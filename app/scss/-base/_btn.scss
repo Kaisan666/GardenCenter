@@ -1,0 +1,97 @@
+.btn{
+    border-radius: 60px;
+    padding: 12px 24px;
+    width: 180px;
+    &__content{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__text{
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    
+    &.btn--dark-green{
+        background-color: $GMediumG;
+        color: $MWhite;
+        transition: all .2s ease-in-out;
+        svg use{
+            fill: $MWhite;
+            transition: all .2s ease-in-out;
+        }
+        @media (hover : hover) and (pointer : fine) {
+            &:hover{
+                background: $GSupportDG;
+                color: $GLightG;
+                transition: all .2s ease-in-out;
+                svg use{
+                    fill: $GLightG;
+                    transition: all .2s ease-in-out;
+                }
+            }
+        }
+        &:active{
+            background-color: $GDarkG;
+            color: $GLightG;
+            transition: all .2s ease-in-out;
+            svg use{
+                fill: $GLightG;
+                transition: all .2s ease-in-out;
+            }
+        }
+        &:disabled{
+            pointer-events: none;
+            background-color: $MMiddleGray;
+            color: $MWhite;
+            transition: all .2s ease-in-out;
+            svg use{
+                fill: $MWhite;
+                transition: all .2s ease-in-out;
+            }
+        }
+        
+    }
+    &.btn--light-green{
+        background-color: $GLightG;
+        color: $GMediumG;
+        transition: all .2s ;
+        svg use{
+            fill: $GMediumG;
+            transition: all .2s ;
+        }
+        @media (hover : hover) and (pointer : fine) {
+            &:hover{
+                background: $GSupportLG;
+                color: $GSupportDG;
+                transition: all .2s ;
+                svg use{
+                    fill: $GSupportDG;
+                    transition: all .2s ;
+                }
+            }
+        }
+        &:active{
+            background-color: $GMediumG;
+            color: $GLightG;
+            transition: all .2s;
+            svg use{
+                fill: $GLightG;
+                transition: all .2s;
+            }
+        }
+        &:disabled{
+            pointer-events: none;
+            background-color: $MMiddleGray;
+            color: $MWhite;
+            transition: all .3s ease-in-out;
+            svg use{
+                fill: $MWhite;
+                transition: all .3s ease-in-out;
+            }
+        }
+    }
+    
+}
+
+

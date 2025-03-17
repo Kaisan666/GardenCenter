@@ -1,0 +1,121 @@
+.field{
+    position: relative;
+    max-width: 313px;
+    input{
+        border-radius: 16px;
+    padding: 8px 12px;
+    border: 2px solid $GSupportLG;
+    width: 100%;
+    height: 59px;
+    transition: all .3s ease-in-out;
+    position: relative;
+    &::placeholder{
+        color: transparent;
+    }
+    }
+    
+    
+    &__container{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    &__date-time{
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        color: $MDarkGray;
+        transition: all .3s ease-in-out;
+    }
+    
+    &__placeholder{
+        position: relative;
+    }
+    &__placeholder-text{
+        position: absolute;
+        top: 50%;
+        left: 12px;
+        transform: translate(0, -50%);
+        pointer-events: none;
+        color: $MDarkGray;
+        transition: all .3s ease-in-out;
+    }
+    input:not(:placeholder-shown) + &__placeholder-text{
+        top: 8px;
+        transform: translate(0);
+        font-size: 12px;
+        transition: all .3s ease-in-out;
+        
+    }
+    input:focus + &__placeholder-text{
+        top: 8px;
+        transform: translate(0);
+        font-size: 12px;
+        transition: all .3s ease-in-out;
+    }
+    &__eye-icon{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        fill: $MDarkGray;
+        transition: all .3s ease-in-out;
+        right: 12px;
+    }
+    @media (hover : hover) and (pointer : fine) {
+        &:has(&:hover) &__placeholder-text{
+            color : $GMediumG;
+            transition: all .3s ease-in-out;
+        }
+        &-wrapper:has(&:hover) &__eye-icon{
+            fill: $GMediumG;
+            transition: all .3s ease-in-out;
+
+        }
+    input:focus{
+        transition: all .3s ease-in-out;
+        border: 2px solid $GMediumG;
+    }
+    &__placeholder:has(input:focus) &__placeholder-text{
+        color : $GMediumG;
+        transition: all .3s ease-in-out;
+    }
+    &__placeholder:has(input:focus) svg{
+        fill: $GMediumG;
+        transition: all .3s ease-in-out;
+    };
+    &:has(input:focus) &__date-time{
+        color: $GMediumG;
+        transition: all .3s ease-in-out;
+    };
+}
+    &:has(&:disabled) input{
+        border: 2px solid $MMiddleGray;
+        pointer-events: none;
+    }
+    &.field--error{
+        .field__placeholder-text{
+            color: $MRed;
+            transition: all .3s ease-in-out;
+        }
+        
+        input{
+        border: 2px solid $MRed;
+        background: $MLightRed;
+        transition: all .3s ease-in-out;
+        }
+        .field__placeholder:has(input:focus) .field__placeholder-text{
+            color: $MRed;
+        }
+        
+        .field__eye-icon{
+            fill: $MRed;
+            transition: all .3s ease-in-out;
+        }
+        .field__date-time{
+            color: $MRed;
+            transition: all .3s ease-in-out;
+        }
+    }
+}
+
+
