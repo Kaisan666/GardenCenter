@@ -1,0 +1,55 @@
+$FFMontserrat: 'Montserrat', 'Arial';
+
+//color
+$MWhite: #ffffff;
+$MTBlackBg: rgba(#2e2e2e, 0.6);
+$MTWhiteBg: rgba(#ffffff, 0.6);
+$MLightGray: #f1f1f1;
+$MMiddleGray: #b7b7b7;
+$MDarkGray: #6A6A6A;
+$MBlack: #393939;
+$MRed: #B24646;
+$MLightRed: #F0DADA;
+
+$GLightG: #DFE8D8;
+$GSupportLG: #8EAD75;
+$GMediumG: #5E8A3B;
+$GSupportDG: #426129;
+$GDarkG: #2F451E;
+
+//breakpoints
+$laptop: 1439px;
+$table: 1023px;
+$mobile: 767px;
+$mediumMobile: 576px;
+$smallMobile: 374px;
+
+@mixin laptop {
+  @media screen and (max-width: $laptop) {
+    @content;
+  }
+}
+
+@mixin table {
+  @media screen and (max-width: $table) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin mediumMobile {
+  @media screen and (max-width: $mediumMobile) {
+    @content;
+  }
+}
+
+@mixin smallMobile {
+  @media screen and (max-width: $smallMobile) {
+    @content;
+  }
+}

@@ -1,0 +1,34 @@
+mixin header 
+    .header
+        .container
+            .header__container
+                .header__up
+                    .header__logo 
+                        svg(width="288" height="60")
+                            use( href="../assets/icons/sprite.svg#logo")
+                    .header__up-right
+                        .socials
+                            a(href='##').social
+                                .social__icon
+                                    svg(width='24' height='24' fill="#ffffff") 
+                                        use( href="../assets/icons/sprite.svg#inst")
+                            a(href='##').social
+                                .social__icon
+                                    svg(width='24' height='24' fill="#ffffff") 
+                                        use( href="../assets/icons/sprite.svg#tg")
+                            a(href='##').social
+                                .social__icon
+                                    svg(width='24' height='24' fill="#ffffff") 
+                                        use( href="../assets/icons/sprite.svg#vk")
+                            .social.social--phone
+                                .social__icon
+                                    svg(width='24' height='24' fill="#ffffff") 
+                                        use( href="../assets/icons/sprite.svg#phone")
+                                .custom-tooltip.custom-tooltip--arrow
+                                    a.custom-tooltip__text(href='##') +7 (999) 999 99 99
+                                    .custom-tooltip__container
+                                        .custom-tooltip__items
+                                            a(href='##').custom-tooltip__item +7 (999) 999 99 91
+                                            a(href='##').custom-tooltip__item +7 (999) 999 99 92
+
+
