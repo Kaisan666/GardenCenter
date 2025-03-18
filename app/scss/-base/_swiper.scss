@@ -1,21 +1,21 @@
+.swiper-main{
 .swiper{
-    &-main{
-        margin-top: 40px;
-    }
     position: relative;
     .swiper-wrapper{
-        height: 400px;
+        height: fit-content;
     }
     .swiper-slide{
-        height: 400px;
+        height: fit-content;
         border-radius: 20px;
     }
-    .main-swiper-pagination{
+    .swiper-main__pagination{
         display: flex;
         gap: 12px;
-        left: 50%;
+        height: 24px;
+        bottom: 8px;
+        align-items: center;
         position: absolute;
-        &__wrapper{
+        &-wrapper{
             width: 168px;
             position: absolute;
             left: 50%;
@@ -32,15 +32,25 @@
             }
         }
     }
-    &-slide
-    &-slide{
+// <-------------> для картинок на фон слайдов
+    &-slide:nth-child(1){
+        background: url('../../assets/images/mainSwiper.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right;
+    }
+
+
+    // <------------>
+
+
+    &-main{
     &__content{
-        background: rgba(57, 57, 57, 0.6);
         position: relative;
         overflow: hidden;
         height: 100%;
         border-radius: 20px;
-        padding: 35px 96px 37px;
+        padding: 37px 96px 35px;
         color: $MWhite;
         display: flex;
         flex-direction: column;
@@ -76,14 +86,6 @@
         justify-content: center;
         align-items: center;
     }
-    &__background{
-        position: absolute;
-        width: 100%;
-        border-radius: 20px;
-        left: 0;
-        top: -50%;
-        z-index: -1;
-    }
     &__phone-img{
         position: absolute;
         right: 96px;
@@ -98,25 +100,24 @@
     }
 }
 }
-.main-swiper-button-prev,
-.main-swiper-button-next{
+}
+.swiper-main__button-prev,
+.swiper-main__button-next{
     position: absolute;
-    // background-color: $GMediumG;
     height: 48px;
     width: 48px;
     top: 47.5%;
     z-index: 3;
     border-radius: 60px;
-    // display: flex;
     padding: 12px;
     
 
 }
-.main-swiper-button-next{
+.swiper-main__button-next{
     right: 8px;
     transform: rotate(-90deg);
 }
-.main-swiper-button-prev{
+.swiper-main__button-prev{
     left: 8px;
     transform: rotate(90deg);
 }

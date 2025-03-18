@@ -1,0 +1,19 @@
+.product-card{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 316px;
+
+
+
+    &__footer{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__price{
+        color: $MDarkGray;
+        line-height: 110%;
+        font-weight: 600;
+    }
+}

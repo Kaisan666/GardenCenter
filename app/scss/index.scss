@@ -28,6 +28,47 @@
   margin: 0 auto;
   padding: 0px 40px;
 }
+section {
+  padding: 40px 0;
+}
+
+.link{
+  color: $GMediumG;
+  text-transform: uppercase;
+  svg{
+    fill: $GMediumG;
+  }
+  @media (hover : hover) and (pointer : fine) {
+    &:hover{
+      color: $GSupportDG;
+      text-decoration: underline;
+      transition: all .2s linear;
+      svg{
+        fill: $GSupportDG;
+        transition: all .2s linear;
+      }
+      
+    }
+  }
+  &:active{
+    color : $GDarkG;
+    text-decoration: underline;
+    transition: all .1s linear;
+    svg{
+      fill: $GDarkG;
+      transition: all .1s linear;
+    } 
+  }
+  &:disabled{
+    color:  $MMiddleGray;
+    text-decoration: underline;
+    pointer-events: none;
+    svg{
+      fill: $MMiddleGray;
+    }
+  }
+}
+
 
 .socials {
   display: flex;
