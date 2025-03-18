@@ -4,7 +4,7 @@
 // import 'nouislider/dist/nouislider.css';
 import 'choices.js/public/assets/styles/choices.css';
 import '../scss/index.scss';
-
+import "./swiper"
 //js
 // import $ from 'jquery';
 // import Swiper from 'swiper';

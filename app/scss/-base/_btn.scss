@@ -1,7 +1,6 @@
 .btn{
     border-radius: 60px;
     padding: 12px 24px;
-    width: 180px;
     &__content{
         display: flex;
         justify-content: space-between;
@@ -16,7 +15,7 @@
         background-color: $GMediumG;
         color: $MWhite;
         transition: all .2s ease-in-out;
-        svg use{
+        svg{
             fill: $MWhite;
             transition: all .2s ease-in-out;
         }
@@ -56,7 +55,7 @@
         background-color: $GLightG;
         color: $GMediumG;
         transition: all .2s ;
-        svg use{
+        svg{
             fill: $GMediumG;
             transition: all .2s ;
         }
@@ -90,6 +89,7 @@
                 transition: all .3s ease-in-out;
             }
         }
+        
     }
     
 }
