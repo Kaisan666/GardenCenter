@@ -5,7 +5,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 const swiperSection = document.querySelector(".swiper-main")
-if (swiperSection.querySelector(".swiper")){
+if (swiperSection){
 const mainSwiper = swiperSection.querySelector(".swiper")
 new Swiper(mainSwiper, {
     pagination : {

@@ -73,23 +73,15 @@ function openNextList(mainBlock, items, eventChange, level, name) {
   container.classList = 'btn-toggle__catalog-container';
   if (level == 1) {
     header.innerHTML = `
-      <button class="btn-toggle__catalog-header-case" type="button" data-toggle-back="data-toggle-back">
-        <svg>
-            <use xlink:href="/assets/icons/sprite.svg#arrowRight"></use>
-        </svg>
+      <button class="btn-toggle__catalog-header-case" type="button">
         <div class="h4">Каталог</div>
-      </button>
-      <button class="btn-toggle__catalog-header-close"type="button" data-toggle-close="data-toggle-close">
-        <svg>
-            <use xlink:href="/assets/icons/sprite.svg#closeBurgerMobile"></use>
-        </svg>
       </button>
     `;
   } else {
     header.innerHTML = `
       <button class="btn-toggle__catalog-header-case" type="button" data-toggle-back="data-toggle-back">
-        <svg>
-            <use xlink:href="/assets/icons/sprite.svg#arrowRight"></use>
+        <svg width="24" height="24" fill="">
+            <use xlink:href="/assets/icons/sprite.svg#arrowLeft"></use>
         </svg>
         <div class="h4">${name}</div>
       </button>
@@ -115,6 +107,10 @@ function openNextList(mainBlock, items, eventChange, level, name) {
   });
 
   header.querySelector('[data-toggle-back]')?.addEventListener('click', () => {
+    console.log(111);
+    console.log(mainBlock.children[mainBlock.children.length - 1]);
+    
+    
     if (mainBlock.children.length > 1) {
       mainBlock.children[mainBlock.children.length - 1].classList.remove('btn-toggle__catalog-list--active');
       setTimeout(() => {
@@ -184,12 +180,12 @@ function openNextList(mainBlock, items, eventChange, level, name) {
 const menuList = document.querySelector('.menu');
 const catalogFixed = document.querySelector('.header__up-fixed-catalog');
 
-  if (catalogFixed) {
-    const btnToggle = catalogFixed.querySelector('.btn-toggle');
-    // const mainBlock = btnToggle.querySelector('.btn-toggle__catalog-container');
-    const mainBlock = btnToggle.querySelector('.btn-toggle__catalog');
-    openNextList(mainBlock, menu, eventChange, 1);
-  }
+if (catalogFixed) {
+  const btnToggle = catalogFixed.querySelector('.btn-toggle');
+  // const mainBlock = btnToggle.querySelector('.btn-toggle__catalog-container');
+  const mainBlock = btnToggle.querySelector('.btn-toggle__catalog');
+  openNextList(mainBlock, menu, eventChange, 1);
+}
 
 if (menuList) {
   const btnToggle = menuList.querySelector('.btn-toggle');
@@ -254,11 +250,17 @@ if (catalogStageTexts) {
 }
 
 btnToggleMobileBtn?.addEventListener('click', () => {
-  btnToggleMobileBtn.classList.toggle('btn-toggle__button--active');
+  btnToggleMobileBtn.classList.add('btn-toggle__button--active');
+  btnToggleCatalog.classList.add('btn-toggle__catalog--active')
+  eventChange = 'click'
+
+  console.log(btnToggleMobileBtn);
+
   if (btnToggleMobileBtn.classList.contains('btn-toggle__button--active')) {
     btnToggleMobileBtn.nextElementSibling.style.maxHeight = btnToggleMobileBtn.nextElementSibling.scrollHeight + 'px';
   } else {
     btnToggleMobileBtn.nextElementSibling.style.maxHeight = 0 + 'px';
   }
-  // openNextListMobile(btnToggleCatalog);
+
+  openNextList(btnToggleCatalog, menu, eventChange, 1);
 });

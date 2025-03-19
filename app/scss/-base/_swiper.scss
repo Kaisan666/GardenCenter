@@ -1,51 +1,49 @@
-.swiper-main{
-.swiper{
+.swiper-main {
+  .swiper {
     position: relative;
-    .swiper-wrapper{
-        height: fit-content;
+    .swiper-wrapper {
+      height: fit-content;
     }
-    .swiper-slide{
-        height: fit-content;
-        border-radius: 20px;
+    .swiper-slide {
+      height: fit-content;
+      border-radius: 20px;
     }
-    .swiper-main__pagination{
-        display: flex;
-        gap: 12px;
-        height: 24px;
-        bottom: 8px;
-        align-items: center;
+    .swiper-main__pagination {
+      display: flex;
+      gap: 12px;
+      height: 24px;
+      bottom: 8px;
+      align-items: center;
+      position: absolute;
+      &-wrapper {
+        width: 168px;
         position: absolute;
-        &-wrapper{
-            width: 168px;
-            position: absolute;
-            left: 50%;
-            z-index: 5;
-            transform: translateX(-50%);
+        left: 50%;
+        z-index: 5;
+        transform: translateX(-50%);
+      }
+      .swiper-pagination-bullet {
+        width: 11px;
+        height: 10px;
+        background: $MWhite;
+        opacity: 1;
+        &-active {
+          background: $GMediumG;
         }
-        .swiper-pagination-bullet{
-            width: 11px;
-            height: 10px;
-            background: $MWhite;
-            opacity: 1;
-            &-active{
-                background: $GMediumG;
-            }
-        }
+      }
     }
-// <-------------> для картинок на фон слайдов
-    &-slide:nth-child(1){
-        background: url('../../assets/images/mainSwiper.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: right;
+    // <-------------> для картинок на фон слайдов
+    &-slide:nth-child(1) {
+      background: url('../../assets/images/mainSwiper.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: right;
     }
-
 
     // <------------>
 
-
-    &-main{
-    &__content{
+    &-main {
+      &__content {
         position: relative;
         overflow: hidden;
         height: 100%;
@@ -54,74 +52,71 @@
         color: $MWhite;
         display: flex;
         flex-direction: column;
-    }
-    &__text{
+      }
+      &__text {
         margin-top: 40px;
         background: $MTBlackBg;
         border-radius: 16px;
         padding: 12px 24px;
         max-width: 500px;
-    }
-    &__link{
+      }
+      &__link {
         display: block;
         margin-top: 20px;
         max-width: 186px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        &-text{
-            text-transform: uppercase;
-            font-weight: 700;
-            font-size: 20px;
-
+        &-text {
+          text-transform: uppercase;
+          font-weight: 700;
+          font-size: 20px;
         }
         // &-arrow{
         //     fill: $GMediumG
         // }
-    }
-    &__arrow-wrapper{
+      }
+      &__arrow-wrapper {
         width: 24px;
         height: 24px;
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-    &__phone-img{
+      }
+      &__phone-img {
         position: absolute;
         right: 96px;
-    }
-    &__title{
+      }
+      &__title {
         font-size: 48px;
         font-weight: 700;
         color: $MWhite;
-    }
-    &__left{
+      }
+      &__left {
         max-width: 568px;
+      }
     }
-}
-}
+  }
 }
 .swiper-main__button-prev,
-.swiper-main__button-next{
-    position: absolute;
-    height: 48px;
-    width: 48px;
-    top: 47.5%;
-    z-index: 3;
-    border-radius: 60px;
-    padding: 12px;
-    
-
+.swiper-main__button-next {
+  position: absolute;
+  height: 48px;
+  width: 48px;
+  top: 47.5%;
+  z-index: 3;
+  border-radius: 60px;
+  padding: 12px;
 }
-.swiper-main__button-next{
-    right: 8px;
-    transform: rotate(-90deg);
+.swiper-main__button-next {
+  right: 8px;
+  transform: rotate(-90deg);
 }
-.swiper-main__button-prev{
-    left: 8px;
-    transform: rotate(90deg);
+.swiper-main__button-prev {
+  left: 8px;
+  transform: rotate(90deg);
 }
-.swiper-button-disabled{
-    filter: grayscale(100%);
-    pointer-events: none;
+.swiper-button-disabled {
+  filter: grayscale(100%);
+  pointer-events: none;
 }

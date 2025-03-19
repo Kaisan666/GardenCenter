@@ -5,6 +5,18 @@
     justify-content: space-between;
     align-items: center;
     gap: 20px;
+
+    &-right {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+  }
+
+  &__logo {
+    svg {
+      width: 100%;
+    }
   }
 
   &__line {
@@ -37,53 +49,13 @@
       display: flex;
       align-items: center;
       gap: 16px;
-    }
-  }
 
-  &__category {
-    cursor: pointer;
-    white-space: nowrap;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 100%;
-    color: $MDarkGray;
-    transition: all 0.2s ease-in-out;
-
-    svg {
-      flex: 0 0 auto;
-    }
-
-    @media (hover: hover) and (pointer: fine) {
-      &:hover {
-        color: $GMediumG;
-        transition: all 0.2s ease-in-out;
+      &-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 16px;
       }
-    }
-  }
-
-  &__page {
-    padding: 11px 12px;
-    border-radius: 60px;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 110%;
-    color: $MDarkGray;
-
-    &.custom-tooltip {
-      padding: 8px 12px;
-    }
-
-    svg {
-      flex: 0 0 auto;
-    }
-
-    &--active {
-      background-color: $GLightG;
-      color: $GSupportDG;
-      transition: all 0.2s ease-in-out;
     }
   }
 
@@ -161,6 +133,19 @@
           }
         }
       }
+    }
+  }
+
+  @include table {
+    &__up {
+      gap: 55px;
+      &-right {
+        display: none;
+      }
+    }
+
+    &__bottom {
+      display: none;
     }
   }
 }
