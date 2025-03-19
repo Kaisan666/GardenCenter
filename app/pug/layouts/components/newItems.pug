@@ -1,23 +1,40 @@
+include ui/productCard.pug
 mixin newItems 
     section.new-items 
         .container 
             .new-items__header.section-header
                 .section-header__first-row
                     h2.section-header__title Новинки
-                    a(href="#").section-header__link.link
+                    a(href="##").section-header__link.link
                         .section-header__link-text К подборке
                         svg(width="24" height='24').section-header__link-img
-                            use(href="../assets/icons/sprite.svg#selectArrow")
+                            use(href=  "../assets/icons/sprite.svg#selectArrow")
                 .section-header__second-row Свежие поступления уже здесь!
                 .section-header__third-row Опробуйте новые товары для сада и огорода, которые мы подготовили для Вашего удобства, урожая и красоты вашего участка!
-            .swiper
-                .product-card
-                    .product-card__photo
-                        img(src="../../assets/images/flowers/sansevieria.png", alt="сансеверия")
-                    .product-card__content
-                        .product-card__title 
-                        .product-card__footer
-                            .product-card__price от 1200 Р
-                            a(href="").product-card__link.btn.btn--dark-green
-                                svg(width="24" height="24")
-                                    use(href="../assets/icons/sprite.svg#link-arrow")
+            .new-items__swiper
+                .item-swiper
+                    .swiper
+                        .swiper-wrapper
+                            .swiper-slide
+                                +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
+                            .swiper-slide
+                                +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
+                            .swiper-slide
+                                +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
+                            .swiper-slide
+                                +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
+                            .swiper-slide
+                                +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
+                            .swiper-slide
+                                +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
+                            .swiper-slide
+                                +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
+                        .item-swiper__pagination-wrapper 
+                            .item-swiper__pagination 
+                        button.item-swiper__button-prev.btn.btn--light-green
+                            svg(width="24" height='24')
+                                use(href="../assets/icons/sprite.svg#selectArrow")
+                        button.item-swiper__button-next.btn.btn--light-green
+                            svg(width="24" height='24')
+                                use(href="../assets/icons/sprite.svg#selectArrow")
+                    

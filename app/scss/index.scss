@@ -52,6 +52,7 @@ section {
     &:hover {
       color: $GSupportDG;
       text-decoration: underline;
+      text-underline-offset: 5px;
       transition: all 0.2s linear;
       svg {
         fill: $GSupportDG;

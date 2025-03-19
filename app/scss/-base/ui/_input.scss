@@ -1,6 +1,5 @@
 .field {
   position: relative;
-  // max-width: 313px;
   input {
     border-radius: 16px;
     padding: 8px 12px;
@@ -89,27 +88,33 @@
     pointer-events: none;
   }
   &.field--error {
-    .field__placeholder-text {
-      color: $MRed;
-      transition: all 0.3s ease-in-out;
-    }
-
     input {
       border: 2px solid $MRed;
       background: $MLightRed;
       transition: all 0.3s ease-in-out;
     }
-    .field__placeholder:has(input:focus) .field__placeholder-text {
+    .field{
+    &__placeholder-text {
       color: $MRed;
+      transition: all 0.3s ease-in-out;
     }
+    &__placeholder{
+    &:has(input:focus) .field__placeholder-text {    ///спросить про селектор
+        color: $MRed;
+      }
+  }
+    // &__placeholder:has(input:focus) &__placeholder-text {
+    //   color: $MRed;
+    // }
 
-    .field__eye-icon {
+    &__eye-icon {
       fill: $MRed;
       transition: all 0.3s ease-in-out;
     }
-    .field__date-time {
+    &__date-time {
       color: $MRed;
       transition: all 0.3s ease-in-out;
     }
   }
+}
 }
