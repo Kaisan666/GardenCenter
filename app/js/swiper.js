@@ -8,6 +8,7 @@ const swiperSection = document.querySelector(".swiper-main")
 if (swiperSection){
 const mainSwiper = swiperSection.querySelector(".swiper")
 new Swiper(mainSwiper, {
+    loop : true,
     pagination : {
         el : ".swiper-main__pagination",
         clickable : true

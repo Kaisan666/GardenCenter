@@ -27,6 +27,12 @@ section {
   padding: 40px 0;
 }
 
+.swiper{
+  .swiper-wrapper{
+    height: auto;
+  }
+}
+
 .body--active {
   padding-right: 15px;
   overflow: hidden;

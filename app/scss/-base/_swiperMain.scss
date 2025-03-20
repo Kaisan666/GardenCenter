@@ -1,39 +1,47 @@
 .swiper-main {
+  &__pagination {
+    display: flex;
+    gap: 12px;
+    height: 24px;
+    bottom: 8px;
+    align-items: center;
+    position: absolute;
+    &-wrapper {
+      width: 168px;
+      position: absolute;
+      left: 50%;
+      z-index: 5;
+      transform: translateX(-50%);
+    }
+    
+  }
   .swiper {
     position: relative;
-    .swiper-wrapper {
+    &-wrapper {
       height: fit-content;
     }
-    .swiper-slide {
+    &-slide {
       height: fit-content;
       border-radius: 20px;
     }
-    .swiper-main__pagination {
-      display: flex;
-      gap: 12px;
-      height: 24px;
-      bottom: 8px;
-      align-items: center;
-      position: absolute;
-      &-wrapper {
-        width: 168px;
-        position: absolute;
-        left: 50%;
-        z-index: 5;
-        transform: translateX(-50%);
-      }
-      .swiper-pagination-bullet {
-        width: 11px;
-        height: 10px;
-        background: $MWhite;
-        opacity: 1;
-        &-active {
-          background: $GMediumG;
-        }
+    &-pagination-bullet {
+      width: 11px;
+      height: 10px;
+      background: $MWhite;
+      opacity: 1;
+      &-active {
+        background: $GMediumG;
       }
     }
+    
     // <-------------> для картинок на фон слайдов
-    &-slide:nth-child(1) {
+    &-slide-duplicate{
+      background: url('../../assets/images/mainSwiper.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: right;
+    }
+    &-slide:nth-child(2) {
       background: url('../../assets/images/mainSwiper.png');
       background-repeat: no-repeat;
       background-size: cover;
