@@ -97,9 +97,8 @@
       }
     }
   }
-}
-.swiper-main__button-prev,
-.swiper-main__button-next {
+  & &__button-prev,
+& &__button-next {
   position: absolute;
   height: 48px;
   width: 48px;
@@ -108,15 +107,17 @@
   border-radius: 60px;
   padding: 12px;
 }
-.swiper-main__button-next {
+& &__button-next {
   right: 8px;
   transform: rotate(-90deg);
 }
-.swiper-main__button-prev {
+& &__button-prev {
   left: 8px;
   transform: rotate(90deg);
 }
 .swiper-button-disabled {
   filter: grayscale(100%);
   pointer-events: none;
+}
+
 }

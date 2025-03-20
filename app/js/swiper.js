@@ -21,3 +21,20 @@ new Swiper(mainSwiper, {
     spaceBetween : 20,
 })
 }
+const newItems = document.querySelector(".new-items__swiper")
+if (newItems) {
+    const newItemsSwiper = newItems.querySelector(".swiper")
+    new Swiper(newItemsSwiper, {
+        pagination : {
+            el : ".item-swiper__pagination",
+            clickable : true
+        },
+        navigation: {
+            nextEl: '.item-swiper__button-next',
+            prevEl: '.item-swiper__button-prev',
+          },
+        slidesPerView: 4,
+        // autoHeight : true
+        spaceBetween : 20,
+    })
+}
