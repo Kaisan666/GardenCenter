@@ -1,0 +1,17 @@
+.blog{
+    &__main{
+        display: flex;
+        gap: 50px;
+
+    }
+    &__news{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: start;
+    }
+    &__swiper {
+        max-width: 590px;
+        // max-width: 335px;
+    }
+}

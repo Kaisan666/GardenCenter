@@ -39,3 +39,20 @@ if (newItems) {
         spaceBetween : 20,
     })
 }
+const blog = document.querySelector(".blog__swiper")
+if(blog){
+    const blogSwiper = blog.querySelector(".swiper")
+    new Swiper(blogSwiper, {
+        pagination : {
+            el : ".item-swiper__pagination",
+            clickable : true
+        },
+        navigation: {
+            nextEl: '.item-swiper__button-next',
+            prevEl: '.item-swiper__button-prev',
+          },
+        slidesPerView: 2,
+        // autoHeight : true
+        spaceBetween : 10,
+    })
+}

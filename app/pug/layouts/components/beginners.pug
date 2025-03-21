@@ -8,7 +8,7 @@ mixin beginners
                     a(href="##").section-header__link.link
                         .section-header__link-text К подборке
                         svg(width="24" height='24').section-header__link-img
-                            use(href=  "../assets/icons/sprite.svg#selectArrow")
+                            use(href="../assets/icons/sprite.svg#selectArrow")
                 .section-header__second-row Легкий старт для вашего сада!
                 .section-header__third-row Если вы только начинаете садоводческий путь, не волнуйтесь — у нас есть всё, чтобы он был простым и приятным! 
             .beginners__main 
@@ -20,7 +20,7 @@ mixin beginners
                     +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
                     +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
             .beginners__footer.attraction
-                img(src="" alt="").attraction__img
+                img(src="../assets/images/beginnersSection.png" alt="").attraction__img
                 .attraction__info
                     .attraction__text
                         .attraction__title Уценка? Скорее удача!
@@ -30,8 +30,9 @@ mixin beginners
                             | Это наш способ заботиться об экологии, давая каждому растению шанс,
                             | и Ваша возможность сэкономить без потери качества. Загляните к нам
                             | в магазин, они ждут Ваших заботливых рук!
+                    //- svg(height="88" width='100').attraction__info-card
+                                use(href="../assets/icons/sprite.svg#attentionBottom")
                     a(href="#").attraction__link.btn.btn--dark-green
-                        .attraction__link-text 
-                        .attraction__link-icon
-                            svg()
-                                use()
+                        .attraction__link-text подробнее
+                        svg(height="24" width="24").attraction__link-icon
+                            use(href="../assets/icons/sprite.svg#selectArrow")
