@@ -13,17 +13,28 @@
       z-index: 5;
       transform: translateX(-50%);
     }
-    
+  }
+  &__background-img{
+    position: absolute;
+    height: 100%;
+    // // width: 100%;
+    object-fit: cover;
+    object-position: right;
+    z-index: -1;
   }
   .swiper {
     position: relative;
+    z-index: 2;
+    border-radius: 20px;
     &-wrapper {
       height: fit-content;
     }
     &-slide {
+      position: relative;
       height: fit-content;
       border-radius: 20px;
     }
+
     &-pagination-bullet {
       width: 11px;
       height: 10px;
@@ -33,29 +44,27 @@
         background: $GMediumG;
       }
     }
-    
+
     // <-------------> для картинок на фон слайдов
-    &-slide-duplicate{
-      background: url('../../assets/images/mainSwiper.png');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: right;
-    }
-    &-slide:nth-child(2) {
-      background: url('../../assets/images/mainSwiper.png');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: right;
-    }
+    // &-slide-duplicate{
+    //   background: url('../../assets/images/mainSwiper.png');
+    //   background-repeat: no-repeat;
+    //   background-size: cover;
+    //   background-position: right;
+    // }
+    // &-slide:nth-child(2) {
+    //   background: url('../../assets/images/mainSwiper.png');
+    //   background-repeat: no-repeat;
+    //   background-size: cover;
+    //   background-position: right;
+    // }
 
     // <------------>
 
     &-main {
       &__content {
-        position: relative;
         overflow: hidden;
         height: 100%;
-        border-radius: 20px;
         padding: 37px 96px 35px;
         color: $MWhite;
         display: flex;
@@ -106,26 +115,25 @@
     }
   }
   & &__button-prev,
-& &__button-next {
-  position: absolute;
-  height: 48px;
-  width: 48px;
-  top: 47.5%;
-  z-index: 3;
-  border-radius: 60px;
-  padding: 12px;
-}
-& &__button-next {
-  right: 8px;
-  transform: rotate(-90deg);
-}
-& &__button-prev {
-  left: 8px;
-  transform: rotate(90deg);
-}
-.swiper-button-disabled {
-  filter: grayscale(100%);
-  pointer-events: none;
-}
-
+  & &__button-next {
+    position: absolute;
+    height: 48px;
+    width: 48px;
+    top: 47.5%;
+    z-index: 3;
+    border-radius: 60px;
+    padding: 12px;
+  }
+  & &__button-next {
+    right: 8px;
+    transform: rotate(-90deg);
+  }
+  & &__button-prev {
+    left: 8px;
+    transform: rotate(90deg);
+  }
+  .swiper-button-disabled {
+    filter: grayscale(100%);
+    pointer-events: none;
+  }
 }
