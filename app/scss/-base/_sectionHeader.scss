@@ -10,9 +10,12 @@
     &__title{
         font-weight: 700;
         font-size: 48px;
+        line-height: 100%;
     }
     &__link{
         display: flex;
+        align-items: center;
+        padding-bottom: 8px;
         gap: 10px;
         color: $GMediumG;
         font-weight: 700;

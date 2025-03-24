@@ -36,7 +36,7 @@ if (newItems) {
           },
         slidesPerView: 4,
         // autoHeight : true
-        spaceBetween : 20,
+        spaceBetween : 32,
     })
 }
 const blog = document.querySelector(".blog__swiper")

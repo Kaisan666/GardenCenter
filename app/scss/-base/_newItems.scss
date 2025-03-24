@@ -1,3 +1,9 @@
 .new-items{
-
+    &__swiper{
+        .product-card{
+            &__photo{
+                flex: 0 1 auto;
+            }
+        }
+    }
 }
