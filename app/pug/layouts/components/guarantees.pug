@@ -1,0 +1,56 @@
+mixin guarantees 
+    section.guarantees 
+        .container 
+            .guarantees__header.section-header
+                .section-header__first-row
+                    h2.section-header__title Наши акции
+                    a(href="##").section-header__link.link
+                        .section-header__link-text все акции
+                        svg(width="24" height='24').section-header__link-img
+                            use(href=  "../assets/icons/sprite.svg#selectArrow")
+                .section-header__second-row Выгодные предложения для вас!
+                .section-header__third-row
+                    | Не упустите шанс воспользоваться выгодными предложениями и бонусами, которые мы регулярно готовим для вас!
+            .guarantees__main       
+                .guarantees__promotion-card.promotion-card 
+                    .promotion-card__header 
+                        .promotion-card__title Опытный понедельник
+                        .promotion-card__text Скидка 5% на покупку для пенсионеров каждый понедельник!
+                    .promotion-card__main
+                        .promotion-card__img-wrapper  
+                            img(src="../assets/images/topics/expMonday.png" alt="").promotion-card__img
+                            a(href="##").promotion-card__link.btn.btn--dark-green
+                                svg(width="15" height="15")
+                                    use(href="../assets/icons/sprite.svg#link-arrow")
+                .guarantees__promotion-card.promotion-card 
+                    .promotion-card__header 
+                        .promotion-card__title Цветочный день рождения!
+                        .promotion-card__text Скидка 10% в день рождения и в течении 3 дней до и 3 дней после для всех! 
+                    .promotion-card__main
+                        .promotion-card__img-wrapper  
+                            img(src="../assets/images/topics/girlBD.png" alt="").promotion-card__img
+                            a(href="##").promotion-card__link.btn.btn--dark-green
+                                svg(width="15" height="15")
+                                    use(href="../assets/icons/sprite.svg#link-arrow")
+                .guarantees__promotion-card.promotion-card 
+                    .promotion-card__header 
+                        .promotion-card__title Двойная выгода!
+                        .promotion-card__text 2 числа каждого месяца скидки по дисконтным картам удваиваются!
+                    .promotion-card__main
+                        .promotion-card__img-wrapper  
+                            img(src="../assets/images/topics/momGirl.png" alt="").promotion-card__img
+                            a(href="##").promotion-card__link.btn.btn--dark-green
+                                svg(width="15" height="15")
+                                    use(href="../assets/icons/sprite.svg#link-arrow")
+            .blog__footer.attraction.attraction--reversed
+                img(src="../assets/images/happyGrandad.png" alt="").attraction__img
+                .attraction__info
+                    .attraction__text
+                        .attraction__title Вырастил? Поделись!
+                        .attraction__main Присоединяйтесь к нашему уютному сообществу единомышленников! Делитесь фотографиями своих растений, обменивайтесь опытом, вдохновляйтесь идеями и находите поддержку. Подписывайтесь на нашу беседу в Telegram — создадим зеленый уголок в сети вместе!
+                    //- svg(height="88" width='100').attraction__info-card
+                                use(href="../assets/icons/sprite.svg#attentionBottom")
+                    a(href="#").attraction__link.btn.btn--dark-green
+                        .attraction__link-text Присоедениться
+                        svg(height="24" width="24").attraction__link-icon
+                            use(href="../assets/icons/sprite.svg#selectArrow")

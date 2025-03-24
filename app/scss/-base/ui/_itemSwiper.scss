@@ -1,0 +1,51 @@
+.item-swiper {
+  &__pagination {
+    display: flex;
+    gap: 12px;
+    height: 24px;
+    bottom: 8px;
+    align-items: center;
+  }
+
+  &__ui {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  & &__button-prev,
+  & &__button-next {
+    height: 48px;
+    width: 48px;
+    top: 47.5%;
+    z-index: 3;
+    border-radius: 60px;
+    padding: 12px;
+  }
+
+  & &__button-next {
+    right: 8px;
+    transform: rotate(-90deg);
+  }
+
+  & &__button-prev {
+    left: 8px;
+    transform: rotate(90deg);
+  }
+
+  .swiper {
+    &-wrapper{
+      padding-bottom: 40px;
+    }
+    &-pagination-bullet {
+      width: 11px;
+      height: 10px;
+      background: $GLightG;
+      opacity: 1;
+
+      &-active {
+        background: $GMediumG;
+      }
+    }
+  }
+}

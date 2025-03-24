@@ -1,0 +1,22 @@
+.blog{
+    &__main{
+        display: flex;
+        gap: 50px;
+
+    }
+    &__news{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: start;
+    }
+    &__swiper {
+        // min-width: 0;
+        // max-width: 590px;
+        // max-width: 335px;
+        min-width: 0;
+        flex-grow: 1;
+        flex-basis: 590px;
+        align-self: center;
+    }
+}
