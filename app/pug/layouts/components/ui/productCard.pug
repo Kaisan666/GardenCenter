@@ -1,9 +1,13 @@
-mixin productCard(img, alt, name, price, link)
+mixin productCard(img, alt, name, price, link, items)
     .product-card
         .product-card__photo
             img(src=img, alt=alt)
         .product-card__content
             .product-card__title=name
+            ul.product-card__categories
+                each item in (items || [])
+                    li.product-card__category.btn.btn--light-green
+                        a(href="#").product-card__category-name= item
             .product-card__footer
                 .product-card__price=(price)
                 a(href=link).product-card__link.btn.btn--dark-green

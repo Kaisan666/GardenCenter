@@ -17,6 +17,16 @@
         font-size: 24px;
         // color
     }
+    &__categories{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    &__category{
+        a{
+            color: inherit;
+        }
+    }
     &__footer{
         display: flex;
         align-items: center;

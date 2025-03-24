@@ -11,7 +11,12 @@
         align-items: start;
     }
     &__swiper {
-        max-width: 590px;
+        // min-width: 0;
+        // max-width: 590px;
         // max-width: 335px;
+        min-width: 0;
+        flex-grow: 1;
+        flex-basis: 590px;
+        align-self: center;
     }
 }

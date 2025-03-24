@@ -51,7 +51,12 @@ if(blog){
             nextEl: '.item-swiper__button-next',
             prevEl: '.item-swiper__button-prev',
           },
-        slidesPerView: 2,
+        slidesPerView: 1,
+        breakpoints : {
+            1065 : {
+                slidesPerView : 2
+            }
+        },
         // autoHeight : true
         spaceBetween : 10,
     })
