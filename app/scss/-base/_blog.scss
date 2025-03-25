@@ -9,6 +9,8 @@
         flex-direction: column;
         gap: 20px;
         align-items: start;
+        max-width: 720px;
+
     }
     &__swiper {
         // min-width: 0;
@@ -18,5 +20,14 @@
         flex-grow: 1;
         flex-basis: 590px;
         align-self: center;
+    }
+
+    @include mobile {
+        &__main{
+            flex-direction: column;
+        }
+        &__swiper{
+            align-self: normal;
+        }
     }
 }

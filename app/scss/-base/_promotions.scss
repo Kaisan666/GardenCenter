@@ -1,7 +1,12 @@
 .promotions{
     &__main{
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         gap: 20px;
-        margin-top: 40px;
+        @media screen and (max-width : $mobile) {
+            display: flex;
+            flex-direction: column;
+
+        }
     }
 }

@@ -1,7 +1,28 @@
 .guarantees{
     &__main{
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         gap: 20px;
-        margin-top: 40px;
+        @media screen and (max-width : $mobile) {
+            display: flex;
+            flex-direction: column;
+
+        }
+    }
+    &__footer.attraction{
+        
+        gap: 0;
+        .attraction{
+
+            &__info{
+                flex: 0 1 720px;
+            }
+            &__img{
+                flex: 1 1 auto;
+            }
+        }
+        @include mobile{
+            gap: 20px;
+        }
     }
 }

@@ -22,7 +22,7 @@ import { computePosition, shift, offset, flip } from '@floating-ui/dom';
 import './btnToggle';
 import './moreBtn';
 import './burger';
-import './marquee'
+// import './marquee'
 
 
 //// ================================ Code ======================================
