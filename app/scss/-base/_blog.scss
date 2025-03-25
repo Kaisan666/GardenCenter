@@ -21,4 +21,13 @@
         flex-basis: 590px;
         align-self: center;
     }
+
+    @include mobile {
+        &__main{
+            flex-direction: column;
+        }
+        &__swiper{
+            align-self: normal;
+        }
+    }
 }

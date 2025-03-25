@@ -4,10 +4,6 @@ mixin guarantees
             .guarantees__header.section-header
                 .section-header__first-row
                     h2.section-header__title Мы гарантируем
-                    a(href="##").section-header__link.link
-                        .section-header__link-text все акции
-                        svg(width="24" height='24').section-header__link-img
-                            use(href=  "../assets/icons/sprite.svg#selectArrow")
                 .section-header__second-row Ответственность в каждом шаге!
                 .section-header__third-row
                     | От выбора растений до реализации проекта — мы гарантируем надежность, профессионализм и результат, который будет радовать Вас каждый день!
@@ -39,7 +35,7 @@ mixin guarantees
                         a(href="##").promotion-card__link.btn.btn--dark-green
                             svg(width="15" height="15")
                                 use(href="../assets/icons/sprite.svg#link-arrow")
-            .guarantees__footer.attraction
+            .guarantees__footer.attraction.attraction--gray
                 img(src="../assets/images/happyGrandad.png" alt="").attraction__img
                 .attraction__info
                     .attraction__text
@@ -52,6 +48,7 @@ mixin guarantees
                             | Мы также предлагаем услуги по озеленению, мастер-классы и тематические мероприятия. Вдохновляйтесь природой вместе с нами!
                     //- svg(height="88" width='100').attraction__info-card
                         use(href="../assets/icons/sprite.svg#attentionBottom")
+                    img(src="../../assets/images/SubtractGray.png", alt="").attraction__info-bottom
                     a(href="#").attraction__link.btn.btn--dark-green
                         .attraction__link-text Подробнее
                         svg(height="24" width="24").attraction__link-icon

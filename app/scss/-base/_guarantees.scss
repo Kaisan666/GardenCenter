@@ -1,7 +1,13 @@
 .guarantees{
     &__main{
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         gap: 20px;
+        @media screen and (max-width : $mobile) {
+            display: flex;
+            flex-direction: column;
+
+        }
     }
     &__footer.attraction{
         
@@ -14,6 +20,9 @@
             &__img{
                 flex: 1 1 auto;
             }
+        }
+        @include mobile{
+            gap: 20px;
         }
     }
 }

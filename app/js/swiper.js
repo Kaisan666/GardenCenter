@@ -34,9 +34,14 @@ if (newItems) {
             nextEl: '.item-swiper__button-next',
             prevEl: '.item-swiper__button-prev',
           },
-        slidesPerView: 4,
+        slidesPerView: 1.5,
         // autoHeight : true
         spaceBetween : 32,
+        breakpoints : {
+            765 : {
+                slidesPerView : 4
+            }
+        },
     })
 }
 const blog = document.querySelector(".blog__swiper")

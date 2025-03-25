@@ -130,4 +130,39 @@
     filter: grayscale(100%);
     pointer-events: none;
   }
+
+  @include mobile{
+    
+    .container{
+      padding: 0;
+    }
+
+    &__background-img{
+     object-position: 75%; 
+    }
+
+    .swiper-main{
+    &__button-prev,
+      &__button-next {
+        top: 90%;
+        // bottom: 8px;
+      }
+    &__title{
+      font-size: 32px;
+      line-height: 110%;
+    }
+    &__content{
+      padding: 32px 20px 86px;
+      // min-height: 400px;
+    }
+    &__text{
+      margin-top: 24px;
+      max-width: 260px;
+    }
+    &__link{
+      margin-top: 16px;
+    }
+
+  }
+}
 }
