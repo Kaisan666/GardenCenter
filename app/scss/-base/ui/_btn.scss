@@ -11,7 +11,7 @@
         text-transform: uppercase;
     }
     
-    &.btn--dark-green{
+    &--dark-green{
         background-color: $GMediumG;
         color: $MWhite;
         transition: all .2s ease-in-out;
@@ -51,7 +51,7 @@
         }
         
     }
-    &.btn--light-green{
+    &--light-green{
         background-color: $GLightG;
         color: $GMediumG;
         transition: all .2s ;

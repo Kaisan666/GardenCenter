@@ -5,5 +5,12 @@
                 flex: 0 1 auto;
             }
         }
+        
+    }
+    @include mobile{
+        overflow: hidden;
+        .swiper{
+            overflow: visible;
+        }
     }
 }

@@ -13,9 +13,6 @@
 
     }
     &__swiper {
-        // min-width: 0;
-        // max-width: 590px;
-        // max-width: 335px;
         min-width: 0;
         flex-grow: 1;
         flex-basis: 590px;
@@ -28,6 +25,7 @@
         }
         &__swiper{
             align-self: normal;
+            flex-basis: auto;
         }
     }
 }

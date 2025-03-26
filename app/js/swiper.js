@@ -56,7 +56,7 @@ if(blog){
             nextEl: '.item-swiper__button-next',
             prevEl: '.item-swiper__button-prev',
           },
-        slidesPerView: 1,
+        slidesPerView: 2,
         breakpoints : {
             1065 : {
                 slidesPerView : 2

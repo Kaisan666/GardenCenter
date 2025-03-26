@@ -1,28 +1,40 @@
-.guarantees{
-    &__main{
+.guarantees {
+    &__main {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
-        @media screen and (max-width : $mobile) {
-            display: flex;
-            flex-direction: column;
+    }
 
+    .attraction {
+
+        gap: 0;
+
+        &__info {
+            flex: 0 1 720px;
+        }
+
+        &__img {
+            flex: 1 1 auto;
         }
     }
-    &__footer.attraction{
-        
-        gap: 0;
-        .attraction{
 
-            &__info{
-                flex: 0 1 720px;
+    @include mobile {
+
+        .attraction {
+            gap: 20px;
+
+            &__info {
+                flex: 1 1 auto;
             }
-            &__img{
+
+            &__img {
                 flex: 1 1 auto;
             }
         }
-        @include mobile{
-            gap: 20px;
+
+        &__main {
+            display: flex;
+            flex-direction: column;
         }
     }
 }

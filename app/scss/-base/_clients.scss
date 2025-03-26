@@ -30,25 +30,4 @@
             transform: translate(calc(-50% - 20px));
         }
     }
-    // @media screen and (max-width : $maxTablet) {
-    //     &__marquee-wrapper{
-    //         margin-top: 24px ;
-    //     }
-    // }
-    
-    // @media screen and (max-width: $maxMobile ) {
-    //     &__marquee-wrapper{
-    //         margin-top: 24px;
-    //     }
-    //     .marquee{
-    //         &__inner{
-    //             gap: 50px;
-    //         }
-    //     }
-    //     @keyframes scroll {
-    //         to {
-    //             transform: translate(calc(-50% - 25px));
-    //         }
-    //     }
-    // }
 }
