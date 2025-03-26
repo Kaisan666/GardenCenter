@@ -1,0 +1,27 @@
+.breadcrumbs{
+    display: flex;
+    gap: 8px;
+    padding-bottom: 40px;
+    &__text{
+        color: $MMiddleGray;
+        line-height: 110%;
+        font-weight: 600;
+        
+    }
+    &__page{
+        display: flex;
+        align-items: center;
+        color: $MMiddleGray;
+        svg{
+            transform: rotate(-90deg);
+            fill: $MMiddleGray;
+        }
+    }
+    &--current{
+        .breadcrumbs{
+        &__text{
+            color: $MDarkGray;
+        }
+    }
+    }
+}
