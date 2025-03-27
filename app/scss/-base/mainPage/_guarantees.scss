@@ -1,0 +1,40 @@
+.guarantees {
+    &__main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .attraction {
+
+        gap: 0;
+
+        &__info {
+            flex: 0 1 720px;
+        }
+
+        &__img {
+            flex: 1 1 auto;
+        }
+    }
+
+    @include mobile {
+
+        .attraction {
+            gap: 20px;
+
+            &__info {
+                flex: 1 1 auto;
+            }
+
+            &__img {
+                flex: 1 1 auto;
+            }
+        }
+
+        &__main {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

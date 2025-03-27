@@ -1,0 +1,151 @@
+.header {
+  padding: 12px 0px;
+  &__up {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    &-right {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+  }
+
+  &__logo {
+    svg {
+      width: 100%;
+    }
+  }
+
+  &__line {
+    flex: 0 0 auto;
+    width: 2px;
+    height: 24px;
+    background-color: $MLightGray;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0px;
+
+    &-left {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    &-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      &-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 16px;
+      }
+    }
+  }
+
+  .menu {
+    &--hidden {
+      display: none;
+    }
+
+    .swiper-button {
+      width: 28px;
+      height: 28px;
+      border-radius: 100%;
+      top: inherit;
+      bottom: 50%;
+      transform: translateY(50%);
+      box-shadow: 4px 2px 5px 0px rgba(34, 60, 80, 0.2);
+
+      &-next {
+        right: -24px;
+        &::after {
+          content: '';
+          background-image: url('/assets/images/pagination-arrow.svg');
+          background-repeat: no-repeat;
+          background-position: center;
+          width: 8px;
+          height: 13px;
+        }
+      }
+
+      &-prev {
+        left: -28px;
+        &::after {
+          content: '';
+          background-image: url('/assets/images/pagination-arrow.svg');
+          background-repeat: no-repeat;
+          background-position: center;
+          width: 8px;
+          height: 13px;
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .btn-toggle {
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          .btn-toggle__catalog {
+            opacity: 1;
+            visibility: visible;
+            transition: all 0.5s ease-in-out;
+          }
+        }
+      }
+
+      &__items {
+        &-stage {
+          &--active {
+            color: $GSupportDG;
+            background-color: $GLightG;
+
+            .btn-toggle__catalog-text {
+              color: $GSupportDG;
+              background-color: $GLightG;
+            }
+          }
+          @media (hover: hover) and (pointer: fine) {
+            &:hover {
+              color: $GSupportDG;
+              background-color: $GLightG;
+              .btn-toggle__catalog-text {
+                color: $GSupportDG;
+                background-color: $GLightG;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include table {
+    &__up {
+      gap: 55px;
+      &-right {
+        display: none;
+      }
+    }
+
+    &__bottom {
+      display: none;
+    }
+  }
+}

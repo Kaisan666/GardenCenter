@@ -4,7 +4,7 @@ mixin productCard(img, alt, name, price, link, items)
             img(src=img, alt=alt)
         .product-card__content
             .product-card__title=name
-            ul.product-card__categories
+            ul.product-card__categories.categories
                 each item in (items || [])
                     li.product-card__category.btn.btn--light-green
                         a(href="#").product-card__category-name= item

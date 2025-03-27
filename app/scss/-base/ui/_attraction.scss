@@ -3,14 +3,15 @@
   gap: 50px;
   padding-top: 80px;
   align-items: center;
-  
+
   &__img {
     max-width: 50%;
   }
+
   &__text {
     position: relative;
-    border-radius: 20px 20px 0 0;
-    padding: 40px 40px 8px 40px;
+    border-radius: 20px 20px 40px 0;
+    padding: 40px 40px 40px 40px;
     background-color: $GLightG;
     display: flex;
     flex-direction: column;
@@ -26,89 +27,134 @@
     //   background-color: $GLightG;
     // }
   }
+
   &__title {
     font-size: 32px;
     font-weight: 600;
     color: $GSupportDG;
   }
+
   &__main {
     color: $GSupportDG;
     line-height: 125%;
   }
+
   &__info {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: end;
 
-    &-bottom{
-      padding: 44px 0;
-      width: 100%;
-      background-color: $GLightG;
-      mask: url('../../../assets/images/Plug.png');
-      mask-repeat: no-repeat;
-      mask-size: 100% 100%;
+    &-bottom {
+      display: flex;
+      justify-content: end;
+      
+      position: relative;
 
     }
-
+    &-middle{
+      width: 100%;
+      height: 32px;
+      background-color: $GLightG;
+      border-radius: 0 0 50px 0;
+    }
   }
+  &__white-space{
+    border-radius: 40px 0 0 0;
+    width: 100%;
+    position: absolute;
+    height: 52px;
+    bottom: 28px;
+    background-color: #fff;
+    // &::before{
+    //   content: url("../../../assets/images/hyperbola.png");
+    //   position: absolute;
+    //   width: 10%;
+    //   height: 100%;
+    //   background-color: white;
+    // }
+  }
+
   &__info-card {
     width: 100%;
   }
+
   &__link {
-    position: absolute;
-    bottom: -9.5%;
-    // left: 0;
     z-index: 10;
     display: flex;
     gap: 10px;
     align-items: center;
+
     &-text {
       text-transform: uppercase;
       font-weight: 700;
       font-size: 20px;
     }
+
     &-icon {
       transform: rotate(-90deg);
     }
   }
+
   &--reversed {
     flex-direction: row-reverse;
+
     .attraction {
       &__info-card {
         transform: scale(-1, 1);
       }
+      &__text{
+        border-radius: 20px 20px 0px 40px;
+      }
+      &__white-space{
+      border-radius: 0px 40px 0 0;
+      }
+
       &__info {
         align-items: start;
+      &-bottom {
+        transform: scale(1, 1);
       }
-      &__info-bottom{
+      &-middle{
+        transform: scale(1, 1);
+      }
       }
     }
   }
-  &--gray{
-    .attraction{
-      &__text{
-        background-color: $MLightGray;
-        color: $MBlack;
 
-        &::after{
+  &--gray {
+    .attraction {
+      &__text {
+        background-color: $MLightGray;
+        
+
+        &::after {
           background-color: $MLightGray;
         }
       }
-      &__title{
+      
+
+      &__title,
+      &__main {
         color: $MBlack;
       }
+      &__info{
+      &-middle{
+        background-color: $MLightGray;
+      }}
     }
   }
+
   @include mobile {
     flex-direction: column;
     gap: 20px;
-    &__img{
+
+    &__img {
       max-width: 100%;
     }
-    &__title{
+
+    &__title {
       font-size: 24px;
     }
   }
 }
-

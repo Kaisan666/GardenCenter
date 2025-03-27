@@ -56,12 +56,29 @@ if(blog){
             nextEl: '.item-swiper__button-next',
             prevEl: '.item-swiper__button-prev',
           },
-        slidesPerView: 1,
+        slidesPerView: 2,
         breakpoints : {
             1065 : {
                 slidesPerView : 2
             }
         },
+        // autoHeight : true
+        spaceBetween : 10,
+    })
+}
+const productDetail = document.querySelector(".product-details__swiper")
+if(productDetail){
+    const productDetailSwiper = productDetail.querySelector(".swiper")
+    new Swiper(productDetailSwiper, {
+        pagination : {
+            el : ".item-swiper__pagination",
+            clickable : true
+        },
+        navigation: {
+            nextEl: '.item-swiper__button-next',
+            prevEl: '.item-swiper__button-prev',
+          },
+        slidesPerView: 1,
         // autoHeight : true
         spaceBetween : 10,
     })
