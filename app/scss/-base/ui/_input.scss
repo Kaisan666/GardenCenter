@@ -98,14 +98,12 @@
       color: $MRed;
       transition: all 0.3s ease-in-out;
     }
+    
     &__placeholder{
     &:has(input:focus) .field__placeholder-text {    ///спросить про селектор
         color: $MRed;
       }
   }
-    // &__placeholder:has(input:focus) &__placeholder-text {
-    //   color: $MRed;
-    // }
 
     &__eye-icon {
       fill: $MRed;
