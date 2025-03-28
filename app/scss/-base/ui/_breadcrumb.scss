@@ -1,11 +1,13 @@
 .breadcrumbs{
     display: flex;
     gap: 8px;
-    padding-bottom: 40px;
+    padding: 0 40px;
+    overflow-x: scroll;
     &__text{
         color: $MMiddleGray;
         line-height: 110%;
         font-weight: 600;
+        white-space: nowrap;
         
     }
     &__page{
@@ -23,5 +25,8 @@
             color: $MDarkGray;
         }
     }
+    }
+    @include mobile{
+        padding: 0;
     }
 }

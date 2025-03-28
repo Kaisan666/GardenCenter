@@ -25,7 +25,7 @@ html(lang='ru')
                 .section-header__first-row
                     h1.section-header__title Наши акции
             .catalog__categories.categories 
-                button.category__badge-tag.badge-tag Все
+                button.category__badge-tag.badge-tag.badge-tag--current Все
                 button.category__badge-tag.badge-tag Амфора
                 button.category__badge-tag.badge-tag бриз
                 button.category__badge-tag.badge-tag бук
@@ -69,7 +69,7 @@ html(lang='ru')
                 +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
                 +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
             .catalog__pagination.catalog-pagination
-                btn.catalog-pagination__more-btn
+                button.catalog-pagination__more-btn
                     .catalog-pagination__text показать еще 
                     .catalog-pagination__icon
                         svg(width="24" height="24")
@@ -79,6 +79,5 @@ html(lang='ru')
                     button.catalog-pagination__bullet 2
                     button.catalog-pagination__bullet 3
                     button.catalog-pagination__bullet 4
-                    button.catalog-pagination__bullet 5
-
+                    button.catalog-pagination__bullet 
     +footer

@@ -5,16 +5,18 @@
     height: 24px;
     bottom: 8px;
     align-items: center;
+    
   }
 
   &__ui {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 40px;
   }
 
-  & &__button-prev,
-  & &__button-next {
+  &__button-prev,
+  &__button-next {
     height: 48px;
     width: 48px;
     top: 47.5%;
@@ -23,20 +25,17 @@
     padding: 12px;
   }
 
-  & &__button-next {
+  &__button-next {
     right: 8px;
     transform: rotate(-90deg);
   }
 
-  & &__button-prev {
+   &__button-prev {
     left: 8px;
     transform: rotate(90deg);
   }
 
   .swiper {
-    &-wrapper{
-      padding-bottom: 40px;
-    }
     &-pagination-bullet {
       width: 11px;
       height: 10px;

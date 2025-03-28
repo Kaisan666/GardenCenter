@@ -1,6 +1,7 @@
 include layouts/modules/_m-head.pug
 include layouts/components/header.pug
 include layouts/components/footer.pug
+include layouts/components/ui/productCard.pug
 
 
 html(lang='ru')
@@ -8,32 +9,96 @@ html(lang='ru')
   body
   +header
   section.product-details 
-    .container 
-        .product-details.breadcrumbs
-                .breadcrumbs__page 
-                    .breadcrumbs__text Главная
-                    svg(width="24" height="24")
-                        use(href="../assets/icons/sprite.svg#selectArrow")
-                .breadcrumbs__page 
-                    .breadcrumbs__text Каталог
-                    svg(width="24" height="24")
-                        use(href="../assets/icons/sprite.svg#selectArrow")
-                .breadcrumbs__page.breadcrumbs--current
-                    .breadcrumbs__text Субстракт универсальный
-        .product-details__main
-            .product-details__swiper
-                    .swiper.item-swiper
-                        .swiper-wrapper 
+     
+    .product-details.breadcrumbs
+            .breadcrumbs__page 
+                .breadcrumbs__text Главная
+                svg(width="24" height="24")
+                    use(href="../assets/icons/sprite.svg#selectArrow")
+            .breadcrumbs__page 
+                .breadcrumbs__text Каталог
+                svg(width="24" height="24")
+                    use(href="../assets/icons/sprite.svg#selectArrow")
+            .breadcrumbs__page.breadcrumbs--current
+                .breadcrumbs__text Субстракт универсальный
+    .container            
+        .product-details__content
+            .product-details__main
+                .product-details__swiper-item
+                        .swiper.item-swiper
+                            .swiper-wrapper 
+                                .swiper-slide
+                                    img(src="../assets/images/productDetails.png", alt="")  
+                                .swiper-slide
+                                    img(src="../assets/images/productDetails.png", alt="") 
+                                .swiper-slide
+                                    img(src="../assets/images/productDetails.png", alt="") 
+                                .swiper-slide
+                                    img(src="../assets/images/productDetails.png", alt="") 
+                                .swiper-slide
+                                    img(src="../assets/images/productDetails.png", alt="") 
+                            .item-swiper__ui
+                                button.item-swiper__button-prev.btn.btn--light-green
+                                    svg(width="24" height='24')
+                                        use(href="../assets/icons/sprite.svg#selectArrow")
+                                .item-swiper__pagination-wrapper 
+                                    .item-swiper__pagination 
+                                button.item-swiper__button-next.btn.btn--light-green
+                                    svg(width="24" height='24')
+                                        use(href="../assets/icons/sprite.svg#selectArrow")
+                .product-details__info 
+                    .product-details__title Субстрак универсальный
+                    .product-details__price
+                        .product-details__price-header.subheader
+                            .subheader__icon
+                                svg(width="24" height="24")
+                                    use(href="../assets/icons/sprite.svg#circle") 
+                            .subheader__title Цена
+                        .product-detail__main по договоренности
+
+                    .product-details__characteristics
+                        .product-details__header.subheader
+                            .subheader__icon
+                                    svg(width="24" height="24")
+                                        use(href="../assets/icons/sprite.svg#star") 
+                            .subheader__title Характеристики
+                        .product-details__main
+                            ul.product-details__characteristics-list 
+                                li.product-details__characteristics-item
+                                    .product-details__characteristics-characteristic Объем
+                                    .product-details__characteristics-border
+                                    .product-details__characteristics-quantity 1л
+                                li.product-details__characteristics-item
+                                    .product-details__characteristics-characteristic Предназначение
+                                    .product-details__characteristics-border
+                                    .product-details__characteristics-quantity универсальное
+                                li.product-details__characteristics-item
+                                    .product-details__characteristics-characteristic Ширина
+                                    .product-details__characteristics-border
+                                    .product-details__characteristics-quantity 15 см
+            .product-details__swiper-similar
+                .promotions__header.section-header
+                    .section-header__first-row
+                        h1.section-header__title Похожие товары
+                .item-swiper
+                    .swiper
+                        .swiper-wrapper
                             .swiper-slide
-                                img(src="../assets/images/productDetails.png", alt="")  
+                                +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
                             .swiper-slide
-                                img(src="../assets/images/productDetails.png", alt="") 
+                                +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
                             .swiper-slide
-                                img(src="../assets/images/productDetails.png", alt="") 
+                                +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
                             .swiper-slide
-                                img(src="../assets/images/productDetails.png", alt="") 
+                                +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
                             .swiper-slide
-                                img(src="../assets/images/productDetails.png", alt="") 
+                                +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
+                            .swiper-slide
+                                +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
+                            .swiper-slide
+                                +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
+                            .swiper-slide
+                                +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
                         .item-swiper__ui
                             button.item-swiper__button-prev.btn.btn--light-green
                                 svg(width="24" height='24')
@@ -43,32 +108,26 @@ html(lang='ru')
                             button.item-swiper__button-next.btn.btn--light-green
                                 svg(width="24" height='24')
                                     use(href="../assets/icons/sprite.svg#selectArrow")
-            .product-details__info 
-                .product-details__title Субстрак универсальный
-                .product-details__price
-                    .product-details__price-header.subheader
-                        .subheader__price-icon
-                            svg()
-                                use() 
-                        .subheader__price-title Цена
-                    .subheader__price-main по договоренности
-                .product-details__characteristics
-                    .product-details__characteristics-header.subheader
-                        .subheader__characteristics-icon
-                                svg()
-                                    use() 
-                        .subheader__characteristics-title Характеристики
-                    ul.product-details__characteristics-list 
-                        li.product-details__characteristics-item
-                            .product-details__characteristics-characteristic Объем
-                            .product-details__characteristics-quantity 1л
-                        li.product-details__characteristics-item
-                            .product-details__characteristics-characteristic Предназначение
-                            .product-details__characteristics-quantity универсальное
-                        li.product-details__characteristics-item
-                            .product-details__characteristics-characteristic Ширина
-                            .product-details__characteristics-quantity 15 см
-
+            .product-details__swiper-watched
+                .promotions__header.section-header
+                    .section-header__first-row
+                        h1.section-header__title Вы смотрели
+                .item-swiper
+                    .swiper
+                        .swiper-wrapper
+                            .swiper-slide
+                                +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
+                            .swiper-slide
+                                +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
+                        .item-swiper__ui
+                            button.item-swiper__button-prev.btn.btn--light-green
+                                svg(width="24" height='24')
+                                    use(href="../assets/icons/sprite.svg#selectArrow")
+                            .item-swiper__pagination-wrapper 
+                                .item-swiper__pagination 
+                            button.item-swiper__button-next.btn.btn--light-green
+                                svg(width="24" height='24')
+                                    use(href="../assets/icons/sprite.svg#selectArrow")
 
                 
   +footer

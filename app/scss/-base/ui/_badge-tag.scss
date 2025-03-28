@@ -1,8 +1,28 @@
-.badge-tag{
+.badge-tag {
     padding: 12px 24px;
     background-color: $MLightGray;
     border-radius: 60px;
     font-weight: 700;
     font-size: 20px;
     text-transform: uppercase;
+
+    @media (hover : hover) and (pointer : fine) {
+        &:hover {
+            background-color: $GLightG;
+            color: $GMediumG;
+            transition: all 0.3s;
+        }
+    }
+
+    &:active {
+        background-color: $GMediumG;
+        color: $MWhite;
+        transition: all 0.3s;
+    }
+
+    &--current {
+        background-color: $GMediumG;
+        color: $MWhite;
+    }
+
 }

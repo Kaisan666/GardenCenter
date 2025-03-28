@@ -1,0 +1,60 @@
+include layouts/modules/_m-head.pug
+include layouts/components/header.pug
+include layouts/components/footer.pug
+include layouts/components/ui/productCard.pug
+
+html(lang='ru')
+  +m-head
+  body
+  +header
+  section.promotions 
+     
+    .promotions.breadcrumbs
+            .breadcrumbs__page 
+                .breadcrumbs__text Главная
+                svg(width="24" height="24")
+                    use(href="../assets/icons/sprite.svg#selectArrow")
+            .breadcrumbs__page 
+                .breadcrumbs__text Каталог
+                svg(width="24" height="24")
+                    use(href="../assets/icons/sprite.svg#selectArrow")
+            .breadcrumbs__page.breadcrumbs--current
+                .breadcrumbs__text Субстракт универсальный
+    .container            
+        .beginners__header.section-header
+                .section-header__first-row
+                    h2.section-header__title Наши акции
+                .section-header__second-row Выгодные предложения для вас!
+                .section-header__third-row Не упустите шанс воспользоваться выгодными предложениями и бонусами, которые мы регулярно готовим для вас!
+        .promotions__main       
+                .promotions__promotion-card.promotion-card 
+                    .promotion-card__header 
+                        .promotion-card__title Опытный понедельник
+                        .promotion-card__text Скидка 5% на покупку для пенсионеров каждый понедельник!
+                    .promotion-card__main
+                        .promotion-card__img-wrapper  
+                            img(src="../assets/images/topics/expMonday.png" alt="").promotion-card__img
+                        a(href="##").promotion-card__link.btn.btn--dark-green
+                            svg(width="15" height="15")
+                                use(href="../assets/icons/sprite.svg#link-arrow")
+                .promotions__promotion-card.promotion-card 
+                    .promotion-card__header 
+                        .promotion-card__title Цветочный день рождения!
+                        .promotion-card__text Скидка 10% в день рождения и в течении 3 дней до и 3 дней после для всех! 
+                    .promotion-card__main
+                        .promotion-card__img-wrapper  
+                            img(src="../assets/images/topics/girlBD.png" alt="").promotion-card__img
+                        a(href="##").promotion-card__link.btn.btn--dark-green
+                            svg(width="15" height="15")
+                                use(href="../assets/icons/sprite.svg#link-arrow")
+                .promotions__promotion-card.promotion-card 
+                    .promotion-card__header 
+                        .promotion-card__title Двойная выгода!
+                        .promotion-card__text 2 числа каждого месяца скидки по дисконтным картам удваиваются!
+                    .promotion-card__main
+                        .promotion-card__img-wrapper  
+                            img(src="../assets/images/topics/momGirl.png" alt="").promotion-card__img
+                        a(href="##").promotion-card__link.btn.btn--dark-green
+                            svg(width="15" height="15")
+                                use(href="../assets/icons/sprite.svg#link-arrow")
+  +footer
