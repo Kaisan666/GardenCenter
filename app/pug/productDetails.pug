@@ -76,12 +76,12 @@ html(lang='ru')
                                     .product-details__characteristics-characteristic Ширина
                                     .product-details__characteristics-border
                                     .product-details__characteristics-quantity 15 см
-            .product-details__swiper-similar
-                .promotions__header.section-header
+            .product-details__similar
+                .product-details__header.section-header
                     .section-header__first-row
                         h1.section-header__title Похожие товары
-                .item-swiper
-                    .swiper
+                .item-swiper.products-swiper
+                    .swiper 
                         .swiper-wrapper
                             .swiper-slide
                                 +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
@@ -108,11 +108,11 @@ html(lang='ru')
                             button.item-swiper__button-next.btn.btn--light-green
                                 svg(width="24" height='24')
                                     use(href="../assets/icons/sprite.svg#selectArrow")
-            .product-details__swiper-watched
-                .promotions__header.section-header
+            .product-details__watched
+                .product-details__header.section-header
                     .section-header__first-row
                         h1.section-header__title Вы смотрели
-                .item-swiper
+                .item-swiper.products-swiper
                     .swiper
                         .swiper-wrapper
                             .swiper-slide

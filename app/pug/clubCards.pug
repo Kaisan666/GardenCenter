@@ -7,9 +7,9 @@ html(lang='ru')
   +m-head
   body
   +header
-  section.promotions 
+  section.club-card 
      
-    .promotions.breadcrumbs
+    .club-card.breadcrumbs
             .breadcrumbs__page 
                 .breadcrumbs__text Главная
                 svg(width="24" height="24")
@@ -20,9 +20,10 @@ html(lang='ru')
                     use(href="../assets/icons/sprite.svg#selectArrow")
             .breadcrumbs__page.breadcrumbs--current
                 .breadcrumbs__text Субстракт универсальный
-    .container            
-        .beginners__header.section-header
-                .section-header__first-row
-                    h2.section-header__title Наши акции
-                .section-header__second-row Выгодные предложения для вас!
-                .section-header__third-row Не упустите шанс воспользоваться выгодными предложениями и бонусами, которые мы регулярно готовим для вас!
+    .container 
+        .club-card__content           
+            .club-card__header.section-header
+                    .section-header__first-row
+                        h2.section-header__title Наши акции
+                    .section-header__second-row Выгодные предложения для вас!
+                    .section-header__third-row Не упустите шанс воспользоваться выгодными предложениями и бонусами, которые мы регулярно готовим для вас!

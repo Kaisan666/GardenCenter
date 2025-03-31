@@ -7,9 +7,9 @@ html(lang='ru')
   +m-head
   body
   +header
-  section.promotions 
+  section.search 
      
-    .promotions.breadcrumbs
+    .search.breadcrumbs
             .breadcrumbs__page 
                 .breadcrumbs__text Главная
                 svg(width="24" height="24")
@@ -21,11 +21,11 @@ html(lang='ru')
             .breadcrumbs__page.breadcrumbs--current
                 .breadcrumbs__text Субстракт универсальный
     .container            
-        .beginners__header.section-header
+        .search__header.section-header
                 .section-header__first-row
                     h2.section-header__title Результаты поиска
                 .section-header__second-row Выгодные предложения для вас!
-        .collection__main.catalog-list
+        .search__main.catalog-list
             +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
             +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
             +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
@@ -42,7 +42,7 @@ html(lang='ru')
             +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
             +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
             +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
-        .catalog__pagination.catalog-pagination
+        .search__pagination.catalog-pagination
             button.catalog-pagination__more-btn
                 .catalog-pagination__text показать еще 
                 .catalog-pagination__icon

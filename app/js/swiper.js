@@ -127,3 +127,27 @@ if(watched){
         },
     })
 }
+const productsSwipers = document.querySelectorAll(".products-swiper")
+if(productsSwipers){
+    productsSwipers.forEach(swiper => {
+        new Swiper(swiper, {
+            pagination : {
+                el : ".item-swiper__pagination",
+                clickable : true
+            },
+            navigation: {
+                nextEl: '.item-swiper__button-next',
+                prevEl: '.item-swiper__button-prev',
+              },
+            slidesPerView: 1.5,
+            // autoHeight : true
+            spaceBetween : 32,
+            breakpoints : {
+                765 : {
+                    slidesPerView : 4
+                }
+            },
+        })
+    })
+    
+}
