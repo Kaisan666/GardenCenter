@@ -21,6 +21,8 @@
     }
     &__categories{
         gap: 8px;
+        flex-wrap: wrap;
+        display: flex;
     }
     &__category{
         a{
@@ -43,5 +45,17 @@
         color: $MDarkGray;
         line-height: 110%;
         font-weight: 600;
+    }
+    @include mobile {
+        &__link{
+            padding: 12px;
+            svg{
+                height: 15px;
+                width: 15px;
+            }
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
+        }
     }
 }

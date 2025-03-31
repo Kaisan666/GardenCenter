@@ -22,28 +22,28 @@ new Swiper(mainSwiper, {
     spaceBetween : 20,
 })
 }
-const newItems = document.querySelector(".new-items__swiper")
-if (newItems) {
-    const newItemsSwiper = newItems.querySelector(".swiper")
-    new Swiper(newItemsSwiper, {
-        pagination : {
-            el : ".item-swiper__pagination",
-            clickable : true
-        },
-        navigation: {
-            nextEl: '.item-swiper__button-next',
-            prevEl: '.item-swiper__button-prev',
-          },
-        slidesPerView: 1.5,
-        // autoHeight : true
-        spaceBetween : 32,
-        breakpoints : {
-            765 : {
-                slidesPerView : 4
-            }
-        },
-    })
-}
+// const newItems = document.querySelector(".new-items__swiper")
+// if (newItems) {
+//     const newItemsSwiper = newItems.querySelector(".swiper")
+//     new Swiper(newItemsSwiper, {
+//         pagination : {
+//             el : ".item-swiper__pagination",
+//             clickable : true
+//         },
+//         navigation: {
+//             nextEl: '.item-swiper__button-next',
+//             prevEl: '.item-swiper__button-prev',
+//           },
+//         slidesPerView: 1.5,
+//         // autoHeight : true
+//         spaceBetween : 32,
+//         breakpoints : {
+//             765 : {
+//                 slidesPerView : 4
+//             }
+//         },
+//     })
+// }
 const blog = document.querySelector(".blog__swiper")
 if(blog){
     const blogSwiper = blog.querySelector(".swiper")
@@ -83,53 +83,55 @@ if(productDetail){
         spaceBetween : 10,
     })
 }
-const similars = document.querySelector(".product-details__swiper-similar")
-if(similars){
-    const similarProductsSwiper = similars.querySelector(".swiper")
-    new Swiper(similarProductsSwiper, {
-        pagination : {
-            el : ".item-swiper__pagination",
-            clickable : true
-        },
-        navigation: {
-            nextEl: '.item-swiper__button-next',
-            prevEl: '.item-swiper__button-prev',
-          },
-        slidesPerView: 1.5,
-        // autoHeight : true
-        spaceBetween : 32,
-        breakpoints : {
-            765 : {
-                slidesPerView : 4
-            }
-        },
-    })
-}
-const watched = document.querySelector(".product-details__swiper-watched")
-if(watched){
-    const watchedSwiper = watched.querySelector(".swiper")
-    new Swiper(watchedSwiper, {
-        pagination : {
-            el : ".item-swiper__pagination",
-            clickable : true
-        },
-        navigation: {
-            nextEl: '.item-swiper__button-next',
-            prevEl: '.item-swiper__button-prev',
-          },
-        slidesPerView: 1.5,
-        // autoHeight : true
-        spaceBetween : 32,
-        breakpoints : {
-            765 : {
-                slidesPerView : 4
-            }
-        },
-    })
-}
+// const similars = document.querySelector(".product-details__swiper-similar")
+// if(similars){
+//     const similarProductsSwiper = similars.querySelector(".swiper")
+//     new Swiper(similarProductsSwiper, {
+//         pagination : {
+//             el : ".item-swiper__pagination",
+//             clickable : true
+//         },
+//         navigation: {
+//             nextEl: '.item-swiper__button-next',
+//             prevEl: '.item-swiper__button-prev',
+//           },
+//         slidesPerView: 1.5,
+//         // autoHeight : true
+//         spaceBetween : 32,
+//         breakpoints : {
+//             765 : {
+//                 slidesPerView : 4
+//             }
+//         },
+//     })
+// }
+// const watched = document.querySelector(".product-details__swiper-watched")
+// if(watched){
+//     const watchedSwiper = watched.querySelector(".swiper")
+//     new Swiper(watchedSwiper, {
+//         pagination : {
+//             el : ".item-swiper__pagination",
+//             clickable : true
+//         },
+//         navigation: {
+//             nextEl: '.item-swiper__button-next',
+//             prevEl: '.item-swiper__button-prev',
+//           },
+//         slidesPerView: 1.5,
+//         // autoHeight : true
+//         spaceBetween : 32,
+//         breakpoints : {
+//             765 : {
+//                 slidesPerView : 4
+//             }
+//         },
+//     })
+// }
 const productsSwipers = document.querySelectorAll(".products-swiper")
 if(productsSwipers){
-    productsSwipers.forEach(swiper => {
+
+    productsSwipers.forEach(productSwiper => {
+        const swiper = productSwiper.querySelector(".swiper")
         new Swiper(swiper, {
             pagination : {
                 el : ".item-swiper__pagination",

@@ -4,4 +4,11 @@
         flex-direction: column;
         gap: 80px;
     }
+    
+    @include mobile{
+        overflow: hidden;
+        .swiper{
+            overflow: visible;
+        }
+    }
 }

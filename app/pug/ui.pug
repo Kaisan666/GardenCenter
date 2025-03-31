@@ -1,5 +1,5 @@
 include layouts/modules/_m-head.pug
-
+include layouts/components/ui/productCard.pug
 html(lang='ru')
   +m-head
   body
@@ -43,3 +43,12 @@ html(lang='ru')
             svg(width="24" height="24").button__burger-icon
               use(href="../assets/icons/sprite.svg#burger-icon")
     
+    .product-card__wrapper
+            +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##", [123, 123, 123, 23,23,32,23,23,232,32,])
+            +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##", ["а что если тут будет очень длинная категория"])
+            +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
+    .product-card__wrapper
+            +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
+            +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
+            +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
+            +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")

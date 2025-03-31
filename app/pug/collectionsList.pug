@@ -9,20 +9,20 @@ html(lang='ru')
     +header
     section.collections
 
-        .collections.breadcrumbs
-            .breadcrumbs__page 
-                .breadcrumbs__text Главная
-                svg(width="24" height="24")
-                    use(href="../assets/icons/sprite.svg#selectArrow")
-            .breadcrumbs__page 
-                .breadcrumbs__text Каталог
-                svg(width="24" height="24")
-                    use(href="../assets/icons/sprite.svg#selectArrow")
-            .breadcrumbs__page.breadcrumbs--current
-                .breadcrumbs__text Субстракт универсальный
-        .container
-            .collections__content
 
+        .container
+            .collections.breadcrumbs
+                .breadcrumbs__page 
+                    .breadcrumbs__text Главная
+                    svg(width="24" height="24")
+                        use(href="../assets/icons/sprite.svg#selectArrow")
+                .breadcrumbs__page 
+                    .breadcrumbs__text Каталог
+                    svg(width="24" height="24")
+                        use(href="../assets/icons/sprite.svg#selectArrow")
+                .breadcrumbs__page.breadcrumbs--current
+                    .breadcrumbs__text Субстракт универсальный
+            .collections__content
                 .product-details__swiper-similar
                     .beginners__header.section-header
                         .section-header__first-row
@@ -33,7 +33,7 @@ html(lang='ru')
                                     use(href="../assets/icons/sprite.svg#selectArrow")
                         .section-header__second-row Легкий старт для вашего сада!
                         .section-header__third-row Опробуйте новые товары для сада и огорода, которые мы подготовили для Вашего удобства, урожая и красоты вашего участка!
-                    .item-swiper
+                    .item-swiper.products-swiper
                         .swiper
                             .swiper-wrapper
                                 .swiper-slide
@@ -72,7 +72,7 @@ html(lang='ru')
                                     use(href="../assets/icons/sprite.svg#selectArrow")
                         .section-header__second-row Дарите подарки любимым вместе с нами!
                         .section-header__third-row Ознакомьтесь с подборкой товаров для сада и огорода, которую мы подготовили для Вашего удобства, урожая и красоты вашего участка!
-                    .item-swiper
+                    .item-swiper.products-swiper
                         .swiper
                             .swiper-wrapper
                                 .swiper-slide
