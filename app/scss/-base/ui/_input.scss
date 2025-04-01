@@ -115,4 +115,16 @@
     }
   }
 }
+  &.field--normal{
+    input:not(:placeholder-shown) + .field__placeholder-text {
+      color: transparent;
+      visibility: hidden;
+      transition: all 0.3s;
+    }
+    input:focus + .field__placeholder-text {
+      color: transparent;
+      visibility: hidden;
+      transition: all 0.3s;
+    }
+  }
 }

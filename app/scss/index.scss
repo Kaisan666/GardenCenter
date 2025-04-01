@@ -62,10 +62,7 @@ section {
   }
 }
 
-.categories {
-  display: flex;
-  flex-wrap: wrap;
-}
+
 
 .link {
   color: $GMediumG;
@@ -730,4 +727,11 @@ section {
     color: $GSupportDG;
     transition: all 0.2s ease-in-out;
   }
+}
+
+
+
+.product-card__wrapper{
+  display: flex;
+  gap: 10px;
 }

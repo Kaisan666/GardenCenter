@@ -4,7 +4,6 @@
     gap: 20px;
     justify-content: space-between;
     height: 100%;
-    // width: 316px;
     &__photo{
         flex-grow: 2;
         
@@ -16,13 +15,14 @@
         object-fit: cover;
     }
     &__title{
-        margin-bottom: 12px;
         font-weight: 600;
         font-size: 24px;
         // color
     }
     &__categories{
         gap: 8px;
+        flex-wrap: wrap;
+        display: flex;
     }
     &__category{
         a{
@@ -45,5 +45,17 @@
         color: $MDarkGray;
         line-height: 110%;
         font-weight: 600;
+    }
+    @include mobile {
+        &__link{
+            padding: 12px;
+            svg{
+                height: 15px;
+                width: 15px;
+            }
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
+        }
     }
 }

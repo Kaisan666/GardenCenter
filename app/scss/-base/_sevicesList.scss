@@ -1,0 +1,92 @@
+.services {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+
+.name-card {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 40px;
+    padding: 12px 40px;
+    background-color: $MLightGray;
+    row-gap: 12px;
+
+    &__title {
+        font-weight: 600;
+        font-size: 32px;
+    }
+
+    &__info {
+
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    &__main {
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        grid-column: 1;
+        grid-row: 2;
+        width: 50%;
+
+    }
+
+    &__button {
+        flex-shrink: 0;
+        flex-grow: 0;
+        grid-column: 2;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    @include table {
+        &__main {
+            width: 75%;
+
+        }
+    }
+
+    @include mobile {
+        &__title {
+            font-size: 24px;
+        }
+
+        &__info {
+            width: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        &__button {
+            grid-row: 1;
+            grid-column: 2;
+
+            &.btn {
+                padding: 12px;
+            }
+
+            svg {
+                width: 15px;
+                height: 15px;
+            }
+        }
+
+        &__main {
+            -webkit-line-clamp: 3;
+            line-clamp: 3;
+            width: auto;
+        }
+    }
+}

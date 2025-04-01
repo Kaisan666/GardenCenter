@@ -1,29 +1,116 @@
 .product-details {
+  overflow: hidden;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
   &__main {
     display: flex;
     // justify-content: space-between;
     gap: 40px;
   }
-  &__swiper {
+
+  &__swiper-item {
     min-width: 0;
     flex-grow: 1;
-    max-width: 600px;
+    max-width: 700px;
     align-self: center;
+
+    .swiper-slide {
+      width: 100% !important;
+    }
+
+    img {
+      border-radius: 40px;
+    }
   }
-  &__info{
+
+
+  &__info {
     display: flex;
     flex-direction: column;
     gap: 40px;
   }
+
   &__title {
     font-weight: 700;
     font-size: 48px;
     line-height: 100%;
   }
-  &__price{
-    &-title{
-        font-weight: 600;
-        font-size: 24px;
+
+  &__price {
+    &-title {
+      font-weight: 600;
+      font-size: 24px;
     }
   }
+
+  .subheader {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 12px;
+
+    &__title {
+      font-weight: 600;
+      font-size: 24px;
+    }
+  }
+
+  &__characteristics {
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+    }
+
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    &-characteristic {
+      overflow: hidden;
+      // &::after{
+      //   content: ".........................................................................................................................................................";
+      //   overflow: hidden;
+      // }
+    }
+
+    &-border {
+      flex: 1 1 auto;
+      border-bottom: dotted 3px $MMiddleGray;
+    }
+  }
+
+  @include mobile {
+    &__main {
+      flex-direction: column;
+      gap: 60px;
+    }
+
+    &__similar,
+    &__watched {
+      .swiper {
+        overflow: visible;
+
+      }
+
+      .item-swiper__ui {
+        display: none;
+      }
+    }
+
+    &__title {
+      font-size: 32px;
+      line-height: 110%;
+    }
+  }
+
 }
