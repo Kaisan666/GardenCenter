@@ -4,12 +4,12 @@ include layouts/components/footer.pug
 include layouts/components/ui/productCard.pug
 
 html(lang='ru')
-  +m-head
-  body
-  +header
-  section.photo-studio
-    .container
-        .photo-studio__breadcrumbs.breadcrumbs
+    +m-head
+    body
+    +header
+    section.photo-studio
+        .container
+            .photo-studio__breadcrumbs.breadcrumbs
                 .swiper
                     .swiper-wrapper
                         .swiper-slide 
@@ -25,11 +25,55 @@ html(lang='ru')
                         .swiper-slide
                             .breadcrumbs__page.breadcrumbs--current
                                 .breadcrumbs__text Горшки и кашпо
-        .club-card__header.section-header
+            .club-card__header.section-header
                 .section-header__first-row
                     h2.section-header__title Фотостудия
                 .section-header__second-row Пространство для вдохновения!
                 .section-header__third-row Наша фотостудия — это не просто место для съемок, а пространство, где сочетаются естественная красота природы и современные возможности для творчества. 
-        .photo-studio__content 
-            
-  +footer 
+            .photo-studio__content 
+                .photo-studio__swiper
+                    .swiper.item-swiper
+                        .swiper-wrapper 
+                            .swiper-slide 
+                                img(src="../assets/images/photoStudio/girl.png", alt="")
+                            .swiper-slide 
+                                img(src="../assets/images/photoStudio/girl.png", alt="")
+                            .swiper-slide 
+                                img(src="../assets/images/photoStudio/girl.png", alt="")
+                            .swiper-slide 
+                                img(src="../assets/images/photoStudio/girl.png", alt="")
+                            .swiper-slide 
+                                img(src="../assets/images/photoStudio/girl.png", alt="")
+                        .item-swiper__ui
+                                button.item-swiper__button-prev.btn.btn--light-green
+                                    svg(width="24" height='24')
+                                        use(href="../assets/icons/sprite.svg#selectArrow")
+                                .item-swiper__pagination-wrapper 
+                                    .item-swiper__pagination 
+                                button.item-swiper__button-next.btn.btn--light-green
+                                    svg(width="24" height='24')
+                                        use(href="../assets/icons/sprite.svg#selectArrow")
+                .photo-studio__swiper
+                    .swiper.item-swiper
+                        .swiper-wrapper 
+                            .swiper-slide 
+                                img(src="../assets/images/photoStudio/girls.png", alt="")
+                            .swiper-slide 
+                                img(src="../assets/images/photoStudio/girls.png", alt="")
+                            .swiper-slide 
+                                img(src="../assets/images/photoStudio/girls.png", alt="")
+                            .swiper-slide 
+                                img(src="../assets/images/photoStudio/girls.png", alt="")
+                            .swiper-slide 
+                                img(src="../assets/images/photoStudio/girls.png", alt="")
+                        .item-swiper__ui
+                                button.item-swiper__button-prev.btn.btn--light-green
+                                    svg(width="24" height='24')
+                                        use(href="../assets/icons/sprite.svg#selectArrow")
+                                .item-swiper__pagination-wrapper 
+                                    .item-swiper__pagination 
+                                button.item-swiper__button-next.btn.btn--light-green
+                                    svg(width="24" height='24')
+                                        use(href="../assets/icons/sprite.svg#selectArrow")
+
+    +footer 

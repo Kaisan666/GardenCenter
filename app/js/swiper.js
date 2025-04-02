@@ -171,11 +171,36 @@ if (categories){
         }
     })
 }
-const breadcrumbs = document.querySelector(".breadcrumbs")
+const breadcrumbs = document.querySelectorAll(".breadcrumbs")
+console.log(breadcrumbs)
 if(breadcrumbs){
-    new Swiper(breadcrumbs.querySelector(".swiper"), {
-        // slidesPerView: 2,
-        // autoHeight : true
-        slidesPerView: "auto",
+    breadcrumbs.forEach(breadcrumb => {
+        new Swiper(breadcrumb.querySelector('.swiper'), {
+            // slidesPerView: 2,
+            // autoHeight : true
+            slidesPerView: "auto",
+        })
+    })
+    
+}
+
+const photoSwipers = document.querySelectorAll(".photo-studio__swiper")
+if (photoSwipers){
+    photoSwipers.forEach(photoSwiper => {
+        new Swiper(photoSwiper.querySelector(".swiper"), {
+            loop : true,
+            pagination : {
+                el : ".item-swiper__pagination",
+                clickable : true
+            },
+            navigation: {
+                nextEl: '.item-swiper__button-next',
+                prevEl: '.item-swiper__button-prev',
+              },
+            slidesPerView: 1,
+            // autoHeight : false,
+            height : 100,
+            spaceBetween : 20,
+        })
     })
 }
