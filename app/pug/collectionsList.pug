@@ -11,17 +11,22 @@ html(lang='ru')
 
 
         .container
-            .collections.breadcrumbs
-                .breadcrumbs__page 
-                    .breadcrumbs__text Главная
-                    svg(width="24" height="24")
-                        use(href="../assets/icons/sprite.svg#selectArrow")
-                .breadcrumbs__page 
-                    .breadcrumbs__text Каталог
-                    svg(width="24" height="24")
-                        use(href="../assets/icons/sprite.svg#selectArrow")
-                .breadcrumbs__page.breadcrumbs--current
-                    .breadcrumbs__text Субстракт универсальный
+            .collections__breadcrumbs.breadcrumbs
+                .swiper
+                    .swiper-wrapper
+                        .swiper-slide 
+                            .breadcrumbs__page 
+                                .breadcrumbs__text Главная
+                                svg(width="24" height="24")
+                                    use(href="../assets/icons/sprite.svg#selectArrow")
+                        .swiper-slide
+                            .breadcrumbs__page 
+                                .breadcrumbs__text Каталог
+                                svg(width="24" height="24")
+                                    use(href="../assets/icons/sprite.svg#selectArrow")
+                        .swiper-slide
+                            .breadcrumbs__page.breadcrumbs--current
+                                .breadcrumbs__text Горшки и кашпо
             .collections__content
                 .product-details__swiper-similar
                     .beginners__header.section-header

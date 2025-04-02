@@ -10,7 +10,6 @@
         }
     }
     &__left{
-        
 
     }
     &__right{
@@ -24,12 +23,14 @@
     @include mobile {
             &__right{
             display: flex;
-        }
-        .product-card{
-            &:first-child,
-            &:last-child    {
-                display: none;
+            justify-content: space-between;
+            .product-card{
+                &:first-child,
+                &:last-child    {
+                    display: none;
+                }
             }
         }
+        
     }
 }

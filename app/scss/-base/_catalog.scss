@@ -1,128 +1,29 @@
 .catalog {
     &__categories {
-        gap: 12px;
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    &-list {
-        display: grid;
-        grid-template-columns: repeat(4, auto);
-
-        @include table {
-            grid-template-columns: repeat(3, auto);
-        }
-
-        @include mobile {
-            grid-template-columns: repeat(2, auto);
-        }
-
-        @include mediumMobile {
-            grid-template-columns: auto;
-        }
-
-        column-gap: 32px;
-        row-gap: 20px;
-        padding: 40px 0;
-    }
-
-    &-pagination {
-        display: flex;
-        flex-direction: column;
-
-        &__more-btn {
-            display: flex;
-            background-color: $MLightGray;
-            border-radius: 60px;
-            padding: 12px;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            transition: all 0.3s;
-            svg{
-                transition: all 0.3s;
+        padding-bottom: 40px;
+        .swiper {
+            &-wrapper {
+                flex-wrap: wrap;
+                gap: 12px;
             }
 
-            @media (hover : hover) and (pointer : fine) {
-                &:hover {
-                    background-color: $GLightG;
-                    color: $GMediumG;
-                    transition: all 0.3s;
-                    svg{
-                        fill: $GMediumG;
-                        transition: all 0.3s;
-                    }
-                }
-            }
-
-            &:active {
-                background-color: $GMediumG;
-                color: $MWhite;
-                transition: all 0.3s;
-                svg{
-                    fill: $MWhite;
-                    transition: all 0.3s;
-                }
-            }
-        }
-
-        &__text {
-            font-weight: 700;
-            font-size: 20px;
-            text-transform: uppercase;
-        }
-
-        &__bullets {
-            display: flex;
-            gap: 16px;
-            justify-content: center;
-            padding-top: 23px;
-        }
-
-        &__bullet {
-            &--current {
-                background-color: $GMediumG;
-                color: $MWhite;
-            }
-
-            width: 60px;
-            font-weight: 700;
-            font-size: 20px;
-            text-transform: uppercase;
-            border-radius: 60px;
-            padding: 12px 24px;
-            background-color: $MLightGray;
-
-            @media (hover : hover) and (pointer : fine) {
-                &:hover {
-                    background-color: $GLightG;
-                    color: $GMediumG;
-                    transition: all 0.3s;
-                }
-            }
-
-            &:active {
-                background-color: $GMediumG;
-                color: $MWhite;
-                transition: all 0.3s;
+            &-slide {
+                width: fit-content;
             }
         }
     }
-
-    @include mobile {
-        &-pagination {
-            &__bullet {
-                width: 48px;
-                padding: 12px 18px;
-            }
-        }
-    }
-
     @include table {
-            &__categories{
-            flex-wrap: nowrap;
-            overflow-x: scroll;
+        &__categories {
+            .swiper {
+                &-wrapper {
+                    flex-wrap: nowrap;
+                    gap: 12px;
+                }
+
+                &-slide {
+                    width: fit-content;
+                }
+            }
         }
     }
-
 }

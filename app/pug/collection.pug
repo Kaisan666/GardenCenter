@@ -4,30 +4,35 @@ include layouts/components/footer.pug
 include layouts/components/ui/productCard.pug
 
 html(lang='ru')
-  +m-head
-  body
-  +header
-  section.collection 
-     
-    .collection.breadcrumbs
-            .breadcrumbs__page 
-                .breadcrumbs__text Главная
-                svg(width="24" height="24")
-                    use(href="../assets/icons/sprite.svg#selectArrow")
-            .breadcrumbs__page 
-                .breadcrumbs__text Каталог
-                svg(width="24" height="24")
-                    use(href="../assets/icons/sprite.svg#selectArrow")
-            .breadcrumbs__page.breadcrumbs--current
-                .breadcrumbs__text Субстракт универсальный
-    .container
-        .collection__content
-            .collection__header.section-header
+    +m-head
+    body
+    +header
+    section.collection 
+
+        .collection__breadcrumbs.breadcrumbs
+            .swiper
+                .swiper-wrapper
+                    .swiper-slide 
+                        .breadcrumbs__page 
+                            .breadcrumbs__text Главная
+                            svg(width="24" height="24")
+                                use(href="../assets/icons/sprite.svg#selectArrow")
+                    .swiper-slide
+                        .breadcrumbs__page 
+                            .breadcrumbs__text Каталог
+                            svg(width="24" height="24")
+                                use(href="../assets/icons/sprite.svg#selectArrow")
+                    .swiper-slide
+                        .breadcrumbs__page.breadcrumbs--current
+                            .breadcrumbs__text Горшки и кашпо
+        .container
+            .collection__content
+                .collection__header.section-header
                     .section-header__first-row
                         h2.section-header__title Наши акции
                     .section-header__second-row Выгодные предложения для вас!
                     .section-header__third-row Не упустите шанс воспользоваться выгодными предложениями и бонусами, которые мы регулярно готовим для вас!
-            .collection__main.catalog-list
+                .collection__main.catalog-list
                     +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
                     +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
                     +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
@@ -44,16 +49,16 @@ html(lang='ru')
                     +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
                     +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
                     +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
-            .catalog__pagination.catalog-pagination
-                button.catalog-pagination__more-btn
-                    .catalog-pagination__text показать еще 
-                    .catalog-pagination__icon
-                        svg(width="24" height="24")
-                            use(href="../assets/icons/sprite.svg#selectArrow")
-                .catalog-pagination__bullets
-                    button.catalog-pagination__bullet.catalog-pagination__bullet--current 1
-                    button.catalog-pagination__bullet 2
-                    button.catalog-pagination__bullet 3
-                    button.catalog-pagination__bullet 4
-                    button.catalog-pagination__bullet 5
+                .catalog__pagination.catalog-pagination
+                    button.catalog-pagination__more-btn
+                        .catalog-pagination__text показать еще 
+                        .catalog-pagination__icon
+                            svg(width="24" height="24")
+                                use(href="../assets/icons/sprite.svg#selectArrow")
+                    .catalog-pagination__bullets
+                        button.catalog-pagination__bullet.catalog-pagination__bullet--current 1
+                        button.catalog-pagination__bullet 2
+                        button.catalog-pagination__bullet 3
+                        button.catalog-pagination__bullet 4
+                        button.catalog-pagination__bullet 5
     +footer

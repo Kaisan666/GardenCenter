@@ -153,3 +153,54 @@ if(productsSwipers){
     })
     
 }
+const categories = document.querySelector(".categories")
+if (categories){
+    new Swiper(categories.querySelector(".swiper"), {
+        slidesPerView: "auto",
+        noSwipingClass : "swiper-no-swiping",
+        noSwiping : false,
+        breakpoints : {
+            1023 : {
+                noSwiping : true,
+            }
+        },
+        on : {
+            resize : function(){
+                this.slideTo(0)
+            }
+        }
+    })
+}
+const breadcrumbs = document.querySelectorAll(".breadcrumbs")
+console.log(breadcrumbs)
+if(breadcrumbs){
+    breadcrumbs.forEach(breadcrumb => {
+        new Swiper(breadcrumb.querySelector('.swiper'), {
+            // slidesPerView: 2,
+            // autoHeight : true
+            slidesPerView: "auto",
+        })
+    })
+    
+}
+
+const photoSwipers = document.querySelectorAll(".photo-studio__swiper")
+if (photoSwipers){
+    photoSwipers.forEach(photoSwiper => {
+        new Swiper(photoSwiper.querySelector(".swiper"), {
+            loop : true,
+            pagination : {
+                el : ".item-swiper__pagination",
+                clickable : true
+            },
+            navigation: {
+                nextEl: '.item-swiper__button-next',
+                prevEl: '.item-swiper__button-prev',
+              },
+            slidesPerView: 1,
+            // autoHeight : false,
+            height : 100,
+            spaceBetween : 20,
+        })
+    })
+}

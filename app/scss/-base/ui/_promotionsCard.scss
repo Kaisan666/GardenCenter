@@ -13,10 +13,11 @@
     }
     &__main{
         position: relative;
-        display: flex;
-        flex-direction: column;
+        // display: flex;
+        // flex-direction: column;
         align-items: center;
         max-height: 306px;
+        margin-bottom: 10px;
     }
     &__title {
         font-weight: 600;
@@ -27,6 +28,7 @@
     }
     &__img {
         // height: 100%;
+        width: 100%;
         mask-image: url("../../../assets/images/topics/Subtract.png");
         mask-repeat: no-repeat;
         mask-size: contain;
@@ -39,10 +41,12 @@
     }
 
     &__link {
-        position: relative;
+        position: absolute;
         padding: 0;
         flex: 1 0 auto;
-        bottom: 12.5%;
+        bottom: -5%;
+        left: 50%;
+        transform: translateX(-50%);
         width: 56px;
         height: 56px;
         display: flex;
@@ -52,7 +56,7 @@
     &:nth-child(2){
         flex-direction: column-reverse;
     }
-    @include mobile {
+    @include table {
         flex-direction: column-reverse;
         &__title{
             font-size: 18px;

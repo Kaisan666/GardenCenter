@@ -1,0 +1,15 @@
+.photo-studio{
+    .swiper{
+        &-slide{
+            max-height: 580px;
+            
+            img{
+                object-fit: cover;
+                object-position: 0 60%;
+                width: 100%;
+                height: 100%;
+                border-radius: 40px;
+            }
+        }
+    }
+}

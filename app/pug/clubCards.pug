@@ -7,20 +7,25 @@ html(lang='ru')
     +m-head
     body
     +header
-    section.club-card 
+    section.club-card
 
         .container 
-            .club-card.breadcrumbs
-                .breadcrumbs__page 
-                    .breadcrumbs__text Главная
-                    svg(width="24" height="24")
-                        use(href="../assets/icons/sprite.svg#selectArrow")
-                .breadcrumbs__page 
-                    .breadcrumbs__text Каталог
-                    svg(width="24" height="24")
-                        use(href="../assets/icons/sprite.svg#selectArrow")
-                .breadcrumbs__page.breadcrumbs--current
-                    .breadcrumbs__text Субстракт универсальный
+            .club-card__breadcrumbs.breadcrumbs
+                .swiper
+                    .swiper-wrapper
+                        .swiper-slide 
+                            .breadcrumbs__page 
+                                .breadcrumbs__text Главная
+                                svg(width="24" height="24")
+                                    use(href="../assets/icons/sprite.svg#selectArrow")
+                        .swiper-slide
+                            .breadcrumbs__page 
+                                .breadcrumbs__text Каталог
+                                svg(width="24" height="24")
+                                    use(href="../assets/icons/sprite.svg#selectArrow")
+                        .swiper-slide
+                            .breadcrumbs__page.breadcrumbs--current
+                                .breadcrumbs__text Горшки и кашпо
             .club-card__header.section-header
                 .section-header__first-row
                     h2.section-header__title Клубные карты
@@ -28,7 +33,7 @@ html(lang='ru')
                 .section-header__third-row Хотите получать больше выгод от покупок в нашем садовом центре? Присоединяйтесь к нашей клубной программе и наслаждайтесь особыми условиями для постоянных клиентов! 
             .club-card__content
                 .club-card__photo-wrapper
-                    img(src="../assets/images/clubCard.png", alt="").club-card__photo
+                    img(src="../assets/images/clubCard.png" alt="").club-card__photo
                 .club-card__topic
                     .club-card__topic-header Как получить клубную карту?
                     .club-card__topic-main При единовременной покупке на сумму от 30 000 рублей вы получаете персональную скидочную карту, которая открывает доступ к эксклюзивным привилегиям.
@@ -45,4 +50,3 @@ html(lang='ru')
                     .club-card__topic-main Просто предъявите карту при оплате покупки в магазине и получите скидку. Ваша карта остается активной на неограниченный срок, а чем больше вы покупаете, тем больше преимуществ вас ждет!
                     .club-card__topic-footer Присоединяйтесь к нашему клубу и делайте покупки с удовольствием!
     +footer
-            

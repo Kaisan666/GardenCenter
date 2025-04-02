@@ -17,11 +17,25 @@
         flex-grow: 1;
         flex-basis: 590px;
         align-self: center;
+        .swiper{
+            &-slide{
+                &-active{
+                    display: flex;
+                    justify-content: end;
+                }
+                &-next{
+                    display: flex;
+                    justify-content: start;
+                }
+            }
+
+        }
     }
 
-    @include mobile {
+    @include table {
         &__main{
             flex-direction: column;
+            align-items: center;
         }
         &__swiper{
             align-self: normal;

@@ -58,6 +58,7 @@
     }
 
     @include mobile {
+        padding: 24px 20px;
         &__title {
             font-size: 24px;
         }

@@ -7,8 +7,16 @@
     
     @include mobile{
         overflow: hidden;
+        &__content{
+            gap: 40px;
         .swiper{
             overflow: visible;
         }
+        .item-swiper{
+            &__ui{
+                display: none;
+            }
+        }
+    }
     }
 }

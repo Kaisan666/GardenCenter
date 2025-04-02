@@ -10,27 +10,17 @@
 
   &__text {
     position: relative;
-    border-radius: 20px 20px 40px 0;
-    padding: 40px 40px 40px 40px;
+    border-radius: 20px 20px 40px 20px;
+    padding: 40px 40px 96px 40px;
     background-color: $GLightG;
     display: flex;
     flex-direction: column;
     gap: 24px;
-
-    // &::after{
-    //   content: "";
-    //   width: 100%;
-    //   height: 25px;
-    //   left: 0;
-    //   bottom: -20px;
-    //   position: absolute;
-    //   background-color: $GLightG;
-    // }
   }
   &__figure {
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: -3%;
     background-color: $MWhite;
     border-radius: 40px 0 0 0;
     max-width: 242px;
@@ -42,8 +32,8 @@
       position: absolute;
       width: 59px;
       height: 40px;
-      left: -28px;
-      bottom: 0;
+      left: -23px;
+      bottom: 19%;
       background-image: url('../../../assets/icons/figure-item-1.svg');
       background-repeat: no-repeat;
     }
@@ -79,8 +69,8 @@
     &-bottom {
       display: flex;
       justify-content: end;
-      
-      position: relative;
+      position: absolute;
+      bottom: -10%;
 
     }
     &-middle{
@@ -89,21 +79,6 @@
       background-color: $GLightG;
       border-radius: 0 0 50px 0;
     }
-  }
-  &__white-space{
-    border-radius: 40px 0 0 0;
-    width: 100%;
-    position: absolute;
-    height: 52px;
-    bottom: 28px;
-    background-color: #fff;
-    // &::before{
-    //   content: url("../../../assets/images/hyperbola.png");
-    //   position: absolute;
-    //   width: 10%;
-    //   height: 100%;
-    //   background-color: white;
-    // }
   }
 
   &__info-card {
@@ -135,10 +110,15 @@
         transform: scale(-1, 1);
       }
       &__text{
-        border-radius: 20px 20px 0px 40px;
+        border-radius: 20px 20px 20px 40px;
       }
-      &__white-space{
-      border-radius: 0px 40px 0 0;
+      &__figure{
+        left: 0;
+        bottom: -4%;
+        transform: scale(-1, 1);
+        &::before{
+          bottom: 20%;
+        }
       }
 
       &__info {

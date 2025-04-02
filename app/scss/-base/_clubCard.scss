@@ -4,6 +4,9 @@
         flex-direction: column;
         gap: 40px;
     }
+    &__photo{
+        border-radius: 40px;
+    }
 
     &__topic {
         display: flex;
