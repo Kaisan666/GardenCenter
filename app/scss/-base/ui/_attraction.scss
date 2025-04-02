@@ -11,7 +11,7 @@
   &__text {
     position: relative;
     border-radius: 20px 20px 40px 0;
-    padding: 40px 40px 40px 40px;
+    padding: 40px 40px 96px 40px;
     background-color: $GLightG;
     display: flex;
     flex-direction: column;
@@ -30,7 +30,7 @@
   &__figure {
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: -5%;
     background-color: $MWhite;
     border-radius: 40px 0 0 0;
     max-width: 242px;
@@ -42,8 +42,8 @@
       position: absolute;
       width: 59px;
       height: 40px;
-      left: -28px;
-      bottom: 0;
+      left: -23px;
+      bottom: 24.5%;
       background-image: url('../../../assets/icons/figure-item-1.svg');
       background-repeat: no-repeat;
     }
@@ -79,8 +79,8 @@
     &-bottom {
       display: flex;
       justify-content: end;
-      
-      position: relative;
+      position: absolute;
+      bottom: -10%;
 
     }
     &-middle{
@@ -137,8 +137,9 @@
       &__text{
         border-radius: 20px 20px 0px 40px;
       }
-      &__white-space{
-      border-radius: 0px 40px 0 0;
+      &__figure{
+        left: 0;
+        transform: scale(-1, 1);
       }
 
       &__info {

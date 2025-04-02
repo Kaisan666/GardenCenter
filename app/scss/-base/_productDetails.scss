@@ -85,7 +85,7 @@
 
     &-border {
       flex: 1 1 auto;
-      border-bottom: dotted 3px $MMiddleGray;
+      border-bottom: dotted 2px $MMiddleGray;
     }
   }
 
@@ -112,5 +112,13 @@
       line-height: 110%;
     }
   }
+  @include smallMobile{
+    &__characteristics{
+      &-item {
+        gap: 0;
+      }
+    }
+  }
+
 
 }

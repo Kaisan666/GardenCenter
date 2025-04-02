@@ -9,49 +9,110 @@ html(lang='ru')
     body
     +header
     section.catalog
-        .catalog__breadcrumbs.breadcrumbs
-            .breadcrumbs__page 
-                .breadcrumbs__text Главная
-                svg(width="24" height="24")
-                    use(href="../assets/icons/sprite.svg#selectArrow")
-            .breadcrumbs__page 
-                .breadcrumbs__text Каталог
-                svg(width="24" height="24")
-                    use(href="../assets/icons/sprite.svg#selectArrow")
-            .breadcrumbs__page.breadcrumbs--current
-                .breadcrumbs__text Горшки и кашпо
         .container
+            .catalog__breadcrumbs.breadcrumbs
+                .swiper
+                    .swiper-wrapper
+                        .swiper-slide 
+                            .breadcrumbs__page 
+                                .breadcrumbs__text Главная
+                                svg(width="24" height="24")
+                                    use(href="../assets/icons/sprite.svg#selectArrow")
+                        .swiper-slide
+                            .breadcrumbs__page 
+                                .breadcrumbs__text Каталог
+                                svg(width="24" height="24")
+                                    use(href="../assets/icons/sprite.svg#selectArrow")
+                        .swiper-slide
+                            .breadcrumbs__page.breadcrumbs--current
+                                .breadcrumbs__text Горшки и кашпо
             .catalog__content
                 .catalog__header.section-header
                     .section-header__first-row
                         h1.section-header__title Наши акции
-                .catalog__categories.categories 
-                    button.category__badge-tag.badge-tag.badge-tag--current Все
-                    button.category__badge-tag.badge-tag Амфора
-                    button.category__badge-tag.badge-tag бриз
-                    button.category__badge-tag.badge-tag бук
-                    button.category__badge-tag.badge-tag бутон птицы
-                    button.category__badge-tag.badge-tag венге
-                    button.category__badge-tag.badge-tag венера
-                    button.category__badge-tag.badge-tag волна
-                    button.category__badge-tag.badge-tag восток
-                    button.category__badge-tag.badge-tag девочка
-                    button.category__badge-tag.badge-tag квартет
-                    button.category__badge-tag.badge-tag коба меандр
-                    button.category__badge-tag.badge-tag кольца
-                    button.category__badge-tag.badge-tag терракота
-                    button.category__badge-tag.badge-tag модерн
-                    button.category__badge-tag.badge-tag мозайка
-                    button.category__badge-tag.badge-tag орха
-                    button.category__badge-tag.badge-tag рифленный
-                    button.category__badge-tag.badge-tag грань
-                    button.category__badge-tag.badge-tag плошка
-                    button.category__badge-tag.badge-tag ритм
-                    button.category__badge-tag.badge-tag роза
-                    button.category__badge-tag.badge-tag страйп
-                    button.category__badge-tag.badge-tag тюльпан
-                    button.category__badge-tag.badge-tag уют
-                    button.category__badge-tag.badge-tag цилиндр
+                .catalog__categories.categories
+                    .swiper.swiper-no-swiping
+                        .swiper-wrapper 
+                            .swiper-slide
+                                button.category__badge-tag.badge-tag.badge-tag--current Все
+                            .swiper-slide
+                                button.category__badge-tag.badge-tag Амфора
+                            .swiper-slide
+                                button.category__badge-tag.badge-tag Амфора
+                            .swiper-slide
+                                button.category__badge-tag.badge-tag бриз
+                            .swiper-slide
+                                button.category__badge-tag.badge-tag бук
+                            .swiper-slide
+                                button.category__badge-tag.badge-tag бутон птицы
+                            .swiper-slide
+                                button.category__badge-tag.badge-tag венге
+                            .swiper-slide
+                                button.category__badge-tag.badge-tag венера
+                            .swiper-slide
+                                button.category__badge-tag.badge-tag волна
+                            .swiper-slide
+                                button.category__badge-tag.badge-tag восток
+                            .swiper-slide
+                                button.category__badge-tag.badge-tag девочка
+                            .swiper-slide
+                                button.category__badge-tag.badge-tag квартет
+                            .swiper-slide
+                                button.category__badge-tag.badge-tag коба меандр
+                            .swiper-slide
+                                button.category__badge-tag.badge-tag кольца
+                            .swiper-slide
+                                button.category__badge-tag.badge-tag терракота
+                            .swiper-slide
+                                button.category__badge-tag.badge-tag модерн
+                            .swiper-slide
+                                button.category__badge-tag.badge-tag мозайка
+                            .swiper-slide
+                                button.category__badge-tag.badge-tag орха
+                            .swiper-slide
+                                button.category__badge-tag.badge-tag рифленный
+                            .swiper-slide
+                                button.category__badge-tag.badge-tag грань
+                            .swiper-slide
+                                button.category__badge-tag.badge-tag плошка
+                            .swiper-slide
+                                button.category__badge-tag.badge-tag ритм
+                            .swiper-slide
+                                button.category__badge-tag.badge-tag роза
+                            .swiper-slide
+                                button.category__badge-tag.badge-tag страйп
+                            .swiper-slide
+                                button.category__badge-tag.badge-tag тюльпан
+                            .swiper-slide
+                                button.category__badge-tag.badge-tag уют
+                            .swiper-slide
+                                button.category__badge-tag.badge-tag цилиндр
+                    //- button.category__badge-tag.badge-tag.badge-tag--current Все
+                    //- button.category__badge-tag.badge-tag Амфора
+                    //- button.category__badge-tag.badge-tag бриз
+                    //- button.category__badge-tag.badge-tag бук
+                    //- button.category__badge-tag.badge-tag бутон птицы
+                    //- button.category__badge-tag.badge-tag венге
+                    //- button.category__badge-tag.badge-tag венера
+                    //- button.category__badge-tag.badge-tag волна
+                    //- button.category__badge-tag.badge-tag восток
+                    //- button.category__badge-tag.badge-tag девочка
+                    //- button.category__badge-tag.badge-tag квартет
+                    //- button.category__badge-tag.badge-tag коба меандр
+                    //- button.category__badge-tag.badge-tag кольца
+                    //- button.category__badge-tag.badge-tag терракота
+                    //- button.category__badge-tag.badge-tag модерн
+                    //- button.category__badge-tag.badge-tag мозайка
+                    //- button.category__badge-tag.badge-tag орха
+                    //- button.category__badge-tag.badge-tag рифленный
+                    //- button.category__badge-tag.badge-tag грань
+                    //- button.category__badge-tag.badge-tag плошка
+                    //- button.category__badge-tag.badge-tag ритм
+                    //- button.category__badge-tag.badge-tag роза
+                    //- button.category__badge-tag.badge-tag страйп
+                    //- button.category__badge-tag.badge-tag тюльпан
+                    //- button.category__badge-tag.badge-tag уют
+                    //- button.category__badge-tag.badge-tag цилиндр
                 .catalog__main.catalog-list
                     +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
                     +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")

@@ -9,18 +9,23 @@ html(lang='ru')
   +header
   section.promotions 
      
-    .promotions.breadcrumbs
-            .breadcrumbs__page 
-                .breadcrumbs__text Главная
-                svg(width="24" height="24")
-                    use(href="../assets/icons/sprite.svg#selectArrow")
-            .breadcrumbs__page 
-                .breadcrumbs__text Каталог
-                svg(width="24" height="24")
-                    use(href="../assets/icons/sprite.svg#selectArrow")
-            .breadcrumbs__page.breadcrumbs--current
-                .breadcrumbs__text Субстракт универсальный
     .container            
+        .promotions__breadcrumbs.breadcrumbs
+                    .swiper
+                        .swiper-wrapper
+                            .swiper-slide 
+                                .breadcrumbs__page 
+                                    .breadcrumbs__text Главная
+                                    svg(width="24" height="24")
+                                        use(href="../assets/icons/sprite.svg#selectArrow")
+                            .swiper-slide
+                                .breadcrumbs__page 
+                                    .breadcrumbs__text Каталог
+                                    svg(width="24" height="24")
+                                        use(href="../assets/icons/sprite.svg#selectArrow")
+                            .swiper-slide
+                                .breadcrumbs__page.breadcrumbs--current
+                                    .breadcrumbs__text Горшки и кашпо
         .promotions__header.section-header
                 .section-header__first-row
                     h2.section-header__title Наши акции

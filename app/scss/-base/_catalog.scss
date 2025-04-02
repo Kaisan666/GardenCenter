@@ -1,8 +1,14 @@
 .catalog {
     &__categories {
-        gap: 12px;
-        display: flex;
-        flex-wrap: wrap;
+        .swiper{
+            &-wrapper{
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+            &-slide{
+                width: fit-content;
+            }
+        }
     }
 
     &-list {
@@ -108,9 +114,26 @@
             }
         }
     }
-
+    @include table {
+            &__categories{
+                .swiper{
+                    &-wrapper{
+                        flex-wrap: nowrap;
+                        gap: 12px;
+                    }
+                    &-slide{
+                        width: fit-content;
+                    }
+                }
+        }
+    }
+    
     @include mobile {
         &-pagination {
+            &__bullets{
+                gap: 0;
+                justify-content: space-between;
+            }
             &__bullet {
                 width: 48px;
                 padding: 12px 18px;
@@ -118,11 +141,5 @@
         }
     }
 
-    @include table {
-            &__categories{
-            flex-wrap: nowrap;
-            overflow-x: scroll;
-        }
-    }
 
 }

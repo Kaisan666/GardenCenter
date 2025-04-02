@@ -3,10 +3,11 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
-        @media screen and (max-width : $mobile) {
-            display: flex;
-            flex-direction: column;
-
+    }
+    @include mobile {
+        &__main{
+        display: flex;
+        flex-direction: column;
         }
     }
 }

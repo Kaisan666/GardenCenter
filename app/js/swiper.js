@@ -153,3 +153,29 @@ if(productsSwipers){
     })
     
 }
+const categories = document.querySelector(".categories")
+if (categories){
+    new Swiper(categories.querySelector(".swiper"), {
+        slidesPerView: "auto",
+        noSwipingClass : "swiper-no-swiping",
+        noSwiping : false,
+        breakpoints : {
+            1023 : {
+                noSwiping : true,
+            }
+        },
+        on : {
+            resize : function(){
+                this.slideTo(0)
+            }
+        }
+    })
+}
+const breadcrumbs = document.querySelector(".breadcrumbs")
+if(breadcrumbs){
+    new Swiper(breadcrumbs.querySelector(".swiper"), {
+        // slidesPerView: 2,
+        // autoHeight : true
+        slidesPerView: "auto",
+    })
+}
