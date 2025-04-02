@@ -11,6 +11,13 @@
         overflow: hidden;
         .swiper{
             overflow: visible;
+
         }
+        .item-swiper{
+            &__ui{
+                display: none;
+            }
+        }
+        // .ite
     }
 }

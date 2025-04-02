@@ -7,7 +7,7 @@
 }
 
 
-.name-card {
+.offer-card {
     display: grid;
     grid-template-rows: auto auto;
     grid-template-columns: auto auto;
@@ -39,6 +39,7 @@
         grid-column: 1;
         grid-row: 2;
         width: 50%;
+        font-weight: 300;
 
     }
 

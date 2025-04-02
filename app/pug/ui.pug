@@ -52,3 +52,13 @@ html(lang='ru')
             +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
             +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
             +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
+    .pages
+      ul.pages__table
+          li.pages__table-item
+              a(href='/ui.html') UI
+              .pages__table-item-box
+                  iframe(src="/ui.html")
+          li.pages__table-item.pages__table-item--new
+              a(href='/catalog.html') Корзина
+              .pages__table-item-box
+                  iframe(src="/catalog.html")
