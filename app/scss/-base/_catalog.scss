@@ -1,5 +1,11 @@
 .catalog {
     overflow: hidden;
+    &__section-title{
+        font-size: 48px;
+        line-height: 100%;
+        padding-bottom: 40px;
+        font-weight: 700;
+    }
     &__categories {
         padding-bottom: 40px;
         .swiper {
@@ -27,6 +33,13 @@
                     margin-right: 12px;
                 }
             }
+        }
+    }
+    @include mobile{
+        &__section-title{
+            font-size: 32px;
+            line-height: 110%;
+            padding-bottom: 16px;
         }
     }
 }

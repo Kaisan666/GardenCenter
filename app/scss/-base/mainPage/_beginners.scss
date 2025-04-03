@@ -21,6 +21,14 @@
         
     }
     @include mobile {
+        .product-card{
+                    &:first-child{
+                        img{
+                            // max-height: 275px;
+                            aspect-ratio: 12 / 10;
+                        }
+                    }
+                }
             &__right{
             display: flex;
             justify-content: space-between;
@@ -33,4 +41,8 @@
         }
         
     }
+    // @include smallMobile{
+    //     
+    // }
+
 }

@@ -118,6 +118,7 @@
         left: 0;
         bottom: -4%;
         transform: scale(-1, 1);
+        max-width: 315px;
         &::before{
           bottom: 20%;
         }
@@ -149,6 +150,10 @@
       &__img{
         object-fit: cover;
         height: 440px;
+        max-width: 100%;
+        &-wrapper{
+          max-width: 640px;
+        }
       }
       
 
@@ -157,7 +162,6 @@
         color: $MBlack;
       }
       &__info{
-        padding: 28px 0;
         &-middle{
         background-color: $MLightGray;
       }}

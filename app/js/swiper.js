@@ -144,10 +144,12 @@ if(productsSwipers){
                 prevEl: '.item-swiper__button-prev',
               },
             slidesPerView: 1.5,
-            spaceBetween : 32,
+            spaceBetween : 24,
+            // autoHeight : true,
             breakpoints : {
                 765 : {
-                    slidesPerView : 4
+                    slidesPerView : 4,
+                    spaceBetween : 32,
                 }
             },
         })

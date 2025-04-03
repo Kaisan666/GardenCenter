@@ -1,0 +1,63 @@
+include layouts/modules/_m-head.pug
+include layouts/components/header.pug
+include layouts/components/footer.pug
+include layouts/components/ui/productCard.pug
+
+html(lang='ru')
+    +m-head
+    body
+    +header
+    section.vacancies 
+        .container 
+            .vacancies__breadcrumbs.breadcrumbs
+                .swiper
+                    .swiper-wrapper
+                        .swiper-slide 
+                            .breadcrumbs__page 
+                                .breadcrumbs__text Главная
+                                svg(width="24" height="24")
+                                    use(href="../assets/icons/sprite.svg#selectArrow")
+                        .swiper-slide
+                            .breadcrumbs__page.breadcrumbs--current
+                                .breadcrumbs__text Вакансии
+            .vacancies__header.section-header
+                .section-header__first-row
+                    h2.section-header__title Вакансии
+                .section-header__second-row Присоединяйтесь к нашей команде!
+                .section-header__third-row У нас всегда есть место для увлеченных и трудолюбивых людей! Станьте частью нашей дружной команды и помогайте создавать уют вместе с нами.
+            .vacancies__container
+                .vacancies__card.offer-card
+                    .offer-card__info
+                        .offer-card__header
+                            .offer-card__title Охранник-контроллер
+                            btn.offer-card__button.btn.btn--dark-green.offer-card__button--mobile
+                                svg(width="24" height="24")
+                                    use(href="../assets/icons/sprite.svg#link-arrow")
+                        .offer-card__main Следите за порядком? У нас есть работа для вас! <br> Сменный график | Стабильная зарплата
+                    btn.offer-card__button.btn.btn--dark-green
+                        svg(width="24" height="24")
+                            use(href="../assets/icons/sprite.svg#link-arrow")
+                .vacancies__card.offer-card
+                    .offer-card__info
+                        .offer-card__header
+                            .offer-card__title Интерьерное озеленение
+                            btn.offer-card__button.btn.btn--dark-green.offer-card__button--mobile
+                                svg(width="24" height="24")
+                                    use(href="../assets/icons/sprite.svg#link-arrow")
+                        .offer-card__main Любите растения и общение? Приглашаем в нашу команду! <br> Гибкий график | Конкурентная зарплата
+                    btn.offer-card__button.btn.btn--dark-green
+                        svg(width="24" height="24")
+                            use(href="../assets/icons/sprite.svg#link-arrow")
+                .vacancies__card.offer-card
+                    .offer-card__info
+                        .offer-card__header
+                            .offer-card__title Садовник-агроном
+                            btn.offer-card__button.btn.btn--dark-green.offer-card__button--mobile
+                                svg(width="24" height="24")
+                                    use(href="../assets/icons/sprite.svg#link-arrow")
+                        .offer-card__main Любите растения и умеете ухаживать за ними? Мы вас ждем! <br> Стабильная работа | Возможность профессионального роста.
+                    btn.offer-card__button.btn.btn--dark-green
+                        svg(width="24" height="24")
+                            use(href="../assets/icons/sprite.svg#link-arrow")
+
+    +footer

@@ -1,0 +1,69 @@
+include layouts/modules/_m-head.pug
+include layouts/components/header.pug
+include layouts/components/footer.pug
+include layouts/components/ui/productCard.pug
+
+html(lang='ru')
+    +m-head
+    body
+    +header
+    section.gift-card-detail
+
+        .container 
+            .gift-card-detail__breadcrumbs.breadcrumbs
+                .swiper
+                    .swiper-wrapper
+                        .swiper-slide 
+                            .breadcrumbs__page 
+                                .breadcrumbs__text Главная
+                                svg(width="24" height="24")
+                                    use(href="../assets/icons/sprite.svg#selectArrow")
+                        .swiper-slide
+                            .breadcrumbs__page 
+                                .breadcrumbs__text Каталог
+                                svg(width="24" height="24")
+                                    use(href="../assets/icons/sprite.svg#selectArrow")
+                        .swiper-slide
+                            .breadcrumbs__page.breadcrumbs--current
+                                .breadcrumbs__text Горшки и кашпо
+            .gift-card-detail__header.section-header
+                .section-header__first-row
+                    h2.section-header__title Клубные карты
+                .section-header__second-row Привилегии для наших клиентов!
+                .section-header__third-row Хотите получать больше выгод от покупок в нашем садовом центре? Присоединяйтесь к нашей клубной программе и наслаждайтесь особыми условиями для постоянных клиентов! 
+            .gift-card-detail__content
+                .gift-card-detail__photo-wrapper
+                    img(src="../assets/images/clubCard.png" alt="").gift-card-detail__photo
+                .gift-card-detail__topic
+                    .gift-card-detail__topic-header Ваши преимущества:
+                    .gift-card-detail__topic-main
+                        ul 
+                            li Персональная скидка – выгодные условия на все категории товаров, включая растения, удобрения, аксессуары и декор.
+                            li Специальные предложения – ранний доступ к акциям, сезонным скидкам и новым коллекциям.
+                            li Закрытые мероприятия – участие в мастер-классах, лекциях и встречах для участников клуба.
+                            li Персональные рекомендации – помощь в подборе растений и уходе за ними от наших экспертов.
+                .gift-card-detail__topic
+                    .gift-card-detail__topic-header Ваши преимущества:
+                    .gift-card-detail__topic-main
+                        ul 
+                            li Персональная скидка – выгодные условия на все категории товаров, включая растения, удобрения, аксессуары и декор.
+                            li Специальные предложения – ранний доступ к акциям, сезонным скидкам и новым коллекциям.
+                            li Закрытые мероприятия – участие в мастер-классах, лекциях и встречах для участников клуба.
+                            li Персональные рекомендации – помощь в подборе растений и уходе за ними от наших экспертов.
+                .gift-card-detail__topic
+                    .gift-card-detail__topic-header Ваши преимущества:
+                    .gift-card-detail__topic-main
+                        ul 
+                            li Персональная скидка – выгодные условия на все категории товаров, включая растения, удобрения, аксессуары и декор.
+                            li Специальные предложения – ранний доступ к акциям, сезонным скидкам и новым коллекциям.
+                            li Закрытые мероприятия – участие в мастер-классах, лекциях и встречах для участников клуба.
+                            li Персональные рекомендации – помощь в подборе растений и уходе за ними от наших экспертов.
+                .gift-card-detail__topic
+                    .gift-card-detail__topic-header Ваши преимущества:
+                    .gift-card-detail__topic-main
+                        ul 
+                            li Персональная скидка – выгодные условия на все категории товаров, включая растения, удобрения, аксессуары и декор.
+                            li Специальные предложения – ранний доступ к акциям, сезонным скидкам и новым коллекциям.
+                            li Закрытые мероприятия – участие в мастер-классах, лекциях и встречах для участников клуба.
+                            li Персональные рекомендации – помощь в подборе растений и уходе за ними от наших экспертов.
+    +footer

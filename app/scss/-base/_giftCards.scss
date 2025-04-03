@@ -1,0 +1,38 @@
+.gift-card {
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    &__photo{
+        border-radius: 40px;
+        &-wrapper{
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &__topic {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        &-header {
+            font-weight: 600;
+            font-size: 24px;
+        }
+
+        ul {
+            li {
+                list-style: inside;
+            }
+        }
+    }
+    @include mobile{
+        &__topic{
+            &-header{
+                font-size: 18px;
+            }
+        }
+    }
+}

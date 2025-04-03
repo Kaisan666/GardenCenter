@@ -7,6 +7,7 @@
         // padding: 40px 0;
         padding-bottom: 40px;
     }
+
     &-pagination {
         display: flex;
         flex-direction: column;
@@ -20,7 +21,8 @@
             align-items: center;
             gap: 10px;
             transition: all 0.3s;
-            svg{
+
+            svg {
                 transition: all 0.3s;
             }
 
@@ -29,7 +31,8 @@
                     background-color: $GLightG;
                     color: $GMediumG;
                     transition: all 0.3s;
-                    svg{
+
+                    svg {
                         fill: $GMediumG;
                         transition: all 0.3s;
                     }
@@ -40,17 +43,20 @@
                 background-color: $GMediumG;
                 color: $MWhite;
                 transition: all 0.3s;
-                svg{
+
+                svg {
                     fill: $MWhite;
                     transition: all 0.3s;
                 }
             }
         }
+
         &__text {
             font-weight: 700;
             font-size: 20px;
             text-transform: uppercase;
         }
+
         &__bullets {
             display: flex;
             flex-wrap: wrap;
@@ -58,9 +64,8 @@
             gap: 16px;
             justify-content: center;
             padding-top: 23px;
-            max-width: 50%;
-            margin: 0 auto;
         }
+
         &__bullet {
             &--current {
                 background-color: $GMediumG;
@@ -95,8 +100,9 @@
         &-list {
             grid-template-columns: repeat(3, auto);
         }
-        &-pagination{
-            &__bullets{
+
+        &-pagination {
+            &__bullets {
                 max-width: 100%;
                 margin: 0;
             }
@@ -107,13 +113,14 @@
         &-list {
             grid-template-columns: repeat(2, auto);
         }
-        &-pagination{
-        &__bullet {
-            width: 48px;
-            padding: 12px 18px;
+
+        &-pagination {
+            &__bullet {
+                width: 48px;
+                padding: 12px 18px;
+            }
         }
-    }
-        
+
     }
 
     @include mediumMobile {
@@ -121,13 +128,14 @@
             grid-template-columns: auto;
         }
     }
-    @include smallMobile{
+
+    @include smallMobile {
         &-pagination {
-            &__bullets{
+            &__bullets {
                 gap: 0;
                 justify-content: space-between;
             }
-            
+
         }
     }
 }
