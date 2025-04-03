@@ -60,6 +60,15 @@ section {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0px 40px;
+
+  @include table {
+    padding: 0 20px;
+  }
+}
+.swiper-container{
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0px 40px;
   overflow: hidden;
 
   @include table {

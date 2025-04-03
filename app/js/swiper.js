@@ -144,7 +144,6 @@ if(productsSwipers){
                 prevEl: '.item-swiper__button-prev',
               },
             slidesPerView: 1.5,
-            // autoHeight : true
             spaceBetween : 32,
             breakpoints : {
                 765 : {

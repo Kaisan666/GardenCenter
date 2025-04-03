@@ -19,11 +19,12 @@
             .swiper {
                 &-wrapper {
                     flex-wrap: nowrap;
-                    gap: 12px;
+                    column-gap: 0;
                 }
 
                 &-slide {
                     width: fit-content;
+                    margin-right: 12px;
                 }
             }
         }
