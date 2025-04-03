@@ -34,46 +34,61 @@ html(lang='ru')
                 .photo-studio__swiper
                     .swiper.item-swiper
                         .swiper-wrapper 
-                            .swiper-slide 
-                                img(src="../assets/images/photoStudio/girl.png", alt="")
-                            .swiper-slide 
-                                img(src="../assets/images/photoStudio/girl.png", alt="")
-                            .swiper-slide 
-                                img(src="../assets/images/photoStudio/girl.png", alt="")
-                            .swiper-slide 
-                                img(src="../assets/images/photoStudio/girl.png", alt="")
-                            .swiper-slide 
-                                img(src="../assets/images/photoStudio/girl.png", alt="")
+                            .swiper-slide
+                                .photo-studio__img-wrapper 
+                                    img(src="../assets/images/photoStudio/girl.png" alt="")
+                                .photo-studio__img-wrapper 
+                                    img(src="../assets/images/photoStudio/girl.png" alt="")
+                                .photo-studio__img-wrapper 
+                                    img(src="../assets/images/photoStudio/girl.png" alt="")
+                                .photo-studio__img-wrapper 
+                                    img(src="../assets/images/photoStudio/girl.png" alt="")
+                                .photo-studio__img-wrapper 
+                                    img(src="../assets/images/photoStudio/girl.png" alt="")
                         .item-swiper__ui
-                                button.item-swiper__button-prev.btn.btn--light-green
-                                    svg(width="24" height='24')
-                                        use(href="../assets/icons/sprite.svg#selectArrow")
-                                .item-swiper__pagination-wrapper 
-                                    .item-swiper__pagination 
-                                button.item-swiper__button-next.btn.btn--light-green
-                                    svg(width="24" height='24')
-                                        use(href="../assets/icons/sprite.svg#selectArrow")
+                            button.item-swiper__button-prev.btn.btn--light-green
+                                svg(width="24" height='24')
+                                    use(href="../assets/icons/sprite.svg#selectArrow")
+                            .item-swiper__pagination-wrapper 
+                                .item-swiper__pagination 
+                            button.item-swiper__button-next.btn.btn--light-green
+                                svg(width="24" height='24')
+                                    use(href="../assets/icons/sprite.svg#selectArrow")
+                .photo-studio__description
+                .club-card__topic-header Ваши преимущества:
+                    .club-card__topic-main
+                        ul 
+                            li Персональная скидка – выгодные условия на все категории товаров, включая растения, удобрения, аксессуары и декор.
+                            li Специальные предложения – ранний доступ к акциям, сезонным скидкам и новым коллекциям.
+                            li Закрытые мероприятия – участие в мастер-классах, лекциях и встречах для участников клуба.
+                            li Персональные рекомендации – помощь в подборе растений и уходе за ними от наших экспертов.
+                .club-card__topic
+                    .club-card__topic-header Как воспользоваться картой?
+                    .club-card__topic-main Просто предъявите карту при оплате покупки в магазине и получите скидку. Ваша карта остается активной на неограниченный срок, а чем больше вы покупаете, тем больше преимуществ вас ждет!
+                    .club-card__topic-footer Присоединяйтесь к нашему клубу и делайте покупки с удовольствием!
                 .photo-studio__swiper
                     .swiper.item-swiper
                         .swiper-wrapper 
                             .swiper-slide 
-                                img(src="../assets/images/photoStudio/girls.png", alt="")
+                                img(src="../assets/images/photoStudio/girls.png" alt="")
                             .swiper-slide 
-                                img(src="../assets/images/photoStudio/girls.png", alt="")
+                                img(src="../assets/images/photoStudio/girls.png" alt="")
                             .swiper-slide 
-                                img(src="../assets/images/photoStudio/girls.png", alt="")
+                                img(src="../assets/images/photoStudio/girls.png" alt="")
                             .swiper-slide 
-                                img(src="../assets/images/photoStudio/girls.png", alt="")
+                                img(src="../assets/images/photoStudio/girls.png" alt="")
                             .swiper-slide 
-                                img(src="../assets/images/photoStudio/girls.png", alt="")
+                                img(src="../assets/images/photoStudio/girls.png" alt="")
                         .item-swiper__ui
-                                button.item-swiper__button-prev.btn.btn--light-green
-                                    svg(width="24" height='24')
-                                        use(href="../assets/icons/sprite.svg#selectArrow")
-                                .item-swiper__pagination-wrapper 
-                                    .item-swiper__pagination 
-                                button.item-swiper__button-next.btn.btn--light-green
-                                    svg(width="24" height='24')
-                                        use(href="../assets/icons/sprite.svg#selectArrow")
-
-    +footer 
+                            button.item-swiper__button-prev.btn.btn--light-green
+                                svg(width="24" height='24')
+                                    use(href="../assets/icons/sprite.svg#selectArrow")
+                            .item-swiper__pagination-wrapper 
+                                .item-swiper__pagination 
+                            button.item-swiper__button-next.btn.btn--light-green
+                                svg(width="24" height='24')
+                                    use(href="../assets/icons/sprite.svg#selectArrow")
+                .club-card__topic
+                    .club-card__topic-header Как воспользоваться картой?
+                    .club-card__topic-main Просто предъявите карту при оплате покупки в магазине и получите скидку. Ваша карта остается активной на неограниченный срок, а чем больше вы покупаете, тем больше преимуществ вас ждет!
+    +footer     

@@ -3,6 +3,8 @@
     gap: 8px;
     padding-bottom: 40px;
     .swiper{
+        width: 100%;
+        overflow: visible;
         margin: 0;
         &-slide{
             width: fit-content;

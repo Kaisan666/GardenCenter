@@ -1,7 +1,9 @@
 .catalog {
+    overflow: hidden;
     &__categories {
         padding-bottom: 40px;
         .swiper {
+            overflow: visible;
             &-wrapper {
                 flex-wrap: wrap;
                 gap: 12px;
@@ -17,11 +19,12 @@
             .swiper {
                 &-wrapper {
                     flex-wrap: nowrap;
-                    gap: 12px;
+                    column-gap: 0;
                 }
 
                 &-slide {
                     width: fit-content;
+                    margin-right: 12px;
                 }
             }
         }

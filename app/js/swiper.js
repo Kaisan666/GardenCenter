@@ -17,6 +17,8 @@ new Swiper(mainSwiper, {
         nextEl: '.swiper-main__button-next',
         prevEl: '.swiper-main__button-prev',
       },
+    // dynamicBullets : true,
+    // dynamicMainBullets : 3,
     slidesPerView: 1,
     // autoHeight : true
     spaceBetween : 20,
@@ -142,7 +144,6 @@ if(productsSwipers){
                 prevEl: '.item-swiper__button-prev',
               },
             slidesPerView: 1.5,
-            // autoHeight : true
             spaceBetween : 32,
             breakpoints : {
                 765 : {
@@ -179,6 +180,7 @@ if(breadcrumbs){
             // slidesPerView: 2,
             // autoHeight : true
             slidesPerView: "auto",
+            noSwiping : false,
         })
     })
     

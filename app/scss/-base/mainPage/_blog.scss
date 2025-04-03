@@ -17,19 +17,6 @@
         flex-grow: 1;
         flex-basis: 590px;
         align-self: center;
-        .swiper{
-            &-slide{
-                &-active{
-                    display: flex;
-                    justify-content: end;
-                }
-                &-next{
-                    display: flex;
-                    justify-content: start;
-                }
-            }
-
-        }
     }
 
     @include table {
@@ -40,6 +27,13 @@
         &__swiper{
             align-self: normal;
             flex-basis: auto;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    }
+    @include mobile{
+        &__swiper{
+            margin: 0;
         }
     }
 }

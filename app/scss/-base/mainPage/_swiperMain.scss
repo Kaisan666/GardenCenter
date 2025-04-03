@@ -1,7 +1,9 @@
 .swiper-main {
   &__pagination {
     display: flex;
-    gap: 20px;
+    // flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
     height: 24px;
     bottom: 8px;
     align-items: center;
@@ -161,7 +163,10 @@
     &__link{
       margin-top: 16px;
     }
-
+    
+  }
+  .swiper{
+border-radius: 0;
   }
 }
 }

@@ -53,9 +53,13 @@
         }
         &__bullets {
             display: flex;
+            flex-wrap: wrap;
+            align-items: center;
             gap: 16px;
             justify-content: center;
             padding-top: 23px;
+            max-width: 50%;
+            margin: 0 auto;
         }
         &__bullet {
             &--current {
@@ -90,6 +94,12 @@
     @include table {
         &-list {
             grid-template-columns: repeat(3, auto);
+        }
+        &-pagination{
+            &__bullets{
+                max-width: 100%;
+                margin: 0;
+            }
         }
     }
 

@@ -11,10 +11,21 @@ mixin newItems
                             use(href=  "../assets/icons/sprite.svg#selectArrow")
                 .section-header__second-row Свежие поступления уже здесь!
                 .section-header__third-row Опробуйте новые товары для сада и огорода, которые мы подготовили для Вашего удобства, урожая и красоты вашего участка!
+        .new-items__swiper-container.swiper-container
             .new-items__swiper.products-swiper
                 .item-swiper
                     .swiper
                         .swiper-wrapper
+                            .swiper-slide
+                                +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
+                            .swiper-slide
+                                +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
+                            .swiper-slide
+                                +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
+                            .swiper-slide
+                                +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
+                            .swiper-slide
+                                +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
                             .swiper-slide
                                 +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
                             .swiper-slide
