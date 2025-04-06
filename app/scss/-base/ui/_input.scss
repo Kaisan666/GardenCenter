@@ -1,8 +1,10 @@
 .field {
   position: relative;
-  input {
+  input,
+  textarea {
     border-radius: 16px;
     padding: 8px 12px;
+    // padding-top: 25px;
     border: 2px solid $GSupportLG;
     width: 100%;
     transition: all 0.3s ease-in-out;
@@ -37,13 +39,15 @@
     color: $MDarkGray;
     transition: all 0.3s ease-in-out;
   }
-  input:not(:placeholder-shown) + &__placeholder-text {
+  input:not(:placeholder-shown) + &__placeholder-text,
+  textarea:not(:placeholder-shown) + &__placeholder-text{
     top: 8px;
     transform: translate(0);
     font-size: 12px;
     transition: all 0.3s ease-in-out;
   }
-  input:focus + &__placeholder-text {
+  input:focus + &__placeholder-text,
+  textarea:focus + &__placeholder-text {
     top: 8px;
     transform: translate(0);
     font-size: 12px;
@@ -66,7 +70,8 @@
       fill: $GMediumG;
       transition: all 0.3s ease-in-out;
     }
-    input:focus {
+    input:focus,
+    textarea:focus {
       transition: all 0.3s ease-in-out;
       border: 2px solid $GMediumG;
     }
@@ -78,17 +83,20 @@
       fill: $GMediumG;
       transition: all 0.3s ease-in-out;
     }
-    &:has(input:focus) &__date-time {
+    &:has(input:focus) &__date-time,
+    &:has(textarea:focus) &__date-time {
       color: $GMediumG;
       transition: all 0.3s ease-in-out;
     }
   }
-  &:has(&:disabled) input {
+  &:has(&:disabled) input,
+  &:has(&:disabled) textarea {
     border: 2px solid $MMiddleGray;
     pointer-events: none;
   }
   &.field--error {
-    input {
+    input,
+    textarea {
       border: 2px solid $MRed;
       background: $MLightRed;
       transition: all 0.3s ease-in-out;
@@ -100,7 +108,8 @@
     }
     
     &__placeholder{
-    &:has(input:focus) .field__placeholder-text {    ///спросить про селектор
+    &:has(input:focus) .field__placeholder-text,
+    &:has(textarea:focus) .field__placeholder-text {    ///спросить про селектор
         color: $MRed;
       }
   }
@@ -116,12 +125,14 @@
   }
 }
   &.field--normal{
-    input:not(:placeholder-shown) + .field__placeholder-text {
+    input:not(:placeholder-shown) + .field__placeholder-text,
+    textarea:not(:placeholder-shown) + .field__placeholder-text{
       color: transparent;
       visibility: hidden;
       transition: all 0.3s;
     }
-    input:focus + .field__placeholder-text {
+    input:focus + .field__placeholder-text,
+    textarea:focus + .field__placeholder-text {
       color: transparent;
       visibility: hidden;
       transition: all 0.3s;

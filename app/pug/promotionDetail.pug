@@ -8,7 +8,7 @@ html(lang='ru')
     body
     +header
     section.promotion-details
-        .container
+        .promotion-details__swiper-container.swiper-container
             .promotion-details__breadcrumbs.breadcrumbs
                     .swiper
                         .swiper-wrapper
@@ -25,13 +25,14 @@ html(lang='ru')
                             .swiper-slide
                                 .breadcrumbs__page.breadcrumbs--current
                                     .breadcrumbs__text Горшки и кашпо
+        .container
             .promotion-details__content 
                 .promotion-details__header.section-header
                     .section-header__first-row
                         h2.section-header__title Опытный понедельник
                 .promotion-details__card
-                    .promotion-details__photo-wrapper 
-                        img(src="../assets/images/topics/expMonday.png" alt="").promotion-details__photo
+                    img(src="../assets/images/topics/expMonday.png" alt="").promotion-details__photo
+                    //- .promotion-details__photo-wrapper 
                     .promotion-details__info
                         .promotion-details__main
                             .promotion-details__name Скидка 5% для пенсионеров!

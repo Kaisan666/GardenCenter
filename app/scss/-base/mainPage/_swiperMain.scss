@@ -167,6 +167,14 @@
   }
   .swiper{
 border-radius: 0;
+    &-main{
+      &__button-next {
+        right: 5%;
+      }
+      &__button-prev {
+        left: 5%;
+      }
+    }
   }
 }
 }

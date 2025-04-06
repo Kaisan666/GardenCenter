@@ -2,21 +2,25 @@
     &__card {
         display: flex;
         gap: 40px;
-        align-items: center;
     }
 
     &__photo {
         border-radius: 40px;
-        &-wrapper {
-            align-self: start;
-            min-width: 440px;
-        }
+        height: 100%;
+        object-fit: cover;
+        max-height: 280px;
+        flex: 1 0 440px;
     }
 
     &__main {
         display: flex;
         flex-direction: column;
-        gap: 25px;
+    }
+    &__name{
+        padding-bottom: 20px;
+    }
+    &__description{
+        padding-bottom: 20px;
     }
 
     &__info {
@@ -50,19 +54,18 @@
     }
 
     @include mobile {
+        
         &__card {
             display: flex;
             flex-direction: column;
             gap: 40px;
             align-items: center;
+            justify-content: center;
         }
 
         &__photo {
             border-radius: 40px;
-
-            &-wrapper {
-                min-width: 0;
-            }
+            flex: 1 1 215px;
         }
 
         &__condition {
@@ -79,7 +82,13 @@
             &-name {
                 font-weight: 600;
                 font-size: 18px;
+                
             }
         }
     }
+    // @include mediumMobile{
+    //     &__photo{
+    //         max-height: 215px;
+    //     }
+    // }
 }

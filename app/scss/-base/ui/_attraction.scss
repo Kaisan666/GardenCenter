@@ -182,12 +182,22 @@
     &--gray{
       .attraction{
         &__text{
-          border-radius: 20px 20px 0 0;
+          border-radius: 20px 20px 0 20px;
         }
         &__img{
           height: auto;
         }
       }
+    }
+  }
+  @include mobile{
+    padding-top: 60px;
+    &__text{
+      padding: 20px 20px 70px 20px;
+    }
+    &__img{
+      flex: 1 1 240px;
+      object-fit: cover;
     }
   }
 }

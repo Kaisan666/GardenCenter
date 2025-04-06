@@ -5,15 +5,15 @@ html(lang='ru')
   body
   .container
     .field.field--error
-        .field__container
-          .field__placeholder
-            input(type="text" placeholder=" " )
-            .field__placeholder-text Placeholder
-              svg(width="24" height="24").field__eye-icon
-                use(href="../assets/icons/sprite.svg#hide-password")
-        //- .input__date-time
-        //-   .input__date 06.12.2024
-        //-   .input__time 16:45
+      .field__container
+        .field__placeholder
+          input(type="text" placeholder=" " )
+          .field__placeholder-text Placeholder
+            svg(width="24" height="24").field__eye-icon
+              use(href="../assets/icons/sprite.svg#hide-password")
+      //- .input__date-time
+      //-   .input__date 06.12.2024
+      //-   .input__time 16:45
     .field
       .field__container
         .field__placeholder
@@ -29,36 +29,36 @@ html(lang='ru')
         .btn__content
           svg(width="24" height="24").button__burger-icon
             use(href="../assets/icons/sprite.svg#burger-icon")
-          
+
           .btn__text Name
             svg(width="24" height="24").button__burger-icon
               use(href="../assets/icons/sprite.svg#burger-icon")
-          
+
       button.btn.btn--dark-green
         .btn__content
           svg(width="24" height="24").button__burger-icon
             use(href="../assets/icons/sprite.svg#burger-icon")
-          
+
           .btn__text Name
             svg(width="24" height="24").button__burger-icon
               use(href="../assets/icons/sprite.svg#burger-icon")
-    
+
     .product-card__wrapper
-            +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##", [123, 123, 123, 23,23,32,23,23,232,32,])
-            +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##", ["а что если тут будет очень длинная категория"])
-            +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
+      +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##", [123, 123, 123, 23,23,32,23,23,232,32,])
+      +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##", ["а что если тут будет очень длинная категория"])
+      +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
     .product-card__wrapper
-            +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
-            +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
-            +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
-            +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
+      +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
+      +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
+      +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
+      +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
     .pages
       ul.pages__table
-          li.pages__table-item
-              a(href='/ui.html') UI
-              .pages__table-item-box
-                  iframe(src="/ui.html")
-          li.pages__table-item.pages__table-item--new
-              a(href='/catalog.html') Корзина
-              .pages__table-item-box
-                  iframe(src="/catalog.html")
+        li.pages__table-item
+          a(href='/ui.html') UI
+          .pages__table-item-box
+            iframe(src="/ui.html")
+        li.pages__table-item.pages__table-item--new
+          a(href='/catalog.html') Корзина
+          .pages__table-item-box
+            iframe(src="/catalog.html")

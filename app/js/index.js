@@ -8,7 +8,6 @@ import './swiper';
 //js
 // import $ from 'jquery';
 // import Swiper from 'swiper';
-// import { Fancybox, Carousel, Panzoom } from '@fancyapps/ui';
 // import IMask from 'imask';
 // import Choices from 'choices.js';
 // import autoComplete from '@tarekraafat/autocomplete.js';
@@ -22,6 +21,7 @@ import { computePosition, shift, offset, flip } from '@floating-ui/dom';
 import './btnToggle';
 import './moreBtn';
 import './burger';
+import "./fancyBox"
 // import './marquee'
 
 

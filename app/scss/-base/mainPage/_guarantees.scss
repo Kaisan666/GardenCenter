@@ -1,40 +1,44 @@
 .guarantees {
-    &__main {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
+  &__main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .attraction {
+    gap: 0;
+
+    &__info {
+      flex: 0 1 720px;
     }
 
+    &__img {
+      flex: 1 1 auto;
+    }
+  }
+
+  @include table {
     .attraction {
+      gap: 20px;
+    }
+  }
+  @include mobile {
+    &__main {
+      gap: 40px;
+    }
+    .attraction {
+      &__info {
+        flex: 1 1 auto;
+      }
 
-        gap: 0;
-
-        &__info {
-            flex: 0 1 720px;
-        }
-
-        &__img {
-            flex: 1 1 auto;
-        }
+      &__img {
+        min-height: 240px;
+      }
     }
 
-    @include mobile {
-
-        .attraction {
-            gap: 20px;
-
-            &__info {
-                flex: 1 1 auto;
-            }
-
-            &__img {
-                flex: 1 1 auto;
-            }
-        }
-
-        &__main {
-            display: flex;
-            flex-direction: column;
-        }
+    &__main {
+      display: flex;
+      flex-direction: column;
     }
+  }
 }

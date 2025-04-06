@@ -10,6 +10,8 @@
   }
 
   &__logo {
+    display: flex;
+    align-items: center;
     svg {
       width: 100%;
     }

@@ -80,10 +80,14 @@
         height: auto;
         &__img{
             height: 100%;
+            border-radius: 40px;
+            &-wrapper{
+                flex: 1 1 240px;
+            }
         }
         &__info{
             max-width: 100%;
-            padding: 24px;
+            padding: 24px 20px;
         }
         &__tag{
             display: none;
