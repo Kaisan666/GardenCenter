@@ -20,6 +20,9 @@
   @include table {
     .attraction {
       gap: 20px;
+      &__info{
+        flex: 1 1 auto;
+      }
     }
   }
   @include mobile {
@@ -27,9 +30,6 @@
       gap: 40px;
     }
     .attraction {
-      &__info {
-        flex: 1 1 auto;
-      }
 
       &__img {
         min-height: 240px;

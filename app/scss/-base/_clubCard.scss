@@ -6,9 +6,9 @@
     }
     &__photo{
         border-radius: 40px;
-        &-wrapper{
-            display: flex;
-            justify-content: center;
-        }
+    }
+    &__container-photo{
+        display: flex;
+        justify-content: center;
     }
 }

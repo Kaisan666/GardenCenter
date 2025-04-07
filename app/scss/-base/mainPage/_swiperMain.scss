@@ -8,13 +8,13 @@
     bottom: 8px;
     align-items: center;
     position: absolute;
-    &-wrapper {
-      width: 168px;
-      position: absolute;
-      left: 50%;
-      z-index: 5;
-      transform: translateX(-50%);
-    }
+  }
+  &__wrapper-pagination {
+    width: 168px;
+    position: absolute;
+    left: 50%;
+    z-index: 5;
+    transform: translateX(-50%);
   }
   &__background-img {
     position: absolute;
@@ -84,7 +84,7 @@
         flex-direction: column;
         gap: 3px;
       }
-      &__arrow-wrapper {
+      &__wrapper-arrow {
         width: 24px;
         height: 24px;
         display: flex;

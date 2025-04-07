@@ -1,0 +1,90 @@
+include layouts/modules/_m-head.pug
+include layouts/components/header.pug
+include layouts/components/footer.pug
+include layouts/components/ui/productCard.pug
+
+html(lang='ru')
+    +m-head
+    body
+    +header
+    section.about-us
+        .about-us__breadcrumbs.breadcrumbs.breadcrumbs-case
+            .swiper
+                .swiper-wrapper
+                    .swiper-slide 
+                        .breadcrumbs__page 
+                            .breadcrumbs__text Главная
+                            svg(width="24" height="24")
+                                use(href="../assets/icons/sprite.svg#selectArrow")
+                    .swiper-slide
+                        .breadcrumbs__page 
+                            .breadcrumbs__text Каталог
+                            svg(width="24" height="24")
+                                use(href="../assets/icons/sprite.svg#selectArrow")
+                    .swiper-slide
+                        .breadcrumbs__page.breadcrumbs--current
+                            .breadcrumbs__text Горшки и кашпо
+        .container
+            .club-card__header.section-header
+                .section-header__first-row
+                    h2.section-header__title О нас
+                .section-header__second-row Работаем для вас!
+                .section-header__third-row 27 лет создаем пространство, где каждая покупка — это вдохновение! Качество, стиль и забота о клиентах в каждой детали. 
+            .about-us__content 
+            .photo-swiper
+                .swiper.item-swiper
+                    .swiper-wrapper 
+                        .swiper-slide
+                            .photo-swiper__wrapper-photo
+                                img(src="../assets/images/photoStudio/girls.png" alt="")
+                        .swiper-slide
+                            .photo-swiper__wrapper-photo
+                                img(src="../assets/images/photoStudio/girls.png" alt="")
+                        .swiper-slide
+                            .photo-swiper__wrapper-photo
+                                img(src="../assets/images/photoStudio/girls.png" alt="")
+                        .swiper-slide
+                            .photo-swiper__wrapper-photo
+                                img(src="../assets/images/photoStudio/girls.png" alt="")
+                    .item-swiper__ui
+                        button.item-swiper__button-prev.btn.btn--light-green
+                            svg(width="24" height='24')
+                                use(href="../assets/icons/sprite.svg#selectArrow")
+                        .item-swiper__wrapper-pagination
+                            .item-swiper__pagination 
+                        button.item-swiper__button-next.btn.btn--light-green
+                            svg(width="24" height='24')
+                                use(href="../assets/icons/sprite.svg#selectArrow")
+                .about-us__text
+                    .about-us__text-row Наша история началась в 1998 году. Первоначально мы занимались продажей овощей и фруктов, но вскоре поняли, что нашим призванием является создание уютных зеленых пространств для людей. Так появился наш цветочный центр, который вот уже более 20 лет радует клиентов качественными растениями и аксессуарами для дома и сада.
+                    .about-us__text-row Мы вдохновляемся европейскими садовыми центрами, где каждый посетитель может найти уголок уюта и гармонии. Наш магазин - это не просто место для покупки цветов. Это пространство, где можно отдохнуть, получить профессиональные консультации и даже пообщаться с нашими обитателями – обезьянами и декоративными рыбками кои.
+                .about-us__topic.annotation
+                    .annotation-header Мы предлагаем
+                    .annotation-main
+                        ul.club-card__list.custom-list 
+                            li Комнатные растения и декоративные деревья
+                            li Удобрения и луковицы
+                            li Декор и аксессуары для интерьера
+                            li Услуги по озеленению для ресторанов и общественных пространств
+                            li Индивидуальный подбор растений по заказу
+                
+                .about-us__topic.annotation
+                    .annotation-header Наши преимущества
+                    .annotation-main
+                        ul.club-card__list.custom-list 
+                            li 20 лет успешной работы
+                            li Европейский формат магазина
+                            li Уникальная атмосфера с живым уголком
+                            li Эксклюзивные растения из Голландии, Италии, Венгрии и Китая
+                            li Профессиональные консультации и услуги по пересадке
+                
+                .about-us__topic.annotation
+                    .annotation-header Для кого мы работаем?
+                    .annotation-main Наши клиенты – это любители природы, цветоводы, семьи с детьми, а также владельцы кафе и ресторанов, которые хотят украсить свои пространства зеленью. Мы уделяем особое внимание женщинам 35+, которые любят украшать свой дом и сад.
+                
+                .about-us__topic.annotation
+                    .annotation-header Больше, чем магазин
+                    .annotation-main Мы регулярно проводим мастер-классы, сезонные акции и мероприятия. У нас также есть профессиональная фотостудия, где можно устроить фотосессию в окружении живых растений.
+                    .annotation-footer Присоединяйтесь к нашему сообществу, вдохновляйтесь природой и создавайте красоту вместе с нами!
+                       
+    +footer     

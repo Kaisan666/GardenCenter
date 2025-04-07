@@ -8,48 +8,48 @@ html(lang='ru')
     body
     +header
     section.photo-studio
+        .photo-studio__breadcrumbs.breadcrumbs.breadcrumbs-case
+            .swiper
+                .swiper-wrapper
+                    .swiper-slide 
+                        .breadcrumbs__page 
+                            .breadcrumbs__text Главная
+                            svg(width="24" height="24")
+                                use(href="../assets/icons/sprite.svg#selectArrow")
+                    .swiper-slide
+                        .breadcrumbs__page 
+                            .breadcrumbs__text Каталог
+                            svg(width="24" height="24")
+                                use(href="../assets/icons/sprite.svg#selectArrow")
+                    .swiper-slide
+                        .breadcrumbs__page.breadcrumbs--current
+                            .breadcrumbs__text Горшки и кашпо
         .container
-            .photo-studio__breadcrumbs.breadcrumbs
-                .swiper
-                    .swiper-wrapper
-                        .swiper-slide 
-                            .breadcrumbs__page 
-                                .breadcrumbs__text Главная
-                                svg(width="24" height="24")
-                                    use(href="../assets/icons/sprite.svg#selectArrow")
-                        .swiper-slide
-                            .breadcrumbs__page 
-                                .breadcrumbs__text Каталог
-                                svg(width="24" height="24")
-                                    use(href="../assets/icons/sprite.svg#selectArrow")
-                        .swiper-slide
-                            .breadcrumbs__page.breadcrumbs--current
-                                .breadcrumbs__text Горшки и кашпо
             .club-card__header.section-header
                 .section-header__first-row
                     h2.section-header__title Фотостудия
                 .section-header__second-row Пространство для вдохновения!
                 .section-header__third-row Наша фотостудия — это не просто место для съемок, а пространство, где сочетаются естественная красота природы и современные возможности для творчества. 
             .photo-studio__content 
-                .photo-studio__swiper
+                .photo-swiper
                     .swiper.item-swiper
                         .swiper-wrapper 
                             .swiper-slide
-                                .photo-studio__img-wrapper 
+                                .photo-studio__wrapper-photo
                                     img(src="../assets/images/photoStudio/girl.png" alt="")
-                                .photo-studio__img-wrapper 
+                                .photo-studio__wrapper-photo
                                     img(src="../assets/images/photoStudio/girl.png" alt="")
-                                .photo-studio__img-wrapper 
+                                .photo-studio__wrapper-photo
                                     img(src="../assets/images/photoStudio/girl.png" alt="")
-                                .photo-studio__img-wrapper 
+                                .photo-studio__wrapper-photo
                                     img(src="../assets/images/photoStudio/girl.png" alt="")
-                                .photo-studio__img-wrapper 
+                                .photo-studio__wrapper-photo
                                     img(src="../assets/images/photoStudio/girl.png" alt="")
                         .item-swiper__ui
                             button.item-swiper__button-prev.btn.btn--light-green
                                 svg(width="24" height='24')
                                     use(href="../assets/icons/sprite.svg#selectArrow")
-                            .item-swiper__pagination-wrapper 
+                            .item-swiper__wrapper-pagination
                                 .item-swiper__pagination 
                             button.item-swiper__button-next.btn.btn--light-green
                                 svg(width="24" height='24')
@@ -66,7 +66,7 @@ html(lang='ru')
                     .club-card__topic-header Как воспользоваться картой?
                     .club-card__topic-main Просто предъявите карту при оплате покупки в магазине и получите скидку. Ваша карта остается активной на неограниченный срок, а чем больше вы покупаете, тем больше преимуществ вас ждет!
                     .club-card__topic-footer Присоединяйтесь к нашему клубу и делайте покупки с удовольствием!
-                .photo-studio__swiper
+                .photo-swiper
                     .swiper.item-swiper
                         .swiper-wrapper 
                             .swiper-slide 
@@ -83,7 +83,7 @@ html(lang='ru')
                             button.item-swiper__button-prev.btn.btn--light-green
                                 svg(width="24" height='24')
                                     use(href="../assets/icons/sprite.svg#selectArrow")
-                            .item-swiper__pagination-wrapper 
+                            .item-swiper__wrapper-pagination
                                 .item-swiper__pagination 
                             button.item-swiper__button-next.btn.btn--light-green
                                 svg(width="24" height='24')

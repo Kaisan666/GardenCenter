@@ -1,0 +1,23 @@
+.about-us{
+    .photo-swiper{
+        .swiper{
+            max-width: 1110px;
+            &-wrapper{
+                max-height: 580px;
+            }
+            
+        }
+    }
+    &__wrapper-photo{
+        display: flex;
+        height: 100%;
+        width: 100%;
+        img{
+            object-fit: cover;
+            object-position: 10% 15%;
+            max-height: 100%;
+            width: 100%;
+            border-radius: 40px;
+        }
+    }
+}

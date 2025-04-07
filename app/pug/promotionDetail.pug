@@ -8,23 +8,22 @@ html(lang='ru')
     body
     +header
     section.promotion-details
-        .promotion-details__swiper-container.swiper-container
-            .promotion-details__breadcrumbs.breadcrumbs
-                    .swiper
-                        .swiper-wrapper
-                            .swiper-slide 
-                                .breadcrumbs__page 
-                                    .breadcrumbs__text Главная
-                                    svg(width="24" height="24")
-                                        use(href="../assets/icons/sprite.svg#selectArrow")
-                            .swiper-slide
-                                .breadcrumbs__page 
-                                    .breadcrumbs__text Каталог
-                                    svg(width="24" height="24")
-                                        use(href="../assets/icons/sprite.svg#selectArrow")
-                            .swiper-slide
-                                .breadcrumbs__page.breadcrumbs--current
-                                    .breadcrumbs__text Горшки и кашпо
+        .promotion-details__breadcrumbs.breadcrumbs.breadcrumbs-case
+                .swiper
+                    .swiper-wrapper
+                        .swiper-slide 
+                            .breadcrumbs__page 
+                                .breadcrumbs__text Главная
+                                svg(width="24" height="24")
+                                    use(href="../assets/icons/sprite.svg#selectArrow")
+                        .swiper-slide
+                            .breadcrumbs__page 
+                                .breadcrumbs__text Каталог
+                                svg(width="24" height="24")
+                                    use(href="../assets/icons/sprite.svg#selectArrow")
+                        .swiper-slide
+                            .breadcrumbs__page.breadcrumbs--current
+                                .breadcrumbs__text Горшки и кашпо
         .container
             .promotion-details__content 
                 .promotion-details__header.section-header
@@ -32,7 +31,6 @@ html(lang='ru')
                         h2.section-header__title Опытный понедельник
                 .promotion-details__card
                     img(src="../assets/images/topics/expMonday.png" alt="").promotion-details__photo
-                    //- .promotion-details__photo-wrapper 
                     .promotion-details__info
                         .promotion-details__main
                             .promotion-details__name Скидка 5% для пенсионеров!

@@ -16,9 +16,9 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 40px;
-    // &:not(:has(.swiper-pagination-bullets)){
-    //   display: none;
-    // }
+    &:has(.swiper-pagination-lock){
+      display: none;
+    }
   }
 
   &__button-prev,

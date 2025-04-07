@@ -1,5 +1,9 @@
 .product-details {
-
+  &__header{
+    max-width: 1440px;
+  margin: 0 auto;
+  padding: 0px 40px;
+  }
   &__content {
     display: flex;
     flex-direction: column;
@@ -8,7 +12,6 @@
 
   &__main {
     display: flex;
-    // justify-content: space-between;
     gap: 40px;
   }
 
@@ -17,10 +20,6 @@
     flex-grow: 1;
     max-width: 700px;
     align-self: center;
-
-    .swiper-slide {
-      width: 100% !important;
-    }
 
     img {
       border-radius: 40px;
@@ -38,7 +37,6 @@
     font-weight: 700;
     font-size: 48px;
     line-height: 100%;
-    white-space: nowrap;
   }
 
   &__price {
@@ -88,7 +86,11 @@
       border-bottom: dotted 2px $MMiddleGray;
     }
   }
-
+@include table{
+  &__header{
+    padding: 0 20px;
+  }
+}
   @include mobile {
     &__main {
       flex-direction: column;

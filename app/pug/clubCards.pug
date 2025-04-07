@@ -8,31 +8,30 @@ html(lang='ru')
     body
     +header
     section.club-card
-
+        .club-card__breadcrumbs.breadcrumbs.breadcrumbs-case
+            .swiper
+                .swiper-wrapper
+                    .swiper-slide 
+                        .breadcrumbs__page 
+                            .breadcrumbs__text Главная
+                            svg(width="24" height="24")
+                                use(href="../assets/icons/sprite.svg#selectArrow")
+                    .swiper-slide
+                        .breadcrumbs__page 
+                            .breadcrumbs__text Каталог
+                            svg(width="24" height="24")
+                                use(href="../assets/icons/sprite.svg#selectArrow")
+                    .swiper-slide
+                        .breadcrumbs__page.breadcrumbs--current
+                            .breadcrumbs__text Горшки и кашпо
         .container 
-            .club-card__breadcrumbs.breadcrumbs
-                .swiper
-                    .swiper-wrapper
-                        .swiper-slide 
-                            .breadcrumbs__page 
-                                .breadcrumbs__text Главная
-                                svg(width="24" height="24")
-                                    use(href="../assets/icons/sprite.svg#selectArrow")
-                        .swiper-slide
-                            .breadcrumbs__page 
-                                .breadcrumbs__text Каталог
-                                svg(width="24" height="24")
-                                    use(href="../assets/icons/sprite.svg#selectArrow")
-                        .swiper-slide
-                            .breadcrumbs__page.breadcrumbs--current
-                                .breadcrumbs__text Горшки и кашпо
             .club-card__header.section-header
                 .section-header__first-row
                     h2.section-header__title Клубные карты
                 .section-header__second-row Привилегии для наших клиентов!
                 .section-header__third-row Хотите получать больше выгод от покупок в нашем садовом центре? Присоединяйтесь к нашей клубной программе и наслаждайтесь особыми условиями для постоянных клиентов! 
             .club-card__content
-                .club-card__photo-wrapper
+                .club-card__container-photo
                     img(src="../assets/images/clubCard.png" alt="").club-card__photo
                 .club-card__topic.annotation
                     .annotation-header Как получить клубную карту?

@@ -80,8 +80,7 @@ if(productDetail){
             nextEl: '.item-swiper__button-next',
             prevEl: '.item-swiper__button-prev',
           },
-        // slidesPerView: 2,
-        // autoHeight : true
+        slidesPerView : "auto",
         spaceBetween : 10,
     })
 }
@@ -188,7 +187,7 @@ if(breadcrumbs){
     
 }
 
-const photoSwipers = document.querySelectorAll(".photo-studio__swiper")
+const photoSwipers = document.querySelectorAll(".photo-swiper")
 if (photoSwipers){
     photoSwipers.forEach(photoSwiper => {
         new Swiper(photoSwiper.querySelector(".swiper"), {
@@ -203,7 +202,7 @@ if (photoSwipers){
               },
             slidesPerView: 1,
             // autoHeight : false,
-            height : 100,
+            // height : 100,
             spaceBetween : 20,
         })
     })

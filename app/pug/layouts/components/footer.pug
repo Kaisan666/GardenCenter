@@ -1,56 +1,55 @@
 mixin footer
-    .footer-wrapper
-        .footer
-            .container
-                .footer__container
-                    .footer__up
-                        .footer__logo
-                            svg(width='420' height='128') 
-                                use( href="../assets/icons/sprite.svg#logoFooter")
-                        .footer__info
-                            .footer__info-item
-                                svg(width='24' height='24' fill='#5E8A3B').footer__info-item-icon
-                                    use( href="../assets/icons/sprite.svg#navigator")
-                                |г. Краснодар, ул. Им. Атарбекова, д. 3
-                            .footer__info-item
-                                svg(width='24' height='24' fill='#5E8A3B').footer__info-item-icon 
-                                    use( href="../assets/icons/sprite.svg#clock")
-                                |Мы работаем с 8:30 до 20:00
-                            .footer__info-item
-                                svg(width='24' height='24' fill='#5E8A3B').footer__info-item-icon
-                                    use( href="../assets/icons/sprite.svg#phone")
-                                .custom-tooltip.custom-tooltip--arrow
-                                    a.custom-tooltip__text(href='##') +7 (999) 999 99 99
-                                    .custom-tooltip__arrow
-                                        svg(width='24' height='24') 
-                                            use(href="../assets/icons/sprite.svg#selectArrow")
-                                    .custom-tooltip__container
-                                        .custom-tooltip__items
-                                            a(href='##').custom-tooltip__item +7 (999) 999 99 91
-                                            a(href='##').custom-tooltip__item +7 (999) 999 99 92
-                            .footer__info-item
-                                svg(width='24' height='24' fill='#5E8A3B').footer__info-item-icon
-                                    use( href="../assets/icons/sprite.svg#mail")
-                                |sad.centr.krd@mail.ru
-                    .footer__middle
-                        .maps
-                            .maps__item
-                                svg(width='40' height='40')
-                                    use( href="../assets/icons/sprite.svg#yandexMap")
-                                | Яндекс.Карты
-                            .maps__item
-                                svg(width='40' height='40') 
-                                    use( href="../assets/icons/sprite.svg#gis")
-                                | 2ГИС
-                            .maps__item
-                                svg(width='40' height='40') 
-                                    use( href="../assets/icons/sprite.svg#googleMap")
-                                | Google Maps
-                    .footer__bottom
-                        .footer__help
-                            .footer__help-text © Copyright 2012 - 2025
-                            .footer__help-text Садовый центр «На Атарбекова»
-                        .footer__help
-                            .footer__help-text  Все права защищены
-                            .footer__help-text Товары для создания красивого сада и дома
-                            .footer__help-text Политика конфиденциальности
+    .footer
+        .container
+            .footer__container
+                .footer__up
+                    .footer__logo
+                        svg(width='420' height='128') 
+                            use( href="../assets/icons/sprite.svg#logoFooter")
+                    .footer__info
+                        .footer__info-item
+                            svg(width='24' height='24' fill='#5E8A3B').footer__info-item-icon
+                                use( href="../assets/icons/sprite.svg#navigator")
+                            |г. Краснодар, ул. Им. Атарбекова, д. 3
+                        .footer__info-item
+                            svg(width='24' height='24' fill='#5E8A3B').footer__info-item-icon 
+                                use( href="../assets/icons/sprite.svg#clock")
+                            |Мы работаем с 8:30 до 20:00
+                        .footer__info-item
+                            svg(width='24' height='24' fill='#5E8A3B').footer__info-item-icon
+                                use( href="../assets/icons/sprite.svg#phone")
+                            .custom-tooltip.custom-tooltip--arrow
+                                a.custom-tooltip__text(href='##') +7 (999) 999 99 99
+                                .custom-tooltip__arrow
+                                    svg(width='24' height='24') 
+                                        use(href="../assets/icons/sprite.svg#selectArrow")
+                                .custom-tooltip__container
+                                    .custom-tooltip__items
+                                        a(href='##').custom-tooltip__item +7 (999) 999 99 91
+                                        a(href='##').custom-tooltip__item +7 (999) 999 99 92
+                        .footer__info-item
+                            svg(width='24' height='24' fill='#5E8A3B').footer__info-item-icon
+                                use( href="../assets/icons/sprite.svg#mail")
+                            |sad.centr.krd@mail.ru
+                .footer__middle
+                    .maps
+                        .maps__item
+                            svg(width='40' height='40')
+                                use( href="../assets/icons/sprite.svg#yandexMap")
+                            | Яндекс.Карты
+                        .maps__item
+                            svg(width='40' height='40') 
+                                use( href="../assets/icons/sprite.svg#gis")
+                            | 2ГИС
+                        .maps__item
+                            svg(width='40' height='40') 
+                                use( href="../assets/icons/sprite.svg#googleMap")
+                            | Google Maps
+                .footer__bottom
+                    .footer__help
+                        .footer__help-text © Copyright 2012 - 2025
+                        .footer__help-text Садовый центр «На Атарбекова»
+                    .footer__help
+                        .footer__help-text  Все права защищены
+                        .footer__help-text Товары для создания красивого сада и дома
+                        .footer__help-text Политика конфиденциальности

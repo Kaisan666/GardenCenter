@@ -7,25 +7,24 @@ html(lang='ru')
     +m-head
     body
     +header
-    section.collection 
-
+    section.collection
+        .collection__breadcrumbs.breadcrumbs.breadcrumbs-case
+            .swiper
+                .swiper-wrapper
+                    .swiper-slide 
+                        .breadcrumbs__page 
+                            .breadcrumbs__text Главная
+                            svg(width="24" height="24")
+                                use(href="../assets/icons/sprite.svg#selectArrow")
+                    .swiper-slide
+                        .breadcrumbs__page 
+                            .breadcrumbs__text Каталог
+                            svg(width="24" height="24")
+                                use(href="../assets/icons/sprite.svg#selectArrow")
+                    .swiper-slide
+                        .breadcrumbs__page.breadcrumbs--current
+                            .breadcrumbs__text Горшки и кашпо
         .container
-            .collection__breadcrumbs.breadcrumbs
-                .swiper
-                    .swiper-wrapper
-                        .swiper-slide 
-                            .breadcrumbs__page 
-                                .breadcrumbs__text Главная
-                                svg(width="24" height="24")
-                                    use(href="../assets/icons/sprite.svg#selectArrow")
-                        .swiper-slide
-                            .breadcrumbs__page 
-                                .breadcrumbs__text Каталог
-                                svg(width="24" height="24")
-                                    use(href="../assets/icons/sprite.svg#selectArrow")
-                        .swiper-slide
-                            .breadcrumbs__page.breadcrumbs--current
-                                .breadcrumbs__text Горшки и кашпо
             .collection__content
                 .collection__header.section-header
                     .section-header__first-row

@@ -1,10 +1,12 @@
 .field {
   position: relative;
+  max-width: 313px;
+    width: 100%;
   input,
   textarea {
     border-radius: 16px;
     padding: 8px 12px;
-    // padding-top: 25px;
+    padding-top: 25px;
     border: 2px solid $GSupportLG;
     width: 100%;
     transition: all 0.3s ease-in-out;
@@ -66,7 +68,7 @@
       color: $GMediumG;
       transition: all 0.3s ease-in-out;
     }
-    &-wrapper:has(&:hover) &__eye-icon {
+    &:has(&:hover) &__eye-icon {
       fill: $GMediumG;
       transition: all 0.3s ease-in-out;
     }
@@ -125,6 +127,9 @@
   }
 }
   &.field--normal{
+    input, textarea{
+      padding: 8px 12px;
+    }
     input:not(:placeholder-shown) + .field__placeholder-text,
     textarea:not(:placeholder-shown) + .field__placeholder-text{
       color: transparent;

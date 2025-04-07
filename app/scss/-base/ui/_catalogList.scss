@@ -131,10 +131,10 @@
 
     @include smallMobile {
         &-pagination {
-            &__bullets {
-                gap: 0;
-                justify-content: space-between;
-            }
+            // &__bullets {
+            //     gap: 0;
+            //     justify-content: space-between;
+            // }
 
         }
     }

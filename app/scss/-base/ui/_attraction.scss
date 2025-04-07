@@ -118,7 +118,9 @@
         left: 0;
         bottom: -4%;
         transform: scale(-1, 1);
+        // width: calc(100vw - 90px);
         max-width: 315px;
+
         &::before{
           bottom: 20%;
         }
@@ -151,9 +153,9 @@
         object-fit: cover;
         height: 440px;
         max-width: 100%;
-        &-wrapper{
-          max-width: 640px;
-        }
+      }
+      &__wrapper-img{
+        max-width: 640px;
       }
       
 
@@ -171,6 +173,11 @@
   @include table {
     flex-direction: column;
     gap: 20px;
+    align-items: center;
+
+    &__info{
+    max-width: 590px;
+    }
 
     &__img {
       max-width: 100%;
@@ -179,11 +186,14 @@
     &__title {
       font-size: 24px;
     }
+
     &--gray{
       .attraction{
+
         &__text{
           border-radius: 20px 20px 0 20px;
         }
+
         &__img{
           height: auto;
         }
@@ -198,6 +208,17 @@
     &__img{
       flex: 1 1 240px;
       object-fit: cover;
+    }
+  }
+  @include smallMobile{
+    &--reversed{
+      .attraction{
+        &__figure{
+          &::before{
+            display: none;
+          }
+        }
+      }
     }
   }
 }

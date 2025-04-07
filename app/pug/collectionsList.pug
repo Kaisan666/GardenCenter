@@ -8,25 +8,23 @@ html(lang='ru')
     body
     +header
     section.collections
-
-
+        .collections__breadcrumbs.breadcrumbs
+            .swiper
+                .swiper-wrapper
+                    .swiper-slide 
+                        .breadcrumbs__page 
+                            .breadcrumbs__text Главная
+                            svg(width="24" height="24")
+                                use(href="../assets/icons/sprite.svg#selectArrow")
+                    .swiper-slide
+                        .breadcrumbs__page 
+                            .breadcrumbs__text Каталог
+                            svg(width="24" height="24")
+                                use(href="../assets/icons/sprite.svg#selectArrow")
+                    .swiper-slide
+                        .breadcrumbs__page.breadcrumbs--current
+                            .breadcrumbs__text Горшки и кашпо
         .container
-            .collections__breadcrumbs.breadcrumbs
-                .swiper
-                    .swiper-wrapper
-                        .swiper-slide 
-                            .breadcrumbs__page 
-                                .breadcrumbs__text Главная
-                                svg(width="24" height="24")
-                                    use(href="../assets/icons/sprite.svg#selectArrow")
-                        .swiper-slide
-                            .breadcrumbs__page 
-                                .breadcrumbs__text Каталог
-                                svg(width="24" height="24")
-                                    use(href="../assets/icons/sprite.svg#selectArrow")
-                        .swiper-slide
-                            .breadcrumbs__page.breadcrumbs--current
-                                .breadcrumbs__text Горшки и кашпо
             .collections__content
                 .product-details__swiper-similar
                     .beginners__header.section-header
@@ -61,7 +59,7 @@ html(lang='ru')
                                 button.item-swiper__button-prev.btn.btn--light-green
                                     svg(width="24" height='24')
                                         use(href="../assets/icons/sprite.svg#selectArrow")
-                                .item-swiper__pagination-wrapper 
+                                .item-swiper__wrapper-pagination 
                                     .item-swiper__pagination 
                                 button.item-swiper__button-next.btn.btn--light-green
                                     svg(width="24" height='24')
@@ -100,7 +98,7 @@ html(lang='ru')
                                 button.item-swiper__button-prev.btn.btn--light-green
                                     svg(width="24" height='24')
                                         use(href="../assets/icons/sprite.svg#selectArrow")
-                                .item-swiper__pagination-wrapper 
+                                .item-swiper__wrapper-pagination 
                                     .item-swiper__pagination 
                                 button.item-swiper__button-next.btn.btn--light-green
                                     svg(width="24" height='24')

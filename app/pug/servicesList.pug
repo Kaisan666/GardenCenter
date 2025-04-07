@@ -7,24 +7,24 @@ html(lang='ru')
     +m-head
     body
     +header
-    section.services 
+    section.services
+        .services__breadcrumbs.breadcrumbs.breadcrumbs-case
+            .swiper
+                .swiper-wrapper
+                    .swiper-slide 
+                        .breadcrumbs__page 
+                            .breadcrumbs__text Главная
+                            svg(width="24" height="24")
+                                use(href="../assets/icons/sprite.svg#selectArrow")
+                    .swiper-slide
+                        .breadcrumbs__page 
+                            .breadcrumbs__text Каталог
+                            svg(width="24" height="24")
+                                use(href="../assets/icons/sprite.svg#selectArrow")
+                    .swiper-slide
+                        .breadcrumbs__page.breadcrumbs--current
+                            .breadcrumbs__text Горшки и кашпо
         .container 
-            .services__breadcrumbs.breadcrumbs
-                .swiper
-                    .swiper-wrapper
-                        .swiper-slide 
-                            .breadcrumbs__page 
-                                .breadcrumbs__text Главная
-                                svg(width="24" height="24")
-                                    use(href="../assets/icons/sprite.svg#selectArrow")
-                        .swiper-slide
-                            .breadcrumbs__page 
-                                .breadcrumbs__text Каталог
-                                svg(width="24" height="24")
-                                    use(href="../assets/icons/sprite.svg#selectArrow")
-                        .swiper-slide
-                            .breadcrumbs__page.breadcrumbs--current
-                                .breadcrumbs__text Горшки и кашпо
             .services__header.section-header
                 .section-header__first-row
                     h2.section-header__title Наши услуги
@@ -68,27 +68,47 @@ html(lang='ru')
         h2.popup-form__title Выезд специалиста
         .popup-form__main 
             .popup-form__text
+                .popup-form__row Садовый центр на Атарбекова, рад предложить Вам услугу
+                    | выезда специалиста на дом, в офис, ресторан. Порой, не будучи 
+                    | профессионалом в уходе за комнатными и садовыми растениями, сложно 
+                    | понять и разобраться по каким причинам Ваше любимое растение начало погибать. 
+                .popup-form__row Для того чтобы облегчить Вам задачу, необходимо просто позвонить нам по телефону 
+                    a(href="##").link.popup-form__phone +7(861)22-00-783 
+                    | или оставить заявку на выезд специалиста онлайн, который возьмет с собой необходимые 
+                    | препараты для обработки, произведет все необходимые процедуры для улучшения состояния растения. 
+                .popup-form__row Садовый центр на Атарбекова, рад предложить Вам услугу
+                    | выезда специалиста на дом, в офис, ресторан. Порой, не будучи 
+                    | профессионалом в уходе за комнатными и садовыми растениями, сложно 
+                    | понять и разобраться по каким причинам Ваше любимое растение начало погибать. 
+                .popup-form__row Садовый центр на Атарбекова, рад предложить Вам услугу
+                    | выезда специалиста на дом, в офис, ресторан. Порой, не будучи 
+                    | профессионалом в уходе за комнатными и садовыми растениями, сложно 
+                    | понять и разобраться по каким причинам Ваше любимое растение начало погибать. 
+                .popup-form__row Садовый центр на Атарбекова, рад предложить Вам услугу
+                    | выезда специалиста на дом, в офис, ресторан. Порой, не будучи 
+                    | профессионалом в уходе за комнатными и садовыми растениями, сложно 
+                    | понять и разобраться по каким причинам Ваше любимое растение начало погибать. 
             form.popup-form__form
                 .popup-form__form-title Оставьте заявку онлайн!
                 .popup-form__phone.field 
                     .field__container
                         .field__placeholder
-                            input(type="text" placeholder=" " name="phone")
-                            .field__placeholder-text Placeholder
+                            input(type="text" placeholder=" " name="phone").popup-form__input-phone
+                            .field__placeholder-text Телефон
                                 svg(width="24" height="24").field__eye-icon
                                     use(href="../assets/icons/sprite.svg#hide-password")
                 .popup-form__name.field 
                     .field__container
                         .field__placeholder
-                            input(type="text" placeholder=" " name="name")
-                            .field__placeholder-text Placeholder
+                            input(type="text" placeholder=" " name="name").popup-form__input-name
+                            .field__placeholder-text Ваше имя
                                 svg(width="24" height="24").field__eye-icon
                                     use(href="../assets/icons/sprite.svg#hide-password")
                 .popup-form__message.field 
                     .field__container
                         .field__placeholder
-                            textarea(name="message" type="text" placeholder=" " )
-                            .field__placeholder-text Placeholder
+                            textarea(name="message" type="text" placeholder=" ").popup-form__input-message
+                            .field__placeholder-text Сообщение
                                 svg(width="24" height="24").field__eye-icon
                                     use(href="../assets/icons/sprite.svg#hide-password")
 

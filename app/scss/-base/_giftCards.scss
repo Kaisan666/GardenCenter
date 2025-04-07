@@ -6,10 +6,10 @@
     }
     &__photo{
         border-radius: 40px;
-        &-wrapper{
-            display: flex;
-            justify-content: center;
-        }
+    }
+    &__wrapper-photo{
+        display: flex;
+        justify-content: center;
     }
 
     &__topic {
