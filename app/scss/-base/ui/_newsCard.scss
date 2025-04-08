@@ -1,119 +1,125 @@
 .news-card {
+  display: flex;
+  height: 196px;
+  gap: 20px;
+  &__img-container {
     display: flex;
+    flex: 1 1 auto;
+    // aspe
+  }
+  &__img {
     height: 196px;
-    gap: 20px;
-    &__img-container{
-        display: flex;
-        flex: 1 1 auto;
-        // aspe
+    border-radius: 40px;
+    object-fit: cover;
+    object-position: center;
+    min-width: 210px;
+  }
+  &__tag,
+  &__tag-mobile {
+    font-weight: 700;
+    font-size: 20px;
+    color: $GMediumG;
+    border-radius: 60px;
+    padding: 8px 16px;
+    background-color: $GLightG;
+  }
+
+  &__info {
+    border-radius: 20px;
+    padding: 24px 40px;
+    background-color: $MLightGray;
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex: 0 1 auto;
+    max-width: 490px;
+    height: 100%;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  &__tag {
+    font-weight: 700;
+    font-size: 20px;
+    padding: 8px 16px;
+    &-mobile {
+      display: none;
+      font-weight: 700;
+      font-size: 20px;
+      padding: 8px 16px;
     }
+  }
+  &__main {
+    // word-break: break-all;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 38px;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+
+    &-info {
+      color: $GSupportDG;
+    }
+    &-main {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+
+  &__time-date {
+    display: flex;
+    gap: 12px;
+    color: $MMiddleGray;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    height: auto;
     &__img {
-        height: 196px;
-        border-radius: 40px;
-        object-fit: cover;
-        object-position: center;
-        min-width: 210px;
+      height: 100%;
+      border-radius: 40px;
     }
-
+    &__wrapper-img {
+      flex: 1 1 240px;
+    }
     &__info {
-        border-radius: 20px;
-        padding: 24px 40px;
-        background-color: $MLightGray;
-        align-self: start;
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-        flex: 0 1 auto;
-        max-width: 490px;
-        height: 100%;
+      max-width: 100%;
+      padding: 24px 20px;
     }
+    &__tag {
+      display: none;
 
-    &__header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+      &-mobile {
+        display: block;
+        font-size: 16px;
+        height: 34px;
+        align-self: flex-end;
+      }
     }
-
-    &__title {
-        font-size: 24px;
-        font-weight: 600;
-    }
-    &__tag{
-        font-weight: 700;
-        font-size: 20px;
-        padding: 8px 16px;
-        &-mobile{
-            display: none;
-            font-weight: 700;
-            font-size: 20px;
-            padding: 8px 16px;
-        }
-    }
-    &__main{
-        // word-break: break-all;
-        -webkit-line-clamp: 2;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        min-height: 38px;
-    }
-
-
     &__footer {
+      display: flex;
+
+      &-main {
         display: flex;
-        justify-content: space-between;
-
-        &-info{
-            color: $GSupportDG;
-        }
-        &-main{
-            display: flex;
-            width: 100%;
-            justify-content: space-between;
-        }
+        flex-direction: column-reverse;
+        gap: 4px;
+        padding: 0px 0px 8px 0px;
+      }
     }
-
-    &__time-date {
-        display: flex;
-        gap: 12px;
-        color: $MMiddleGray;
-    }
-    
-    @include mobile{
-        flex-direction: column;
-        height: auto;
-        &__img{
-            height: 100%;
-            border-radius: 40px;
-        }
-        &__wrapper-img{
-            flex: 1 1 240px;
-        }
-        &__info{
-            max-width: 100%;
-            padding: 24px 20px;
-        }
-        &__tag{
-            display: none;
-
-            &-mobile{
-                display: block;
-                font-size: 16px;
-                height: 34px;
-                align-self: flex-end;
-            }
-        }
-        &__footer{
-            display: flex;
-
-            &-main{
-                display: flex;
-                flex-direction: column-reverse;
-                gap: 4px;
-                padding: 0px 0px 8px 0px;
-            }
-        }
-
-    }
-
+  }
 }
