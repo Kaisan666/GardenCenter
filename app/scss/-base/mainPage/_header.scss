@@ -1,6 +1,6 @@
 .header {
   padding: 12px 0px;
-  margin-bottom: 10px;
+
   &__up {
     display: flex;
     justify-content: space-between;
@@ -150,5 +150,8 @@
     &__bottom {
       display: none;
     }
+  }
+  @include mobile{
+    margin-bottom: 10px;
   }
 }

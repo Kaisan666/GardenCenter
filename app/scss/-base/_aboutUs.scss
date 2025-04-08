@@ -1,0 +1,13 @@
+.about-us{
+    &__content{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    &__text{
+        line-height: 125%;
+        &-row + &-row{
+            padding-top: 12px;
+        }
+    }
+}

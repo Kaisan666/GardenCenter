@@ -1,5 +1,5 @@
 .footer {
-  margin-top: 10px;
+  margin-top: auto;
   background-color: $MLightGray;
   padding: 24px 0px 12px 0px;
 
@@ -87,5 +87,8 @@
         text-align: center;
       }
     }
+  }
+  @include mobile{
+    margin-top: 10px;
   }
 }

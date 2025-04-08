@@ -17,6 +17,7 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
+    overflow: hidden;
   }
   &__figure {
     position: absolute;
@@ -62,6 +63,7 @@
   }
 
   &__info {
+    padding-top: 28px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -122,7 +124,7 @@
         max-width: 315px;
 
         &::before{
-          bottom: 20%;
+          bottom: 15%;
         }
       }
 
@@ -157,7 +159,12 @@
       &__wrapper-img{
         max-width: 640px;
       }
-      
+      &__figure{
+        bottom: -2%;
+        &::before{
+          bottom: 12%;
+        }
+      }
 
       &__title,
       &__main {
@@ -175,16 +182,17 @@
     gap: 20px;
     align-items: center;
 
-    &__info{
-    max-width: 590px;
-    }
-
     &__img {
       max-width: 100%;
+      width: 100%;
+      object-fit: cover;
     }
 
     &__title {
       font-size: 24px;
+    }
+    &__info{
+      padding-top: 0;
     }
 
     &--gray{
@@ -195,6 +203,9 @@
         }
 
         &__img{
+          
+          width: 100%;
+          max-width: 100%;
           height: auto;
         }
       }
@@ -213,9 +224,20 @@
   @include smallMobile{
     &--reversed{
       .attraction{
+        &__link{
+          padding: 12px;
+          gap: 4px;
+        }
+        &__figure{
+          width: 96%;
+          ::before{
+            left: -20px;
+          }
+        }
+
         &__figure{
           &::before{
-            display: none;
+            // display: none;
           }
         }
       }

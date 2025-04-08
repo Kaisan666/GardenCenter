@@ -3,6 +3,14 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
+        .promotion-card:last-child{
+            .promotion-card{
+                
+            &__title{
+                max-width: 70%;
+            }
+            }
+        }
     }
     @include mobile {
         &__main{

@@ -17,35 +17,11 @@ new Swiper(mainSwiper, {
         nextEl: '.swiper-main__button-next',
         prevEl: '.swiper-main__button-prev',
       },
-    // dynamicBullets : true,
-    // dynamicMainBullets : 3,
     slidesPerView: 1,
-    // autoHeight : true
     spaceBetween : 20,
 })
 }
-// const newItems = document.querySelector(".new-items__swiper")
-// if (newItems) {
-//     const newItemsSwiper = newItems.querySelector(".swiper")
-//     new Swiper(newItemsSwiper, {
-//         pagination : {
-//             el : ".item-swiper__pagination",
-//             clickable : true
-//         },
-//         navigation: {
-//             nextEl: '.item-swiper__button-next',
-//             prevEl: '.item-swiper__button-prev',
-//           },
-//         slidesPerView: 1.5,
-//         // autoHeight : true
-//         spaceBetween : 32,
-//         breakpoints : {
-//             765 : {
-//                 slidesPerView : 4
-//             }
-//         },
-//     })
-// }
+
 const blog = document.querySelector(".blog__swiper")
 if(blog){
     const blogSwiper = blog.querySelector(".swiper")
@@ -84,6 +60,29 @@ if(productDetail){
         spaceBetween : 10,
     })
 }
+
+const newItems = document.querySelector(".new-items")
+if(newItems){
+    new Swiper(newItems.querySelector(".swiper"), {
+        pagination : {
+            el : ".item-swiper__pagination",
+            clickable : true
+        },
+        navigation: {
+            nextEl: '.item-swiper__button-next',
+            prevEl: '.item-swiper__button-prev',
+            },
+        loop : true,
+        slidesPerView: 1.5,
+        spaceBetween : 24,
+        breakpoints : {
+            765 : {
+                slidesPerView : 4,
+                spaceBetween : 32,
+            }
+        },
+    })
+}
 const productsSwipers = document.querySelectorAll(".products-swiper")
 if(productsSwipers){
 
@@ -100,7 +99,6 @@ if(productsSwipers){
               },
             slidesPerView: 1.5,
             spaceBetween : 24,
-            // autoHeight : true,
             breakpoints : {
                 765 : {
                     slidesPerView : 4,
@@ -134,10 +132,9 @@ console.log(breadcrumbs)
 if(breadcrumbs){
     breadcrumbs.forEach(breadcrumb => {
         new Swiper(breadcrumb.querySelector('.swiper'), {
-            // slidesPerView: 2,
-            // autoHeight : true
             slidesPerView: "auto",
             noSwiping : false,
+            spaceBetween : 8,
         })
     })
     
@@ -157,8 +154,6 @@ if (photoSwipers){
                 prevEl: '.item-swiper__button-prev',
               },
             slidesPerView: "1",
-            // autoHeight : false,
-            // height : 100,
             spaceBetween : 100,
         })
     })

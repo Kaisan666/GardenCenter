@@ -6,6 +6,7 @@
     padding: 12px 40px;
     background-color: $MLightGray;
     row-gap: 12px;
+    min-height: 115px;
 
     &__title {
         font-weight: 600;
@@ -32,22 +33,33 @@
     }
 
     &__button {
-        flex-shrink: 0;
-        flex-grow: 0;
-        grid-column: 2;
-        grid-row-start: 1;
-        grid-row-end: 3;
+        width: 72px;
+        height: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
         &--mobile{
             display: none;
+        }
+
+        svg {
+            width: 15px;
+            height: 15px;
         }
     }
 
     @include table {
         &__header{
             display: flex;
-            justify-content: space-between;
-            align-items: center;    
+            justify-content: space-between; 
+            gap: 10px;
         }
+
+        &__title{
+            line-height: 125%;
+        }
+
         &__button{
             display: none;
             &--mobile{
@@ -57,11 +69,18 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                flex-shrink: 0;
             }
         }
         &__main {
-            width: 75%;
+            line-height: 125%;
 
+        }
+        &__button {
+            padding: 0;
+        }
+        &__info{
+            flex: 1 1 auto;
         }
     }
 
@@ -78,22 +97,15 @@
             gap: 12px;
         }
 
-        &__button {
-
-            &.btn {
-                padding: 12px;
-            }
-
-            svg {
-                width: 15px;
-                height: 15px;
-            }
-        }
+        
 
         &__main {
             -webkit-line-clamp: 3;
             line-clamp: 3;
             width: auto;
         }
+    }
+    @include mediumMobile{
+        min-height: 182px;
     }
 }
