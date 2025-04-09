@@ -1,0 +1,33 @@
+.blog-detail{
+    .photo-swiper{
+        &__img{
+            object-position: top;
+        }
+    }
+    &__content{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    &__main-photo{
+        display: flex;
+        width: 100%;
+        max-height: 500px;
+        
+        img{
+            width: 100%;
+            object-fit: cover;
+            border-radius: 40px;
+            aspect-ratio: 27 / 10;
+        }
+    }
+    &__news-info{
+        display: flex;
+        justify-content: space-between;
+    }
+    @include mediumMobile {
+        &__main-photo{
+            
+        }
+    }
+}

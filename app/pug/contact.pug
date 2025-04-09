@@ -1,0 +1,38 @@
+include layouts/modules/_m-head.pug
+include layouts/components/header.pug
+include layouts/components/footer.pug
+include layouts/components/ui/productCard.pug
+
+html(lang='ru')
+    +m-head
+    body
+    +header
+    section.contacts
+        .contacts__breadcrumbs.breadcrumbs.breadcrumbs-case
+            .swiper
+                .swiper-wrapper
+                    .swiper-slide 
+                        .breadcrumbs__page 
+                            .breadcrumbs__text Главная
+                            svg(width="24" height="24")
+                                use(href="../assets/icons/sprite.svg#selectArrow")
+                    .swiper-slide
+                        .breadcrumbs__page.breadcrumbs--current
+                            .breadcrumbs__text Контакты
+        .container
+            .section-header
+                .section-header__first-row
+                    h2.section-header__title Контакты 
+            .contacts__content
+                .annotation
+                    .annotation-header 
+                        .annotation-header__icon 
+                        .annotation-header__text Адрес
+                    .annotation-main 350062, Россия, Краснодарский край, г. Краснодар, Прикубанский округ, Фестивальный м-н, ул. Им. Атарбекова, дом 3,
+                    p Остановка «Бальнеолечебница»:
+                        ul.custom-list
+                            li Автобус №: 14, 163а, 32, 4, 52,
+                            li Маршрутное такси №: 130а, 183а, 29, 40, 414, 85,
+                            li Троллейбус №: 1, 14, 6, 9.
+                .map(id="map")
+    +footer
