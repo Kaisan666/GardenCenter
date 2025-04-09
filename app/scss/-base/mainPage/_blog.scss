@@ -17,21 +17,11 @@
     }
 
     &__swiper {
-        // flex: 1 0 0;
         min-width: 0;
         max-width: 590px;
 
         .swiper {
             width: 100%;
-
-            // &-slide {
-            //     flex-shrink: 0;
-            //     width: 100%;
-            //     display: flex;
-            //     justify-content: center;
-            //     align-items: center;
-            // }
-
             &-slide {
                 display: flex;
                 justify-content: center;

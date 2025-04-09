@@ -27,8 +27,12 @@
     }
 
     &__photo {
-      flex: 1 1 215px;
-    //   align-items: center;
+      width: 100%;
+      img{
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
     }
 
     &__condition {
@@ -46,6 +50,11 @@
         font-weight: 600;
         font-size: 18px;
       }
+    }
+  }
+  @include mobile {
+    &__photo{
+      max-height: 230px;
     }
   }
 }

@@ -1,14 +1,12 @@
 .photo-studio{
-    &__wrapper-img{
-        position: relative;
-        img{
-            position: absolute;
-            height: 100%;
-        }
+    &__content{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
     }
-    .swiper{
-        &-slide{
-            max-height: 580px;
+    .annotation{
+        .link{
+            font-weight: 700;
         }
     }
 }

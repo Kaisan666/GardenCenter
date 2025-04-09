@@ -42,6 +42,16 @@ body {
   &-header {
     font-weight: 600;
     font-size: 24px;
+    display: flex;
+    align-items: center;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    &__icon{
+      svg{
+        fill : $GSupportLG;
+      }
+    }
   }
   &-main{
     line-height: 125%;

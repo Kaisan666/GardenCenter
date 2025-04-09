@@ -31,28 +31,30 @@ html(lang='ru')
                         h2.section-header__title Доставка и оплата
                 .delivery__card
                     .delivery__photo
-                        img(src="../assets/images/topics/expMonday.png" alt="")
+                        img(src="../assets/images/deliveryAndBuy.png" alt="")
                     .delivery__info
                         .gift-card-detail__topic.annotation
                             .annotation-header 
-                                .annotation__header-icon
-                                .annotation__header-text Доставка
+                                .annotation-header__icon
+                                    svg(width="24" height="24")
+                                        use(href="../assets/icons/sprite.svg#navigator")
+                                .annotation-header__text Доставка
                             .annotation-main Мы стремимся сделать процесс доставки максимально удобным и быстрым. Доступны следующие варианты:
                                 ul.custom-list 
                                     li Курьерская доставка – по вашему адресу в течение 1-3 дней.
                                     li Самовывоз – бесплатно из нашего магазина.
                                     li Транспортные компании – отправка в любой регион России.
-                                    li Персональные рекомендации – помощь в подборе растений и уходе за ними от наших экспертов.
                                 | После оформления заказа мы свяжемся с вами для уточнения деталей доставки.
                         .gift-card-detail__topic.annotation
                             .annotation-header 
-                                    .annotation__header-icon
-                                    .annotation__header-text Оплата
+                                    .annotation-header__icon
+                                        svg(width="24" height="24")
+                                            use(href="../assets/icons/sprite.svg#star")
+                                    .annotation-header__text Оплата
                             .annotation-main Вы можете выбрать удобный способ оплаты:
                                 ul.custom-list 
                                     li Наличный расчет – при получении заказа.
                                     li Банковская карта – онлайн на сайте или при получении.
                                     li Безналичный расчет – для юридических лиц.
-                                    li Персональные рекомендации – помощь в подборе растений и уходе за ними от наших экспертов.
                                 | Если у вас остались вопросы, свяжитесь с нами – мы всегда на связи!
     +footer
