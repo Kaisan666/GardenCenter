@@ -19,10 +19,42 @@
     gap: 24px;
     overflow: hidden;
   }
+  // &__figure {
+  //   position: absolute;
+  //   right: 0;
+  //   bottom: -3%;
+  //   background-color: $MWhite;
+  //   border-radius: 40px 0 0 0;
+  //   max-width: 242px;
+  //   width: 100%;
+  //   height: 52px;
+
+  //   &::before {
+  //     content: '';
+  //     position: absolute;
+  //     width: 59px;
+  //     height: 40px;
+  //     left: -23px;
+  //     bottom: 15%;
+  //     background-image: url('../../../assets/icons/figure-item-1.svg');
+  //     background-repeat: no-repeat;
+  //   }
+
+  //   &::after {
+  //     content: '';
+  //     position: absolute;
+  //     width: 8px;
+  //     height: 100%;
+  //     background-image: url('../../../assets/icons/figure-item-2.svg');
+  //     background-repeat: no-repeat;
+  //     right: 0;
+  //     top: -9px;
+  //   }
+  // }
   &__figure {
     position: absolute;
     right: 0;
-    bottom: -3%;
+    bottom: 0;
     background-color: $MWhite;
     border-radius: 40px 0 0 0;
     max-width: 242px;
@@ -34,8 +66,8 @@
       position: absolute;
       width: 59px;
       height: 40px;
-      left: -23px;
-      bottom: 15%;
+      left: -28px;
+      bottom: 0;
       background-image: url('../../../assets/icons/figure-item-1.svg');
       background-repeat: no-repeat;
     }
@@ -117,14 +149,16 @@
         border-radius: 20px 20px 20px 40px;
       }
       &__figure{
+        // wid
         left: 0;
         bottom: -4%;
         transform: scale(-1, 1);
         // width: calc(100vw - 90px);
         max-width: 315px;
+        width: calc(100vw - 90px);
 
         &::before{
-          bottom: 15%;
+          // bottom: 15%;
         }
       }
 
