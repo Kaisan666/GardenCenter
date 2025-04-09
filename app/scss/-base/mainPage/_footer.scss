@@ -13,14 +13,21 @@
   &__logo {
     display: flex;
     align-items: center;
+    // justify-content: center;
+    flex: 1 1 300px;
+    
     svg {
       width: 100%;
+      max-width: 420px;
     }
   }
 
   &__up {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
   }
 
   &__middle {
@@ -73,15 +80,25 @@
 
   @include table {
     &__up {
-      flex-direction: column;
-      align-items: center;
-      gap: 40px;
+      // flex-direction: column;
+      // align-items: center;
+      // gap: 40px;
+    }
+
+    &__logo {
+      svg {
+        width: 100%;
+        max-width: none;
+      }
     }
     
     &__help {
-      flex-direction: column;
+      flex-wrap: wrap;
+      // flex-direction: column;
       align-items: center;
-      gap: 8px;
+      justify-content: center;
+      // gap: 8px;
+      row-gap: 8px;
 
       &-text {
         text-align: center;
