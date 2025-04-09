@@ -34,11 +34,24 @@ if(blog){
             nextEl: '.item-swiper__button-next',
             prevEl: '.item-swiper__button-prev',
           },
+        observer: true, // Включаем отслеживание
+  observeParents: true,
+  loop: true,
         slidesPerView: 2,
         breakpoints : {
-            1065 : {
+            650 : {
+                slidesPerView : 3,
+            },
+            925 : {
+                slidesPerView : 4
+            },
+            1023 : {
+                slidesPerView : 1
+            },
+            1150 : {
                 slidesPerView : 2
-            }
+            },
+
         },
         // autoHeight : true
         spaceBetween : 10,

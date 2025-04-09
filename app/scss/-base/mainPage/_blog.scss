@@ -1,10 +1,13 @@
-.blog{
-    &__main{
+.blog {
+    &__main {
         display: flex;
         gap: 50px;
+        align-items: center;
+        max-width: 100vw;
 
     }
-    &__news{
+
+    &__news {
         display: flex;
         flex-direction: column;
         gap: 20px;
@@ -12,30 +15,59 @@
         max-width: 720px;
 
     }
+
     &__swiper {
+        // flex: 1 0 0;
         min-width: 0;
-        flex-grow: 1;
-        flex-basis: 590px;
-        align-self: center;
+        max-width: 590px;
+
+        .swiper {
+            width: 100%;
+
+            // &-slide {
+            //     flex-shrink: 0;
+            //     width: 100%;
+            //     display: flex;
+            //     justify-content: center;
+            //     align-items: center;
+            // }
+
+            &-slide {
+                display: flex;
+                justify-content: center;
+            }
+        }
     }
 
     @include table {
-        &__main{
+        &__main {
+            display: block;
             flex-direction: column;
             align-items: center;
         }
-        &__swiper{
-            align-self: normal;
-            flex-basis: auto;
-            max-width: 600px;
-            margin: 0 auto;
+
+        &__news {
+            max-width: max-content;
+            margin-bottom: 60px;
+        }
+
+        .news-card {
+            &__info {
+                max-width: none;
+            }
+        }
+
+        &__swiper {
+            max-width: none;
         }
     }
-    @include mobile{
-        &__swiper{
+
+    @include mobile {
+        &__swiper {
             margin: 0;
         }
-        &__news{
+
+        &__news {
             gap: 40px;
         }
     }
