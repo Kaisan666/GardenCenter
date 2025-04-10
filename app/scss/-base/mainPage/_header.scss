@@ -46,6 +46,12 @@
       display: flex;
       align-items: center;
       gap: 24px;
+      .category{
+        text-transform: uppercase;
+      }
+      .btn-toggle__button{
+        text-transform: uppercaseq;
+      }
     }
 
     &-right {
