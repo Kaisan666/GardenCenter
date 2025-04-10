@@ -197,6 +197,43 @@
         align-items: start;
       &-bottom {
         transform: scale(1, 1);
+      display: flex;
+      justify-content: end;
+      
+      position: relative;
+      margin-top: -42px;
+      background-color: $MWhite;
+      z-index: 2;
+      padding-top: 20px;
+      padding-left: 0;
+      padding-right: 20px;
+      border-top-right-radius: 40px;
+      border-top-left-radius: 0;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 100%;
+        background-image: url('../../../assets/icons/figure-item-2.svg');
+        background-repeat: no-repeat;
+        left: 0;
+        top: -9px;
+        transform: scale(-1, 1);
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 59px;
+        height: 40px;
+        left: 88%;
+        top: 33%;
+        transform: translateY(-50%) scale(-1, 1);
+        background-image: url('../../../assets/icons/figure-item-1.svg');
+        background-repeat: no-repeat;
+      }
+
       }
       &-middle{
         transform: scale(1, 1);
@@ -217,9 +254,11 @@
         }
       }
       &__img{
-        object-fit: cover;
-        height: 440px;
-        max-width: 100%;
+        flex: 1 1 640px;
+        img{
+          object-fit: cover;
+          width: 100%;
+        }
       }
       &__wrapper-img{
         max-width: 640px;
@@ -268,7 +307,7 @@
         }
 
         &__img{
-          
+          flex: 1 1 auto;
           width: 100%;
           max-width: 100%;
           height: auto;
@@ -286,7 +325,7 @@
       object-fit: cover;
     }
   }
-  @include smallMobile{
+  @include mediumMobile{
 
 &__link {
       &-text {
@@ -299,19 +338,31 @@
           padding: 12px;
           gap: 4px;
         }
-        &__figure{
-          width: 96%;
-          ::before{
-            left: -20px;
-          }
-        }
+        &__info{
+          &-bottom{
+            padding-right: 10px;
 
-        &__figure{
-          &::before{
-            // display: none;
+            &::before{
+              left: 84%;
+            }
           }
+
         }
       }
+      
+      //   &__figure{
+      //     width: 96%;
+      //     ::before{
+      //       left: -20px;
+      //     }
+      //   }
+
+      //   &__figure{
+      //     &::before{
+      //       // display: none;
+      //     }
+      //   }
+      // }
     }
   }
 }

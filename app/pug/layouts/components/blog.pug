@@ -4,7 +4,7 @@ mixin blog
             .blog__header.section-header
                 .section-header__first-row
                     h2.section-header__title Блог
-                    a(href="##").section-header__link.link
+                    a(href="##").section-header__link.btn--transparent.btn
                         .section-header__link-text Смотреть все
                         svg(width="24" height='24').section-header__link-img
                             use(href="../assets/icons/sprite.svg#selectArrow")
@@ -74,20 +74,50 @@ mixin blog
                 .blog__swiper
                         .swiper.item-swiper
                             .swiper-wrapper 
-                                .swiper-slide 
-                                    img(src="../assets/images/videos/previews/video1.png", alt="")
-                                    //- video(src="" poster="../assets/images/videos/previews/video1.png") 
-                                .swiper-slide 
-                                    img(src="../assets/images/videos/previews/video2.png", alt="")
-                                    //- video(src="" poster="../assets/images/videos/previews/video1.png") 
-                                .swiper-slide 
-                                    img(src="../assets/images/videos/previews/video1.png", alt="")
-                                    //- video(src="" poster="../assets/images/videos/previews/video1.png") 
-                                .swiper-slide 
-                                    img(src="../assets/images/videos/previews/video2.png", alt="")
-                                    //- video(src="" poster="../assets/images/videos/previews/video1.png") 
-                                .swiper-slide 
-                                    img(src="../assets/images/videos/previews/video1.png", alt="")
+                                .swiper-slide.fancybox-trigger
+                                    .blog__swiper-content
+                                        img(src="../assets/images/videos/previews/video1.png", alt="")
+                                                //- video(src="../assets/videos/video.mp4" controls poster="../assets/images/videos/previews/video1.png")
+                                        a(href="##").subscribe-link.subscribe-link--telegram
+                                            svg(width="24" height="24" fill="white")
+                                                use(href="../assets/icons/sprite.svg#tg") 
+                                        button.play-button
+                                            svg(height="24" width="24")
+                                                use(href="../assets/icons/sprite.svg")
+                                            .subscribe-link__text подписаться
+                                    //- .subscribe- 
+                                .swiper-slide.fancybox-trigger
+                                    .blog-swiper__content
+                                        img(src="../assets/images/videos/previews/video2.png", alt="")
+                                        a(href="##").subscribe-link.subscribe-link--vkontakte
+                                            svg(width="24" height="24" fill="white")
+                                                use(href="../assets/icons/sprite.svg#tg") 
+                                            .subscribe-link__text подписаться
+                                    //- video(src="../assets/videos/video.mp4" controls poster="../assets/images/videos/previews/video1.png") 
+                                .swiper-slide.fancybox-trigger
+                                    .blog-swiper__content
+                                        img(src="../assets/images/videos/previews/video1.png", alt="")
+                                    a(href="##").subscribe-link.subscribe-link--telegram
+                                            svg(width="24" height="24" fill="white")
+                                                use(href="../assets/icons/sprite.svg#tg") 
+                                            .subscribe-link__text подписаться
+                                    //- video(src="../assets/videos/video.mp4" controls poster="../assets/images/videos/previews/video1.png") 
+                                .swiper-slide.fancybox-trigger
+                                    .blog-swiper__content
+                                        img(src="../assets/images/videos/previews/video2.png", alt="")
+                                        a(href="##").subscribe-link.subscribe-link--vkontakte
+                                            svg(width="24" height="24" fill="white")
+                                                use(href="../assets/icons/sprite.svg#tg") 
+                                            .subscribe-link__text подписаться
+                                    //- video(src="../assets/videos/video.mp4" controls poster="../assets/images/videos/previews/video1.png") 
+                                .swiper-slide.fancybox-trigger
+                                    .blog-swiper__content    
+                                        img(src="../assets/images/videos/previews/video1.png", alt="")
+                                        a(href="##").subscribe-link.subscribe-link--telegram
+                                            svg(width="24" height="24" fill="white")
+                                                use(href="../assets/icons/sprite.svg#tg") 
+                                            .subscribe-link__text подписаться
+                                    //- video(src="../assets/videos/video.mp4" controls poster="../assets/images/videos/previews/video1.png") 
                             .item-swiper__ui
                                 button.item-swiper__button-prev.btn.btn--light-green
                                     svg(width="24" height='24')
@@ -103,7 +133,7 @@ mixin blog
                     .attraction__text
                         .attraction__title Вырастил? Поделись!
                         .attraction__main Присоединяйтесь к нашему уютному сообществу единомышленников! Делитесь фотографиями своих растений, обменивайтесь опытом, вдохновляйтесь идеями и находите поддержку. Подписывайтесь на нашу беседу в Telegram — создадим зеленый уголок в сети вместе!
-                        .attraction__figure
+                        //- .attraction__figure
                     .attraction__info-bottom
                         a(href="#").attraction__link.btn.btn--dark-green
                             .attraction__link-text присоединиться

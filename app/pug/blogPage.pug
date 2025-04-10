@@ -1,0 +1,174 @@
+include layouts/modules/_m-head.pug
+include layouts/components/header.pug
+include layouts/components/footer.pug
+include layouts/components/ui/productCard.pug
+
+html(lang='ru')
+    +m-head
+    body
+    +header
+    section.blog-page
+        .subscribe-badge
+            .subscribe-badge__icon 
+                svg(height='24' width="24")
+                    use(href="../assets/icon/sprite.svg#tg")
+            .subscribe-badge__text Розыгрыши призов, информация о мероприятиях и все самое главное о Садовом центре на Атербекова!
+            a(href="##").subscribe-badge__subscribe-link 
+                .subscribe-badge__link-text подписаться
+            .subscribe-badge__close-btn
+                button
+                    svg(width="24" height="24")
+                        use(href="..assets/icon/sprite.svg#close") 
+            
+        .blog-page__breadcrumbs.breadcrumbs.breadcrumbs-case
+            .swiper
+                .swiper-wrapper
+                    .swiper-slide 
+                        .breadcrumbs__page 
+                            .breadcrumbs__text Главная
+                            svg(width="24" height="24")
+                                use(href="../assets/icons/sprite.svg#selectArrow")
+                    .swiper-slide
+                        .breadcrumbs__page.breadcrumbs--current
+                            .breadcrumbs__text Фотостудия
+        .container
+            .club-card__header.section-header
+                .section-header__first-row
+                    h2.section-header__title Фотостудия
+                .section-header__second-row Пространство для вдохновения!
+                .section-header__third-row Наша фотостудия — это не просто место для съемок, а пространство, где сочетаются естественная красота природы и современные возможности для творчества. 
+            .blog-page__content
+                .annotation
+                    .annotation-header Как забронировать студию?
+                    .annotation-main Запись на аренду осуществляется по предварительному бронированию. Позвоните нам по номеру 
+                        a(href="").link +7 (928) 210 13 32 
+                        | (Инна Вячеславовна)!
+                .photo-swiper(id="photo-swiper")
+                    .swiper.item-swiper
+                        .swiper-wrapper 
+                            .swiper-slide.fancybox-trigger
+                                .photo-swiper__wrapper-photo
+                                    img(src="../assets/images/photoStudio/girl.png" alt="").photo-swiper__img
+                            .swiper-slide.fancybox-trigger
+                                .photo-swiper__wrapper-photo
+                                    img(src="../assets/images/photoStudio/girls.png" alt="").photo-swiper__img
+                            .swiper-slide.fancybox-trigger
+                                .photo-swiper__wrapper-photo
+                                    img(src="../assets/images/photoStudio/girls.png" alt="").photo-swiper__img
+                            .swiper-slide.fancybox-trigger
+                                .photo-swiper__wrapper-photo
+                                    img(src="../assets/images/photoStudio/girls.png" alt="").photo-swiper__img
+                            .swiper-slide.fancybox-trigger
+                                .photo-swiper__wrapper-photo
+                                    img(src="../assets/images/photoStudio/girls.png" alt="").photo-swiper__img
+                        .item-swiper__ui
+                            button.item-swiper__button-prev.btn.btn--light-green
+                                svg(width="24" height='24')
+                                    use(href="../assets/icons/sprite.svg#selectArrow")
+                            .item-swiper__wrapper-pagination
+                                .item-swiper__pagination 
+                            button.item-swiper__button-next.btn.btn--light-green
+                                svg(width="24" height='24')
+                                    use(href="../assets/icons/sprite.svg#selectArrow")
+                .annotation
+                    .annotation-header Как забронировать студию?
+                    .annotation-main Запись на аренду осуществляется по предварительному бронированию. Позвоните нам по номеру 
+                        a(href="").link +7 (928) 210 13 32 
+                        | (Инна Вячеславовна)!
+                .photo-swiper
+                    .swiper.item-swiper
+                        .swiper-wrapper 
+                            .swiper-slide
+                                .photo-swiper__wrapper-photo
+                                    img(src="../assets/images/photoStudio/girl.png" alt="").photo-swiper__img
+                            .swiper-slide
+                                .photo-swiper__wrapper-photo
+                                    img(src="../assets/images/photoStudio/girls.png" alt="").photo-swiper__img
+                            .swiper-slide
+                                .photo-swiper__wrapper-photo
+                                    img(src="../assets/images/photoStudio/girls.png" alt="").photo-swiper__img
+                            .swiper-slide
+                                .photo-swiper__wrapper-photo
+                                    img(src="../assets/images/photoStudio/girls.png" alt="").photo-swiper__img
+                            .swiper-slide
+                                .photo-swiper__wrapper-photo
+                                    img(src="../assets/images/photoStudio/girls.png" alt="").photo-swiper__img
+                        .item-swiper__ui
+                            button.item-swiper__button-prev.btn.btn--light-green
+                                svg(width="24" height='24')
+                                    use(href="../assets/icons/sprite.svg#selectArrow")
+                            .item-swiper__wrapper-pagination
+                                .item-swiper__pagination 
+                            button.item-swiper__button-next.btn.btn--light-green
+                                svg(width="24" height='24')
+                                    use(href="../assets/icons/sprite.svg#selectArrow")
+                .annotation
+                    .annotation-header Как забронировать студию?
+                    .annotation-main Запись на аренду осуществляется по предварительному бронированию. Позвоните нам по номеру 
+                        a(href="").link +7 (928) 210 13 32 
+                        | (Инна Вячеславовна)!
+                .photo-swiper
+                    .swiper.item-swiper
+                        .swiper-wrapper 
+                            .swiper-slide
+                                .photo-swiper__wrapper-photo
+                                    img(src="../assets/images/photoStudio/girl.png" alt="").photo-swiper__img
+                            .swiper-slide
+                                .photo-swiper__wrapper-photo
+                                    img(src="../assets/images/photoStudio/girls.png" alt="").photo-swiper__img
+                            .swiper-slide
+                                .photo-swiper__wrapper-photo
+                                    img(src="../assets/images/photoStudio/girls.png" alt="").photo-swiper__img
+                            .swiper-slide
+                                .photo-swiper__wrapper-photo
+                                    img(src="../assets/images/photoStudio/girls.png" alt="").photo-swiper__img
+                            .swiper-slide
+                                .photo-swiper__wrapper-photo
+                                    img(src="../assets/images/photoStudio/girls.png" alt="").photo-swiper__img
+                        .item-swiper__ui
+                            button.item-swiper__button-prev.btn.btn--light-green
+                                svg(width="24" height='24')
+                                    use(href="../assets/icons/sprite.svg#selectArrow")
+                            .item-swiper__wrapper-pagination
+                                .item-swiper__pagination 
+                            button.item-swiper__button-next.btn.btn--light-green
+                                svg(width="24" height='24')
+                                    use(href="../assets/icons/sprite.svg#selectArrow")
+                .annotation
+                    .annotation-header Как забронировать студию?
+                    .annotation-main Запись на аренду осуществляется по предварительному бронированию. Позвоните нам по номеру 
+                        a(href="").link +7 (928) 210 13 32 
+                        | (Инна Вячеславовна)!
+                .photo-swiper
+                    .swiper.item-swiper
+                        .swiper-wrapper 
+                            .swiper-slide
+                                .photo-swiper__wrapper-photo
+                                    img(src="../assets/images/photoStudio/girl.png" alt="").photo-swiper__img
+                            .swiper-slide
+                                .photo-swiper__wrapper-photo
+                                    img(src="../assets/images/photoStudio/girls.png" alt="").photo-swiper__img
+                            .swiper-slide
+                                .photo-swiper__wrapper-photo
+                                    img(src="../assets/images/photoStudio/girls.png" alt="").photo-swiper__img
+                            .swiper-slide
+                                .photo-swiper__wrapper-photo
+                                    img(src="../assets/images/photoStudio/girls.png" alt="").photo-swiper__img
+                            .swiper-slide
+                                .photo-swiper__wrapper-photo
+                                    img(src="../assets/images/photoStudio/girls.png" alt="").photo-swiper__img
+                        .item-swiper__ui
+                            button.item-swiper__button-prev.btn.btn--light-green
+                                svg(width="24" height='24')
+                                    use(href="../assets/icons/sprite.svg#selectArrow")
+                            .item-swiper__wrapper-pagination
+                                .item-swiper__pagination 
+                            button.item-swiper__button-next.btn.btn--light-green
+                                svg(width="24" height='24')
+                                    use(href="../assets/icons/sprite.svg#selectArrow")
+                .annotation
+                    .annotation-header Как забронировать студию?
+                    .annotation-main Запись на аренду осуществляется по предварительному бронированию. Позвоните нам по номеру 
+                        a(href="").link +7 (928) 210 13 32 
+                        | (Инна Вячеславовна)!
+    +footer     

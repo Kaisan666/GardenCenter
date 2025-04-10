@@ -2,19 +2,21 @@
   display: flex;
   height: 196px;
   gap: 20px;
+
   &__wrapper-img {
     display: flex;
     flex: 1 1 auto;
     position: relative;
   }
-  &__hover{
+
+  &__hover {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.473);
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s  0s,
-    visibility 0s ease 0.5s;
+    transition: opacity 0.3s 0s,
+      visibility 0s ease 0.5s;
     position: absolute;
     z-index: 2;
     border-radius: 40px;
@@ -24,13 +26,14 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    
-    &-text{
-        color: $MWhite;
-        font-weight: 700;
-        font-size: 20px;
+
+    &-text {
+      color: $MWhite;
+      font-weight: 700;
+      font-size: 20px;
     }
   }
+
   &__img {
     height: 196px;
     border-radius: 40px;
@@ -38,8 +41,9 @@
     object-position: center;
     min-width: 210px;
     position: relative;
-    
+
   }
+
   &__tag,
   &__tag-mobile {
     font-weight: 700;
@@ -63,7 +67,7 @@
     max-width: 490px;
     height: 100%;
     transition: all 0.3s;
-    
+
   }
 
   &__header {
@@ -77,10 +81,12 @@
     font-weight: 600;
     color: $MBlack;
   }
+
   &__tag {
     font-weight: 700;
-    font-size: 20px;
+    font-size: 12px;
     padding: 8px 16px;
+
     &-mobile {
       display: none;
       font-weight: 700;
@@ -88,6 +94,7 @@
       padding: 8px 16px;
     }
   }
+
   &__main {
     // word-break: break-all;
     -webkit-line-clamp: 2;
@@ -105,6 +112,7 @@
     &-info {
       color: $GSupportDG;
     }
+
     &-main {
       display: flex;
       width: 100%;
@@ -117,39 +125,46 @@
     gap: 12px;
     color: $MMiddleGray;
   }
-  @media (hover : hover) and (pointer : fine){
-    &:hover{
-    .news-card__info{
+
+  @media (hover : hover) and (pointer : fine) {
+    &:hover {
+      .news-card__info {
         background-color: $MMiddleGray;
         transition: all 0.3s;
-    }
-    .news-card__hover{
+      }
+
+      .news-card__hover {
         opacity: 1;
         visibility: visible;
         transition: all 0.3s;
       }
-    .news-card__tag{
+
+      .news-card__tag {
         background-color: $GSupportLG;
         transition: all 0.3s;
         color: $GSupportDG;
+      }
     }
-}
   }
 
   @include mobile {
     flex-direction: column;
     height: auto;
+
     &__img {
       height: 100%;
       border-radius: 40px;
     }
+
     &__wrapper-img {
       flex: 1 1 240px;
     }
+
     &__info {
       max-width: 100%;
       padding: 24px 20px;
     }
+
     &__tag {
       display: none;
 
@@ -160,6 +175,7 @@
         align-self: flex-end;
       }
     }
+
     &__footer {
       display: flex;
 

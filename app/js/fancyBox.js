@@ -28,43 +28,44 @@ Fancybox.bind('[data-fancybox]', {
 
 // const triggers = document.querySelectorAll(".fancybox-trigger")
 
-// if (triggers){
-//   triggers.forEach( trigger => {
-//     trigger.addEventListener("click", () =>{
-//       console.log(123)
-//       Fancybox.show([{
-//         src: "#photo-swiper",
-//         type: "clone",
+if (triggers){
+  triggers.forEach( trigger => {
+    trigger.addEventListener("click", () =>{
+      console.log(123)
+      Fancybox.show([{
+        src: "#photo-swiper",
+        type: "clone",
         
-//       }], {
-//         on : {
-//           reveal : (event, fancybox, slide) => {
-//             console.log('Swiper готов!', event)
-//             console.log('Swiper готов!', fancybox)
-//             console.log('Swiper готов!', slide)
-//             console.log(document.querySelector(".fancybox__content"))
-//             const clonedSwiper = document.getElementById("photo-swiper--clone")
-//             new Swiper(clonedSwiper.querySelector(".swiper"), {
-//               loop : true,
-//             pagination : {  
-//                 el : ".item-swiper__pagination",
-//                 clickable : true
-//             },
-//             navigation: {
-//                 nextEl: '.item-swiper__button-next',
-//                 prevEl: '.item-swiper__button-prev',
-//               },
-//             slidesPerView: "1",
-//             spaceBetween : 100,
-//             })
-//           },
-//           closing : (fancybox, slide) =>{
-//             console.log(123)
-//             console.log(document.querySelector(".fancybox__content"))
-//             const clonedSwiper = document.getElementById("photo-swiper--clone")
-//             console.log(clonedSwiper)
-//           }
-//         }
+      }], {
+        on : {
+          reveal : (event, fancybox, slide) => {
+            console.log('Swiper готов!', event)
+            console.log('Swiper готов!', fancybox)
+            console.log('Swiper готов!', slide)
+            console.log(document.querySelector(".fancybox__content"))
+            const fancyBoxContainer = document.querySelector(".fancybox__container")
+            const clonedSwiper = fancyBoxContainer.querySelector(".swiper")
+            new Swiper(clonedSwiper, {
+              loop : true,
+            pagination : {  
+                el : ".item-swiper__pagination",
+                clickable : true
+            },
+            navigation: {
+                nextEl: '.item-swiper__button-next',
+                prevEl: '.item-swiper__button-prev',
+              },
+            slidesPerView: "1",
+            spaceBetween : 10,
+            })
+          },
+          closing : (fancybox, slide) =>{
+            console.log(123)
+            console.log(document.querySelector(".fancybox__content"))
+            const clonedSwiper = document.getElementById("photo-swiper--clone")
+            console.log(clonedSwiper)
+          }
+        }
         
 //       })
 //     })
