@@ -22,7 +22,7 @@ import './btnToggle';
 import './moreBtn';
 import './burger';
 import "./fancyBox"
-import "./changeName"
+// import "./changeName"
 import "./map"
 // import './marquee'
 
