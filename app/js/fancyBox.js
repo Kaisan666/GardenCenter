@@ -28,9 +28,9 @@ Fancybox.bind('[data-fancybox]', {
 const triggers = document.querySelectorAll(".fancybox-trigger")
 
 if (triggers){
-  triggers.forEach( trigger => {
+  triggers.forEach( (trigger, index) => {
     trigger.addEventListener("click", () =>{
-      const index = trigger.dataset.index
+      // const index = trigger.dataset.index
       console.log(123)
       Fancybox.show([{
         src: "#photo-swiper",
