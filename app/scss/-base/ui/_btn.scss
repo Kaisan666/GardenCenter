@@ -24,7 +24,7 @@
                 background: $GSupportDG;
                 color: $GLightG;
                 transition: all .2s ease-in-out;
-                svg use{
+                svg  {
                     fill: $GLightG;
                     transition: all .2s ease-in-out;
                 }
@@ -34,7 +34,7 @@
             background-color: $GDarkG;
             color: $GLightG;
             transition: all .2s ease-in-out;
-            svg use{
+            svg{
                 fill: $GLightG;
                 transition: all .2s ease-in-out;
             }
@@ -44,7 +44,7 @@
             background-color: $MMiddleGray;
             color: $MWhite;
             transition: all .2s ease-in-out;
-            svg use{
+            svg {
                 fill: $MWhite;
                 transition: all .2s ease-in-out;
             }
@@ -64,7 +64,7 @@
                 background: $GSupportLG;
                 color: $GSupportDG;
                 transition: all .2s ;
-                svg use{
+                svg  {
                     fill: $GSupportDG;
                     transition: all .2s ;
                 }
@@ -74,7 +74,7 @@
             background-color: $GMediumG;
             color: $GLightG;
             transition: all .2s;
-            svg use{
+            svg  {
                 fill: $GLightG;
                 transition: all .2s;
             }
@@ -84,12 +84,48 @@
             background-color: $MMiddleGray;
             color: $MWhite;
             transition: all .3s ease-in-out;
-            svg use{
+            svg  {
                 fill: $MWhite;
                 transition: all .3s ease-in-out;
             }
         }
         
+    }
+    &--transparent{
+        padding: 0;
+        background-color: transparent;
+        transition: all .2s ;
+        svg{
+            fill: $GMediumG;
+            transition: all .2s ;
+        }
+        @media (hover : hover) and (pointer : fine) {
+            &:hover{
+                color: $GSupportDG;
+                transition: all .2s ;
+                svg  {
+                    fill: $GSupportDG;
+                    transition: all .2s ;
+                }
+            }
+        }
+        &:active{
+            color: $GDarkG;
+            transition: all .2s;
+            svg  {
+                fill: $GDarkG;
+                transition: all .2s;
+            }
+        }
+        &:disabled{
+            pointer-events: none;
+            color: $MWhite;
+            transition: all .3s ease-in-out;
+            svg  {
+                fill: $MWhite;
+                transition: all .3s ease-in-out;
+            }
+        }
     }
     
 }

@@ -31,9 +31,10 @@ const triggers = document.querySelectorAll(".fancybox-trigger")
 if (triggers){
   triggers.forEach( trigger => {
     trigger.addEventListener("click", () =>{
+      const swiper = trigger.closest(".photo-swiper")
       console.log(123)
       Fancybox.show([{
-        src: "#photo-swiper",
+        src: swiper,
         type: "clone",
         
       }], {
@@ -43,8 +44,9 @@ if (triggers){
             console.log('Swiper готов!', fancybox)
             console.log('Swiper готов!', slide)
             console.log(document.querySelector(".fancybox__content"))
-            const clonedSwiper = document.getElementById("photo-swiper--clone")
-            new Swiper(clonedSwiper.querySelector(".swiper"), {
+            const fancyBoxContainer = document.querySelector(".fancybox__container")
+            const clonedSwiper = fancyBoxContainer.querySelector(".swiper")
+            new Swiper(clonedSwiper, {
               loop : true,
             pagination : {  
                 el : ".item-swiper__pagination",
@@ -55,7 +57,7 @@ if (triggers){
                 prevEl: '.item-swiper__button-prev',
               },
             slidesPerView: "1",
-            spaceBetween : 100,
+            spaceBetween : 10,
             })
           },
           closing : (fancybox, slide) =>{

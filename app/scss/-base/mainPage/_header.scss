@@ -48,9 +48,20 @@
       gap: 24px;
       .category{
         text-transform: uppercase;
+        svg{
+          transition: all 0.3s ease-in-out;
+        }
+        @media (hover : hover) and (pointer : fine) {
+          &:hover{
+            svg{
+              fill: $GMediumG; 
+              transition: all 0.3s ease-in-out;
+            }
+          }
+        }
       }
       .btn-toggle__button{
-        text-transform: uppercaseq;
+        text-transform: uppercase;
       }
     }
 

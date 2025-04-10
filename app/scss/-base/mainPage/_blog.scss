@@ -19,12 +19,31 @@
     &__swiper {
         min-width: 0;
         max-width: 590px;
+        &-content{
+            display: flex;
+            position: relative;
+        }
 
         .swiper {
             width: 100%;
             &-slide {
                 display: flex;
                 justify-content: center;
+                position: relative;
+            }
+            .subscribe-link{
+                position: absolute;
+                // padding: 12px 24px;
+                border-radius: 60px;
+                bottom: 18px;
+                left: 50%;
+                transform: translateX(-50%);
+                &__text{
+                    font-size: 16px;
+                }
+                @include table{
+                    bottom: 12px;
+                }
             }
         }
     }

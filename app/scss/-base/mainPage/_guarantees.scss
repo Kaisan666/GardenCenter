@@ -4,6 +4,11 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
+  .promotion-card{
+    &__header{
+        flex: 1 1 auto  ;
+    }
+}
 
   .attraction {
     gap: 0;
@@ -22,6 +27,11 @@
       gap: 20px;
       &__info{
         flex: 1 1 auto;
+      }
+      &__img{
+        img{
+          // height: 100%;
+        }
       }
     }
   }

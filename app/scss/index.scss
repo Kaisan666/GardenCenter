@@ -687,6 +687,13 @@ section {
 
     .page {
       padding: 12px 8px;
+      @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        background-color: $GLightG;
+        color: $GSupportDG;
+        transition: all 0.2s ease-in-out;
+      }
+    }
     }
   }
 
@@ -776,9 +783,20 @@ section {
   font-size: 16px;
   line-height: 110%;
   color: $MDarkGray;
+  transition: all 0.3s ease-in-out;
+  &.item-more{
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: $GLightG;
+      color: $GSupportDG;
+      transition: all 0.2s ease-in-out;
+    }
+  }}
+
 
   &.custom-tooltip {
     padding: 8px 12px;
+    padding-right: 1px;
   }
 
   svg {
