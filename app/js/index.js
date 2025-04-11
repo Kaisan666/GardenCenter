@@ -3,6 +3,7 @@
 // import 'bootstrap/dist/css/bootstrap-grid.css';
 // import 'nouislider/dist/nouislider.css';
 import 'choices.js/public/assets/styles/choices.css';
+import "@fancyapps/ui/dist/fancybox.css";
 import '../scss/index.scss';
 import './swiper';
 //js
@@ -22,9 +23,7 @@ import './btnToggle';
 import './moreBtn';
 import './burger';
 import "./fancyBox"
-// import "./changeName"
 import "./map"
-// import './marquee'
 
 
 //// ================================ Code ======================================

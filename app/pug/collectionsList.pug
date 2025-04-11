@@ -8,7 +8,7 @@ html(lang='ru')
     body
     +header
     section.collections
-        .collections__breadcrumbs.breadcrumbs
+        .collections__breadcrumbs.breadcrumbs.breadcrumbs-case
             .swiper
                 .swiper-wrapper
                     .swiper-slide 
@@ -30,7 +30,7 @@ html(lang='ru')
                     .beginners__header.section-header
                         .section-header__first-row
                             h2.section-header__title Новинки
-                            a(href="##").section-header__link.link
+                            a(href="##").section-header__link.btn--transparent.btn
                                 .section-header__link-text К подборке
                                 svg(width="24" height='24').section-header__link-img
                                     use(href="../assets/icons/sprite.svg#selectArrow")

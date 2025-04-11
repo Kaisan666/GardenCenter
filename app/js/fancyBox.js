@@ -1,5 +1,5 @@
 import { Fancybox, Carousel, Panzoom } from '@fancyapps/ui';
-import "@fancyapps/ui/dist/fancybox.css";
+
 import IMask from 'imask';
 import Swiper from 'swiper/bundle';
 const popUps = document.querySelectorAll(".popup-form")
@@ -30,27 +30,24 @@ const triggers = document.querySelectorAll(".fancybox-trigger")
 if (triggers){
   triggers.forEach( (trigger, index) => {
     trigger.addEventListener("click", () =>{
-      // const index = trigger.dataset.index
-      console.log(123)
+      const photoSwiper = trigger.closest(".photo-swiper")
+      let swiper
       Fancybox.show([{
-        src: "#photo-swiper",
+        src: photoSwiper,
         type: "clone",
+        dragToClose : false,
         
       }], {
         on : {
           reveal : (event, fancybox, slide) => {
-
-            console.log('Swiper готов!', event)
-            console.log('Swiper готов!', fancybox["$content"])
-            console.log('Swiper готов!', slide)
-            console.log(document.querySelector(".fancybox__content"))
-            const fancyBoxContainer = document.querySelector(".fancybox__container")
-            const fancyboxContent = document.querySelector(".fancybox__content")
-            const clonedSwiper = fancyBoxContainer.querySelector(".swiper")
-            fancyboxContent.style = "background : transparent; padding : 0; width : calc(100% - 50px)"
-            fancyboxContent.closest(".fancybox__slide").style = "padding : 0"
-            clonedSwiper.style = "width : 100%"
-            const swiper = new Swiper(clonedSwiper, {
+            console.log(event.$container)
+            console.log(fancybox.$content)
+            console.log(slide)
+            const clonedSwiper = fancybox.$content.querySelector(".swiper")
+            // fancyboxContent.style = "background : transparent; padding : 0; width : calc(100% - 50px) ; max-width : fit-content"
+            // fancyboxContent.closest(".fancybox__slide").style = "padding : 0"
+            // clonedSwiper.style = "width : 100%"
+            swiper = new Swiper(clonedSwiper, {
               loop : true,
             pagination : {  
                 el : ".item-swiper__pagination",
@@ -60,25 +57,39 @@ if (triggers){
                 nextEl: '.item-swiper__button-next',
                 prevEl: '.item-swiper__button-prev',
               },
-              observer: true,
-          observeParents: true, 
             slidesPerView: "1",
             spaceBetween : 10,
             }
           )
           swiper.slideTo(index, 0)
           },
-          closing : (fancybox, slide) =>{
-            console.log(123)
-            console.log(document.querySelector(".fancybox__content"))
-            const clonedSwiper = document.getElementById("photo-swiper--clone")
-            console.log(clonedSwiper)
+          closing : () =>{
+            swiper.destroy()
           }
         }
         
       })
     })
     
+  })
+}
+
+const videoTrigger = document.querySelectorAll(".video-trigger")
+
+if (videoTrigger){
+  videoTrigger.forEach(trigger => {
+    trigger.addEventListener("click", () => {
+      const content = trigger.closest(".swiper-slide")
+      console.log(content)
+      const videoPlayer = content.querySelector(".video-player")
+      console.log(videoPlayer)
+      Fancybox.show([{
+        src : videoPlayer,
+        type : "inline",
+        dragToClose : false
+
+      }])
+    })
   })
 }
 

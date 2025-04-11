@@ -29,7 +29,6 @@ body {
   margin: 0 auto;
   padding: 0px 40px 40px;
   overflow: hidden;
-
   @include table {
     padding: 0 20px 60px;
   }
@@ -775,7 +774,18 @@ section {
     }
   }
 }
-
+.fancybox__slide{
+  padding: 0;
+}
+.fancybox__content{
+  padding: 0;
+  background: transparent;
+  width: calc(100% - 50px);
+  max-width: fit-content;
+  .swiper{
+    width: 100%;
+  }
+}
 .page {
   padding: 11px 12px;
   border-radius: 60px;
@@ -792,6 +802,9 @@ section {
       transition: all 0.2s ease-in-out;
     }
   }}
+.fancybox__container{
+
+}
 
 
   &.custom-tooltip {
@@ -808,6 +821,9 @@ section {
     color: $GSupportDG;
     transition: all 0.2s ease-in-out;
   }
+}
+.hidden{
+  display: none;
 }
 
 // .product-card__wrapper {

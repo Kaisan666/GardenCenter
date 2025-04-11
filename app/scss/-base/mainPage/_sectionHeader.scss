@@ -36,12 +36,21 @@
         font-size: 24px;
         color: $MMiddleGray;
         margin: 12px 0 16px;
+        display: flex;
+        gap: 12px;
     }
 
     &__third-row {
         max-width: 785px;
         justify-self: end;
         align-self: flex-end;
+    }
+    &__result{
+        color: $MBlack;
+        max-width: 200px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     @include mobile {

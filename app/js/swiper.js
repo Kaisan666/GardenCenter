@@ -110,6 +110,7 @@ if(productsSwipers){
                 nextEl: '.item-swiper__button-next',
                 prevEl: '.item-swiper__button-prev',
               },
+            loop : true,
             slidesPerView: 1.5,
             spaceBetween : 24,
             breakpoints : {

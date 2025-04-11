@@ -74,19 +74,29 @@ mixin blog
                 .blog__swiper
                         .swiper.item-swiper
                             .swiper-wrapper 
-                                .swiper-slide.fancybox-trigger
+                                .swiper-slide
                                     .blog__swiper-content
                                         img(src="../assets/images/videos/previews/video1.png", alt="")
                                                 //- video(src="../assets/videos/video.mp4" controls poster="../assets/images/videos/previews/video1.png")
                                         a(href="##").subscribe-link.subscribe-link--telegram
                                             svg(width="24" height="24" fill="white")
                                                 use(href="../assets/icons/sprite.svg#tg") 
-                                        button.play-button
-                                            svg(height="24" width="24")
-                                                use(href="../assets/icons/sprite.svg")
                                             .subscribe-link__text подписаться
+                                        button.play-button.btn.btn--light-green.video-trigger
+                                            input(type="checkbox")
+                                            .play-button__play
+                                            svg(height="24" width="24" fill="5E8A3B")
+                                                use(href="../assets/icons/sprite.svg#playIcon")
+                                            .play-button__pause
+                                            svg(height="24" width="24" fill="5E8A3B")
+                                                use(href="../assets/icons/sprite.svg#pauseIcon")
+                                        .video-player(style="display : none" data-videoUrl)
+                                            //- video.video
+                                            //-     source(muted="muted" controls autoplay src="../assets/videos/video.mp4" data-video-url = "")
+                                            <iframe width="720" height="405" src="https://rutube.ru/play/embed/551b68efdb49bdb7bf6193d18368f812/" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen>
+                                            //- iframe( allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen src="https://rutube.ru/video/551b68efdb49bdb7bf6193d18368f812/", frameborder="0") 
                                     //- .subscribe- 
-                                .swiper-slide.fancybox-trigger
+                                .swiper-slide
                                     .blog-swiper__content
                                         img(src="../assets/images/videos/previews/video2.png", alt="")
                                         a(href="##").subscribe-link.subscribe-link--vkontakte
@@ -94,7 +104,7 @@ mixin blog
                                                 use(href="../assets/icons/sprite.svg#tg") 
                                             .subscribe-link__text подписаться
                                     //- video(src="../assets/videos/video.mp4" controls poster="../assets/images/videos/previews/video1.png") 
-                                .swiper-slide.fancybox-trigger
+                                .swiper-slide
                                     .blog-swiper__content
                                         img(src="../assets/images/videos/previews/video1.png", alt="")
                                     a(href="##").subscribe-link.subscribe-link--telegram
@@ -102,7 +112,7 @@ mixin blog
                                                 use(href="../assets/icons/sprite.svg#tg") 
                                             .subscribe-link__text подписаться
                                     //- video(src="../assets/videos/video.mp4" controls poster="../assets/images/videos/previews/video1.png") 
-                                .swiper-slide.fancybox-trigger
+                                .swiper-slide
                                     .blog-swiper__content
                                         img(src="../assets/images/videos/previews/video2.png", alt="")
                                         a(href="##").subscribe-link.subscribe-link--vkontakte
@@ -110,7 +120,7 @@ mixin blog
                                                 use(href="../assets/icons/sprite.svg#tg") 
                                             .subscribe-link__text подписаться
                                     //- video(src="../assets/videos/video.mp4" controls poster="../assets/images/videos/previews/video1.png") 
-                                .swiper-slide.fancybox-trigger
+                                .swiper-slide
                                     .blog-swiper__content    
                                         img(src="../assets/images/videos/previews/video1.png", alt="")
                                         a(href="##").subscribe-link.subscribe-link--telegram
