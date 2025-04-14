@@ -140,7 +140,8 @@
         transition: all 0.3s;
       }
 
-      .news-card__tag {
+      .news-card__tag,
+      .news-card__tag-mobile {
         background-color: $GSupportLG;
         transition: all 0.3s;
         color: $GSupportDG;

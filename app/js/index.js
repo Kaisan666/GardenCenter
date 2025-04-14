@@ -86,25 +86,25 @@ tooltipElements.forEach((item) => {
 });
 
 
-let lastScroll = 0
-const defaultOffset = 100
-const fixedHeader = document.querySelector(".header__fixed")
+// let lastScroll = 0
+// const defaultOffset = 100
+// const fixedHeader = document.querySelector(".header__fixed")
 
-const scrollPosition = () =>{
-  return window.pageYOffset || document.documentElement.scrollTop
-}
+// const scrollPosition = () =>{
+//   return window.pageYOffset || document.documentElement.scrollTop
+// }
 
-const isActive = () =>{
-  return fixedHeader.classList.contains("header__fixed--active")
-}
+// const isActive = () =>{
+//   return fixedHeader.classList.contains("header__fixed--active")
+// }
 
-window.addEventListener("scroll", () =>{
-  console.log(document.documentElement.scrollTop)
-  if (scrollPosition() > lastScroll && isActive() && scrollPosition() > defaultOffset || window.pageYOffset < 200){
-    fixedHeader.classList.remove("header__fixed--active")
-  }
-  else if (scrollPosition() < lastScroll && !isActive()){
-    fixedHeader.classList.add("header__fixed--active")
-  }
-  lastScroll = scrollPosition()
-})
+// window.addEventListener("scroll", () =>{
+//   console.log(document.documentElement.scrollTop)
+//   if (scrollPosition() > lastScroll && isActive() && scrollPosition() > defaultOffset || window.pageYOffset < 200){
+//     fixedHeader.classList.remove("header__fixed--active")
+//   }
+//   else if (scrollPosition() < lastScroll && !isActive()){
+//     fixedHeader.classList.add("header__fixed--active")
+//   }
+//   lastScroll = scrollPosition()
+// })

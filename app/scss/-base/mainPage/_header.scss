@@ -162,12 +162,13 @@
     position: fixed;
     left: 0;
     top: 0;
-    transform: translateY(-200%);
+    // transform: translateY(-200%);
     transition: all 0.3s ease-in-out;
     &--active{
       transform: translateY(0);
       transition: all 0.3s ease-in-out;
     }
+    // &__
   }
 
   @include table {

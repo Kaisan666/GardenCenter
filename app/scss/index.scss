@@ -634,6 +634,9 @@ section {
   display: none;
 
   &--active {
+    .search{
+      max-width: none;
+    }
 
     .burger {
 
@@ -712,6 +715,7 @@ section {
       visibility: visible;
       left: 0;
       transition: all 0.3s ease-in-out;
+      overflow-y: scroll;
     }
   }
 
