@@ -20,27 +20,4 @@
     &__play{
       flex: 1 0 auto;
     }
-    &__pause{
-      flex: 1 0 auto;
-      display: none;
-    }
-    input:checked {
-      & ~ .play-button{
-        &__play{
-          display: none;
-        }
-        &__pause{
-          display: block;
-        }
-      }
-    }
-    input:checked{
-      &~.play{
-        display: none;
-      &~.pause{
-        display: block;
-        flex: 1 0 auto;
-      }
-      }
-    }
-}
+  }
