@@ -2,54 +2,7 @@
   display: flex;
 }
 
-.play-button{
-    width: 56px;
-    height: 56px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 10;
-    input{
-      position: absolute;
-      z-index: 10;
-      width: 100%;
-      height: 100%;
-      border-radius: inherit;
-      opacity: 0;
-    }
-    &__play{
-      flex: 1 0 auto;
-    }
-    &__pause{
-      flex: 1 0 auto;
-      display: none;
-    }
-    input:checked {
-      & ~ .play-button{
-        &__play{
-          display: none;
-        }
-        &__pause{
-          display: block;
-        }
-      }
-    }
-    input:checked{
-      &~.play{
-        display: none;
-        // &:first-child{
-        //   display: none;
-        // }
-      &~.pause{
-        display: block;
-        flex: 1 0 auto;
-      }
-      }
-    }
-}
+
 
 .pages {
     padding: 20px;

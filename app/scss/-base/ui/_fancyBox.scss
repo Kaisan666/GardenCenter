@@ -1,0 +1,29 @@
+.item-swiper,
+.photo-swiper{
+    .fancybox__slide{
+        padding: 0;
+      }
+      &.fancybox__content{
+        padding: 0;
+        background: transparent;
+        width: calc(100% - 50px);
+        max-width: fit-content;
+        .swiper{
+          width: 100%;
+        }
+      }
+}
+.video-player{
+    .fancybox__slide{
+        padding: 0;
+      }
+      &.fancybox__content{
+        padding: 0;
+        background: transparent;
+        width: calc(100% - 50px);
+        max-width: fit-content;
+        .swiper{
+          width: 100%;
+        }
+      }
+}

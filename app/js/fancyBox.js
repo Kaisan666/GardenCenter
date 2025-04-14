@@ -82,6 +82,8 @@ if (videoTrigger){
       const content = trigger.closest(".swiper-slide")
       console.log(content)
       const videoPlayer = content.querySelector(".video-player")
+      const url = videoPlayer.getAttribute("data-videoUrl")
+      videoPlayer.querySelector("iframe").setAttribute("src", url)
       console.log(videoPlayer)
       Fancybox.show([{
         src : videoPlayer,

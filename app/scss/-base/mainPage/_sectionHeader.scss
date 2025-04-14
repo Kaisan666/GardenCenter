@@ -45,9 +45,12 @@
         justify-self: end;
         align-self: flex-end;
     }
+    &__search{
+        white-space: nowrap;
+    }
     &__result{
         color: $MBlack;
-        max-width: 200px;
+        max-width: 450px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;

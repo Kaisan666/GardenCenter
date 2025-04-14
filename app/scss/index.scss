@@ -13,6 +13,12 @@
 /* ================================ Base ================================ */
 @import './-base/**/*.scss';
 
+  // body:has(.swiper-main){
+  //   .header{
+  //     padding-bottom: 0;
+  //     margin-bottom: 0; 
+  //   }
+  // }
 * {
   font-family: $FFMontserrat;
 }
@@ -766,6 +772,7 @@ section {
   svg {
     flex: 0 0 auto;
   }
+  
 
   @media (hover: hover) and (pointer: fine) {
     &:hover {
@@ -774,18 +781,18 @@ section {
     }
   }
 }
-.fancybox__slide{
-  padding: 0;
-}
-.fancybox__content{
-  padding: 0;
-  background: transparent;
-  width: calc(100% - 50px);
-  max-width: fit-content;
-  .swiper{
-    width: 100%;
-  }
-}
+// .fancybox__slide{
+//   padding: 0;
+// }
+// .fancybox__content{
+//   padding: 0;
+//   background: transparent;
+//   width: calc(100% - 50px);
+//   max-width: fit-content;
+//   .swiper{
+//     width: 100%;
+//   }
+// }
 .page {
   padding: 11px 12px;
   border-radius: 60px;

@@ -28,7 +28,8 @@
 
     &__photo {
       width: 100%;
-      img{
+
+      img {
         width: 100%;
         object-fit: cover;
         object-position: center;
@@ -53,7 +54,7 @@
     }
   }
   @include mobile {
-    &__photo{
+    &__photo {
       max-height: 230px;
     }
   }
