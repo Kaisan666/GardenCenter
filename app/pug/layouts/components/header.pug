@@ -146,5 +146,152 @@ mixin header
                                     use(href="../assets/icons/sprite.svg#selectArrow")
                             .custom-tooltip__container
                                 .custom-tooltip__items#jsItemsContainer
+    .header__fixed.header
+        .container
+            .header__container
+                .header__up
+                    a(href="/").header__logo 
+                        svg(width="288" height="60")
+                            use( href="../assets/icons/sprite.svg#logo")
+                    .header__up-right
+                        .search.field.field--normal
+                            .field__container
+                                .field__placeholder
+                                    input(type="text" placeholder=" " )
+                                    .field__placeholder-text Поиск...
+                                    svg(width="24" height="24" fill="#6A6A6A").field__eye-icon
+                                        use(href="../assets/icons/sprite.svg#search")
+                        .socials
+                            a(href='##').social
+                                .social__icon
+                                    svg(width='24' height='24' fill="#ffffff") 
+                                        use( href="../assets/icons/sprite.svg#inst")
+                            a(href='##').social
+                                .social__icon
+                                    svg(width='24' height='24' fill="#ffffff") 
+                                        use( href="../assets/icons/sprite.svg#tg")
+                            a(href='##').social
+                                .social__icon
+                                    svg(width='24' height='24' fill="#ffffff") 
+                                        use( href="../assets/icons/sprite.svg#vk")
+                            .social.social--phone
+                                .social__icon
+                                    svg(width='24' height='24' fill="#ffffff") 
+                                        use( href="../assets/icons/sprite.svg#phone")
+                                .custom-tooltip.custom-tooltip--arrow
+                                    a.custom-tooltip__text(href='##') +7 (999) 999 99 99
+                                    .custom-tooltip__arrow
+                                        svg(width='24' height='24') 
+                                            use(href="../assets/icons/sprite.svg#selectArrow")
+                                    .custom-tooltip__container
+                                        .custom-tooltip__items
+                                            a(href='##').custom-tooltip__item +7 (999) 999 99 91
+                                            a(href='##').custom-tooltip__item +7 (999) 999 99 92
+                    .burger#burger
+                        .burger__btn
+                            .burger__case
+                                .burger__line
+                                .burger__line
+                                .burger__line
+                        .burger__modal
+                            .burger__container
+                                .search.field
+                                    .field__container
+                                        .field__placeholder
+                                            input(type="text" placeholder=" " )
+                                            .field__placeholder-text Поиск...
+                                            svg(width="24" height="24" fill="#6A6A6A").field__eye-icon
+                                                use(href="../assets/icons/sprite.svg#search")
+                                .burger__categories
+                                    .category
+                                        button.btn-toggle__button
+                                            svg(width='24' height='24' fill='#8EAD75') 
+                                                use( href="../assets/icons/sprite.svg#burger") 
+                                            | Каталог
+                                    a(href='##').category
+                                        svg(width='24' height='24' fill='#8EAD75') 
+                                            use( href="../assets/icons/sprite.svg#stocks") 
+                                        | Акции
+                                    a(href='##').category
+                                        svg(width='24' height='24' fill='#8EAD75') 
+                                            use( href="../assets/icons/sprite.svg#compilation") 
+                                        | Подборки
+                                    a(href='##').category
+                                        svg(width='24' height='24' fill='#8EAD75') 
+                                            use( href="../assets/icons/sprite.svg#clubCard") 
+                                        | Клубные карты
+                                .burger__pages
+                                    a(href='##').page Услуги
+                                    a(href='##').page Фотостудия
+                                    a(href='##').page Блог
+                                    a(href='##').page.hidden Подарочные карты
+                                    a(href='##').page О нас
+                                    a(href='##').page Контакты
+                                    a(href='##').page Вакансии
+                                    a(href='##').page Доставка и оплата
+                                .burger__socials.socials
+                                    a(href='##').social
+                                        .social__icon
+                                            svg(width='24' height='24' fill="#ffffff") 
+                                                use( href="../assets/icons/sprite.svg#inst")
+                                    a(href='##').social
+                                        .social__icon
+                                            svg(width='24' height='24' fill="#ffffff") 
+                                                use( href="../assets/icons/sprite.svg#tg")
+                                    a(href='##').social
+                                        .social__icon
+                                            svg(width='24' height='24' fill="#ffffff") 
+                                                use( href="../assets/icons/sprite.svg#vk")
+                                    .social.social--phone
+                                        .social__icon
+                                            svg(width='24' height='24' fill="#ffffff") 
+                                                use( href="../assets/icons/sprite.svg#phone")
+                                        .custom-tooltip
+                                            a.custom-tooltip__text(href='##') +7 (999) 999 99 99
+                                            .custom-tooltip__arrow
+                                                svg(width='24' height='24') 
+                                                    use(href="../assets/icons/sprite.svg#selectArrow")
+                                            .custom-tooltip__container
+                                                .custom-tooltip__items
+                                                    a(href='##').custom-tooltip__item +7 (999) 999 99 91
+                                                    a(href='##').custom-tooltip__item +7 (999) 999 99 92
+                .header__bottom.menu
+                    .header__bottom-left
+                        .header__category.category.btn-toggle(id="menu-catalog")
+                            button.btn-toggle__button
+                                svg(width='24' height='24' fill='#8EAD75') 
+                                    use( href="../assets/icons/sprite.svg#burger") 
+                                | Каталог
+                            .btn-toggle__catalog
+                        a(href='##').header__category.category
+                            svg(width='24' height='24' fill='#8EAD75') 
+                                use( href="../assets/icons/sprite.svg#stocks") 
+                            | Акции
+                        a(href='##').header__category.category
+                            svg(width='24' height='24' fill='#8EAD75') 
+                                use( href="../assets/icons/sprite.svg#compilation") 
+                            | Подборки
+                        a(href='##').header__category.category
+                            svg(width='24' height='24' fill='#8EAD75') 
+                                use( href="../assets/icons/sprite.svg#clubCard") 
+                            | Клубные карты
+                    .header__line
+                    .header__bottom-right 
+                        .header__bottom-right-container#jsItemMoreContainerFixed
+                            a(href='##').header__page.page.item-more Услуги
+                            a(href='##').header__page.page.item-more Фотостудия
+                            a(href='##').header__page.page.item-more Блог
+                            a(href='##').header__page.page.item-more.hidden Подарочные карты
+                            a(href='##').header__page.page.item-more О нас
+                            a(href='##').header__page.page.item-more Контакты
+                            a(href='##').header__page.page.item-more Вакансии
+                            a(href='##').header__page.page.item-more Доставка и оплата
+                        .header__page.page.custom-tooltip--dom.custom-tooltip.custom-tooltip--arrow#jsItemsMoreFixed
+                            .custom-tooltip__text Еще
+                            .custom-tooltip__arrow
+                                svg(width='24' height='24') 
+                                    use(href="../assets/icons/sprite.svg#selectArrow")
+                            .custom-tooltip__container
+                                .custom-tooltip__items#jsItemsContainerFixed
 
 

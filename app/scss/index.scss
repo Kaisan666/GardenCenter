@@ -13,12 +13,12 @@
 /* ================================ Base ================================ */
 @import './-base/**/*.scss';
 
-  // body:has(.swiper-main){
-  //   .header{
-  //     padding-bottom: 0;
-  //     margin-bottom: 0; 
-  //   }
-  // }
+// body:has(.swiper-main){
+//   .header{
+//     padding-bottom: 0;
+//     margin-bottom: 0; 
+//   }
+// }
 * {
   font-family: $FFMontserrat;
 }
@@ -30,15 +30,17 @@ body {
   color: $MBlack;
 }
 
-.breadcrumbs-case{
+.breadcrumbs-case {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0px 40px 40px;
   overflow: hidden;
+
   @include table {
     padding: 0 20px 60px;
   }
 }
+
 .annotation {
   display: flex;
   flex-direction: column;
@@ -52,26 +54,31 @@ body {
     display: flex;
     gap: 12px;
     align-items: center;
-    &__icon{
-      svg{
-        fill : $GSupportLG;
+
+    &__icon {
+      svg {
+        fill: $GSupportLG;
       }
     }
   }
-  &-main{
+
+  &-main {
     line-height: 125%;
   }
+
   @include mobile {
-      &-header {
-        font-size: 18px;
-      }
+    &-header {
+      font-size: 18px;
+    }
   }
 }
+
 .custom-list {
   list-style-position: outside;
   list-style-type: '•';
   padding-left: 15px;
   line-height: 125%;
+
   li {
     list-style-position: outside;
     list-style-type: '•';
@@ -81,10 +88,12 @@ body {
 
 section {
   padding: 40px 0;
+
   @include table {
     padding: 30px 0;
   }
 }
+
 .swiper {
   .swiper-wrapper {
     height: auto;
@@ -119,6 +128,7 @@ section {
     padding: 0 20px;
   }
 }
+
 .swiper-container {
   max-width: 1440px;
   margin: 0 auto;
@@ -323,7 +333,19 @@ section {
     font-size: 16px;
     font-weight: 700;
     line-height: normal;
+    text-transform: uppercase;
     cursor: pointer;
+
+    svg {
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:active {
+      svg {
+        fill: $GMediumG;
+        transition: all 0.3s ease-in-out;
+      }
+    }
   }
 
   &__text {
@@ -603,10 +625,18 @@ section {
 }
 
 .burger {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
   display: none;
 
   &--active {
+
     .burger {
+
       &__line {
         top: 50%;
         transform: translateY(-50%) rotate(45deg);
@@ -673,8 +703,8 @@ section {
     left: -100%;
     top: 84px;
     width: 100%;
-    max-width: 435px;
-    height: calc(100% - 84px);
+    // max-width: 435px;
+    height: calc(100vh - 84px);
     background-color: $MWhite;
     transition: all 0.3s ease-in-out;
 
@@ -692,22 +722,27 @@ section {
 
     .page {
       padding: 12px 8px;
+
       @media (hover: hover) and (pointer: fine) {
-      &:hover {
-        background-color: $GLightG;
-        color: $GSupportDG;
-        transition: all 0.2s ease-in-out;
+        &:hover {
+          background-color: $GLightG;
+          color: $GSupportDG;
+          transition: all 0.2s ease-in-out;
+        }
       }
-    }
     }
   }
 
   &__socials {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    margin-top: auto;
 
     .social {
+
       &--phone {
-        flex: 1 1 100%;
+        // flex: 1 1 100%;
+        justify-self: end;
+        margin-left: auto;
 
         .social {
           &__icon {
@@ -735,6 +770,11 @@ section {
 
     .search {
       margin-bottom: 15px;
+      max-height: 40px;
+
+      input {
+        padding: 8px 12px;
+      }
     }
 
     &__categories {
@@ -745,12 +785,20 @@ section {
 
       .header__category {
         padding: 8px 0px;
-        
+
       }
     }
   }
 
   @include mediumMobile {
+    &__socials{
+      flex-wrap: wrap;
+      .social{
+        &--phone{
+          margin-left: 0;
+        }
+      }
+    }
     &__modal {
       max-width: none;
     }
@@ -768,11 +816,13 @@ section {
   line-height: 100%;
   color: $MDarkGray;
   transition: all 0.2s ease-in-out;
+  text-transform: uppercase;
+  height: 40px;
 
   svg {
     flex: 0 0 auto;
   }
-  
+
 
   @media (hover: hover) and (pointer: fine) {
     &:hover {
@@ -781,6 +831,7 @@ section {
     }
   }
 }
+
 // .fancybox__slide{
 //   padding: 0;
 // }
@@ -801,17 +852,18 @@ section {
   line-height: 110%;
   color: $MDarkGray;
   transition: all 0.3s ease-in-out;
-  &.item-more{
-  @media (hover: hover) and (pointer: fine) {
-    &:hover {
-      background-color: $GLightG;
-      color: $GSupportDG;
-      transition: all 0.2s ease-in-out;
-    }
-  }}
-.fancybox__container{
 
-}
+  &.item-more {
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        background-color: $GLightG;
+        color: $GSupportDG;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+  }
+
+  .fancybox__container {}
 
 
   &.custom-tooltip {
@@ -829,7 +881,8 @@ section {
     transition: all 0.2s ease-in-out;
   }
 }
-.hidden{
+
+.hidden {
   display: none;
 }
 
@@ -837,3 +890,5 @@ section {
 //   display: flex;
 //   gap: 10px;
 // }
+
+

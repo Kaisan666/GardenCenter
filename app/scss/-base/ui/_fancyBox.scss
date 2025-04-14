@@ -1,8 +1,8 @@
+.fancybox__slide{
+    padding: 0;
+  }
 .item-swiper,
 .photo-swiper{
-    .fancybox__slide{
-        padding: 0;
-      }
       &.fancybox__content{
         padding: 0;
         background: transparent;
@@ -14,16 +14,22 @@
       }
 }
 .video-player{
-    .fancybox__slide{
-        padding: 0;
-      }
+  // position: relative;
+justify-content: center;
       &.fancybox__content{
         padding: 0;
         background: transparent;
         width: calc(100% - 50px);
         max-width: fit-content;
-        .swiper{
-          width: 100%;
-        }
+        height: fit-content;
       }
+      iframe{
+        aspect-ratio: 16 / 9;
+        width: 85vw;
+        max-width: 85vw;
+        // max-height: 85vh;
+        
+      }
+      
 }
+
