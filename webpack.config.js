@@ -52,7 +52,7 @@ function MultiplePages(paths) {
       new HtmlWebpackPlugin({
         template: path.resolve(__dirname, html),
         filename: `${outName}.html`,
-        hash: true,
+        hash: false,
         minify: false,
         inject: 'body',
       })
