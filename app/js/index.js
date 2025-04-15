@@ -3,7 +3,7 @@
 // import 'bootstrap/dist/css/bootstrap-grid.css';
 // import 'nouislider/dist/nouislider.css';
 import 'choices.js/public/assets/styles/choices.css';
-import "@fancyapps/ui/dist/fancybox.css";
+import '@fancyapps/ui/dist/fancybox.css';
 import '../scss/index.scss';
 import './swiper';
 //js
@@ -17,14 +17,13 @@ import './swiper';
 // import { rippleEffect, Ripple } from 'data-ripple';
 // import noUiSlider from 'nouislider';
 // import Scrollbar from 'smooth-scrollbar';
-import { computePosition, shift, offset, flip } from '@floating-ui/dom';
+import { computePosition, shift, offset, flip, hide } from '@floating-ui/dom';
 
 import './btnToggle';
 import './moreBtn';
 import './burger';
-import "./fancyBox"
-import "./map"
-
+import './fancyBox';
+import './map';
 
 //// ================================ Code ======================================
 
@@ -85,7 +84,6 @@ tooltipElements.forEach((item) => {
   tooltip.addEventListener('mouseleave', hideTooltip);
 });
 
-
 // let lastScroll = 0
 // const defaultOffset = 100
 // const fixedHeader = document.querySelector(".header__fixed")
@@ -109,51 +107,49 @@ tooltipElements.forEach((item) => {
 //   lastScroll = scrollPosition()
 // })
 
+let lastScroll = 0;
+const treshold = 50;
+const header = document.querySelector('.header');
+const headerBottomHeight = header.querySelector('.header__bottom').offsetHeight;
+const headerOffSet = header.offsetHeight;
 
-let lastScroll = 0
-const treshold = 50
-const header = document.querySelector('.header')
-const headerUp = header.querySelector('.header__up')
-const headerBottomHeight = header.querySelector(".header__bottom").offsetHeight
-const headerOffSet = header.offsetHeight + 150
-const scrollPosition = () =>{
-  return window.pageYOffset || document.documentElement.scrollTop
-}
+const isVisible = () => {
+  return header.classList.contains('header__fixed');
+};
+const hideScroll = () => {
+  console.log(window.scrollY);
+  console.log('scrollPosition', window.scrollY);
+  console.log('lastScroll', lastScroll);
+  header.classList.add('header__fixed--hidden');
+  header.classList.remove('header__fixed--visible');
+  if (window.scrollY > headerOffSet + 150) {
+    header.classList.add('header__fixed');
+    header.classList.add('header__fixed--hidden');
 
-// const isHidde = () =>{
-//   return header.classList.contains("header--sticky")
-// }
-const isVisible = () =>{
-  return header.classList.contains("header__sticky--visible")
-}
+    document.querySelector('body').style = `padding-top : ${headerOffSet}`;
+  //   console.log(headerBottomHeight);
 
-const hideHeader = () =>{(window.addEventListener("scroll", () =>{
-    console.log("scrollPosition", scrollPosition())
-    console.log("lastScroll", lastScroll)
-  // console.log(headerOffSet)
-  // console.log(lastScroll)
-    if(Math.abs(scrollPosition() - lastScroll) > treshold){
-      // if (scrollPosition() > 160){
-      //   header.classList.add("header__sticky--hidden")
-      // }
-     if (scrollPosition() > lastScroll && isVisible() && scrollPosition() > headerOffSet){
-        console.log(headerBottomHeight)
-        header.classList.remove("header__sticky--visible")
-        header.classList.add("header__sticky--hidden")
-      }
-      else if (scrollPosition() < lastScroll && !isVisible()){
-        console.log(headerBottomHeight)
-        console.log(scrollPosition() < lastScroll)
-        // header.classList.remove("header__sticky--hidden")
-        header.classList.add("header__sticky--visible")
-      }
-      lastScroll = scrollPosition()
-}}))
-}
+    if (window.scrollY > lastScroll) {
+      header.classList.add('header__fixed--hidden');
+      header.classList.remove('header__fixed--visible');
+    } else if (window.scrollY < lastScroll) {
+      header.classList.add('header__fixed--visible');
+    }
+  }
+  else {
+    header.classList.remove('header__fixed');
+    header.classList.remove('header__fixed--hidden');
+    header.classList.remove('header__fixed--visible');
+    document.querySelector('body').style = `padding-top : ${0}`;
+  }
 
-hideHeader()
-
-
+  
+  lastScroll = window.scrollY;
+};
+window.addEventListener('scroll', () => {
+  hideScroll();
+});
+hideScroll();
 
 // const hideHeader = () =>{
 //   (document.addEventListener("scroll", (e) =>{
@@ -165,15 +161,13 @@ hideHeader()
 //     header.style = `position : fixed`
 //     document.querySelector('body').style = `padding-top : ${headerHeight}`
 //   }
-//   else { 
+//   else {
 //     const header = document.querySelector(".header")
 //     header.style = `position : normal ;`
 //     document.querySelector('body').style = `padding-top : ${0}`
 //   }
 
-
 // }))
 // }
-
 
 // hideHeader()
