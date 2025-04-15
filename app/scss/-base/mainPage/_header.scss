@@ -4,13 +4,29 @@
   background-color: $MWhite;
   top: 0;
   z-index: 50;
+  
   #button {
     height: 50px;
     width: 100px;
   }
   &__sticky {
+    
     &--hidden {
+      height: 138px;
+      transform: translateY(-45px);
+      transition: all .3s ease-in-out;
+    .container{
+      height: 100%;
+    }
       .header {
+        &__container{
+          height: 100%;
+          
+        }
+        &__up{
+          margin-top: auto;
+          transition: all .3s ease-in-out;
+        }
         &__bottom {
           transform: translateY(-100%);
           visibility: hidden;
@@ -29,7 +45,22 @@
       }
     }
     &--visible {
+      transform: translateY(0px);
+      transition: all .3s ease-in-out;
+      height: 138px;
+    .container{
+      height: 100%;
+    }
+    
+    
       .header {
+        &__container{
+          height: 100%;
+          
+        }
+        &__up{
+          margin-top: auto;
+        }
         &__bottom {
           transform: translateY(0);
           visibility: visible;
