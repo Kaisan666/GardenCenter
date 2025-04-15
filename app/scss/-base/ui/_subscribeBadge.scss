@@ -1,4 +1,100 @@
-.subscribe-badge{
+.subscribe-badge {
     width: 100%;
-    
+    display: flex;
+    padding: 12px 120px;
+    background-color: #cce9ff;
+    justify-content: center;
+    margin-bottom: 40px;
+
+    &__content {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        max-width: 1440px;
+    }
+
+    &__icon {
+        width: 40px;
+        height: 40px;
+        background-color: #08c;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1 0 auto;
+    }
+
+    .subscribe-link {
+        width: auto;
+        min-width: 183px;
+
+        svg {
+            display: none;
+        }
+    }
+
+    &__close-btn {
+        width: 40px;
+        height: 40px;
+        background-color: $MWhite;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__first-part,
+    &__second-part {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+    }
+
+    @include table {
+
+        .subscribe-link {
+            height: 40px;
+
+            &__text {
+                display: block;
+            }
+        }
+    }
+
+    @include mobile {
+        padding: 12px 75px;
+
+        &__content {
+            flex-direction: column;
+        }
+
+        .subscribe-link {
+            &__text {
+                display: block;
+            }
+        }
+
+        &__second-part {
+            align-self: end;
+        }
+    }
+
+    @include mediumMobile {
+        .subscribe-link {
+            svg {
+                display: block;
+            }
+
+            flex: 1 1 auto;
+        }
+
+        &__icon {
+            display: none;
+        }
+
+        &__second-part {
+            // flex: 1 0 auto;
+            width: 100%;
+        }
+    }
 }

@@ -172,3 +172,35 @@ if (photoSwipers){
         })
     })
 }
+const blogPageSwipers = document.querySelectorAll(".blog-page__swiper")
+if (blogPageSwipers){
+    blogPageSwipers.forEach(blogPageSwiper => {
+        new Swiper(blogPageSwiper.querySelector(".swiper"), {
+            loop : true,
+            pagination : {
+                el : ".item-swiper__pagination",
+                clickable : true
+            },
+            navigation: {
+                nextEl: '.item-swiper__button-next',
+                prevEl: '.item-swiper__button-prev',
+              },
+            slidesPerView: "1",
+            spaceBetween : 32,
+            breakpoints : {
+                1023 : {
+                    slidesPerView: "5",
+            spaceBetween : 32,
+                },
+                765 : {
+                    slidesPerView: "4",
+            spaceBetween : 32,
+                },
+                375 : {
+                    slidesPerView: "2",
+            spaceBetween : 32,
+                },
+            },
+        })
+    })
+}
