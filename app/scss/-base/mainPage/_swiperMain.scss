@@ -1,5 +1,4 @@
 .swiper-main {
-  
   &__pagination {
     display: flex;
     // flex-wrap: wrap;
@@ -132,6 +131,9 @@
   .swiper-button-disabled {
     filter: grayscale(100%);
     pointer-events: none;
+  }
+  @include table{
+    padding-top: 40px;
   }
 
   @include mobile{

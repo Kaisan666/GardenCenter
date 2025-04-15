@@ -110,16 +110,12 @@ tooltipElements.forEach((item) => {
 // })
 
 
-document.getElementById("button").addEventListener("click", () =>{
-  document.querySelector(".header").classList.toggle("header--sticky-active")
-})
-
 let lastScroll = 0
-const defaultOffset = 100
+const treshold = 50
 const header = document.querySelector('.header')
 const headerUp = header.querySelector('.header__up')
 const headerBottomHeight = header.querySelector(".header__bottom").offsetHeight
-const headerOffSet = header.offsetHeight
+const headerOffSet = header.offsetHeight + 150
 const scrollPosition = () =>{
   return window.pageYOffset || document.documentElement.scrollTop
 }
@@ -131,35 +127,53 @@ const isVisible = () =>{
   return header.classList.contains("header__sticky--visible")
 }
 
-window.addEventListener("scroll", () =>{
+const hideHeader = () =>{(window.addEventListener("scroll", () =>{
     console.log("scrollPosition", scrollPosition())
     console.log("lastScroll", lastScroll)
   // console.log(headerOffSet)
   // console.log(lastScroll)
-      if (scrollPosition() > lastScroll && isVisible() && scrollPosition() > header.offsetHeight){
+    if(Math.abs(scrollPosition() - lastScroll) > treshold){
+      // if (scrollPosition() > 160){
+      //   header.classList.add("header__sticky--hidden")
+      // }
+     if (scrollPosition() > lastScroll && isVisible() && scrollPosition() > headerOffSet){
         console.log(headerBottomHeight)
         header.classList.remove("header__sticky--visible")
         header.classList.add("header__sticky--hidden")
-        // lastScroll = scrollPosition() + headerBottomHeight
       }
       else if (scrollPosition() < lastScroll && !isVisible()){
         console.log(headerBottomHeight)
-        // console.log("scrollPosition", scrollPosition())
-        // console.log("lastScroll", lastScroll)
         console.log(scrollPosition() < lastScroll)
         // header.classList.remove("header__sticky--hidden")
         header.classList.add("header__sticky--visible")
       }
-      // console.log("scrollPosition", scrollPosition())
-      //   console.log("lastScroll", lastScroll)
       lastScroll = scrollPosition()
-})
+}}))
+}
+
+hideHeader()
 
 
-// window.addEventListener("scroll", () =>{
-//   console.log(lastScroll)
-//   console.log(scrollPosition())
-//   lastScroll = scrollPosition()
 
-  
-// })
+// const hideHeader = () =>{
+//   (document.addEventListener("scroll", (e) =>{
+//   const headerHeight = document.querySelector(".header").offsetHeight
+//   console.log(e)
+//   // console.log( window.scrollY)
+//   if (window.scrollY > headerHeight+100){
+//     const header = document.querySelector(".header")
+//     header.style = `position : fixed`
+//     document.querySelector('body').style = `padding-top : ${headerHeight}`
+//   }
+//   else { 
+//     const header = document.querySelector(".header")
+//     header.style = `position : normal ;`
+//     document.querySelector('body').style = `padding-top : ${0}`
+//   }
+
+
+// }))
+// }
+
+
+// hideHeader()

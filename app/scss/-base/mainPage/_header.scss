@@ -12,61 +12,92 @@
   &__sticky {
     
     &--hidden {
-      height: 138px;
-      transform: translateY(-45px);
       transition: all .3s ease-in-out;
     .container{
       height: 100%;
     }
+    @include table{
+      transform: translateY(-150%);
+      transition: all 0.3s ease-in-out;
+    }
       .header {
         &__container{
           height: 100%;
+          position: relative;
           
         }
         &__up{
-          margin-top: auto;
+          position: relative;
+          z-index: 10;
+          background-color: #fff;
           transition: all .3s ease-in-out;
         }
         &__bottom {
           transform: translateY(-100%);
           visibility: hidden;
-          transition: all 0.1s ease-in-out;
+          transition: all 0.3s ease-in-out;
           &-hide {
             display: grid;
             grid-template-rows: 0fr;
             overflow: hidden;
-            transition: all 0.1s ease-in-out;
+            position: absolute;
+            width: 100%;
+            top: 100%;
+            padding-top: 0px;
+            padding-bottom: 0;
+            background-color: #fff;
+            z-index: -10;
+            transition: all 0.3s ease-in-out;
 
             &-animation {
               min-height: 0;
+            }
+            @include table{
+              display: none;
             }
           }
         }
       }
     }
     &--visible {
-      transform: translateY(0px);
-      transition: all .3s ease-in-out;
-      height: 138px;
-    .container{
-      height: 100%;
-    }
     
-    
+      @include table{
+        transform: translateY(0%);
+        transition: all 0.3s ease-in-out;
+      }
       .header {
         &__container{
-          height: 100%;
+          position: relative;
           
         }
         &__up{
+          position: relative;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 20px;
+          z-index: 10;
           margin-top: auto;
+          background-color: #fff;
         }
-        &__bottom {
+        &__bottom{
           transform: translateY(0);
           visibility: visible;
-          transition: all 0.1s ease-in-out;
-          &-hide {
-            grid-template-rows: 1fr;
+          transition: all .3s ease-in-out;
+        }
+        &__bottom-hide {
+          position: absolute;
+          width: 100%;
+          background-color: #fff;
+          top: 100%;
+          padding-top: 14px;
+          padding-bottom: 12px;
+          visibility: visible;
+          z-index: -10;
+          grid-template-rows: 1fr;
+          transition: all 0.3s ease-in-out;
+          @include table{
+            display: none;
           }
         }
       }
