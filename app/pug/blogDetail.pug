@@ -6,161 +6,161 @@ include layouts/components/ui/productCard.pug
 html(lang='ru')
     +m-head
     body
-    +header
-    section.blog-detail
-        .blog-detail__breadcrumbs.breadcrumbs.breadcrumbs-case
-            .swiper
-                .swiper-wrapper
-                    .swiper-slide 
-                        .breadcrumbs__page 
-                            .breadcrumbs__text Главная
-                            svg(width="24" height="24")
-                                use(href="../assets/icons/sprite.svg#selectArrow")
-                    .swiper-slide 
-                        .breadcrumbs__page 
-                            .breadcrumbs__text Блог
-                            svg(width="24" height="24")
-                                use(href="../assets/icons/sprite.svg#selectArrow")
-                    .swiper-slide
-                        .breadcrumbs__page.breadcrumbs--current
-                            .breadcrumbs__text Статья
-        .container
-            .club-card__header.section-header
-                .section-header__first-row
-                    h2.section-header__title Уход за земляникой садовой (клубникой) весной
-            .blog-detail__content
-                .blog-detail__news-info.news-info
-                    .news-info__main
-                        .news-info__time-date 
-                            .news-info__time 16:45
-                            .news-info__date 06.12.2024
-                        .news-info__info @imya_autora
-                    .news-info__tag Статья
-                .blog-detail__main-photo
-                    img(src="../assets/images/blogDetail/topPhoto.png", alt="земляника")
-                .annotation 
-                    .annotation-main Весна — это время пробуждения природы, и садовая земляника (клубника) не является исключением. Правильный уход за клубникой в этот период играет ключевую роль в обеспечении здорового роста растений и богатого урожая. В этой статье мы рассмотрим основные аспекты весеннего ухода за земляникой, включая подготовку почвы, обрезку, подкормку и защиту от вредителей.
-                .annotation
-                    .annotation-header Подготовка почвы
-                    .annotation-main Перед началом активного роста клубники необходимо провести подготовку почвы. Это включает в себя удаление сорняков, рыхление почвы и внесение органических удобрений. Также важно проверить уровень кислотности и, при необходимости, скорректировать его.
-                .photo-swiper(id="photo-swiper")
-                    .swiper.item-swiper
-                        .swiper-wrapper 
-                            .swiper-slide.fancybox-trigger
-                                .photo-swiper__wrapper-photo
-                                    img(src="../assets/images/blogDetail/firstSwiper.png" alt="режет стебели").photo-swiper__img
-                            .swiper-slide.fancybox-trigger
-                                .photo-swiper__wrapper-photo
-                                    img(src="../assets/images/blogDetail/firstSwiper.png" alt="режет стебели").photo-swiper__img
-                            .swiper-slide.fancybox-trigger
-                                .photo-swiper__wrapper-photo
-                                    img(src="../assets/images/blogDetail/firstSwiper.png" alt="режет стебели").photo-swiper__img
-                            .swiper-slide.fancybox-trigger
-                                .photo-swiper__wrapper-photo
-                                    img(src="../assets/images/blogDetail/firstSwiper.png" alt="режет стебели").photo-swiper__img
-                            .swiper-slide.fancybox-trigger
-                                .photo-swiper__wrapper-photo
-                                    img(src="../assets/images/blogDetail/firstSwiper.png" alt="режет стебели").photo-swiper__img
-                        .item-swiper__ui
-                            button.item-swiper__button-prev.btn.btn--light-green
-                                svg(width="24" height='24')
+        +header
+        section.blog-detail
+            .blog-detail__breadcrumbs.breadcrumbs.breadcrumbs-case
+                .swiper
+                    .swiper-wrapper
+                        .swiper-slide 
+                            .breadcrumbs__page 
+                                .breadcrumbs__text Главная
+                                svg(width="24" height="24")
                                     use(href="../assets/icons/sprite.svg#selectArrow")
-                            .item-swiper__wrapper-pagination
-                                .item-swiper__pagination 
-                            button.item-swiper__button-next.btn.btn--light-green
-                                svg(width="24" height='24')
+                        .swiper-slide 
+                            .breadcrumbs__page 
+                                .breadcrumbs__text Блог
+                                svg(width="24" height="24")
                                     use(href="../assets/icons/sprite.svg#selectArrow")
-                .annotation
-                    .annotation-header Обрезка
-                    .annotation-main Весной клубнику следует обрезать, удаляя старые и поврежденные листья. Это поможет улучшить вентиляцию и снизить риск заболеваний. Также стоит обратить внимание на усы — если вы не планируете размножение, их лучше удалить.
-                .photo-swiper
-                    .swiper.item-swiper
-                        .swiper-wrapper 
-                            .swiper-slide.fancybox-trigger
-                                .photo-swiper__wrapper-photo
-                                    img(src="../assets/images/blogDetail/secondSwiper.png" alt="сыпет в землю яд").photo-swiper__img
-                            .swiper-slide.fancybox-trigger
-                                .photo-swiper__wrapper-photo
-                                    img(src="../assets/images/blogDetail/secondSwiper.png" alt="сыпет в землю яд").photo-swiper__img
-                            .swiper-slide.fancybox-trigger
-                                .photo-swiper__wrapper-photo
-                                    img(src="../assets/images/blogDetail/secondSwiper.png" alt="сыпет в землю яд").photo-swiper__img
-                            .swiper-slide.fancybox-trigger
-                                .photo-swiper__wrapper-photo
-                                    img(src="../assets/images/blogDetail/secondSwiper.png" alt="сыпет в землю яд").photo-swiper__img
-                            .swiper-slide.fancybox-trigger
-                                .photo-swiper__wrapper-photo
-                                    img(src="../assets/images/blogDetail/secondSwiper.png" alt="сыпет в землю яд").photo-swiper__img
-                        .item-swiper__ui
-                            button.item-swiper__button-prev.btn.btn--light-green
-                                svg(width="24" height='24')
-                                    use(href="../assets/icons/sprite.svg#selectArrow")
-                            .item-swiper__wrapper-pagination
-                                .item-swiper__pagination 
-                            button.item-swiper__button-next.btn.btn--light-green
-                                svg(width="24" height='24')
-                                    use(href="../assets/icons/sprite.svg#selectArrow")
-                .annotation
-                    .annotation-header Подкормка
-                    .annotation-main Для обеспечения полноценного роста и плодоношения клубники весной необходимо провести подкормку. Используйте комплексные удобрения, содержащие необходимые микроэлементы. Это поможет растению получить все необходимые питательные вещества.
-                .photo-swiper
-                    .swiper.item-swiper
-                        .swiper-wrapper 
-                            .swiper-slide.fancybox-trigger
-                                .photo-swiper__wrapper-photo
-                                    img(src="../assets/images/blogDetail/thirdSwiper.png" alt="цветет земляника").photo-swiper__img
-                            .swiper-slide.fancybox-trigger
-                                .photo-swiper__wrapper-photo
-                                    img(src="../assets/images/blogDetail/thirdSwiper.png" alt="цветет земляника").photo-swiper__img
-                            .swiper-slide.fancybox-trigger
-                                .photo-swiper__wrapper-photo
-                                    img(src="../assets/images/blogDetail/thirdSwiper.png" alt="цветет земляника").photo-swiper__img
-                            .swiper-slide.fancybox-trigger
-                                .photo-swiper__wrapper-photo
-                                    img(src="../assets/images/blogDetail/thirdSwiper.png" alt="цветет земляника").photo-swiper__img
-                            .swiper-slide.fancybox-trigger
-                                .photo-swiper__wrapper-photo
-                                    img(src="../assets/images/blogDetail/thirdSwiper.png" alt="цветет земляника").photo-swiper__img
-                        .item-swiper__ui
-                            button.item-swiper__button-prev.btn.btn--light-green
-                                svg(width="24" height='24')
-                                    use(href="../assets/icons/sprite.svg#selectArrow")
-                            .item-swiper__wrapper-pagination
-                                .item-swiper__pagination 
-                            button.item-swiper__button-next.btn.btn--light-green
-                                svg(width="24" height='24')
-                                    use(href="../assets/icons/sprite.svg#selectArrow")
-                .annotation
-                    .annotation-header Защита от вредителей и болезней
-                    .annotation-main Весной клубника подвержена различным вредителям и заболеваниям. Регулярные осмотры растений и применение профилактических мер помогут избежать проблем. Рассмотрите возможность использования натуральных средств защиты.
-                .photo-swiper
-                    .swiper.item-swiper
-                        .swiper-wrapper 
-                            .swiper-slide.fancybox-trigger
-                                .photo-swiper__wrapper-photo
-                                    img(src="../assets/images/blogDetail/fourthSwiper.png" alt="опрыскивание").photo-swiper__img
-                            .swiper-slide.fancybox-trigger
-                                .photo-swiper__wrapper-photo
-                                    img(src="../assets/images/blogDetail/fourthSwiper.png" alt="опрыскивание").photo-swiper__img
-                            .swiper-slide.fancybox-trigger
-                                .photo-swiper__wrapper-photo
-                                    img(src="../assets/images/blogDetail/fourthSwiper.png" alt="опрыскивание").photo-swiper__img
-                            .swiper-slide.fancybox-trigger
-                                .photo-swiper__wrapper-photo
-                                    img(src="../assets/images/blogDetail/fourthSwiper.png" alt="опрыскивание").photo-swiper__img
-                            .swiper-slide.fancybox-trigger
-                                .photo-swiper__wrapper-photo
-                                    img(src="../assets/images/blogDetail/fourthSwiper.png" alt="опрыскивание").photo-swiper__img
-                        .item-swiper__ui
-                            button.item-swiper__button-prev.btn.btn--light-green
-                                svg(width="24" height='24')
-                                    use(href="../assets/icons/sprite.svg#selectArrow")
-                            .item-swiper__wrapper-pagination
-                                .item-swiper__pagination 
-                            button.item-swiper__button-next.btn.btn--light-green
-                                svg(width="24" height='24')
-                                    use(href="../assets/icons/sprite.svg#selectArrow")
-                .annotation
-                    .annotation-header Заключение
-                    .annotation-main Уход за земляникой садовой весной — это важный этап, который определяет здоровье растений и качество урожая. Следуя рекомендациям по подготовке почвы, обрезке, подкормке и защите, вы сможете обеспечить своим растениям оптимальные условия для роста и развития. В следующей части статьи мы подробнее рассмотрим каждую из этих тем, чтобы помочь вам стать настоящим экспертом в уходе за клубникой.
-    +footer     
+                        .swiper-slide
+                            .breadcrumbs__page.breadcrumbs--current
+                                .breadcrumbs__text Статья
+            .container
+                .club-card__header.section-header
+                    .section-header__first-row
+                        h2.section-header__title Уход за земляникой садовой (клубникой) весной
+                .blog-detail__content
+                    .blog-detail__news-info.news-info
+                        .news-info__main
+                            .news-info__time-date 
+                                .news-info__time 16:45
+                                .news-info__date 06.12.2024
+                            .news-info__info @imya_autora
+                        .news-info__tag Статья
+                    .blog-detail__main-photo
+                        img(src="../assets/images/blogDetail/topPhoto.png", alt="земляника")
+                    .annotation 
+                        .annotation-main Весна — это время пробуждения природы, и садовая земляника (клубника) не является исключением. Правильный уход за клубникой в этот период играет ключевую роль в обеспечении здорового роста растений и богатого урожая. В этой статье мы рассмотрим основные аспекты весеннего ухода за земляникой, включая подготовку почвы, обрезку, подкормку и защиту от вредителей.
+                    .annotation
+                        .annotation-header Подготовка почвы
+                        .annotation-main Перед началом активного роста клубники необходимо провести подготовку почвы. Это включает в себя удаление сорняков, рыхление почвы и внесение органических удобрений. Также важно проверить уровень кислотности и, при необходимости, скорректировать его.
+                    .photo-swiper(id="photo-swiper")
+                        .swiper.item-swiper
+                            .swiper-wrapper 
+                                .swiper-slide.fancybox-trigger
+                                    .photo-swiper__wrapper-photo
+                                        img(src="../assets/images/blogDetail/firstSwiper.png" alt="режет стебели").photo-swiper__img
+                                .swiper-slide.fancybox-trigger
+                                    .photo-swiper__wrapper-photo
+                                        img(src="../assets/images/blogDetail/firstSwiper.png" alt="режет стебели").photo-swiper__img
+                                .swiper-slide.fancybox-trigger
+                                    .photo-swiper__wrapper-photo
+                                        img(src="../assets/images/blogDetail/firstSwiper.png" alt="режет стебели").photo-swiper__img
+                                .swiper-slide.fancybox-trigger
+                                    .photo-swiper__wrapper-photo
+                                        img(src="../assets/images/blogDetail/firstSwiper.png" alt="режет стебели").photo-swiper__img
+                                .swiper-slide.fancybox-trigger
+                                    .photo-swiper__wrapper-photo
+                                        img(src="../assets/images/blogDetail/firstSwiper.png" alt="режет стебели").photo-swiper__img
+                            .item-swiper__ui
+                                button.item-swiper__button-prev.btn.btn--light-green
+                                    svg(width="24" height='24')
+                                        use(href="../assets/icons/sprite.svg#selectArrow")
+                                .item-swiper__wrapper-pagination
+                                    .item-swiper__pagination 
+                                button.item-swiper__button-next.btn.btn--light-green
+                                    svg(width="24" height='24')
+                                        use(href="../assets/icons/sprite.svg#selectArrow")
+                    .annotation
+                        .annotation-header Обрезка
+                        .annotation-main Весной клубнику следует обрезать, удаляя старые и поврежденные листья. Это поможет улучшить вентиляцию и снизить риск заболеваний. Также стоит обратить внимание на усы — если вы не планируете размножение, их лучше удалить.
+                    .photo-swiper
+                        .swiper.item-swiper
+                            .swiper-wrapper 
+                                .swiper-slide.fancybox-trigger
+                                    .photo-swiper__wrapper-photo
+                                        img(src="../assets/images/blogDetail/secondSwiper.png" alt="сыпет в землю яд").photo-swiper__img
+                                .swiper-slide.fancybox-trigger
+                                    .photo-swiper__wrapper-photo
+                                        img(src="../assets/images/blogDetail/secondSwiper.png" alt="сыпет в землю яд").photo-swiper__img
+                                .swiper-slide.fancybox-trigger
+                                    .photo-swiper__wrapper-photo
+                                        img(src="../assets/images/blogDetail/secondSwiper.png" alt="сыпет в землю яд").photo-swiper__img
+                                .swiper-slide.fancybox-trigger
+                                    .photo-swiper__wrapper-photo
+                                        img(src="../assets/images/blogDetail/secondSwiper.png" alt="сыпет в землю яд").photo-swiper__img
+                                .swiper-slide.fancybox-trigger
+                                    .photo-swiper__wrapper-photo
+                                        img(src="../assets/images/blogDetail/secondSwiper.png" alt="сыпет в землю яд").photo-swiper__img
+                            .item-swiper__ui
+                                button.item-swiper__button-prev.btn.btn--light-green
+                                    svg(width="24" height='24')
+                                        use(href="../assets/icons/sprite.svg#selectArrow")
+                                .item-swiper__wrapper-pagination
+                                    .item-swiper__pagination 
+                                button.item-swiper__button-next.btn.btn--light-green
+                                    svg(width="24" height='24')
+                                        use(href="../assets/icons/sprite.svg#selectArrow")
+                    .annotation
+                        .annotation-header Подкормка
+                        .annotation-main Для обеспечения полноценного роста и плодоношения клубники весной необходимо провести подкормку. Используйте комплексные удобрения, содержащие необходимые микроэлементы. Это поможет растению получить все необходимые питательные вещества.
+                    .photo-swiper
+                        .swiper.item-swiper
+                            .swiper-wrapper 
+                                .swiper-slide.fancybox-trigger
+                                    .photo-swiper__wrapper-photo
+                                        img(src="../assets/images/blogDetail/thirdSwiper.png" alt="цветет земляника").photo-swiper__img
+                                .swiper-slide.fancybox-trigger
+                                    .photo-swiper__wrapper-photo
+                                        img(src="../assets/images/blogDetail/thirdSwiper.png" alt="цветет земляника").photo-swiper__img
+                                .swiper-slide.fancybox-trigger
+                                    .photo-swiper__wrapper-photo
+                                        img(src="../assets/images/blogDetail/thirdSwiper.png" alt="цветет земляника").photo-swiper__img
+                                .swiper-slide.fancybox-trigger
+                                    .photo-swiper__wrapper-photo
+                                        img(src="../assets/images/blogDetail/thirdSwiper.png" alt="цветет земляника").photo-swiper__img
+                                .swiper-slide.fancybox-trigger
+                                    .photo-swiper__wrapper-photo
+                                        img(src="../assets/images/blogDetail/thirdSwiper.png" alt="цветет земляника").photo-swiper__img
+                            .item-swiper__ui
+                                button.item-swiper__button-prev.btn.btn--light-green
+                                    svg(width="24" height='24')
+                                        use(href="../assets/icons/sprite.svg#selectArrow")
+                                .item-swiper__wrapper-pagination
+                                    .item-swiper__pagination 
+                                button.item-swiper__button-next.btn.btn--light-green
+                                    svg(width="24" height='24')
+                                        use(href="../assets/icons/sprite.svg#selectArrow")
+                    .annotation
+                        .annotation-header Защита от вредителей и болезней
+                        .annotation-main Весной клубника подвержена различным вредителям и заболеваниям. Регулярные осмотры растений и применение профилактических мер помогут избежать проблем. Рассмотрите возможность использования натуральных средств защиты.
+                    .photo-swiper
+                        .swiper.item-swiper
+                            .swiper-wrapper 
+                                .swiper-slide.fancybox-trigger
+                                    .photo-swiper__wrapper-photo
+                                        img(src="../assets/images/blogDetail/fourthSwiper.png" alt="опрыскивание").photo-swiper__img
+                                .swiper-slide.fancybox-trigger
+                                    .photo-swiper__wrapper-photo
+                                        img(src="../assets/images/blogDetail/fourthSwiper.png" alt="опрыскивание").photo-swiper__img
+                                .swiper-slide.fancybox-trigger
+                                    .photo-swiper__wrapper-photo
+                                        img(src="../assets/images/blogDetail/fourthSwiper.png" alt="опрыскивание").photo-swiper__img
+                                .swiper-slide.fancybox-trigger
+                                    .photo-swiper__wrapper-photo
+                                        img(src="../assets/images/blogDetail/fourthSwiper.png" alt="опрыскивание").photo-swiper__img
+                                .swiper-slide.fancybox-trigger
+                                    .photo-swiper__wrapper-photo
+                                        img(src="../assets/images/blogDetail/fourthSwiper.png" alt="опрыскивание").photo-swiper__img
+                            .item-swiper__ui
+                                button.item-swiper__button-prev.btn.btn--light-green
+                                    svg(width="24" height='24')
+                                        use(href="../assets/icons/sprite.svg#selectArrow")
+                                .item-swiper__wrapper-pagination
+                                    .item-swiper__pagination 
+                                button.item-swiper__button-next.btn.btn--light-green
+                                    svg(width="24" height='24')
+                                        use(href="../assets/icons/sprite.svg#selectArrow")
+                    .annotation
+                        .annotation-header Заключение
+                        .annotation-main Уход за земляникой садовой весной — это важный этап, который определяет здоровье растений и качество урожая. Следуя рекомендациям по подготовке почвы, обрезке, подкормке и защите, вы сможете обеспечить своим растениям оптимальные условия для роста и развития. В следующей части статьи мы подробнее рассмотрим каждую из этих тем, чтобы помочь вам стать настоящим экспертом в уходе за клубникой.
+        +footer     
