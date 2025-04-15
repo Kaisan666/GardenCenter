@@ -1,8 +1,9 @@
 mixin header 
-    .header
+    .header.header__sticky--visible
         .container
             .header__container
                 .header__up
+                    button#button
                     a(href="/").header__logo 
                         svg(width="288" height="60")
                             use( href="../assets/icons/sprite.svg#logo")
@@ -108,44 +109,46 @@ mixin header
                                                 .custom-tooltip__items
                                                     a(href='##').custom-tooltip__item +7 (999) 999 99 91
                                                     a(href='##').custom-tooltip__item +7 (999) 999 99 92
-                .header__bottom.menu
-                    .header__bottom-left
-                        .header__category.category.btn-toggle(id="menu-catalog")
-                            button.btn-toggle__button
-                                svg(width='24' height='24' fill='#8EAD75') 
-                                    use( href="../assets/icons/sprite.svg#burger") 
-                                | Каталог
-                            .btn-toggle__catalog
-                        a(href='##').header__category.category
-                            svg(width='24' height='24' fill='#8EAD75') 
-                                use( href="../assets/icons/sprite.svg#stocks") 
-                            | Акции
-                        a(href='##').header__category.category
-                            svg(width='24' height='24' fill='#8EAD75') 
-                                use( href="../assets/icons/sprite.svg#compilation") 
-                            | Подборки
-                        a(href='##').header__category.category
-                            svg(width='24' height='24' fill='#8EAD75') 
-                                use( href="../assets/icons/sprite.svg#clubCard") 
-                            | Клубные карты
-                    .header__line
-                    .header__bottom-right 
-                        .header__bottom-right-container#jsItemMoreContainer
-                            a(href='##').header__page.page.item-more Услуги
-                            a(href='##').header__page.page.item-more Фотостудия
-                            a(href='##').header__page.page.item-more Блог
-                            a(href='##').header__page.page.item-more.hidden Подарочные карты
-                            a(href='##').header__page.page.item-more О нас
-                            a(href='##').header__page.page.item-more Контакты
-                            a(href='##').header__page.page.item-more Вакансии
-                            a(href='##').header__page.page.item-more Доставка и оплата
-                        .header__page.page.custom-tooltip--dom.custom-tooltip.custom-tooltip--arrow#jsItemsMore
-                            .custom-tooltip__text Еще
-                            .custom-tooltip__arrow
-                                svg(width='24' height='24') 
-                                    use(href="../assets/icons/sprite.svg#selectArrow")
-                            .custom-tooltip__container
-                                .custom-tooltip__items#jsItemsContainer
+                .header__bottom-hide
+                    .header__bottom-hide-animation
+                        .header__bottom.menu
+                            .header__bottom-left
+                                .header__category.category.btn-toggle(id="menu-catalog")
+                                    button.btn-toggle__button
+                                        svg(width='24' height='24' fill='#8EAD75') 
+                                            use( href="../assets/icons/sprite.svg#burger") 
+                                        | Каталог
+                                    .btn-toggle__catalog
+                                a(href='##').header__category.category
+                                    svg(width='24' height='24' fill='#8EAD75') 
+                                        use( href="../assets/icons/sprite.svg#stocks") 
+                                    | Акции
+                                a(href='##').header__category.category
+                                    svg(width='24' height='24' fill='#8EAD75') 
+                                        use( href="../assets/icons/sprite.svg#compilation") 
+                                    | Подборки
+                                a(href='##').header__category.category
+                                    svg(width='24' height='24' fill='#8EAD75') 
+                                        use( href="../assets/icons/sprite.svg#clubCard") 
+                                    | Клубные карты
+                            .header__line
+                            .header__bottom-right 
+                                .header__bottom-right-container#jsItemMoreContainer
+                                    a(href='##').header__page.page.item-more Услуги
+                                    a(href='##').header__page.page.item-more Фотостудия
+                                    a(href='##').header__page.page.item-more Блог
+                                    a(href='##').header__page.page.item-more.hidden Подарочные карты
+                                    a(href='##').header__page.page.item-more О нас
+                                    a(href='##').header__page.page.item-more Контакты
+                                    a(href='##').header__page.page.item-more Вакансии
+                                    a(href='##').header__page.page.item-more Доставка и оплата
+                                .header__page.page.custom-tooltip--dom.custom-tooltip.custom-tooltip--arrow#jsItemsMore
+                                    .custom-tooltip__text Еще
+                                    .custom-tooltip__arrow
+                                        svg(width='24' height='24') 
+                                            use(href="../assets/icons/sprite.svg#selectArrow")
+                                    .custom-tooltip__container
+                                        .custom-tooltip__items#jsItemsContainer
     //- .header__fixed.header
         .container
             .header__container

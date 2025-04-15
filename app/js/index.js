@@ -108,3 +108,58 @@ tooltipElements.forEach((item) => {
 //   }
 //   lastScroll = scrollPosition()
 // })
+
+
+document.getElementById("button").addEventListener("click", () =>{
+  document.querySelector(".header").classList.toggle("header--sticky-active")
+})
+
+let lastScroll = 0
+const defaultOffset = 100
+const header = document.querySelector('.header')
+const headerUp = header.querySelector('.header__up')
+const headerBottomHeight = header.querySelector(".header__bottom").offsetHeight
+const headerOffSet = header.offsetHeight
+const scrollPosition = () =>{
+  return window.pageYOffset || document.documentElement.scrollTop
+}
+
+// const isHidde = () =>{
+//   return header.classList.contains("header--sticky")
+// }
+const isVisible = () =>{
+  return header.classList.contains("header__sticky--visible")
+}
+
+window.addEventListener("scroll", () =>{
+    console.log("scrollPosition", scrollPosition())
+    console.log("lastScroll", lastScroll)
+  // console.log(headerOffSet)
+  // console.log(lastScroll)
+      if (scrollPosition() > lastScroll && isVisible() && scrollPosition() > header.offsetHeight){
+        console.log(headerBottomHeight)
+        header.classList.remove("header__sticky--visible")
+        header.classList.add("header__sticky--hidden")
+        // lastScroll = scrollPosition() + headerBottomHeight
+      }
+      else if (scrollPosition() < lastScroll && !isVisible()){
+        console.log(headerBottomHeight)
+        // console.log("scrollPosition", scrollPosition())
+        // console.log("lastScroll", lastScroll)
+        console.log(scrollPosition() < lastScroll)
+        // header.classList.remove("header__sticky--hidden")
+        header.classList.add("header__sticky--visible")
+      }
+      // console.log("scrollPosition", scrollPosition())
+      //   console.log("lastScroll", lastScroll)
+      lastScroll = scrollPosition()
+})
+
+
+// window.addEventListener("scroll", () =>{
+//   console.log(lastScroll)
+//   console.log(scrollPosition())
+//   lastScroll = scrollPosition()
+
+  
+// })

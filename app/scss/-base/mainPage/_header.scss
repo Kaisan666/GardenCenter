@@ -1,5 +1,46 @@
 .header {
   padding: 12px 0px;
+  position: sticky;
+  background-color: $MWhite;
+  top: 0;
+  z-index: 50;
+  #button {
+    height: 50px;
+    width: 100px;
+  }
+  &__sticky {
+    &--hidden {
+      .header {
+        &__bottom {
+          transform: translateY(-100%);
+          visibility: hidden;
+          transition: all 0.1s ease-in-out;
+          &-hide {
+            display: grid;
+            grid-template-rows: 0fr;
+            overflow: hidden;
+            transition: all 0.1s ease-in-out;
+
+            &-animation {
+              min-height: 0;
+            }
+          }
+        }
+      }
+    }
+    &--visible {
+      .header {
+        &__bottom {
+          transform: translateY(0);
+          visibility: visible;
+          transition: all 0.1s ease-in-out;
+          &-hide {
+            grid-template-rows: 1fr;
+          }
+        }
+      }
+    }
+  }
 
   &__up {
     display: flex;
@@ -21,7 +62,7 @@
       width: 100%;
     }
   }
-  
+
   &__line {
     flex: 0 0 auto;
     width: 2px;
@@ -46,21 +87,21 @@
       display: flex;
       align-items: center;
       gap: 24px;
-      .category{
+      .category {
         text-transform: uppercase;
-        svg{
+        svg {
           transition: all 0.3s ease-in-out;
         }
-        @media (hover : hover) and (pointer : fine) {
-          &:hover{
-            svg{
-              fill: $GMediumG; 
+        @media (hover: hover) and (pointer: fine) {
+          &:hover {
+            svg {
+              fill: $GMediumG;
               transition: all 0.3s ease-in-out;
             }
           }
         }
       }
-      .btn-toggle__button{
+      .btn-toggle__button {
         text-transform: uppercase;
       }
     }
@@ -155,7 +196,7 @@
       }
     }
   }
-  &__fixed{
+  &__fixed {
     width: 100%;
     background-color: #ffff;
     z-index: 50;
@@ -164,7 +205,7 @@
     top: 0;
     // transform: translateY(-200%);
     transition: all 0.3s ease-in-out;
-    &--active{
+    &--active {
       transform: translateY(0);
       transition: all 0.3s ease-in-out;
     }
@@ -177,15 +218,13 @@
       &-right {
         display: none;
       }
-      
     }
 
     &__bottom {
       display: none;
     }
-    
   }
-  @include mobile{
+  @include mobile {
     margin-bottom: 10px;
   }
 }
