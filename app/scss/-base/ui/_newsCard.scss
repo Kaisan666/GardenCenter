@@ -2,11 +2,16 @@
   display: flex;
   height: 196px;
   gap: 20px;
+  max-width: 660px;
+  max-height: 187px;
 
   &__wrapper-img {
     display: flex;
     flex: 1 1 auto;
     position: relative;
+    img{
+      height: 100%;
+    }
   }
 
   &__hover {
@@ -152,6 +157,8 @@
   @include mobile {
     flex-direction: column;
     height: auto;
+    max-width: none;
+    max-height: none;
 
     &__img {
       height: 100%;
@@ -165,6 +172,7 @@
     &__info {
       max-width: 100%;
       padding: 24px 20px;
+      max-height: 217px;
     }
 
     &__tag {

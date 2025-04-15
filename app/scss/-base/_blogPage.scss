@@ -1,23 +1,135 @@
-.blog-page{
+.blog-page {
+  &__swiper {
     .swiper {
-        // width: 100%;
-        &-slide {
-            display: flex;
-            position: relative;
-        }
-        .subscribe-link{
-            position: absolute;
-            // padding: 12px 24px;
-            border-radius: 60px;
-            bottom: 18px;
-            left: 50%;
-            transform: translateX(-50%);
-            &__text{
-                font-size: 16px;
-            }
-            @include table{
-                bottom: 12px;
-            }
-        }
+      &-slide {
+        display: flex;
+        position: relative;
+      }
     }
+    .subscribe-link {
+      position: absolute;
+      border-radius: 60px;
+      bottom: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      &__text {
+        font-size: 16px;
+      }
+      @include table {
+        bottom: 12px;
+      }
+    }
+  }
+  &__news {
+    &-container{
+        padding-top: 40px;
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 40px;
+        row-gap: 40px;
+    }
+
+    .swiper-slide {
+      width: fit-content;
+      margin-right: 12px;
+    }
+  }
+}
+
+.page-banner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  &__container {
+    display: flex;
+    gap: 60px;
+    background-color: $GLightG;
+    padding-left: 40px;
+    max-height: 350px;
+    border-radius: 40px;
+  }
+  &__title {
+    font-size: 48px;
+    color: $GMediumG;
+    font-weight: 700;
+    padding-bottom: 40px;
+  }
+
+  &__info {
+    flex: 1 0 560px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0;
+  }
+
+  &__description {
+    background-color: rgb(255, 255, 255, 40%);
+    border-radius: 16px;
+    padding: 12px 24px;
+  }
+
+  &__photo {
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 40px;
+    }
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+  }
+  .btn {
+    width: 168px;
+    height: 48px;
+  }
+  &__side-info {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 8px;
+  }
+  &__time-date {
+    display: flex;
+    color: $MMiddleGray;
+    gap: 12px;
+  }
+  &__footer-info {
+    color: $GSupportDG;
+  }
+  @include table {
+    padding: 40px 0;
+    &__container {
+      flex-direction: column-reverse;
+      max-height: none;
+      padding-left: 0;
+      gap: 40px;
+      max-width: none;
+    }
+
+    &__info {
+      flex: 1 1 auto;
+      padding: 0 20px 20px;
+    }
+    &__title {
+      font-size: 32px;
+      line-height: 110%;
+    }
+    &__photo {
+      max-height: 425px;
+      display: flex;
+      flex: 1 1 auto;
+      img {
+        height: auto;
+        max-height: 100%;
+      }
+    }
+  }
+  @include mobile {
+    &__photo {
+      aspect-ratio: 1 / 2;
+    }
+  }
 }
