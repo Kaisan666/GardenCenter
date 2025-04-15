@@ -29,7 +29,7 @@ let plugins = [
     jQuery: 'jquery',
   }),
   new MiniCssExtractPlugin({
-    filename: 'css/[name].[contenthash].css',
+    filename: 'css/[name].css',
   }),
   new CopyWebpackPlugin({
     patterns: [
@@ -66,7 +66,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'js/[name].[contenthash].js',
+    filename: 'js/[name].js',
     clean: true,
   },
   performance: {

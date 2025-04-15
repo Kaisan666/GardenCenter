@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "set NODE_ENV=development&&webpack serve",
     "build": "set NODE_ENV=production&&webpack",
-    "debug": "set NODE_ENV=debug&&webpack serve"
+    "debug": "set NODE_ENV=debug&&webpack serve",
+    "edev": "export NODE_ENV=development&&webpack serve",
+    "ebuild": "export NODE_ENV=production&&webpack",
+    "edebug": "export NODE_ENV=debug&&webpack serve"
   },
   "browserslist": [
     "last 20 versions",
