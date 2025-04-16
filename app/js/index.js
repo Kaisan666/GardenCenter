@@ -19,7 +19,7 @@ import './swiper';
 // import Scrollbar from 'smooth-scrollbar';
 import { computePosition, shift, offset, flip, hide } from '@floating-ui/dom';
 
-import './btnToggle';
+// import './btnToggle';
 import './moreBtn';
 import './burger';
 import './fancyBox';
