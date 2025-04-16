@@ -714,7 +714,6 @@ section {
       visibility: visible;
       left: 0;
       transition: all 0.3s ease-in-out;
-      overflow-y: scroll;
     }
   }
 
@@ -771,7 +770,11 @@ section {
 
   @include table {
     display: flex;
-
+    &__modal{
+      &--active{
+        overflow-y: scroll;
+      }
+    }
     .search {
       margin-bottom: 15px;
       max-height: 40px;

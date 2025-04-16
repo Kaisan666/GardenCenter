@@ -33,3 +33,35 @@ justify-content: center;
       
 }
 
+:root{
+  // --fancybox-color : $MBlack
+}
+.fancybox__content{
+.carousel__button.is-close{
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: $MBlack;
+  transition : all 0.3s ease-in-out;
+  top: -80px;
+  @media (hover : hover) and (pointer : fine) {
+    &:hover{
+      background-color: $GLightG;
+      color: $GMediumG;
+      transition : all 0.3s ease-in-out;
+
+    }
+  }
+  &:active{
+    background-color: $GMediumG;
+    color: $MWhite;
+    transition : all 0.3s ease-in-out;
+  }
+}
+}
+.fancybox__container{
+  --carousel-button-svg-filter: none;
+}

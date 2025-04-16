@@ -7,4 +7,10 @@
     &__phone{
         font-weight: 700;
     }
+    &__main{
+        display: flex;
+    }
+    &__text{
+        max-width: 600px;
+    }
 }

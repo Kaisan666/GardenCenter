@@ -42,7 +42,8 @@ html(lang='ru')
                     h2.section-header__title Блог
                 .section-header__second-row Всегда актуальная информация!
                 .section-header__third-row Все о растениях, трендах, лайфхаках и уходе. Следите за новостями, акциями, смотрите рилсы со свежими идеями и вдохновляйтесь!
-            .blog-page__content
+        .blog-page__content
+            .container
                 .blog-page__swiper
                     .swiper.item-swiper
                         .swiper-wrapper 
@@ -184,19 +185,113 @@ html(lang='ru')
                                 svg(width="24" height='24')
                                     use(href="../assets/icons/sprite.svg#selectArrow")
             .page-banner
-                .page-banner__info 
-                    h2.page-banner__title Ухты! Это самая свежая публикация?
-                    .page-banner__description Описание публикации на одну-две строчки максимально для того что бы пометилось то, что точно надо
-                    .page-banner__footer
-                        a(href="##").btn.btn--dark-green 
-                            .btn__text читать
-                            svg(height="15" width="15" fill="white")
-                                use(href="../assets/icons/sprite.svg#link-arrow")
-                        .page-banner__side-info
-                            .page-banner__time-date
-                                .page-banner__time 16:45
-                                .page-banner__date 06.12.2024
-                            .page-banner__footer-info @imya_autora
-                .page-banner__photo 
-                    img(src="../assets/images/blogPage.png", alt="картинка последней новости")
+                .page-banner__container
+                    .page-banner__info 
+                        h2.page-banner__title Ухты! Это самая свежая публикация?
+                        .page-banner__description Описание публикации на одну-две строчки максимально для того что бы пометилось то, что точно надо
+                        .page-banner__footer
+                            a(href="##").btn.btn--dark-green 
+                                .btn__text читать
+                                svg(height="15" width="15" fill="white")
+                                    use(href="../assets/icons/sprite.svg#link-arrow")
+                            .page-banner__side-info
+                                .page-banner__time-date
+                                    .page-banner__time 16:45
+                                    .page-banner__date 06.12.2024
+                                .page-banner__footer-info @imya_autora
+                    .page-banner__photo 
+                        img(src="../assets/images/blogPage.png", alt="картинка последней новости")
+            .container 
+                .blog-page__news
+                    .swiper-container.categories
+                        .swiper.swiper-no-swiping
+                            .swiper-wrapper 
+                                .swiper-slide
+                                    button.category__badge-tag.badge-tag.badge-tag--current Все
+                                .swiper-slide
+                                    button.category__badge-tag.badge-tag.badge-tag Новости
+                                .swiper-slide
+                                    button.category__badge-tag.badge-tag.badge-tag советы
+                                .swiper-slide
+                                    button.category__badge-tag.badge-tag.badge-tag статьи
+                                .swiper-slide
+                                    button.category__badge-tag.badge-tag.badge-tag эксклюзивы
+                    .blog-page__news-container
+                        a(href="##").blog-page__news-card.news-card
+                            .news-card__wrapper-img
+                                .news-card__hover
+                                    .news-card__hover-text Подробнее
+                                    svg(width="15" height="15" fill="#ffffff")
+                                        use(href="../assets/icons/sprite.svg#link-arrow")
+                                img(src="../assets/images/newsCards/cuttingGrass.png" alt="").news-card__img
+                            .news-card__info 
+                                .news-card__header 
+                                    .news-card__title Название новости
+                                    .news-card__tag Новости
+                                .news-card__main Описание новости на одну-две строчки максимально для того что бы пометилось то, что точно надо
+                                .news-card__footer
+                                    .news-card__footer-main
+                                        .news-card__time-date
+                                            .news-card__time 16:45
+                                            .news-card__date 06.12.2024
+                                        .news-card__footer-info @imya_autora
+                                    .news-card__tag-mobile Новости
+                        a(href="##").blog-page__news-card.news-card
+                            .news-card__wrapper-img
+                                .news-card__hover
+                                    .news-card__hover-text Подробнее
+                                    svg(width="15" height="15" fill="#ffffff")
+                                        use(href="../assets/icons/sprite.svg#link-arrow")
+                                img(src="../assets/images/newsCards/cuttingGrass.png" alt="").news-card__img
+                            .news-card__info 
+                                .news-card__header 
+                                    .news-card__title Название новости
+                                    .news-card__tag Новости
+                                .news-card__main Описание новости на одну-две строчки максимально для того что бы пометилось то, что точно надо
+                                .news-card__footer
+                                    .news-card__footer-main
+                                        .news-card__time-date
+                                            .news-card__time 16:45
+                                            .news-card__date 06.12.2024
+                                        .news-card__footer-info @imya_autora
+                                    .news-card__tag-mobile Новости
+                        a(href="##").blog-page__news-card.news-card
+                            .news-card__wrapper-img
+                                .news-card__hover
+                                    .news-card__hover-text Подробнее
+                                    svg(width="15" height="15" fill="#ffffff")
+                                        use(href="../assets/icons/sprite.svg#link-arrow")
+                                img(src="../assets/images/newsCards/cuttingGrass.png" alt="").news-card__img
+                            .news-card__info 
+                                .news-card__header 
+                                    .news-card__title Название новости
+                                    .news-card__tag Новости
+                                .news-card__main Описание новости на одну-две строчки максимально для того что бы пометилось то, что точно надо
+                                .news-card__footer
+                                    .news-card__footer-main
+                                        .news-card__time-date
+                                            .news-card__time 16:45
+                                            .news-card__date 06.12.2024
+                                        .news-card__footer-info @imya_autora
+                                    .news-card__tag-mobile Новости
+                        a(href="##").blog-page__news-card.news-card
+                            .news-card__wrapper-img
+                                .news-card__hover
+                                    .news-card__hover-text Подробнее
+                                    svg(width="15" height="15" fill="#ffffff")
+                                        use(href="../assets/icons/sprite.svg#link-arrow")
+                                img(src="../assets/images/newsCards/cuttingGrass.png" alt="").news-card__img
+                            .news-card__info 
+                                .news-card__header 
+                                    .news-card__title Название новости
+                                    .news-card__tag Новости
+                                .news-card__main Описание новости на одну-две строчки максимально для того что бы пометилось то, что точно надо
+                                .news-card__footer
+                                    .news-card__footer-main
+                                        .news-card__time-date
+                                            .news-card__time 16:45
+                                            .news-card__date 06.12.2024
+                                        .news-card__footer-info @imya_autora
+                                    .news-card__tag-mobile Новости
+
     +footer     
