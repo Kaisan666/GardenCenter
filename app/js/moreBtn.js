@@ -5,8 +5,10 @@ window.addEventListener('load', () => {
     const itemsMore = document.querySelector('#jsItemsMore');
     const itemsContainer = itemsMore.querySelector('#jsItemsContainer');
     // const offsetTop = itemMoreContainer.offsetTop;
+    
 
-    if (itemMoreContainer.clientHeight > 40) {
+    // if (itemMoreContainer.clientHeight > 40) {
+    if (itemMoreContainer.scrollHeight > 40) {
       const newLink = items[items.length - 1].cloneNode(true);
 
       newLink.classList = 'custom-tooltip__item';
@@ -32,7 +34,8 @@ window.addEventListener('load', () => {
       itemMoreContainer.appendChild(newLink);
 
       items.push(newLink);
-      if (itemMoreContainer.clientHeight > 40) {
+      // if (itemMoreContainer.clientHeight > 40) {
+      if (itemMoreContainer.scrollHeight > 40) {
         items[items.length - 1].remove();
         items.pop();
       } else {
@@ -67,7 +70,8 @@ window.addEventListener('load', () => {
     const itemsContainer = itemsMore.querySelector('#jsItemsContainerFixed');
     // const offsetTop = itemMoreContainer.offsetTop;
 
-    if (itemMoreContainerFixed.clientHeight > 40) {
+    // if (itemMoreContainerFixed.clientHeight > 40) {
+    if (itemMoreContainerFixed.scrollHeight > 40) {
       const newLink = items[items.length - 1].cloneNode(true);
 
       newLink.classList = 'custom-tooltip__item';
@@ -93,7 +97,8 @@ window.addEventListener('load', () => {
       itemMoreContainerFixed.appendChild(newLink);
 
       items.push(newLink);
-      if (itemMoreContainerFixed.clientHeight > 40) {
+      // if (itemMoreContainerFixed.clientHeight > 40) {
+      if (itemMoreContainerFixed.scrollHeight > 40) {
         items[items.length - 1].remove();
         items.pop();
       } else {
