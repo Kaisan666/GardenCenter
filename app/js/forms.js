@@ -39,19 +39,31 @@ formTriggers.forEach((formTrigger) => {
         },
       },
     };
+    const phone = form.querySelector('.popup-form__phone.field');
+    const name = form.querySelector('.popup-form__name');
+    const checkbox = form.querySelector('.checkbox-field');
+    console.log(phone.querySelector('.field__placeholder-content').textContent);
+    const inputs = { phone, name, checkbox };
+    const Getmessages = () => {
+      const messages = [];
+      Object.values(inputs).forEach((input) => {
+        messages.push(input.querySelector('.field__placeholder-content').textContent);
+      });
+      return messages;
+    };
+    const messages = Getmessages()
+    
 
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      const name = form.querySelector('.popup-form__name');
-      const phone = form.querySelector('.popup-form__phone.field');
-      const checkbox = form.querySelector('.checkbox-field');
-      console.log(phone, checkbox)
-      const inputs = { name, phone, checkbox };
+      console.log(phone, checkbox);
       const formData = validate.collectFormValues(form, { trim: true, nullify: false });
       const errors = validate(formData, constraints);
-      for (let error in errors){
-        inputs[error].classList.remove("field--error")
-    }
+        Object.values(inputs).forEach((input, index) =>{
+          console.log(messages[index])
+          input.classList.remove("field--error")
+          input.querySelector(".field__placeholder-content").textContent = messages[index]
+        })
       const submit = async (data) => {
         try {
           const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
@@ -74,15 +86,14 @@ formTriggers.forEach((formTrigger) => {
       if (!errors) {
         submit(formData);
       } else {
-        console.log(errors)
-        for (let error in errors){
-            console.log()
-            console.log(error)
-            inputs[error].classList.add("field--error")
-            const placeholder = inputs[error].querySelector('.field__placeholder-content')
-            placeholder.textContent = errors[error][0].split(' ').slice(1, errors[error][0].length).join(" ")
-            
-            console.log(placeholder)
+        console.log(errors);
+        for (let error in errors) {
+          console.log();
+          console.log(error);
+          inputs[error].classList.add('field--error');
+          const placeholder = inputs[error].querySelector('.field__placeholder-content');
+          placeholder.textContent = errors[error][0].split(' ').slice(1, errors[error][0].length).join(' ');
+          console.log(placeholder);
         }
       }
     });

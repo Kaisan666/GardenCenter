@@ -117,17 +117,17 @@
           }
         }
       
-        &__icon {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%) scale(0);
-          width: 16px;
-          height: 16px;
-          fill: $MWhite;
-          transition: transform 0.2s ease;
-          pointer-events: none;
-        }
+        // &__icon {
+        //   position: absolute;
+        //   top: 50%;
+        //   left: 50%;
+        //   transform: translate(-50%, -50%) scale(0);
+        //   width: 16px;
+        //   height: 16px;
+        //   fill: $MWhite;
+        //   transition: transform 0.2s ease;
+        //   pointer-events: none;
+        // }
       
         &__input:checked + &__fake {
           background-color: $GMediumG;
@@ -137,6 +137,20 @@
             transform: translate(-50%, -50%) scale(1);
           }
         }
+        &.field{
+            &--error{
+                label{
+                    color: $MRed;
+                }
+                .checkbox-field{
+                    &__fake{
+                        background-color: $MLightRed;
+                        border: 2px solid $MRed;
+                    }
+                }
+            }
+        }
+        
       }
       
       .popup-form__checkbox {
