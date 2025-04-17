@@ -176,11 +176,15 @@
       align-items: center;
       gap: 16px;
 
+
       &-container {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         gap: 16px;
+        overflow: hidden;
+        height: 40px;
+
       }
     }
   }
