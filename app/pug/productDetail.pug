@@ -8,39 +8,109 @@ html(lang='ru')
     +m-head
     body
         +header
-        section.product-details
-                .product-details__breadcrumbs.breadcrumbs.breadcrumbs-case
-                    .swiper
-                        .swiper-wrapper
-                            .swiper-slide 
-                                .breadcrumbs__page 
-                                    .breadcrumbs__text Главная
-                                    svg(width="24" height="24")
-                                        use(href="../assets/icons/sprite.svg#selectArrow")
-                            .swiper-slide
-                                .breadcrumbs__page 
-                                    .breadcrumbs__text Каталог
-                                    svg(width="24" height="24")
-                                        use(href="../assets/icons/sprite.svg#selectArrow")
-                            .swiper-slide
-                                .breadcrumbs__page.breadcrumbs--current
-                                    .breadcrumbs__text Горшки и кашпо
-                .product-details__content
-                    .container 
-                        .product-details__main
-                            .product-details__swiper-item
-                                .swiper.item-swiper
-                                    .swiper-wrapper 
+        .app__content
+            section.product-details
+                    .product-details__breadcrumbs.breadcrumbs.breadcrumbs-case
+                        .swiper
+                            .swiper-wrapper
+                                .swiper-slide 
+                                    .breadcrumbs__page 
+                                        .breadcrumbs__text Главная
+                                        svg(width="24" height="24")
+                                            use(href="../assets/icons/sprite.svg#selectArrow")
+                                .swiper-slide
+                                    .breadcrumbs__page 
+                                        .breadcrumbs__text Каталог
+                                        svg(width="24" height="24")
+                                            use(href="../assets/icons/sprite.svg#selectArrow")
+                                .swiper-slide
+                                    .breadcrumbs__page.breadcrumbs--current
+                                        .breadcrumbs__text Горшки и кашпо
+                    .product-details__content
+                        .container 
+                            .product-details__main
+                                .product-details__swiper-item
+                                    .swiper.item-swiper
+                                        .swiper-wrapper 
+                                            .swiper-slide
+                                                img(src="../assets/images/productDetails.png" alt="")  
+                                            .swiper-slide
+                                                img(src="../assets/images/productDetails.png" alt="") 
+                                            .swiper-slide
+                                                img(src="../assets/images/productDetails.png" alt="") 
+                                            .swiper-slide
+                                                img(src="../assets/images/productDetails.png" alt="") 
+                                            .swiper-slide
+                                                img(src="../assets/images/productDetails.png" alt="") 
+                                        .item-swiper__ui
+                                            button.item-swiper__button-prev.btn.btn--light-green
+                                                svg(width="24" height='24')
+                                                    use(href="../assets/icons/sprite.svg#selectArrow")
+                                            .item-swiper__wrapper-pagination 
+                                                .item-swiper__pagination 
+                                            button.item-swiper__button-next.btn.btn--light-green
+                                                svg(width="24" height='24')
+                                                    use(href="../assets/icons/sprite.svg#selectArrow")
+                                .product-details__info 
+                                    .product-details__title Субстрак универсальный
+                                    .product-details__price
+                                        .product-details__price-header.subheader
+                                            .subheader__icon
+                                                svg(width="24" height="24")
+                                                    use(href="../assets/icons/sprite.svg#money") 
+                                            .subheader__title Цена
+                                        .product-detail__main по договоренности
+                                    .product-details__description
+                                        .product-details__description-header.subheader
+                                            .subheader__icon
+                                                svg(width="24" height="24")
+                                                    use(href="../assets/icons/sprite.svg#star") 
+                                            .subheader__title Описание
+                                        .product-detail__main Предназначено для хранения маленьких штучек и прочих штучек 
+
+                                    .product-details__characteristics
+                                        .product-details__characteristics-header.subheader
+                                            .subheader__icon
+                                                svg(width="24" height="24")
+                                                    use(href="../assets/icons/sprite.svg#circleAttention") 
+                                            .subheader__title Характеристики
+                                        .product-details__main
+                                            ul.product-details__characteristics-list 
+                                                li.product-details__characteristics-item
+                                                    .product-details__characteristics-characteristic Объем
+                                                    .product-details__characteristics-border
+                                                    .product-details__characteristics-quantity 1л
+                                                li.product-details__characteristics-item
+                                                    .product-details__characteristics-characteristic Предназначение
+                                                    .product-details__characteristics-border
+                                                    .product-details__characteristics-quantity универсальное
+                                                li.product-details__characteristics-item
+                                                    .product-details__characteristics-characteristic Ширина
+                                                    .product-details__characteristics-border
+                                                    .product-details__characteristics-quantity 15 см
+                        .product-details__similar
+                            .product-details__header.section-header
+                                .section-header__first-row
+                                    h1.section-header__title Похожие товары
+                            .item-swiper.products-swiper.swiper-container
+                                .swiper 
+                                    .swiper-wrapper
                                         .swiper-slide
-                                            img(src="../assets/images/productDetails.png" alt="")  
+                                            +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
                                         .swiper-slide
-                                            img(src="../assets/images/productDetails.png" alt="") 
+                                            +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
                                         .swiper-slide
-                                            img(src="../assets/images/productDetails.png" alt="") 
+                                            +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
                                         .swiper-slide
-                                            img(src="../assets/images/productDetails.png" alt="") 
+                                            +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
                                         .swiper-slide
-                                            img(src="../assets/images/productDetails.png" alt="") 
+                                            +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
+                                        .swiper-slide
+                                            +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
+                                        .swiper-slide
+                                            +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
+                                        .swiper-slide
+                                            +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
                                     .item-swiper__ui
                                         button.item-swiper__button-prev.btn.btn--light-green
                                             svg(width="24" height='24')
@@ -50,93 +120,24 @@ html(lang='ru')
                                         button.item-swiper__button-next.btn.btn--light-green
                                             svg(width="24" height='24')
                                                 use(href="../assets/icons/sprite.svg#selectArrow")
-                            .product-details__info 
-                                .product-details__title Субстрак универсальный
-                                .product-details__price
-                                    .product-details__price-header.subheader
-                                        .subheader__icon
-                                            svg(width="24" height="24")
-                                                use(href="../assets/icons/sprite.svg#money") 
-                                        .subheader__title Цена
-                                    .product-detail__main по договоренности
-                                .product-details__description
-                                    .product-details__description-header.subheader
-                                        .subheader__icon
-                                            svg(width="24" height="24")
-                                                use(href="../assets/icons/sprite.svg#star") 
-                                        .subheader__title Описание
-                                    .product-detail__main Предназначено для хранения маленьких штучек и прочих штучек 
-
-                                .product-details__characteristics
-                                    .product-details__characteristics-header.subheader
-                                        .subheader__icon
-                                            svg(width="24" height="24")
-                                                use(href="../assets/icons/sprite.svg#circleAttention") 
-                                        .subheader__title Характеристики
-                                    .product-details__main
-                                        ul.product-details__characteristics-list 
-                                            li.product-details__characteristics-item
-                                                .product-details__characteristics-characteristic Объем
-                                                .product-details__characteristics-border
-                                                .product-details__characteristics-quantity 1л
-                                            li.product-details__characteristics-item
-                                                .product-details__characteristics-characteristic Предназначение
-                                                .product-details__characteristics-border
-                                                .product-details__characteristics-quantity универсальное
-                                            li.product-details__characteristics-item
-                                                .product-details__characteristics-characteristic Ширина
-                                                .product-details__characteristics-border
-                                                .product-details__characteristics-quantity 15 см
-                    .product-details__similar
-                        .product-details__header.section-header
-                            .section-header__first-row
-                                h1.section-header__title Похожие товары
-                        .item-swiper.products-swiper.swiper-container
-                            .swiper 
-                                .swiper-wrapper
-                                    .swiper-slide
-                                        +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
-                                    .swiper-slide
-                                        +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
-                                    .swiper-slide
-                                        +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
-                                    .swiper-slide
-                                        +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
-                                    .swiper-slide
-                                        +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
-                                    .swiper-slide
-                                        +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
-                                    .swiper-slide
-                                        +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
-                                    .swiper-slide
-                                        +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
-                                .item-swiper__ui
-                                    button.item-swiper__button-prev.btn.btn--light-green
-                                        svg(width="24" height='24')
-                                            use(href="../assets/icons/sprite.svg#selectArrow")
-                                    .item-swiper__wrapper-pagination 
-                                        .item-swiper__pagination 
-                                    button.item-swiper__button-next.btn.btn--light-green
-                                        svg(width="24" height='24')
-                                            use(href="../assets/icons/sprite.svg#selectArrow")
-                    .product-details__watched
-                        .product-details__header.section-header
-                            .section-header__first-row
-                                h1.section-header__title Вы смотрели
-                        .item-swiper.products-swiper.swiper-container
-                            .swiper
-                                .swiper-wrapper
-                                    .swiper-slide
-                                        +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
-                                    .swiper-slide
-                                        +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
-                                .item-swiper__ui
-                                    button.item-swiper__button-prev.btn.btn--light-green
-                                        svg(width="24" height='24')
-                                            use(href="../assets/icons/sprite.svg#selectArrow")
-                                    .item-swiper__wrapper-pagination 
-                                        .item-swiper__pagination 
-                                    button.item-swiper__button-next.btn.btn--light-green
-                                        svg(width="24" height='24')
-                                            use(href="../assets/icons/sprite.svg#selectArrow")
+                        .product-details__watched
+                            .product-details__header.section-header
+                                .section-header__first-row
+                                    h1.section-header__title Вы смотрели
+                            .item-swiper.products-swiper.swiper-container
+                                .swiper
+                                    .swiper-wrapper
+                                        .swiper-slide
+                                            +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
+                                        .swiper-slide
+                                            +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
+                                    .item-swiper__ui
+                                        button.item-swiper__button-prev.btn.btn--light-green
+                                            svg(width="24" height='24')
+                                                use(href="../assets/icons/sprite.svg#selectArrow")
+                                        .item-swiper__wrapper-pagination 
+                                            .item-swiper__pagination 
+                                        button.item-swiper__button-next.btn.btn--light-green
+                                            svg(width="24" height='24')
+                                                use(href="../assets/icons/sprite.svg#selectArrow")
         +footer

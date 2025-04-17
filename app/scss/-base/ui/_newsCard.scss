@@ -1,13 +1,11 @@
 .news-card {
   display: flex;
-  height: 196px;
   gap: 20px;
-  max-width: 660px;
-  max-height: 187px;
+  max-height: 196;
+  flex: 1 1 660px;
 
   &__wrapper-img {
     display: flex;
-    flex: 1 1 auto;
     position: relative;
     img{
       height: 100%;
@@ -68,9 +66,9 @@
     align-self: start;
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    flex: 0 1 auto;
-    max-width: 490px;
+    justify-content: space-between;
+    flex: 1 1 auto;
+    gap: 12px;
     height: 100%;
     transition: all 0.3s;
 
@@ -130,12 +128,17 @@
     display: flex;
     gap: 12px;
     color: $MMiddleGray;
+    transition: all 0.3s;
   }
 
   @media (hover : hover) and (pointer : fine) {
     &:hover {
       .news-card__info {
         background-color: $MMiddleGray;
+        transition: all 0.3s;
+      }
+      .news-card__time-date{
+        color: $MDarkGray;
         transition: all 0.3s;
       }
 
@@ -159,9 +162,12 @@
     height: auto;
     max-width: none;
     max-height: none;
+    flex: 1 1 auto;
+    
 
     &__img {
       height: 100%;
+      width: 100%;
       border-radius: 40px;
     }
 
@@ -172,7 +178,8 @@
     &__info {
       max-width: 100%;
       padding: 24px 20px;
-      max-height: 217px;
+      justify-content: space-between;
+
     }
 
     &__tag {
@@ -196,5 +203,7 @@
         padding: 0px 0px 8px 0px;
       }
     }
+  }
+  @include smallMobile{
   }
 }

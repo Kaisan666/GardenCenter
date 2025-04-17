@@ -7,108 +7,109 @@ html(lang='ru')
     +m-head
     body
         +header
-        section.vacancies
-            .vacancies__breadcrumbs.breadcrumbs.breadcrumbs-case
-                .swiper
-                    .swiper-wrapper
-                        .swiper-slide 
-                            .breadcrumbs__page 
-                                .breadcrumbs__text Главная
+        .app__content
+            section.vacancies
+                .vacancies__breadcrumbs.breadcrumbs.breadcrumbs-case
+                    .swiper
+                        .swiper-wrapper
+                            .swiper-slide 
+                                .breadcrumbs__page 
+                                    .breadcrumbs__text Главная
+                                    svg(width="24" height="24")
+                                        use(href="../assets/icons/sprite.svg#selectArrow")
+                            .swiper-slide
+                                .breadcrumbs__page 
+                                    .breadcrumbs__text Каталог
+                                    svg(width="24" height="24")
+                                        use(href="../assets/icons/sprite.svg#selectArrow")
+                            .swiper-slide
+                                .breadcrumbs__page.breadcrumbs--current
+                                    .breadcrumbs__text Горшки и кашпо
+                .container 
+                    .vacancies__header.section-header
+                        .section-header__first-row
+                            h2.section-header__title Вакансии
+                        .section-header__second-row Присоединяйтесь к нашей команде!
+                        .section-header__third-row У нас всегда есть место для увлеченных и трудолюбивых людей! Станьте частью нашей дружной команды и помогайте создавать уют вместе с нами.
+                    .vacancies__container
+                        .offer-card
+                            .offer-card__info
+                                .offer-card__header
+                                    .offer-card__title Охранник-контроллер
+                                    btn.offer-card__button.btn.btn--dark-green.offer-card__button--mobile(data-fancybox data-src="#service_1")
+                                        svg(width="24" height="24")
+                                            use(href="../assets/icons/sprite.svg#link-arrow")
+                                .offer-card__main Следите за порядком? У нас есть работа для вас! <br> Сменный график | Стабильная зарплата
+                            btn.offer-card__button.btn.btn--dark-green(data-fancybox data-src="#service_1")
                                 svg(width="24" height="24")
-                                    use(href="../assets/icons/sprite.svg#selectArrow")
-                        .swiper-slide
-                            .breadcrumbs__page 
-                                .breadcrumbs__text Каталог
+                                    use(href="../assets/icons/sprite.svg#link-arrow")
+                        .offer-card
+                            .offer-card__info
+                                .offer-card__header
+                                    .offer-card__title Продавец-консультант
+                                    btn.offer-card__button.btn.btn--dark-green.offer-card__button--mobile
+                                        svg(width="24" height="24")
+                                            use(href="../assets/icons/sprite.svg#link-arrow")
+                                .offer-card__main Любите растения и общение? Приглашаем в нашу команду! <br> Гибкий график | Конкурентная зарплата
+                            btn.offer-card__button.btn.btn--dark-green
                                 svg(width="24" height="24")
-                                    use(href="../assets/icons/sprite.svg#selectArrow")
-                        .swiper-slide
-                            .breadcrumbs__page.breadcrumbs--current
-                                .breadcrumbs__text Горшки и кашпо
-            .container 
-                .vacancies__header.section-header
-                    .section-header__first-row
-                        h2.section-header__title Вакансии
-                    .section-header__second-row Присоединяйтесь к нашей команде!
-                    .section-header__third-row У нас всегда есть место для увлеченных и трудолюбивых людей! Станьте частью нашей дружной команды и помогайте создавать уют вместе с нами.
-                .vacancies__container
-                    .offer-card
-                        .offer-card__info
-                            .offer-card__header
-                                .offer-card__title Охранник-контроллер
-                                btn.offer-card__button.btn.btn--dark-green.offer-card__button--mobile(data-fancybox data-src="#service_1")
-                                    svg(width="24" height="24")
-                                        use(href="../assets/icons/sprite.svg#link-arrow")
-                            .offer-card__main Следите за порядком? У нас есть работа для вас! <br> Сменный график | Стабильная зарплата
-                        btn.offer-card__button.btn.btn--dark-green(data-fancybox data-src="#service_1")
-                            svg(width="24" height="24")
-                                use(href="../assets/icons/sprite.svg#link-arrow")
-                    .offer-card
-                        .offer-card__info
-                            .offer-card__header
-                                .offer-card__title Продавец-консультант
-                                btn.offer-card__button.btn.btn--dark-green.offer-card__button--mobile
-                                    svg(width="24" height="24")
-                                        use(href="../assets/icons/sprite.svg#link-arrow")
-                            .offer-card__main Любите растения и общение? Приглашаем в нашу команду! <br> Гибкий график | Конкурентная зарплата
-                        btn.offer-card__button.btn.btn--dark-green
-                            svg(width="24" height="24")
-                                use(href="../assets/icons/sprite.svg#link-arrow")
-                    .offer-card
-                        .offer-card__info
-                            .offer-card__header
-                                .offer-card__title Садовник-агроном
-                                btn.offer-card__button.btn.btn--dark-green.offer-card__button--mobile
-                                    svg(width="24" height="24")
-                                        use(href="../assets/icons/sprite.svg#link-arrow")
-                            .offer-card__main Любите растения и умеете ухаживать за ними? Мы вас ждем! <br> Стабильная работа | Возможность профессионального роста
-                        btn.offer-card__button.btn.btn--dark-green
-                            svg(width="24" height="24")
-                                use(href="../assets/icons/sprite.svg#link-arrow")
-        .vacancies__popup.popup-form(id="service_1" style="display:none;max-width:1360px")
-            h2.popup-form__title Выезд специалиста
-            .popup-form__main 
-                .popup-form__text
-                    .popup-form__row Садовый центр на Атарбекова, рад предложить Вам услугу
-                        | выезда специалиста на дом, в офис, ресторан. Порой, не будучи 
-                        | профессионалом в уходе за комнатными и садовыми растениями, сложно 
-                        | понять и разобраться по каким причинам Ваше любимое растение начало погибать. 
-                    .popup-form__row Для того чтобы облегчить Вам задачу, необходимо просто позвонить нам по телефону 
-                        a(href="##").link.popup-form__phone +7(861)22-00-783 
-                        | или оставить заявку на выезд специалиста онлайн, который возьмет с собой необходимые 
-                        | препараты для обработки, произведет все необходимые процедуры для улучшения состояния растения. 
-                    .popup-form__row Садовый центр на Атарбекова, рад предложить Вам услугу
-                        | выезда специалиста на дом, в офис, ресторан. Порой, не будучи 
-                        | профессионалом в уходе за комнатными и садовыми растениями, сложно 
-                        | понять и разобраться по каким причинам Ваше любимое растение начало погибать. 
-                    .popup-form__row Садовый центр на Атарбекова, рад предложить Вам услугу
-                        | выезда специалиста на дом, в офис, ресторан. Порой, не будучи 
-                        | профессионалом в уходе за комнатными и садовыми растениями, сложно 
-                        | понять и разобраться по каким причинам Ваше любимое растение начало погибать. 
-                    .popup-form__row Садовый центр на Атарбекова, рад предложить Вам услугу
-                        | выезда специалиста на дом, в офис, ресторан. Порой, не будучи 
-                        | профессионалом в уходе за комнатными и садовыми растениями, сложно 
-                        | понять и разобраться по каким причинам Ваше любимое растение начало погибать. 
-                form.popup-form__form
-                    .popup-form__form-title Оставьте заявку онлайн!
-                    .popup-form__phone.field 
-                        .field__container
-                            .field__placeholder
-                                input(type="text" placeholder=" " name="phone").popup-form__input-phone
-                                .field__placeholder-text Телефон
-                                    svg(width="24" height="24").field__eye-icon
-                                        use(href="../assets/icons/sprite.svg#hide-password")
-                    .popup-form__name.field 
-                        .field__container
-                            .field__placeholder
-                                input(type="text" placeholder=" " name="name").popup-form__input-name
-                                .field__placeholder-text Ваше имя
-                                    svg(width="24" height="24").field__eye-icon
-                                        use(href="../assets/icons/sprite.svg#hide-password")
-                    .popup-form__message.field 
-                        .field__container
-                            .field__placeholder
-                                textarea(name="message" type="text" placeholder=" ").popup-form__input-message
-                                .field__placeholder-text Сообщение
-                                    svg(width="24" height="24").field__eye-icon
-                                        use(href="../assets/icons/sprite.svg#hide-password")
+                                    use(href="../assets/icons/sprite.svg#link-arrow")
+                        .offer-card
+                            .offer-card__info
+                                .offer-card__header
+                                    .offer-card__title Садовник-агроном
+                                    btn.offer-card__button.btn.btn--dark-green.offer-card__button--mobile
+                                        svg(width="24" height="24")
+                                            use(href="../assets/icons/sprite.svg#link-arrow")
+                                .offer-card__main Любите растения и умеете ухаживать за ними? Мы вас ждем! <br> Стабильная работа | Возможность профессионального роста
+                            btn.offer-card__button.btn.btn--dark-green
+                                svg(width="24" height="24")
+                                    use(href="../assets/icons/sprite.svg#link-arrow")
+            //- .vacancies__popup.popup-form(id="service_1" style="display:none;max-width:1360px")
+                h2.popup-form__title Выезд специалиста
+                .popup-form__main 
+                    .popup-form__text
+                        .popup-form__row Садовый центр на Атарбекова, рад предложить Вам услугу
+                            | выезда специалиста на дом, в офис, ресторан. Порой, не будучи 
+                            | профессионалом в уходе за комнатными и садовыми растениями, сложно 
+                            | понять и разобраться по каким причинам Ваше любимое растение начало погибать. 
+                        .popup-form__row Для того чтобы облегчить Вам задачу, необходимо просто позвонить нам по телефону 
+                            a(href="##").link.popup-form__phone +7(861)22-00-783 
+                            | или оставить заявку на выезд специалиста онлайн, который возьмет с собой необходимые 
+                            | препараты для обработки, произведет все необходимые процедуры для улучшения состояния растения. 
+                        .popup-form__row Садовый центр на Атарбекова, рад предложить Вам услугу
+                            | выезда специалиста на дом, в офис, ресторан. Порой, не будучи 
+                            | профессионалом в уходе за комнатными и садовыми растениями, сложно 
+                            | понять и разобраться по каким причинам Ваше любимое растение начало погибать. 
+                        .popup-form__row Садовый центр на Атарбекова, рад предложить Вам услугу
+                            | выезда специалиста на дом, в офис, ресторан. Порой, не будучи 
+                            | профессионалом в уходе за комнатными и садовыми растениями, сложно 
+                            | понять и разобраться по каким причинам Ваше любимое растение начало погибать. 
+                        .popup-form__row Садовый центр на Атарбекова, рад предложить Вам услугу
+                            | выезда специалиста на дом, в офис, ресторан. Порой, не будучи 
+                            | профессионалом в уходе за комнатными и садовыми растениями, сложно 
+                            | понять и разобраться по каким причинам Ваше любимое растение начало погибать. 
+                    form.popup-form__form
+                        .popup-form__form-title Оставьте заявку онлайн!
+                        .popup-form__phone.field 
+                            .field__container
+                                .field__placeholder
+                                    input(type="text" placeholder=" " name="phone").popup-form__input-phone
+                                    .field__placeholder-text Телефон
+                                        svg(width="24" height="24").field__eye-icon
+                                            use(href="../assets/icons/sprite.svg#hide-password")
+                        .popup-form__name.field 
+                            .field__container
+                                .field__placeholder
+                                    input(type="text" placeholder=" " name="name").popup-form__input-name
+                                    .field__placeholder-text Ваше имя
+                                        svg(width="24" height="24").field__eye-icon
+                                            use(href="../assets/icons/sprite.svg#hide-password")
+                        .popup-form__message.field 
+                            .field__container
+                                .field__placeholder
+                                    textarea(name="message" type="text" placeholder=" ").popup-form__input-message
+                                    .field__placeholder-text Сообщение
+                                        svg(width="24" height="24").field__eye-icon
+                                            use(href="../assets/icons/sprite.svg#hide-password")
         +footer

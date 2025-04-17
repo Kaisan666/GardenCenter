@@ -7,45 +7,46 @@ html(lang='ru')
     +m-head
     body
         +header
-        section.club-card
-            .club-card__breadcrumbs.breadcrumbs.breadcrumbs-case
-                .swiper
-                    .swiper-wrapper
-                        .swiper-slide 
-                            .breadcrumbs__page 
-                                .breadcrumbs__text Главная
-                                svg(width="24" height="24")
-                                    use(href="../assets/icons/sprite.svg#selectArrow")
-                        .swiper-slide
-                            .breadcrumbs__page 
-                                .breadcrumbs__text Каталог
-                                svg(width="24" height="24")
-                                    use(href="../assets/icons/sprite.svg#selectArrow")
-                        .swiper-slide
-                            .breadcrumbs__page.breadcrumbs--current
-                                .breadcrumbs__text Горшки и кашпо
-            .container 
-                .club-card__header.section-header
-                    .section-header__first-row
-                        h2.section-header__title Клубные карты
-                    .section-header__second-row Привилегии для наших клиентов!
-                    .section-header__third-row Хотите получать больше выгод от покупок в нашем садовом центре? Присоединяйтесь к нашей клубной программе и наслаждайтесь особыми условиями для постоянных клиентов! 
-                .club-card__content
-                    .club-card__container-photo
-                        img(src="../assets/images/clubCard.png" alt="").club-card__photo
-                    .club-card__topic.annotation
-                        .annotation-header Как получить клубную карту?
-                        .annotation-main При единовременной покупке на сумму от 30 000 рублей вы получаете персональную скидочную карту, которая открывает доступ к эксклюзивным привилегиям.
-                    .club-card__topic.annotation
-                        .annotation-header Ваши преимущества:
-                        .annotation-main
-                            ul.club-card__list.custom-list 
-                                li Персональная скидка – выгодные условия на все категории товаров, включая растения, удобрения, аксессуары и декор.
-                                li Специальные предложения – ранний доступ к акциям, сезонным скидкам и новым коллекциям.
-                                li Закрытые мероприятия – участие в мастер-классах, лекциях и встречах для участников клуба.
-                                li Персональные рекомендации – помощь в подборе растений и уходе за ними от наших экспертов.
-                    .club-card__topic.annotation
-                        .annotation-header Как воспользоваться картой?
-                        .annotation-main Просто предъявите карту при оплате покупки в магазине и получите скидку. Ваша карта остается активной на неограниченный срок, а чем больше вы покупаете, тем больше преимуществ вас ждет!
-                        .annotation-footer Присоединяйтесь к нашему клубу и делайте покупки с удовольствием!
+        .app__content
+            section.club-card
+                .club-card__breadcrumbs.breadcrumbs.breadcrumbs-case
+                    .swiper
+                        .swiper-wrapper
+                            .swiper-slide 
+                                .breadcrumbs__page 
+                                    .breadcrumbs__text Главная
+                                    svg(width="24" height="24")
+                                        use(href="../assets/icons/sprite.svg#selectArrow")
+                            .swiper-slide
+                                .breadcrumbs__page 
+                                    .breadcrumbs__text Каталог
+                                    svg(width="24" height="24")
+                                        use(href="../assets/icons/sprite.svg#selectArrow")
+                            .swiper-slide
+                                .breadcrumbs__page.breadcrumbs--current
+                                    .breadcrumbs__text Горшки и кашпо
+                .container 
+                    .club-card__header.section-header
+                        .section-header__first-row
+                            h2.section-header__title Клубные карты
+                        .section-header__second-row Привилегии для наших клиентов!
+                        .section-header__third-row Хотите получать больше выгод от покупок в нашем садовом центре? Присоединяйтесь к нашей клубной программе и наслаждайтесь особыми условиями для постоянных клиентов! 
+                    .club-card__content
+                        .club-card__container-photo
+                            img(src="../assets/images/clubCard.png" alt="").club-card__photo
+                        .club-card__topic.annotation
+                            .annotation-header Как получить клубную карту?
+                            .annotation-main При единовременной покупке на сумму от 30 000 рублей вы получаете персональную скидочную карту, которая открывает доступ к эксклюзивным привилегиям.
+                        .club-card__topic.annotation
+                            .annotation-header Ваши преимущества:
+                            .annotation-main
+                                ul.club-card__list.custom-list 
+                                    li Персональная скидка – выгодные условия на все категории товаров, включая растения, удобрения, аксессуары и декор.
+                                    li Специальные предложения – ранний доступ к акциям, сезонным скидкам и новым коллекциям.
+                                    li Закрытые мероприятия – участие в мастер-классах, лекциях и встречах для участников клуба.
+                                    li Персональные рекомендации – помощь в подборе растений и уходе за ними от наших экспертов.
+                        .club-card__topic.annotation
+                            .annotation-header Как воспользоваться картой?
+                            .annotation-main Просто предъявите карту при оплате покупки в магазине и получите скидку. Ваша карта остается активной на неограниченный срок, а чем больше вы покупаете, тем больше преимуществ вас ждет!
+                            .annotation-footer Присоединяйтесь к нашему клубу и делайте покупки с удовольствием!
         +footer

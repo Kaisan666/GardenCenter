@@ -65,6 +65,7 @@ if(productDetail){
             el : ".item-swiper__pagination",
             clickable : true
         },
+        loop : true,
         navigation: {
             nextEl: '.item-swiper__button-next',
             prevEl: '.item-swiper__button-prev',

@@ -7,7 +7,7 @@ html(lang='ru')
     +m-head
     body
     +header
-    section.blog-page
+    .app__content
         .subscribe-badge
             .subscribe-badge__content
                 .subscribe-badge__first-part
@@ -24,184 +24,184 @@ html(lang='ru')
                         button
                             svg(width="24" height="24")
                                 use(href="../assets/icons/sprite.svg#close") 
-            
-        .blog-page__breadcrumbs.breadcrumbs.breadcrumbs-case
-            .swiper
-                .swiper-wrapper
-                    .swiper-slide 
-                        .breadcrumbs__page 
-                            .breadcrumbs__text Главная
-                            svg(width="24" height="24")
-                                use(href="../assets/icons/sprite.svg#selectArrow")
-                    .swiper-slide
-                        .breadcrumbs__page.breadcrumbs--current
-                            .breadcrumbs__text Блог
-        .container
-            .club-card__header.section-header
-                .section-header__first-row
-                    h2.section-header__title Блог
-                .section-header__second-row Всегда актуальная информация!
-                .section-header__third-row Все о растениях, трендах, лайфхаках и уходе. Следите за новостями, акциями, смотрите рилсы со свежими идеями и вдохновляйтесь!
-        .blog-page__content
+        section.blog-page
+            .blog-page__breadcrumbs.breadcrumbs.breadcrumbs-case
+                .swiper
+                    .swiper-wrapper
+                        .swiper-slide 
+                            .breadcrumbs__page 
+                                .breadcrumbs__text Главная
+                                svg(width="24" height="24")
+                                    use(href="../assets/icons/sprite.svg#selectArrow")
+                        .swiper-slide
+                            .breadcrumbs__page.breadcrumbs--current
+                                .breadcrumbs__text Блог
             .container
-                .blog-page__swiper
-                    .swiper.item-swiper
-                        .swiper-wrapper 
-                            .swiper-slide
-                                .blog__swiper-content
-                                    img(src="../assets/images/videos/previews/video1.png" alt="")
-                                        //- video(src="../assets/videos/video.mp4" controls poster="../assets/images/videos/previews/video1.png")
-                                    a(href="##").subscribe-link.subscribe-link--telegram
-                                        svg(width="24" height="24" fill="white")
-                                            use(href="../assets/icons/sprite.svg#tg") 
-                                        .subscribe-link__text подписаться
-                                    button.play-button.btn.btn--light-green.video-trigger
-                                        input(type="checkbox")
-                                        .play-button__play
-                                            svg(height="24" width="24" fill="5E8A3B")
-                                                use(href="../assets/icons/sprite.svg#playIcon")
-                                    .video-player(style="display : none" data-videoUrl="https://rutube.ru/play/embed/ffce4f28377280f37816764889414dbd/")
+                .club-card__header.section-header
+                    .section-header__first-row
+                        h2.section-header__title Блог
+                    .section-header__second-row Всегда актуальная информация!
+                    .section-header__third-row Все о растениях, трендах, лайфхаках и уходе. Следите за новостями, акциями, смотрите рилсы со свежими идеями и вдохновляйтесь!
+            .blog-page__content
+                .container
+                    .blog-page__swiper
+                        .swiper.item-swiper
+                            .swiper-wrapper 
+                                .swiper-slide
+                                    .blog__swiper-content
+                                        img(src="../assets/images/videos/previews/video1.png" alt="")
+                                            //- video(src="../assets/videos/video.mp4" controls poster="../assets/images/videos/previews/video1.png")
+                                        a(href="##").subscribe-link.subscribe-link--telegram
+                                            svg(width="24" height="24" fill="white")
+                                                use(href="../assets/icons/sprite.svg#tg") 
+                                            .subscribe-link__text подписаться
+                                        button.play-button.btn.btn--light-green.video-trigger
+                                            input(type="checkbox")
+                                            .play-button__play
+                                                svg(height="24" width="24" fill="5E8A3B")
+                                                    use(href="../assets/icons/sprite.svg#playIcon")
+                                        .video-player(style="display : none" data-videoUrl="https://rutube.ru/play/embed/ffce4f28377280f37816764889414dbd/")
 
-                                        <iframe src="" width="100%" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-                            .swiper-slide
-                                .blog__swiper-content
-                                    img(src="../assets/images/videos/previews/video2.png" alt="")
-                                    a(href="##").subscribe-link.subscribe-link--vkontakte
-                                        svg(width="24" height="24" fill="white")
-                                            use(href="../assets/icons/sprite.svg#vk") 
-                                        .subscribe-link__text подписаться
-                                    button.play-button.btn.btn--light-green.video-trigger
-                                        input(type="checkbox")
-                                        .play-button__play
-                                            svg(height="24" width="24" fill="5E8A3B")
-                                                use(href="../assets/icons/sprite.svg#playIcon")
-                                    .video-player(style="display : none" data-videoUrl="https://rutube.ru/video/d1ecef52c0bf3f433a4b746a2f08ef88/")
+                                            <iframe src="" width="100%" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                                .swiper-slide
+                                    .blog__swiper-content
+                                        img(src="../assets/images/videos/previews/video2.png" alt="")
+                                        a(href="##").subscribe-link.subscribe-link--vkontakte
+                                            svg(width="24" height="24" fill="white")
+                                                use(href="../assets/icons/sprite.svg#vk") 
+                                            .subscribe-link__text подписаться
+                                        button.play-button.btn.btn--light-green.video-trigger
+                                            input(type="checkbox")
+                                            .play-button__play
+                                                svg(height="24" width="24" fill="5E8A3B")
+                                                    use(href="../assets/icons/sprite.svg#playIcon")
+                                        .video-player(style="display : none" data-videoUrl="https://rutube.ru/video/d1ecef52c0bf3f433a4b746a2f08ef88/")
 
-                                        <iframe src="" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen sameorigin></iframe>
-                                //- video(src="../assets/videos/video.mp4" controls poster="../assets/images/videos/previews/video1.png") 
-                            .swiper-slide
-                                .blog__swiper-content
-                                    img(src="../assets/images/videos/previews/video1.png" alt="")
-                                        //- video(src="../assets/videos/video.mp4" controls poster="../assets/images/videos/previews/video1.png")
-                                    a(href="##").subscribe-link.subscribe-link--telegram
-                                        svg(width="24" height="24" fill="white")
-                                            use(href="../assets/icons/sprite.svg#tg") 
-                                        .subscribe-link__text подписаться
-                                    button.play-button.btn.btn--light-green.video-trigger
-                                        input(type="checkbox")
-                                        .play-button__play
-                                            svg(height="24" width="24" fill="5E8A3B")
-                                                use(href="../assets/icons/sprite.svg#playIcon")
-                                    .video-player(style="display : none" data-videoUrl="https://rutube.ru/play/embed/ffce4f28377280f37816764889414dbd/")
+                                            <iframe src="" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen sameorigin></iframe>
+                                    //- video(src="../assets/videos/video.mp4" controls poster="../assets/images/videos/previews/video1.png") 
+                                .swiper-slide
+                                    .blog__swiper-content
+                                        img(src="../assets/images/videos/previews/video1.png" alt="")
+                                            //- video(src="../assets/videos/video.mp4" controls poster="../assets/images/videos/previews/video1.png")
+                                        a(href="##").subscribe-link.subscribe-link--telegram
+                                            svg(width="24" height="24" fill="white")
+                                                use(href="../assets/icons/sprite.svg#tg") 
+                                            .subscribe-link__text подписаться
+                                        button.play-button.btn.btn--light-green.video-trigger
+                                            input(type="checkbox")
+                                            .play-button__play
+                                                svg(height="24" width="24" fill="5E8A3B")
+                                                    use(href="../assets/icons/sprite.svg#playIcon")
+                                        .video-player(style="display : none" data-videoUrl="https://rutube.ru/play/embed/ffce4f28377280f37816764889414dbd/")
 
-                                        <iframe src="" width="100%" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-                            .swiper-slide
-                                .blog__swiper-content
-                                    img(src="../assets/images/videos/previews/video2.png" alt="")
-                                    a(href="##").subscribe-link.subscribe-link--vkontakte
-                                        svg(width="24" height="24" fill="white")
-                                            use(href="../assets/icons/sprite.svg#vk") 
-                                        .subscribe-link__text подписаться
-                                    button.play-button.btn.btn--light-green.video-trigger
-                                        input(type="checkbox")
-                                        .play-button__play
-                                            svg(height="24" width="24" fill="5E8A3B")
-                                                use(href="../assets/icons/sprite.svg#playIcon")
-                                    .video-player(style="display : none" data-videoUrl="https://rutube.ru/video/d1ecef52c0bf3f433a4b746a2f08ef88/")
+                                            <iframe src="" width="100%" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                                .swiper-slide
+                                    .blog__swiper-content
+                                        img(src="../assets/images/videos/previews/video2.png" alt="")
+                                        a(href="##").subscribe-link.subscribe-link--vkontakte
+                                            svg(width="24" height="24" fill="white")
+                                                use(href="../assets/icons/sprite.svg#vk") 
+                                            .subscribe-link__text подписаться
+                                        button.play-button.btn.btn--light-green.video-trigger
+                                            input(type="checkbox")
+                                            .play-button__play
+                                                svg(height="24" width="24" fill="5E8A3B")
+                                                    use(href="../assets/icons/sprite.svg#playIcon")
+                                        .video-player(style="display : none" data-videoUrl="https://rutube.ru/video/d1ecef52c0bf3f433a4b746a2f08ef88/")
 
-                                        <iframe src="" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen sameorigin></iframe>
-                                //- video(src="../assets/videos/video.mp4" controls poster="../assets/images/videos/previews/video1.png") 
-                            .swiper-slide
-                                .blog__swiper-content
-                                    img(src="../assets/images/videos/previews/video1.png" alt="")
-                                        //- video(src="../assets/videos/video.mp4" controls poster="../assets/images/videos/previews/video1.png")
-                                    a(href="##").subscribe-link.subscribe-link--telegram
-                                        svg(width="24" height="24" fill="white")
-                                            use(href="../assets/icons/sprite.svg#tg") 
-                                        .subscribe-link__text подписаться
-                                    button.play-button.btn.btn--light-green.video-trigger
-                                        input(type="checkbox")
-                                        .play-button__play
-                                            svg(height="24" width="24" fill="5E8A3B")
-                                                use(href="../assets/icons/sprite.svg#playIcon")
-                                    .video-player(style="display : none" data-videoUrl="https://rutube.ru/play/embed/ffce4f28377280f37816764889414dbd/")
+                                            <iframe src="" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen sameorigin></iframe>
+                                    //- video(src="../assets/videos/video.mp4" controls poster="../assets/images/videos/previews/video1.png") 
+                                .swiper-slide
+                                    .blog__swiper-content
+                                        img(src="../assets/images/videos/previews/video1.png" alt="")
+                                            //- video(src="../assets/videos/video.mp4" controls poster="../assets/images/videos/previews/video1.png")
+                                        a(href="##").subscribe-link.subscribe-link--telegram
+                                            svg(width="24" height="24" fill="white")
+                                                use(href="../assets/icons/sprite.svg#tg") 
+                                            .subscribe-link__text подписаться
+                                        button.play-button.btn.btn--light-green.video-trigger
+                                            input(type="checkbox")
+                                            .play-button__play
+                                                svg(height="24" width="24" fill="5E8A3B")
+                                                    use(href="../assets/icons/sprite.svg#playIcon")
+                                        .video-player(style="display : none" data-videoUrl="https://rutube.ru/play/embed/ffce4f28377280f37816764889414dbd/")
 
-                                        <iframe src="" width="100%" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-                            .swiper-slide
-                                .blog__swiper-content
-                                    img(src="../assets/images/videos/previews/video2.png" alt="")
-                                    a(href="##").subscribe-link.subscribe-link--vkontakte
-                                        svg(width="24" height="24" fill="white")
-                                            use(href="../assets/icons/sprite.svg#vk") 
-                                        .subscribe-link__text подписаться
-                                    button.play-button.btn.btn--light-green.video-trigger
-                                        input(type="checkbox")
-                                        .play-button__play
-                                            svg(height="24" width="24" fill="5E8A3B")
-                                                use(href="../assets/icons/sprite.svg#playIcon")
-                                    .video-player(style="display : none" data-videoUrl="https://rutube.ru/video/d1ecef52c0bf3f433a4b746a2f08ef88/")
+                                            <iframe src="" width="100%" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                                .swiper-slide
+                                    .blog__swiper-content
+                                        img(src="../assets/images/videos/previews/video2.png" alt="")
+                                        a(href="##").subscribe-link.subscribe-link--vkontakte
+                                            svg(width="24" height="24" fill="white")
+                                                use(href="../assets/icons/sprite.svg#vk") 
+                                            .subscribe-link__text подписаться
+                                        button.play-button.btn.btn--light-green.video-trigger
+                                            input(type="checkbox")
+                                            .play-button__play
+                                                svg(height="24" width="24" fill="5E8A3B")
+                                                    use(href="../assets/icons/sprite.svg#playIcon")
+                                        .video-player(style="display : none" data-videoUrl="https://rutube.ru/video/d1ecef52c0bf3f433a4b746a2f08ef88/")
 
-                                        <iframe src="" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen sameorigin></iframe>
-                                //- video(src="../assets/videos/video.mp4" controls poster="../assets/images/videos/previews/video1.png") 
-                            .swiper-slide
-                                .blog__swiper-content
-                                    img(src="../assets/images/videos/previews/video1.png" alt="")
-                                        //- video(src="../assets/videos/video.mp4" controls poster="../assets/images/videos/previews/video1.png")
-                                    a(href="##").subscribe-link.subscribe-link--telegram
-                                        svg(width="24" height="24" fill="white")
-                                            use(href="../assets/icons/sprite.svg#tg") 
-                                        .subscribe-link__text подписаться
-                                    button.play-button.btn.btn--light-green.video-trigger
-                                        input(type="checkbox")
-                                        .play-button__play
-                                            svg(height="24" width="24" fill="5E8A3B")
-                                                use(href="../assets/icons/sprite.svg#playIcon")
-                                    .video-player(style="display : none" data-videoUrl="https://rutube.ru/play/embed/ffce4f28377280f37816764889414dbd/")
+                                            <iframe src="" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen sameorigin></iframe>
+                                    //- video(src="../assets/videos/video.mp4" controls poster="../assets/images/videos/previews/video1.png") 
+                                .swiper-slide
+                                    .blog__swiper-content
+                                        img(src="../assets/images/videos/previews/video1.png" alt="")
+                                            //- video(src="../assets/videos/video.mp4" controls poster="../assets/images/videos/previews/video1.png")
+                                        a(href="##").subscribe-link.subscribe-link--telegram
+                                            svg(width="24" height="24" fill="white")
+                                                use(href="../assets/icons/sprite.svg#tg") 
+                                            .subscribe-link__text подписаться
+                                        button.play-button.btn.btn--light-green.video-trigger
+                                            input(type="checkbox")
+                                            .play-button__play
+                                                svg(height="24" width="24" fill="5E8A3B")
+                                                    use(href="../assets/icons/sprite.svg#playIcon")
+                                        .video-player(style="display : none" data-videoUrl="https://rutube.ru/play/embed/ffce4f28377280f37816764889414dbd/")
 
-                                        <iframe src="" width="100%" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-                            .swiper-slide
-                                .blog__swiper-content
-                                    img(src="../assets/images/videos/previews/video2.png" alt="")
-                                    a(href="##").subscribe-link.subscribe-link--vkontakte
-                                        svg(width="24" height="24" fill="white")
-                                            use(href="../assets/icons/sprite.svg#vk") 
-                                        .subscribe-link__text подписаться
-                                    button.play-button.btn.btn--light-green.video-trigger
-                                        input(type="checkbox")
-                                        .play-button__play
-                                            svg(height="24" width="24" fill="5E8A3B")
-                                                use(href="../assets/icons/sprite.svg#playIcon")
-                                    .video-player(style="display : none" data-videoUrl="https://rutube.ru/video/d1ecef52c0bf3f433a4b746a2f08ef88/")
+                                            <iframe src="" width="100%" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                                .swiper-slide
+                                    .blog__swiper-content
+                                        img(src="../assets/images/videos/previews/video2.png" alt="")
+                                        a(href="##").subscribe-link.subscribe-link--vkontakte
+                                            svg(width="24" height="24" fill="white")
+                                                use(href="../assets/icons/sprite.svg#vk") 
+                                            .subscribe-link__text подписаться
+                                        button.play-button.btn.btn--light-green.video-trigger
+                                            input(type="checkbox")
+                                            .play-button__play
+                                                svg(height="24" width="24" fill="5E8A3B")
+                                                    use(href="../assets/icons/sprite.svg#playIcon")
+                                        .video-player(style="display : none" data-videoUrl="https://rutube.ru/video/d1ecef52c0bf3f433a4b746a2f08ef88/")
 
-                                        <iframe src="" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen sameorigin></iframe>
-                                //- video(src="../assets/videos/video.mp4" controls poster="../assets/images/videos/previews/video1.png") 
-                        .item-swiper__ui
-                            button.item-swiper__button-prev.btn.btn--light-green
-                                svg(width="24" height='24')
-                                    use(href="../assets/icons/sprite.svg#selectArrow")
-                            .item-swiper__wrapper-pagination
-                                .item-swiper__pagination 
-                            button.item-swiper__button-next.btn.btn--light-green
-                                svg(width="24" height='24')
-                                    use(href="../assets/icons/sprite.svg#selectArrow")
-            .page-banner
-                .page-banner__container
-                    .page-banner__info 
-                        h2.page-banner__title Ухты! Это самая свежая публикация?
-                        .page-banner__description Описание публикации на одну-две строчки максимально для того что бы пометилось то, что точно надо
-                        .page-banner__footer
-                            a(href="##").btn.btn--dark-green 
-                                .btn__text читать
-                                svg(height="15" width="15" fill="white")
-                                    use(href="../assets/icons/sprite.svg#link-arrow")
-                            .page-banner__side-info
-                                .page-banner__time-date
-                                    .page-banner__time 16:45
-                                    .page-banner__date 06.12.2024
-                                .page-banner__footer-info @imya_autora
-                    .page-banner__photo 
-                        img(src="../assets/images/blogPage.png", alt="картинка последней новости")
-            .container 
+                                            <iframe src="" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen sameorigin></iframe>
+                                    //- video(src="../assets/videos/video.mp4" controls poster="../assets/images/videos/previews/video1.png") 
+                            .item-swiper__ui
+                                button.item-swiper__button-prev.btn.btn--light-green
+                                    svg(width="24" height='24')
+                                        use(href="../assets/icons/sprite.svg#selectArrow")
+                                .item-swiper__wrapper-pagination
+                                    .item-swiper__pagination 
+                                button.item-swiper__button-next.btn.btn--light-green
+                                    svg(width="24" height='24')
+                                        use(href="../assets/icons/sprite.svg#selectArrow")
+                .page-banner
+                    .page-banner__container
+                        .page-banner__info 
+                            h2.page-banner__title Ухты! Это самая свежая публикация?
+                            .page-banner__description 
+                                .page-banner__description-text Описание публикации на одну-две строчки максимально для того что бы пометилось то, что точно надо
+                            .page-banner__footer
+                                a(href="##").btn.btn--dark-green 
+                                    .btn__text читать
+                                    svg(height="15" width="15" fill="white")
+                                        use(href="../assets/icons/sprite.svg#link-arrow")
+                                .page-banner__side-info
+                                    .page-banner__time-date
+                                        .page-banner__time 16:45
+                                        .page-banner__date 06.12.2024
+                                    .page-banner__footer-info @imya_autora
+                        .page-banner__photo 
+                            img(src="../assets/images/blogPage.png", alt="картинка последней новости")
                 .blog-page__news
                     .swiper-container.categories
                         .swiper.swiper-no-swiping
@@ -216,82 +216,83 @@ html(lang='ru')
                                     button.category__badge-tag.badge-tag.badge-tag статьи
                                 .swiper-slide
                                     button.category__badge-tag.badge-tag.badge-tag эксклюзивы
-                    .blog-page__news-container
-                        a(href="##").blog-page__news-card.news-card
-                            .news-card__wrapper-img
-                                .news-card__hover
-                                    .news-card__hover-text Подробнее
-                                    svg(width="15" height="15" fill="#ffffff")
-                                        use(href="../assets/icons/sprite.svg#link-arrow")
-                                img(src="../assets/images/newsCards/cuttingGrass.png" alt="").news-card__img
-                            .news-card__info 
-                                .news-card__header 
-                                    .news-card__title Название новости
-                                    .news-card__tag Новости
-                                .news-card__main Описание новости на одну-две строчки максимально для того что бы пометилось то, что точно надо
-                                .news-card__footer
-                                    .news-card__footer-main
-                                        .news-card__time-date
-                                            .news-card__time 16:45
-                                            .news-card__date 06.12.2024
-                                        .news-card__footer-info @imya_autora
-                                    .news-card__tag-mobile Новости
-                        a(href="##").blog-page__news-card.news-card
-                            .news-card__wrapper-img
-                                .news-card__hover
-                                    .news-card__hover-text Подробнее
-                                    svg(width="15" height="15" fill="#ffffff")
-                                        use(href="../assets/icons/sprite.svg#link-arrow")
-                                img(src="../assets/images/newsCards/cuttingGrass.png" alt="").news-card__img
-                            .news-card__info 
-                                .news-card__header 
-                                    .news-card__title Название новости
-                                    .news-card__tag Новости
-                                .news-card__main Описание новости на одну-две строчки максимально для того что бы пометилось то, что точно надо
-                                .news-card__footer
-                                    .news-card__footer-main
-                                        .news-card__time-date
-                                            .news-card__time 16:45
-                                            .news-card__date 06.12.2024
-                                        .news-card__footer-info @imya_autora
-                                    .news-card__tag-mobile Новости
-                        a(href="##").blog-page__news-card.news-card
-                            .news-card__wrapper-img
-                                .news-card__hover
-                                    .news-card__hover-text Подробнее
-                                    svg(width="15" height="15" fill="#ffffff")
-                                        use(href="../assets/icons/sprite.svg#link-arrow")
-                                img(src="../assets/images/newsCards/cuttingGrass.png" alt="").news-card__img
-                            .news-card__info 
-                                .news-card__header 
-                                    .news-card__title Название новости
-                                    .news-card__tag Новости
-                                .news-card__main Описание новости на одну-две строчки максимально для того что бы пометилось то, что точно надо
-                                .news-card__footer
-                                    .news-card__footer-main
-                                        .news-card__time-date
-                                            .news-card__time 16:45
-                                            .news-card__date 06.12.2024
-                                        .news-card__footer-info @imya_autora
-                                    .news-card__tag-mobile Новости
-                        a(href="##").blog-page__news-card.news-card
-                            .news-card__wrapper-img
-                                .news-card__hover
-                                    .news-card__hover-text Подробнее
-                                    svg(width="15" height="15" fill="#ffffff")
-                                        use(href="../assets/icons/sprite.svg#link-arrow")
-                                img(src="../assets/images/newsCards/cuttingGrass.png" alt="").news-card__img
-                            .news-card__info 
-                                .news-card__header 
-                                    .news-card__title Название новости
-                                    .news-card__tag Новости
-                                .news-card__main Описание новости на одну-две строчки максимально для того что бы пометилось то, что точно надо
-                                .news-card__footer
-                                    .news-card__footer-main
-                                        .news-card__time-date
-                                            .news-card__time 16:45
-                                            .news-card__date 06.12.2024
-                                        .news-card__footer-info @imya_autora
-                                    .news-card__tag-mobile Новости
+                    .container 
+                        .blog-page__news-container
+                            a(href="##").blog-page__news-card.news-card
+                                .news-card__wrapper-img
+                                    .news-card__hover
+                                        .news-card__hover-text Подробнее
+                                        svg(width="15" height="15" fill="#ffffff")
+                                            use(href="../assets/icons/sprite.svg#link-arrow")
+                                    img(src="../assets/images/newsCards/cuttingGrass.png" alt="").news-card__img
+                                .news-card__info 
+                                    .news-card__header 
+                                        .news-card__title Название новости
+                                        .news-card__tag Новости
+                                    .news-card__main Описание новости на одну-две строчки максимально для того что бы пометилось то, что точно надо
+                                    .news-card__footer
+                                        .news-card__footer-main
+                                            .news-card__time-date
+                                                .news-card__time 16:45
+                                                .news-card__date 06.12.2024
+                                            .news-card__footer-info @imya_autora
+                                        .news-card__tag-mobile Новости
+                            a(href="##").blog-page__news-card.news-card
+                                .news-card__wrapper-img
+                                    .news-card__hover
+                                        .news-card__hover-text Подробнее
+                                        svg(width="15" height="15" fill="#ffffff")
+                                            use(href="../assets/icons/sprite.svg#link-arrow")
+                                    img(src="../assets/images/newsCards/cuttingGrass.png" alt="").news-card__img
+                                .news-card__info 
+                                    .news-card__header 
+                                        .news-card__title Название новости
+                                        .news-card__tag Новости
+                                    .news-card__main Описание новости на одну-две строчки максимально для того что бы пометилось то, что точно надо
+                                    .news-card__footer
+                                        .news-card__footer-main
+                                            .news-card__time-date
+                                                .news-card__time 16:45
+                                                .news-card__date 06.12.2024
+                                            .news-card__footer-info @imya_autora
+                                        .news-card__tag-mobile Новости
+                            a(href="##").blog-page__news-card.news-card
+                                .news-card__wrapper-img
+                                    .news-card__hover
+                                        .news-card__hover-text Подробнее
+                                        svg(width="15" height="15" fill="#ffffff")
+                                            use(href="../assets/icons/sprite.svg#link-arrow")
+                                    img(src="../assets/images/newsCards/cuttingGrass.png" alt="").news-card__img
+                                .news-card__info 
+                                    .news-card__header 
+                                        .news-card__title Название новости
+                                        .news-card__tag Новости
+                                    .news-card__main Описание новости на одну-две строчки максимально для того что бы пометилось то, что точно надо
+                                    .news-card__footer
+                                        .news-card__footer-main
+                                            .news-card__time-date
+                                                .news-card__time 16:45
+                                                .news-card__date 06.12.2024
+                                            .news-card__footer-info @imya_autora
+                                        .news-card__tag-mobile Новости
+                            a(href="##").blog-page__news-card.news-card
+                                .news-card__wrapper-img
+                                    .news-card__hover
+                                        .news-card__hover-text Подробнее
+                                        svg(width="24" height="24" fill="#ffffff")
+                                            use(href="../assets/icons/sprite.svg#link-arrow")
+                                    img(src="../assets/images/newsCards/cuttingGrass.png" alt="").news-card__img
+                                .news-card__info 
+                                    .news-card__header 
+                                        .news-card__title Название новости
+                                        .news-card__tag Новости
+                                    .news-card__main Описание новости на одну-две строчки максимально для того что бы пометилось то, что точно надо
+                                    .news-card__footer
+                                        .news-card__footer-main
+                                            .news-card__time-date
+                                                .news-card__time 16:45
+                                                .news-card__date 06.12.2024
+                                            .news-card__footer-info @imya_autora
+                                        .news-card__tag-mobile Новости
 
     +footer     

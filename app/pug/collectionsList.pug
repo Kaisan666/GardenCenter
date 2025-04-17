@@ -7,100 +7,101 @@ html(lang='ru')
     +m-head
     body
         +header
-        section.collections
-            .collections__breadcrumbs.breadcrumbs.breadcrumbs-case
-                .swiper
-                    .swiper-wrapper
-                        .swiper-slide 
-                            .breadcrumbs__page 
-                                .breadcrumbs__text Главная
-                                svg(width="24" height="24")
-                                    use(href="../assets/icons/sprite.svg#selectArrow")
-                        .swiper-slide
-                            .breadcrumbs__page 
-                                .breadcrumbs__text Каталог
-                                svg(width="24" height="24")
-                                    use(href="../assets/icons/sprite.svg#selectArrow")
-                        .swiper-slide
-                            .breadcrumbs__page.breadcrumbs--current
-                                .breadcrumbs__text Горшки и кашпо
-            .container
-                .collections__content
-                    .product-details__swiper-similar
-                        .beginners__header.section-header
-                            .section-header__first-row
-                                h2.section-header__title Новинки
-                                a(href="##").section-header__link.btn--transparent.btn
-                                    .section-header__link-text К подборке
-                                    svg(width="24" height='24').section-header__link-img
+        .app__content
+            section.collections
+                .collections__breadcrumbs.breadcrumbs.breadcrumbs-case
+                    .swiper
+                        .swiper-wrapper
+                            .swiper-slide 
+                                .breadcrumbs__page 
+                                    .breadcrumbs__text Главная
+                                    svg(width="24" height="24")
                                         use(href="../assets/icons/sprite.svg#selectArrow")
-                            .section-header__second-row Свежие поступления уже здесь!
-                            .section-header__third-row Опробуйте новые товары для сада и огорода, которые мы подготовили для Вашего удобства, урожая и красоты вашего участка!
-                        .item-swiper.products-swiper
-                            .swiper
-                                .swiper-wrapper
-                                    .swiper-slide
-                                        +productCard("../../assets/images/flowers/flower1.png", "монстера", "монстера", 1200, "##")
-                                    .swiper-slide
-                                        +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
-                                    .swiper-slide
-                                        +productCard("../../assets/images/flowers/flower2.png", "Сансеверия", "Сансеверия", 1200, "##")
-                                    .swiper-slide
-                                        +productCard("../../assets/images/flowers/flower3.png", "Сансеверия", "Сансеверия", 1200, "##")
-                                    .swiper-slide
-                                        +productCard("../../assets/images/flowers/flower4.png", "Сансеверия", "Сансеверия", 1200, "##")
-                                    .swiper-slide
-                                        +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
-                                    .swiper-slide
-                                        +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
-                                    .swiper-slide
-                                        +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
-                                .item-swiper__ui
-                                    button.item-swiper__button-prev.btn.btn--light-green
-                                        svg(width="24" height='24')
+                            .swiper-slide
+                                .breadcrumbs__page 
+                                    .breadcrumbs__text Каталог
+                                    svg(width="24" height="24")
+                                        use(href="../assets/icons/sprite.svg#selectArrow")
+                            .swiper-slide
+                                .breadcrumbs__page.breadcrumbs--current
+                                    .breadcrumbs__text Горшки и кашпо
+                .container
+                    .collections__content
+                        .product-details__swiper-similar
+                            .beginners__header.section-header
+                                .section-header__first-row
+                                    h2.section-header__title Новинки
+                                    a(href="##").section-header__link.btn--transparent.btn
+                                        .section-header__link-text К подборке
+                                        svg(width="24" height='24').section-header__link-img
                                             use(href="../assets/icons/sprite.svg#selectArrow")
-                                    .item-swiper__wrapper-pagination 
-                                        .item-swiper__pagination 
-                                    button.item-swiper__button-next.btn.btn--light-green
-                                        svg(width="24" height='24')
-                                            use(href="../assets/icons/sprite.svg#selectArrow")
+                                .section-header__second-row Свежие поступления уже здесь!
+                                .section-header__third-row Опробуйте новые товары для сада и огорода, которые мы подготовили для Вашего удобства, урожая и красоты вашего участка!
+                            .item-swiper.products-swiper
+                                .swiper
+                                    .swiper-wrapper
+                                        .swiper-slide
+                                            +productCard("../../assets/images/flowers/flower1.png", "монстера", "монстера", 1200, "##")
+                                        .swiper-slide
+                                            +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
+                                        .swiper-slide
+                                            +productCard("../../assets/images/flowers/flower2.png", "Сансеверия", "Сансеверия", 1200, "##")
+                                        .swiper-slide
+                                            +productCard("../../assets/images/flowers/flower3.png", "Сансеверия", "Сансеверия", 1200, "##")
+                                        .swiper-slide
+                                            +productCard("../../assets/images/flowers/flower4.png", "Сансеверия", "Сансеверия", 1200, "##")
+                                        .swiper-slide
+                                            +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
+                                        .swiper-slide
+                                            +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
+                                        .swiper-slide
+                                            +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
+                                    .item-swiper__ui
+                                        button.item-swiper__button-prev.btn.btn--light-green
+                                            svg(width="24" height='24')
+                                                use(href="../assets/icons/sprite.svg#selectArrow")
+                                        .item-swiper__wrapper-pagination 
+                                            .item-swiper__pagination 
+                                        button.item-swiper__button-next.btn.btn--light-green
+                                            svg(width="24" height='24')
+                                                use(href="../assets/icons/sprite.svg#selectArrow")
 
-                    .product-details__swiper-watched
-                        .beginners__header.section-header
-                            .section-header__first-row
-                                h2.section-header__title Готовимся к 8 марта!
-                                a(href="##").section-header__link.btn--transparent.btn
-                                    .section-header__link-text К подборке
-                                    svg(width="24" height='24').section-header__link-img
-                                        use(href="../assets/icons/sprite.svg#selectArrow")
-                            .section-header__second-row Дарите подарки любимым вместе с нами!
-                            .section-header__third-row Ознакомьтесь с подборкой товаров для сада и огорода, которую мы подготовили для Вашего удобства, урожая и красоты вашего участка!
-                        .item-swiper.products-swiper
-                            .swiper
-                                .swiper-wrapper
-                                    .swiper-slide
-                                        +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
-                                    .swiper-slide
-                                        +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
-                                    .swiper-slide
-                                        +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
-                                    .swiper-slide
-                                        +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
-                                    .swiper-slide
-                                        +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
-                                    .swiper-slide
-                                        +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
-                                    .swiper-slide
-                                        +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
-                                    .swiper-slide
-                                        +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
-                                .item-swiper__ui
-                                    button.item-swiper__button-prev.btn.btn--light-green
-                                        svg(width="24" height='24')
+                        .product-details__swiper-watched
+                            .beginners__header.section-header
+                                .section-header__first-row
+                                    h2.section-header__title Готовимся к 8 марта!
+                                    a(href="##").section-header__link.btn--transparent.btn
+                                        .section-header__link-text К подборке
+                                        svg(width="24" height='24').section-header__link-img
                                             use(href="../assets/icons/sprite.svg#selectArrow")
-                                    .item-swiper__wrapper-pagination 
-                                        .item-swiper__pagination 
-                                    button.item-swiper__button-next.btn.btn--light-green
-                                        svg(width="24" height='24')
-                                            use(href="../assets/icons/sprite.svg#selectArrow")
+                                .section-header__second-row Дарите подарки любимым вместе с нами!
+                                .section-header__third-row Ознакомьтесь с подборкой товаров для сада и огорода, которую мы подготовили для Вашего удобства, урожая и красоты вашего участка!
+                            .item-swiper.products-swiper
+                                .swiper
+                                    .swiper-wrapper
+                                        .swiper-slide
+                                            +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
+                                        .swiper-slide
+                                            +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
+                                        .swiper-slide
+                                            +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
+                                        .swiper-slide
+                                            +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
+                                        .swiper-slide
+                                            +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
+                                        .swiper-slide
+                                            +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
+                                        .swiper-slide
+                                            +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
+                                        .swiper-slide
+                                            +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
+                                    .item-swiper__ui
+                                        button.item-swiper__button-prev.btn.btn--light-green
+                                            svg(width="24" height='24')
+                                                use(href="../assets/icons/sprite.svg#selectArrow")
+                                        .item-swiper__wrapper-pagination 
+                                            .item-swiper__pagination 
+                                        button.item-swiper__button-next.btn.btn--light-green
+                                            svg(width="24" height='24')
+                                                use(href="../assets/icons/sprite.svg#selectArrow")
         +footer

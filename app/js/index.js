@@ -24,7 +24,7 @@ import './moreBtn';
 import './burger';
 import './fancyBox';
 import './map';
-
+import "./forms"
 //// ================================ Code ======================================
 
 const tooltipElements = document.querySelectorAll('.custom-tooltip');

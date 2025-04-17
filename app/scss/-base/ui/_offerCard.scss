@@ -1,14 +1,12 @@
 .offer-card {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     border-radius: 40px;
     padding: 12px 40px;
     background-color: $MLightGray;
     row-gap: 12px;
-    min-height: 115px;
     &__header{
-        height: 58px;
+        
     }
     
     &__title {
@@ -41,6 +39,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        align-self: center;
 
         &--mobile{
             display: none;
@@ -53,11 +52,16 @@
     }
 
     @include table {
+        
+    }
+
+    @include mobile {
         &__header{
             display: flex;
             justify-content: space-between; 
             gap: 40px;
             align-items: center;
+            height: 58px;
         }
 
         &__title{
@@ -86,9 +90,6 @@
         &__info{
             flex: 1 1 auto;
         }
-    }
-
-    @include mobile {
         padding: 24px 20px;
         &__title {
             font-size: 24px;
@@ -108,8 +109,5 @@
             line-clamp: 3;
             width: auto;
         }
-    }
-    @include mediumMobile{
-        min-height: 182px;
     }
 }

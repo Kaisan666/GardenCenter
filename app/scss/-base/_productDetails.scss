@@ -19,7 +19,6 @@
     min-width: 0;
     flex-grow: 1;
     max-width: 700px;
-    align-self: center;
 
     img {
       border-radius: 40px;
@@ -91,7 +90,7 @@
     padding: 0 20px;
   }
 }
-  @include mobile {
+  @include table {
     &__main {
       flex-direction: column;
       gap: 60px;
@@ -118,6 +117,14 @@
     &__characteristics{
       &-item {
         gap: 0;
+      }
+    }
+    &__title{
+      font-size: 30px;
+    }
+    .subheader{
+      &__title{
+        font-size: 22px;
       }
     }
   }

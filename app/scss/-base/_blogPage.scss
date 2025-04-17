@@ -21,12 +21,15 @@
     }
   }
   &__news {
+    .swiper{
+      overflow: visible;
+    }
     &-container{
         padding-top: 40px;
-        display: grid;
-        grid-template-columns: auto auto;
-        column-gap: 40px;
+        display: flex;
+        flex-wrap: wrap;
         row-gap: 40px;
+        column-gap: 40px;
     }
 
     .swiper-slide {
@@ -39,20 +42,21 @@
 .page-banner {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 60px 40px;
   &__container {
     display: flex;
     gap: 60px;
     background-color: $GLightG;
     padding-left: 40px;
-    max-height: 350px;
-    border-radius: 40px;
+    height: min(100%, 350px);
+    border-radius: 20px 40px 40px 20px;
   }
   &__title {
     font-size: 48px;
     color: $GMediumG;
     font-weight: 700;
     padding-bottom: 40px;
+    line-height: 100%;
   }
 
   &__info {
@@ -66,9 +70,18 @@
     background-color: rgb(255, 255, 255, 40%);
     border-radius: 16px;
     padding: 12px 24px;
+    &-text{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    // min-height: 38px;
+    color: $MBlack;
+  }
   }
 
   &__photo {
+    flex: 1 1 700px;
     img {
       height: 100%;
       width: 100%;
@@ -103,10 +116,10 @@
     padding: 40px 0;
     &__container {
       flex-direction: column-reverse;
-      max-height: none;
       padding-left: 0;
       gap: 40px;
       max-width: none;
+      height: auto;
     }
 
     &__info {

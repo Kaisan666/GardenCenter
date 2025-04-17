@@ -4,7 +4,7 @@ mixin header
             .header__container
                 .header__up
                     a(href="/").header__logo 
-                        svg(width="288" height="60")
+                        svg(width="240" height="50")
                             use( href="../assets/icons/sprite.svg#logo")
                     .header__up-right
                         .search.field.field--normal
@@ -82,19 +82,20 @@ mixin header
                                     a(href='/contact.html').page Контакты
                                     a(href='/vacancyesList.html').page Вакансии
                                     a(href='/deliveryAndBuy.html').page Доставка и оплата
-                                .burger__socials.socials
-                                    a(href='##').social
-                                        .social__icon
-                                            svg(width='24' height='24' fill="#ffffff") 
-                                                use( href="../assets/icons/sprite.svg#inst")
-                                    a(href='##').social
-                                        .social__icon
-                                            svg(width='24' height='24' fill="#ffffff") 
-                                                use( href="../assets/icons/sprite.svg#tg")
-                                    a(href='##').social
-                                        .social__icon
-                                            svg(width='24' height='24' fill="#ffffff") 
-                                                use( href="../assets/icons/sprite.svg#vk")
+                                .burger__socials
+                                    .socials
+                                        a(href='##').social
+                                            .social__icon
+                                                svg(width='24' height='24' fill="#ffffff") 
+                                                    use( href="../assets/icons/sprite.svg#inst")
+                                        a(href='##').social
+                                            .social__icon
+                                                svg(width='24' height='24' fill="#ffffff") 
+                                                    use( href="../assets/icons/sprite.svg#tg")
+                                        a(href='##').social
+                                            .social__icon
+                                                svg(width='24' height='24' fill="#ffffff") 
+                                                    use( href="../assets/icons/sprite.svg#vk")
                                     .social.social--phone
                                         .social__icon
                                             svg(width='24' height='24' fill="#ffffff") 

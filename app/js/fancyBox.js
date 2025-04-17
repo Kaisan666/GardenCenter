@@ -19,10 +19,6 @@ if (popUps){
   })
 }
 
-Fancybox.bind('[data-fancybox]', {
-    // Custom options for all galleries
-
-  });
 
 
 const triggers = document.querySelectorAll(".fancybox-trigger")

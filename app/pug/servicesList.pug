@@ -7,108 +7,115 @@ html(lang='ru')
     +m-head
     body
         +header
-        section.services
-            .services__breadcrumbs.breadcrumbs.breadcrumbs-case
-                .swiper
-                    .swiper-wrapper
-                        .swiper-slide 
-                            .breadcrumbs__page 
-                                .breadcrumbs__text Главная
+        .app__content
+            section.services
+                .services__breadcrumbs.breadcrumbs.breadcrumbs-case
+                    .swiper
+                        .swiper-wrapper
+                            .swiper-slide 
+                                .breadcrumbs__page 
+                                    .breadcrumbs__text Главная
+                                    svg(width="24" height="24")
+                                        use(href="../assets/icons/sprite.svg#selectArrow")
+                            .swiper-slide
+                                .breadcrumbs__page 
+                                    .breadcrumbs__text Каталог
+                                    svg(width="24" height="24")
+                                        use(href="../assets/icons/sprite.svg#selectArrow")
+                            .swiper-slide
+                                .breadcrumbs__page.breadcrumbs--current
+                                    .breadcrumbs__text Горшки и кашпо
+                .container
+                    .services__header.section-header
+                        .section-header__first-row
+                            h2.section-header__title Наши услуги
+                        .section-header__second-row Удобно, профессионально, для вас!
+                        .section-header__third-row Мы не просто продаем растения, а помогаем вам создать сад мечты! Всё, чтобы садоводство было радостью, а не хлопотами!
+                    .services__container
+                        .services__card.offer-card
+                            .services__popup.popup-form(id="service_1" style="display:none;max-width:1360px")
+                                h2.popup-form__title Выезд специалиста
+                                .popup-form__main 
+                                    .popup-form__text
+                                        .popup-form__row Садовый центр на Атарбекова, рад предложить Вам услугу
+                                            | выезда специалиста на дом, в офис, ресторан. Порой, не будучи 
+                                            | профессионалом в уходе за комнатными и садовыми растениями, сложно 
+                                            | понять и разобраться по каким причинам Ваше любимое растение начало погибать. 
+                                        .popup-form__row Для того чтобы облегчить Вам задачу, необходимо просто позвонить нам по телефону 
+                                            a(href="##").link.popup-form__phone +7(861)22-00-783 
+                                            | или оставить заявку на выезд специалиста онлайн, который возьмет с собой необходимые 
+                                            | препараты для обработки, произведет все необходимые процедуры для улучшения состояния растения. 
+                                        .popup-form__row Чтобы работа специалиста была как можно более продуктивной, Вам необходимо правильно и точно описать Вашу проблему: требует ли растение пересадки, возможно, Вы заметили паразитов и насекомых на растении,  необходимо описать внешние изменения в растении, увядшие или почерневшие листья и т.д. Исходя из информации, которую Вы предоставили, специалист сможет правильно подобрать «Аптечку», которую необходимо будет взять ему с собой.
+                                        .popup-form__row Помимо экстренной помощи, можно организовать постоянное обслуживание Ваших растений в офисе, ресторане или дома. В назначенное  по договоренности время специалист будет осуществлять полив, опрыскивание и пересадку растений. Мы давно сотрудничаем с организациями и физическими лицами города Краснодара  и зарекомендовали себя  как ответственные и качественные исполнители.
+                                        .popup-form__row Стоимость услуг зависит от объема необходимых работ и количества растений.
+                                    form.popup-form__form
+                                        .popup-form__form-title Оставьте заявку онлайн!
+                                        .popup-form__fields
+                                            .popup-form__phone.field 
+                                                .field__container
+                                                    .field__placeholder
+                                                        input(type="text" placeholder=" " name="phone").popup-form__input-phone
+                                                        .field__placeholder-text
+                                                            .field__placeholder-content Телефон
+                                                            svg(width="24" height="24").field__eye-icon
+                                                                use(href="../assets/icons/sprite.svg#hide-password")
+                                            .popup-form__name.field 
+                                                .field__container
+                                                    .field__placeholder
+                                                        input(type="text" placeholder=" " name="name").popup-form__input-name
+                                                        .field__placeholder-text
+                                                            .field__placeholder-content Ваше имя
+                                                            svg(width="24" height="24").field__eye-icon
+                                                                use(href="../assets/icons/sprite.svg#hide-password")
+                                            .popup-form__message.field 
+                                                .field__container
+                                                    .field__placeholder
+                                                        textarea(name="message" type="text" placeholder=" ").popup-form__input-message
+                                                        .field__placeholder-text 
+                                                            .field__placeholder-content Сообщение
+                                                            svg(width="24" height="24").field__eye-icon
+                                                                use(href="../assets/icons/sprite.svg#hide-password")
+                                        .popup-form__footer 
+                                            .checkbox-field
+                                                .checkbox-field__fake
+                                                    input(type="checkbox" name="checkbox" id="checkbox" class="checkbox-field__input")
+                                                    svg.checkbox-field__icon(viewBox="0 0 24 24" aria-hidden="true")
+                                                        path(d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z")
+                                                label.field__placeholder-content(for="checkbox") Политика конфиденциальности
+                                            button.btn.btn--dark-green Отправить
+
+                                            
+                                        
+                            .offer-card__info
+                                .offer-card__header
+                                    .offer-card__title Охранник-контроллер
+                                    btn.offer-card__button.btn.btn--dark-green.offer-card__button--mobile.form-trigger
+                                        svg(width="24" height="24")
+                                            use(href="../assets/icons/sprite.svg#link-arrow")
+                                .offer-card__main Следите за порядком? У нас есть работа для вас! <br> Сменный график | Стабильная зарплата
+                            btn.offer-card__button.btn.btn--dark-green.form-trigger
                                 svg(width="24" height="24")
-                                    use(href="../assets/icons/sprite.svg#selectArrow")
-                        .swiper-slide
-                            .breadcrumbs__page 
-                                .breadcrumbs__text Каталог
+                                    use(href="../assets/icons/sprite.svg#link-arrow")
+                        .services__card.offer-card
+                            .offer-card__info
+                                .offer-card__header
+                                    .offer-card__title Охранник-контроллер
+                                    btn.offer-card__button.btn.btn--dark-green.offer-card__button--mobile
+                                        svg(width="24" height="24")
+                                            use(href="../assets/icons/sprite.svg#link-arrow")
+                                .offer-card__main Следите за порядком? У нас есть работа для вас! <br> Сменный график | Стабильная зарплата
+                            btn.offer-card__button.btn.btn--dark-green
                                 svg(width="24" height="24")
-                                    use(href="../assets/icons/sprite.svg#selectArrow")
-                        .swiper-slide
-                            .breadcrumbs__page.breadcrumbs--current
-                                .breadcrumbs__text Горшки и кашпо
-            .container
-                .services__header.section-header
-                    .section-header__first-row
-                        h2.section-header__title Наши услуги
-                    .section-header__second-row Удобно, профессионально, для вас!
-                    .section-header__third-row Мы не просто продаем растения, а помогаем вам создать сад мечты! Всё, чтобы садоводство было радостью, а не хлопотами!
-                .services__container
-                    .services__card.offer-card
-                        .offer-card__info
-                            .offer-card__header
-                                .offer-card__title Охранник-контроллер
-                                btn.offer-card__button.btn.btn--dark-green.offer-card__button--mobile(data-fancybox data-src="#service_1")
-                                    svg(width="24" height="24")
-                                        use(href="../assets/icons/sprite.svg#link-arrow")
-                            .offer-card__main Следите за порядком? У нас есть работа для вас! <br> Сменный график | Стабильная зарплата
-                        btn.offer-card__button.btn.btn--dark-green(data-fancybox data-src="#service_1")
-                            svg(width="24" height="24")
-                                use(href="../assets/icons/sprite.svg#link-arrow")
-                    .services__card.offer-card
-                        .offer-card__info
-                            .offer-card__header
-                                .offer-card__title Охранник-контроллер
-                                btn.offer-card__button.btn.btn--dark-green.offer-card__button--mobile
-                                    svg(width="24" height="24")
-                                        use(href="../assets/icons/sprite.svg#link-arrow")
-                            .offer-card__main Следите за порядком? У нас есть работа для вас! <br> Сменный график | Стабильная зарплата
-                        btn.offer-card__button.btn.btn--dark-green
-                            svg(width="24" height="24")
-                                use(href="../assets/icons/sprite.svg#link-arrow")
-                    .services__card.offer-card
-                        .offer-card__info
-                            .offer-card__header
-                                .offer-card__title Охранник-контроллер
-                                btn.offer-card__button.btn.btn--dark-green.offer-card__button--mobile
-                                    svg(width="24" height="24")
-                                        use(href="../assets/icons/sprite.svg#link-arrow")
-                            .offer-card__main Следите за порядком? У нас есть работа для вас! <br> Сменный график | Стабильная зарплата
-                        btn.offer-card__button.btn.btn--dark-green
-                            svg(width="24" height="24")
-                                use(href="../assets/icons/sprite.svg#link-arrow")
-        .services__popup.popup-form(id="service_1" style="display:none;max-width:1360px")
-            h2.popup-form__title Выезд специалиста
-            .popup-form__main 
-                .popup-form__text
-                    .popup-form__row Садовый центр на Атарбекова, рад предложить Вам услугу
-                        | выезда специалиста на дом, в офис, ресторан. Порой, не будучи 
-                        | профессионалом в уходе за комнатными и садовыми растениями, сложно 
-                        | понять и разобраться по каким причинам Ваше любимое растение начало погибать. 
-                    .popup-form__row Для того чтобы облегчить Вам задачу, необходимо просто позвонить нам по телефону 
-                        a(href="##").link.popup-form__phone +7(861)22-00-783 
-                        | или оставить заявку на выезд специалиста онлайн, который возьмет с собой необходимые 
-                        | препараты для обработки, произведет все необходимые процедуры для улучшения состояния растения. 
-                    .popup-form__row Садовый центр на Атарбекова, рад предложить Вам услугу
-                        | выезда специалиста на дом, в офис, ресторан. Порой, не будучи 
-                        | профессионалом в уходе за комнатными и садовыми растениями, сложно 
-                        | понять и разобраться по каким причинам Ваше любимое растение начало погибать. 
-                    .popup-form__row Садовый центр на Атарбекова, рад предложить Вам услугу
-                        | выезда специалиста на дом, в офис, ресторан. Порой, не будучи 
-                        | профессионалом в уходе за комнатными и садовыми растениями, сложно 
-                        | понять и разобраться по каким причинам Ваше любимое растение начало погибать. 
-                    .popup-form__row Садовый центр на Атарбекова, рад предложить Вам услугу
-                        | выезда специалиста на дом, в офис, ресторан. Порой, не будучи 
-                        | профессионалом в уходе за комнатными и садовыми растениями, сложно 
-                        | понять и разобраться по каким причинам Ваше любимое растение начало погибать. 
-                form.popup-form__form
-                    .popup-form__form-title Оставьте заявку онлайн!
-                    .popup-form__phone.field 
-                        .field__container
-                            .field__placeholder
-                                input(type="text" placeholder=" " name="phone").popup-form__input-phone
-                                .field__placeholder-text Телефон
-                                    svg(width="24" height="24").field__eye-icon
-                                        use(href="../assets/icons/sprite.svg#hide-password")
-                    .popup-form__name.field 
-                        .field__container
-                            .field__placeholder
-                                input(type="text" placeholder=" " name="name").popup-form__input-name
-                                .field__placeholder-text Ваше имя
-                                    svg(width="24" height="24").field__eye-icon
-                                        use(href="../assets/icons/sprite.svg#hide-password")
-                    .popup-form__message.field 
-                        .field__container
-                            .field__placeholder
-                                textarea(name="message" type="text" placeholder=" ").popup-form__input-message
-                                .field__placeholder-text Сообщение
-                                    svg(width="24" height="24").field__eye-icon
-                                        use(href="../assets/icons/sprite.svg#hide-password")
+                                    use(href="../assets/icons/sprite.svg#link-arrow")
+                        .services__card.offer-card
+                            .offer-card__info
+                                .offer-card__header
+                                    .offer-card__title Охранник-контроллер
+                                    btn.offer-card__button.btn.btn--dark-green.offer-card__button--mobile
+                                        svg(width="24" height="24")
+                                            use(href="../assets/icons/sprite.svg#link-arrow")
+                                .offer-card__main Следите за порядком? У нас есть работа для вас! <br> Сменный график | Стабильная зарплата
+                            btn.offer-card__button.btn.btn--dark-green
+                                svg(width="24" height="24")
+                                    use(href="../assets/icons/sprite.svg#link-arrow")
         +footer

@@ -27,6 +27,7 @@
           height: 100%;
           position: relative;
           
+          
         }
         &__up{
           position: relative;
@@ -282,6 +283,9 @@
   }
 
   @include table {
+    &__container{
+      gap: 0;
+    }
     &__up {
       gap: 55px;
       &-right {
@@ -294,6 +298,5 @@
     }
   }
   @include mobile {
-    margin-bottom: 10px;
   }
 }
