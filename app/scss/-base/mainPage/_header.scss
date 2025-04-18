@@ -4,24 +4,24 @@
   background-color: $MWhite;
   top: 0;
   z-index: 50;
-  width: 100%;  
+  width: 100%; 
+  .search{
+    max-width: 313px;
+  }
   #button {
     height: 50px;
     width: 100px;
+  }
+  &__wrapper-bottom,
+  &__wrapper-up{
+    width: 100%;
+    background-color: $MWhite;
   }
   &__fixed {
     position: fixed;
 
 
     &--hidden {
-      transition: all .3s ease-in-out;
-    .container{
-      height: 100%;
-    }
-    @include table{
-      transform: translateY(-150%);
-      transition: all 0.3s ease-in-out;
-    }
       .header {
         &__container{
           height: 100%;
@@ -29,59 +29,35 @@
           
           
         }
-        &__up{
-          position: relative;
-          z-index: 10;
-          background-color: #fff;
-          transition: all .3s ease-in-out;
-        }
-        &__bottom {
-          transform: translateY(-100%);
-          visibility: hidden;
-          transition: all 0.3s ease-in-out;
-          &-hide {
-            display: grid;
-            grid-template-rows: 0fr;
-            overflow: hidden;
-            position: absolute;
-            width: 100%;
-            top: 100%;
-            padding-top: 0px;
-            padding-bottom: 0;
-            background-color: #fff;
-            z-index: -10;
-            transition: all 0.3s ease-in-out;
-
-            &-animation {
-              min-height: 0;
-            }
-            @include table{
-              display: none;
-            }
-          }
+        &__wrapper-bottom{
+          position: absolute;
+          padding: 14px 0;
+          
+          top: 0;
+          z-index: -1;
+          transition: all .3s;
         }
       }
     }
     &--visible {
-    
-      @include table{
-        transform: translateY(0%);
-        transition: all 0.3s ease-in-out;
-      }
       .header {
         &__container{
           position: relative;
           
         }
-        &__up{
-          position: relative;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          gap: 20px;
-          z-index: 10;
-          margin-top: auto;
-          background-color: #fff;
+        // &__up{
+        //   position: relative;
+        //   display: flex;
+        //   justify-content: space-between;
+        //   align-items: center;
+        //   gap: 20px;
+        //   z-index: 10;
+        //   margin-top: auto;
+        //   background-color: #fff;
+        // }
+        &__wrapper-bottom{
+          top: 100%;
+          transition: all .3s;
         }
         &__bottom{
           transform: translateY(0);
@@ -113,6 +89,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 20px;
+    padding-bottom: 14px;
 
     &-right {
       display: flex;
@@ -293,10 +270,14 @@
       }
     }
 
-    &__bottom {
+    &__wrapper-bottom {
       display: none;
     }
   }
   @include mobile {
+    &__logo{
+      width: 240px;
+      height: 50px;
+    }
   }
 }

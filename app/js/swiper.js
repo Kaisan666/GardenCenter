@@ -112,7 +112,7 @@ if(productsSwipers){
                 prevEl: '.item-swiper__button-prev',
               },
             loop : true,
-            slidesPerView: 1.5,
+            slidesPerView: 1.47,
             spaceBetween : 24,
             breakpoints : {
                 765 : {

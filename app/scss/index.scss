@@ -71,10 +71,6 @@ body {
     }
   }
 
-  &-main {
-    line-height: 125%;
-  }
-
   @include mobile {
     &-header {
       font-size: 18px;
@@ -104,7 +100,8 @@ body {
     }
   }
   @include mobile{
-    padding: 12px 0;
+    padding-top: 12px;
+    padding-bottom: 40px;
     &:has(.swiper-main){
       padding-top: 0;
     }
@@ -175,8 +172,6 @@ section {
   @media (hover: hover) and (pointer: fine) {
     &:hover {
       color: $GSupportDG;
-      text-decoration: underline;
-      text-underline-offset: 5px;
       transition: all 0.2s linear;
 
       svg {
@@ -188,9 +183,7 @@ section {
 
   &:active {
     color: $GDarkG;
-    text-decoration: underline;
     transition: all 0.1s linear;
-    text-underline-offset: 5px;
 
     svg {
       fill: $GDarkG;

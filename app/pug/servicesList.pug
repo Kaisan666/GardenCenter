@@ -18,13 +18,8 @@ html(lang='ru')
                                     svg(width="24" height="24")
                                         use(href="../assets/icons/sprite.svg#selectArrow")
                             .swiper-slide
-                                .breadcrumbs__page 
-                                    .breadcrumbs__text Каталог
-                                    svg(width="24" height="24")
-                                        use(href="../assets/icons/sprite.svg#selectArrow")
-                            .swiper-slide
                                 .breadcrumbs__page.breadcrumbs--current
-                                    .breadcrumbs__text Горшки и кашпо
+                                    .breadcrumbs__text Наши услуги
                 .container
                     .services__header.section-header
                         .section-header__first-row
@@ -48,41 +43,44 @@ html(lang='ru')
                                         .popup-form__row Чтобы работа специалиста была как можно более продуктивной, Вам необходимо правильно и точно описать Вашу проблему: требует ли растение пересадки, возможно, Вы заметили паразитов и насекомых на растении,  необходимо описать внешние изменения в растении, увядшие или почерневшие листья и т.д. Исходя из информации, которую Вы предоставили, специалист сможет правильно подобрать «Аптечку», которую необходимо будет взять ему с собой.
                                         .popup-form__row Помимо экстренной помощи, можно организовать постоянное обслуживание Ваших растений в офисе, ресторане или дома. В назначенное  по договоренности время специалист будет осуществлять полив, опрыскивание и пересадку растений. Мы давно сотрудничаем с организациями и физическими лицами города Краснодара  и зарекомендовали себя  как ответственные и качественные исполнители.
                                         .popup-form__row Стоимость услуг зависит от объема необходимых работ и количества растений.
-                                    form.popup-form__form
+                                    .popup-form__wrapper-form
                                         .popup-form__form-title Оставьте заявку онлайн!
-                                        .popup-form__fields
-                                            .popup-form__phone.field 
-                                                .field__container
-                                                    .field__placeholder
-                                                        input(type="text" placeholder=" " name="phone").popup-form__input-phone
-                                                        .field__placeholder-text
-                                                            .field__placeholder-content Телефон
-                                                            svg(width="24" height="24").field__eye-icon
-                                                                use(href="../assets/icons/sprite.svg#hide-password")
-                                            .popup-form__name.field 
-                                                .field__container
-                                                    .field__placeholder
-                                                        input(type="text" placeholder=" " name="name").popup-form__input-name
-                                                        .field__placeholder-text
-                                                            .field__placeholder-content Ваше имя
-                                                            svg(width="24" height="24").field__eye-icon
-                                                                use(href="../assets/icons/sprite.svg#hide-password")
-                                            .popup-form__message.field 
-                                                .field__container
-                                                    .field__placeholder
-                                                        textarea(name="message" type="text" placeholder=" ").popup-form__input-message
-                                                        .field__placeholder-text 
-                                                            .field__placeholder-content Сообщение
-                                                            svg(width="24" height="24").field__eye-icon
-                                                                use(href="../assets/icons/sprite.svg#hide-password")
-                                        .popup-form__footer 
-                                            .checkbox-field
-                                                .checkbox-field__fake
-                                                    input(type="checkbox" name="checkbox" id="checkbox" class="checkbox-field__input")
-                                                    svg.checkbox-field__icon(height='24' width='24' fill="black")
-                                                        use(href='../assets/icon/sprite.svg#link-arrow')
-                                                label.field__placeholder-content(for="checkbox") Политика конфиденциальности
-                                            button.btn.btn--dark-green Отправить
+                                        form.popup-form__form
+                                            .popup-form__fields
+                                                .popup-form__phone.field 
+                                                    .field__container
+                                                        .field__placeholder
+                                                            input(type="text" placeholder=" " name="phone").popup-form__input-phone
+                                                            .field__placeholder-text
+                                                                .field__placeholder-content Телефон
+                                                                svg(width="24" height="24").field__eye-icon
+                                                                    use(href="../assets/icons/sprite.svg#hide-password")
+                                                .popup-form__name.field 
+                                                    .field__container
+                                                        .field__placeholder
+                                                            input(type="text" placeholder=" " name="name").popup-form__input-name
+                                                            .field__placeholder-text
+                                                                .field__placeholder-content Ваше имя
+                                                                svg(width="24" height="24").field__eye-icon
+                                                                    use(href="../assets/icons/sprite.svg#hide-password")
+                                                .popup-form__message.field 
+                                                    .field__container
+                                                        .field__placeholder
+                                                            textarea(name="message" type="text" placeholder=" ").popup-form__input-message
+                                                            .field__placeholder-text 
+                                                                .field__placeholder-content Сообщение
+                                                                svg(width="24" height="24").field__eye-icon
+                                                                    use(href="../assets/icons/sprite.svg#hide-password")
+                                            .popup-form__footer 
+                                                .checkbox-field
+                                                    .checkbox-field__wrapper
+                                                        .checkbox-field__fake
+                                                            input(type="checkbox" name="checkbox" id="checkbox" class="checkbox-field__input")
+                                                            svg.checkbox-field__icon(width="24" height='24')
+                                                                use(href='../assets/icons/sprite.svg#checkMark')
+                                                        label(for="checkbox") Политика конфиденциальности
+                                                    label.field__placeholder-content(for="checkbox")
+                                                button.btn.btn--dark-green Отправить
 
                                             
                                         
@@ -97,25 +95,136 @@ html(lang='ru')
                                 svg(width="24" height="24")
                                     use(href="../assets/icons/sprite.svg#link-arrow")
                         .services__card.offer-card
+                            .services__popup.popup-form(id="service_1" style="display:none;max-width:1360px")
+                                h2.popup-form__title Выезд специалфыв ыфыфвиста
+                                .popup-form__main 
+                                    .popup-form__text
+                                        .popup-form__row Садовый центр на Атарбекова, рад предложить Вам услугу
+                                            | выезда специалиста на дом, в офис, ресторан. Порой, не будучи 
+                                            | профессионалом в уходе за комнатными и садовыми растениями, сложно 
+                                            | понять и разобраться по каким причинам Ваше любимое растение начало погибать. 
+                                        .popup-form__row Для того чтобы облегчить Вам задачу, необходимо просто позвонить нам по телефону 
+                                            a(href="##").link.popup-form__phone +7(861)22-00-783 
+                                            | или оставить заявку на выезд специалиста онлайн, который возьмет с собой необходимые 
+                                            | препараты для обработки, произведет все необходимые процедуры для улучшения состояния растения. 
+                                        .popup-form__row Чтобы работа специалиста была как можно более продуктивной, Вам необходимо правильно и точно описать Вашу проблему: требует ли растение пересадки, возможно, Вы заметили паразитов и насекомых на растении,  необходимо описать внешние изменения в растении, увядшие или почерневшие листья и т.д. Исходя из информации, которую Вы предоставили, специалист сможет правильно подобрать «Аптечку», которую необходимо будет взять ему с собой.
+                                        .popup-form__row Помимо экстренной помощи, можно организовать постоянное обслуживание Ваших растений в офисе, ресторане или дома. В назначенное  по договоренности время специалист будет осуществлять полив, опрыскивание и пересадку растений. Мы давно сотрудничаем с организациями и физическими лицами города Краснодара  и зарекомендовали себя  как ответственные и качественные исполнители.
+                                        .popup-form__row Стоимость услуг зависит от объема необходимых работ и количества растений.
+                                    .popup-form__wrapper-form
+                                        .popup-form__form-title Оставьте заявку онлайн!
+                                        form.popup-form__form
+                                            .popup-form__fields
+                                                .popup-form__phone.field 
+                                                    .field__container
+                                                        .field__placeholder
+                                                            input(type="text" placeholder=" " name="phone").popup-form__input-phone
+                                                            .field__placeholder-text
+                                                                .field__placeholder-content Телефон
+                                                                svg(width="24" height="24").field__eye-icon
+                                                                    use(href="../assets/icons/sprite.svg#hide-password")
+                                                .popup-form__name.field 
+                                                    .field__container
+                                                        .field__placeholder
+                                                            input(type="text" placeholder=" " name="name").popup-form__input-name
+                                                            .field__placeholder-text
+                                                                .field__placeholder-content Ваше имя
+                                                                svg(width="24" height="24").field__eye-icon
+                                                                    use(href="../assets/icons/sprite.svg#hide-password")
+                                                .popup-form__message.field 
+                                                    .field__container
+                                                        .field__placeholder
+                                                            textarea(name="message" type="text" placeholder=" ").popup-form__input-message
+                                                            .field__placeholder-text 
+                                                                .field__placeholder-content Сообщение
+                                                                svg(width="24" height="24").field__eye-icon
+                                                                    use(href="../assets/icons/sprite.svg#hide-password")
+                                            .popup-form__footer 
+                                                .checkbox-field
+                                                    .checkbox-field__wrapper
+                                                        .checkbox-field__fake
+                                                            input(type="checkbox" name="checkbox" id="checkbox" class="checkbox-field__input")
+                                                            svg.checkbox-field__icon(width="24" height='24')
+                                                                use(href='../assets/icons/sprite.svg#checkMark')
+                                                        label(for="checkbox") Политика конфиденциальности
+                                                    label.field__placeholder-content(for="checkbox")
+                                                button.btn.btn--dark-green Отправить
                             .offer-card__info
                                 .offer-card__header
                                     .offer-card__title Охранник-контроллер
-                                    btn.offer-card__button.btn.btn--dark-green.offer-card__button--mobile
+                                    btn.offer-card__button.btn.btn--dark-green.offer-card__button--mobile.form-trigger
                                         svg(width="24" height="24")
                                             use(href="../assets/icons/sprite.svg#link-arrow")
                                 .offer-card__main Следите за порядком? У нас есть работа для вас! <br> Сменный график | Стабильная зарплата
-                            btn.offer-card__button.btn.btn--dark-green
+                            btn.offer-card__button.btn.btn--dark-green.form-trigger
                                 svg(width="24" height="24")
                                     use(href="../assets/icons/sprite.svg#link-arrow")
                         .services__card.offer-card
+                            .services__popup.popup-form(id="service_1" style="display:none;max-width:1360px")
+                                h2.popup-form__title Выезд фвыфвфвсп ециалиста
+                                .popup-form__main 
+                                    .popup-form__text
+                                        .popup-form__row Садовый центр на Атарбекова, рад предложить Вам услугу
+                                            | выезда специалиста на дом, в офис, ресторан. Порой, не будучи 
+                                            | профессионалом в уходе за комнатными и садовыми растениями, сложно 
+                                            | понять и разобраться по каким причинам Ваше любимое растение начало погибать. 
+                                        .popup-form__row Для того чтобы облегчить Вам задачу, необходимо просто позвонить нам по телефону 
+                                            a(href="##").link.popup-form__phone +7(861)22-00-783 
+                                            | или оставить заявку на выезд специалиста онлайн, который возьмет с собой необходимые 
+                                            | препараты для обработки, произведет все необходимые процедуры для улучшения состояния растения. 
+                                        .popup-form__row Чтобы работа специалиста была как можно более продуктивной, Вам необходимо правильно и точно описать Вашу проблему: требует ли растение пересадки, возможно, Вы заметили паразитов и насекомых на растении,  необходимо описать внешние изменения в растении, увядшие или почерневшие листья и т.д. Исходя из информации, которую Вы предоставили, специалист сможет правильно подобрать «Аптечку», которую необходимо будет взять ему с собой.
+                                        .popup-form__row Помимо экстренной помощи, можно организовать постоянное обслуживание Ваших растений в офисе, ресторане или дома. В назначенное  по договоренности время специалист будет осуществлять полив, опрыскивание и пересадку растений. Мы давно сотрудничаем с организациями и физическими лицами города Краснодара  и зарекомендовали себя  как ответственные и качественные исполнители.
+                                        .popup-form__row Стоимость услуг зависит от объема необходимых работ и количества растений.
+                                    .popup-form__wrapper-form
+                                        .popup-form__form-title Оставьте заявку онлайн!
+                                        form.popup-form__form
+                                            .popup-form__fields
+                                                .popup-form__phone.field 
+                                                    .field__container
+                                                        .field__placeholder
+                                                            input(type="text" placeholder=" " name="phone").popup-form__input-phone
+                                                            .field__placeholder-text
+                                                                .field__placeholder-content Телефон
+                                                                svg(width="24" height="24").field__eye-icon
+                                                                    use(href="../assets/icons/sprite.svg#hide-password")
+                                                .popup-form__name.field 
+                                                    .field__container
+                                                        .field__placeholder
+                                                            input(type="text" placeholder=" " name="name").popup-form__input-name
+                                                            .field__placeholder-text
+                                                                .field__placeholder-content Ваше имя
+                                                                svg(width="24" height="24").field__eye-icon
+                                                                    use(href="../assets/icons/sprite.svg#hide-password")
+                                                .popup-form__message.field 
+                                                    .field__container
+                                                        .field__placeholder
+                                                            textarea(name="message" type="text" placeholder=" ").popup-form__input-message
+                                                            .field__placeholder-text 
+                                                                .field__placeholder-content Сообщение
+                                                                svg(width="24" height="24").field__eye-icon
+                                                                    use(href="../assets/icons/sprite.svg#hide-password")
+                                            .popup-form__footer 
+                                                .checkbox-field
+                                                    .checkbox-field__wrapper
+                                                        .checkbox-field__fake
+                                                            input(type="checkbox" name="checkbox" id="checkbox" class="checkbox-field__input")
+                                                            svg.checkbox-field__icon(width="24" height='24')
+                                                                use(href='../assets/icons/sprite.svg#checkMark')
+                                                        label(for="checkbox") Политика конфиденциальности
+                                                    label.field__placeholder-content(for="checkbox")
+                                                button.btn.btn--dark-green Отправить
                             .offer-card__info
                                 .offer-card__header
                                     .offer-card__title Охранник-контроллер
-                                    btn.offer-card__button.btn.btn--dark-green.offer-card__button--mobile
+                                    btn.offer-card__button.btn.btn--dark-green.offer-card__button--mobile.form-trigger
                                         svg(width="24" height="24")
                                             use(href="../assets/icons/sprite.svg#link-arrow")
                                 .offer-card__main Следите за порядком? У нас есть работа для вас! <br> Сменный график | Стабильная зарплата
-                            btn.offer-card__button.btn.btn--dark-green
+                            btn.offer-card__button.btn.btn--dark-green.form-trigger
                                 svg(width="24" height="24")
                                     use(href="../assets/icons/sprite.svg#link-arrow")
+
+        .form-message 
+            .form-message__img
+                img(src="", alt="")
+            .form-message__text
         +footer

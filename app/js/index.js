@@ -87,11 +87,10 @@ tooltipElements.forEach((item) => {
 
 let lastScroll = 0;
 const header = document.querySelector('.header');
+const headerTop = header.querySelector(".header__up").offsetHeight
 const headerOffSet = header.offsetHeight;
+
 const hideScroll = () => {
-  console.log(window.scrollY);
-  console.log('scrollPosition', window.scrollY);
-  console.log('lastScroll', lastScroll);
   const burger = header.querySelector('.burger__modal');
   if (burger.classList.contains('burger__modal--active')) {
     header.classList.add('header__fixed--visible');

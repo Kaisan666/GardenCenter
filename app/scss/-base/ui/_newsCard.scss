@@ -1,7 +1,7 @@
 .news-card {
   display: flex;
   gap: 20px;
-  max-height: 196;
+  max-height: 192px;
   flex: 1 1 660px;
 
   &__wrapper-img {
@@ -39,7 +39,7 @@
   }
 
   &__img {
-    height: 196px;
+    height: 192px;
     border-radius: 40px;
     object-fit: cover;
     object-position: center;
@@ -84,6 +84,11 @@
     font-size: 24px;
     font-weight: 600;
     color: $MBlack;
+    -webkit-line-clamp: 2;
+        line-clamp: 2;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
   }
 
   &__tag {
@@ -172,13 +177,15 @@
     }
 
     &__wrapper-img {
-      flex: 1 1 240px;
+      aspect-ratio: 12.55 / 9;
     }
 
     &__info {
       max-width: 100%;
       padding: 24px 20px;
       justify-content: space-between;
+      gap: 24px;
+      flex: 1 1 224px;
 
     }
 
