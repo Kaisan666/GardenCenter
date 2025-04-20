@@ -25,9 +25,4 @@
         display: flex;
         justify-content: space-between;
     }
-    @include mediumMobile {
-        &__main-photo{
-            
-        }
-    }
 }

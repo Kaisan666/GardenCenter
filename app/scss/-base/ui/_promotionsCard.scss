@@ -1,128 +1,114 @@
 .promotion-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+
+  &__header {
+    border-radius: 20px;
+    padding: 24px 40px;
+    background-color: $MLightGray;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    justify-content: space-between;
+    gap: 24px;
+  }
+  &__wrapper-img {
+    position: relative;
+  }
 
+  &__main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 306px;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 24px;
+  }
+
+  &__text {
+    font-weight: 400;
+  }
+
+  &__img {
+    width: 100%;
+    mask-image: url('../../../assets/images/topics/Subtract.png');
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: 0px 5px;
+    padding-bottom: 26px;
+  }
+
+  &__link {
+    position: absolute;
+    bottom: -6px;
+    border-radius: 100%;
+    max-width: 56px;
+    max-height: 56px;
+    width: 3.52vw;
+    height: 3.52vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  &:nth-child(2) {
+    flex-direction: column-reverse;
+  }
+
+  @include table {
     &__header {
-        border-radius: 20px;
-        padding: 24px 40px;
-        background-color: $MLightGray;
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-    }
-    &__wrapper-img{
-        position: relative;
-    }
-
-
-
-    &__main {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        max-height: 306px;
-    }
-
-    &__title {
-        font-weight: 600;
-        font-size: 24px;
-    }
-
-    &__text {
-        font-weight: 400;
-    }
-
-    &__img {
-        width: 100%;
-        mask-image: url('../../../assets/images/topics/Subtract.png');
-        mask-repeat: no-repeat;
-        mask-size: contain;
-        mask-position: 0px 5px;
-        padding-bottom: 26px;
+      padding: 20px;
     }
 
     &__link {
-        position: absolute;
-        bottom: -6px;
-        border-radius: 100%;
-        max-width: 56px;
-        max-height: 56px;
-        width: 3.52vw;
-        height: 3.52vw;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 10px;
+      width: 4vw;
+      height: 4vw;
+    }
+  }
 
+  @include mobile {
+    gap: 41.5px;
+    flex-direction: column-reverse;
+
+    &__title {
+      font-size: 18px;
     }
 
-    &:nth-child(2) {
-        flex-direction: column-reverse;
+    &__main {
+      max-height: 100%;
     }
 
-    @include table {
-        &__header {
-            padding: 20px;
-        }
-
-        &__link {
-            width: 4vw;
-            height: 4vw;
-        }
+    &__link {
+      min-width: 56px;
+      min-height: 56px;
+      max-width: 75px;
+      max-height: 75px;
+      width: 11.93vw;
+      height: 11.93vw;
+      bottom: -25px;
     }
 
-    // @media screen and (max-width : 900px) {
-    //     &__link{
-    //         bottom: -10%;
-    //     }
-
-    // }
-
-    @include mobile {
-        gap: 41.5px;
-        flex-direction: column-reverse;
-
-        &__title {
-            font-size: 18px;
-        }
-
-        &__main {
-            max-height: 100%;
-            // max-width: 80%;
-            // justify-self: center;
-            // align-self: center;
-        }
-
-        &__link {
-            min-width: 56px;
-            min-height: 56px;
-            max-width: 75px;
-            max-height: 75px;
-            width: 11.93vw;
-            height: 11.93vw;
-            //   bottom: -1%;
-            bottom: -25px;
-        }
-
-        &__img {
-            min-height: 280px;
-            object-fit: cover;
-            mask-image: url('../../../assets/images/topics/maskMobile.png');
-            mask-size: 100% 100%;
-            mask-position: 0;
-            padding-bottom: 0;
-        }
-
-        &__header {
-            padding: 24px;
-        }
-
-        &__text {
-            line-height: 125%;
-        }
+    &__img {
+      min-height: 280px;
+      object-fit: cover;
+      mask-image: url('../../../assets/images/topics/maskMobile.png');
+      mask-size: 100% 100%;
+      mask-position: 0;
+      padding-bottom: 0;
     }
+
+    &__header {
+      padding: 24px;
+    }
+
+    &__text {
+      line-height: 125%;
+    }
+  }
 }

@@ -1,8 +1,8 @@
 .product-details {
-  &__header{
+  &__header {
     max-width: 1440px;
-  margin: 0 auto;
-  padding: 0px 40px;
+    margin: 0 auto;
+    padding: 0px 40px;
   }
   &__content {
     display: flex;
@@ -22,7 +22,6 @@
       border-radius: 40px;
     }
   }
-
 
   &__info {
     display: flex;
@@ -57,7 +56,6 @@
   }
 
   &__characteristics {
-
     &-list {
       display: flex;
       flex-direction: column;
@@ -73,10 +71,6 @@
 
     &-characteristic {
       overflow: hidden;
-      // &::after{
-      //   content: ".........................................................................................................................................................";
-      //   overflow: hidden;
-      // }
     }
 
     &-border {
@@ -84,20 +78,20 @@
       border-bottom: dotted 2px $MMiddleGray;
     }
   }
-@include table{
-  &__header{
-    padding: 0 20px;
+  @include table {
+    &__header {
+      padding: 0 20px;
+    }
   }
-}
   @include table {
     &__main {
       flex-direction: column;
       gap: 60px;
     }
-    &__swiper-item{
+    &__swiper-item {
       flex: 1 1 auto;
     }
-    &__info{
+    &__info {
       flex: 1 1 auto;
     }
 
@@ -105,7 +99,6 @@
     &__watched {
       .swiper {
         overflow: visible;
-
       }
 
       .item-swiper__ui {
@@ -118,21 +111,19 @@
       line-height: 110%;
     }
   }
-  @include smallMobile{
-    &__characteristics{
+  @include smallMobile {
+    &__characteristics {
       &-item {
         gap: 0;
       }
     }
-    &__title{
+    &__title {
       font-size: 30px;
     }
-    .subheader{
-      &__title{
+    .subheader {
+      &__title {
         font-size: 22px;
       }
     }
   }
-
-
 }

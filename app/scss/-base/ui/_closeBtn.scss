@@ -1,0 +1,27 @@
+.close-btn {
+  width: 40px;
+  height: 40px;
+  background-color: $MWhite;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (hover : hover) and (pointer : fine) {
+    &:hover{
+        background-color: $GLightG;
+        transition: all .3s ease-in-out;
+        svg{
+            fill: $GMediumG;
+            transition: all .3s ease-in-out;
+        }
+    }
+  }
+  &:active{
+    background-color: $GMediumG;
+        transition: all .3s ease-in-out;
+        svg{
+            fill: $MWhite;
+            transition: all .3s ease-in-out;
+        }
+  }
+}

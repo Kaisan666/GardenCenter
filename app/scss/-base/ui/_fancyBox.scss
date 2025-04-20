@@ -14,7 +14,6 @@
       }
 }
 .video-player{
-  // position: relative;
 justify-content: center;
       &.fancybox__content{
         padding: 0;
@@ -26,16 +25,12 @@ justify-content: center;
       iframe{
         aspect-ratio: 16 / 9;
         width: 85vw;
-        max-width: 85vw;
-        // max-height: 85vh;
+        max-width: 1200px;
         
       }
       
 }
 
-:root{
-  // --fancybox-color : $MBlack
-}
 .fancybox__content{
 .carousel__button.is-close{
   width: 40px;

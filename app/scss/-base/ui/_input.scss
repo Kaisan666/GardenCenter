@@ -1,6 +1,5 @@
 .field {
   position: relative;
-  // max-width: 313px;
   width: 100%;
 
   input,
@@ -130,15 +129,15 @@
         transition: all 0.3s ease-in-out;
       }
 
-      &__placeholder {
+      // &__placeholder {
 
-        &:has(input:focus),
-        &:has(textarea:focus) {
-          .field__placeholder-text {
-            // color: $MRed;
-          }
-        }
-      }
+      //   &:has(input:focus),
+      //   &:has(textarea:focus) {
+      //     .field__placeholder-text {
+      //       // color: $MRed;
+      //     }
+      //   }
+      // }
 
       &__eye-icon {
         fill: $MRed;

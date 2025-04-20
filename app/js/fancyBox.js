@@ -2,22 +2,6 @@ import { Fancybox, Carousel, Panzoom } from '@fancyapps/ui';
 
 import IMask from 'imask';
 import Swiper from 'swiper/bundle';
-const popUps = document.querySelectorAll(".popup-form")
-if (popUps){
-  popUps.forEach(popUp => {
-    const message = popUp.querySelector(".popup-form__input-message")
-    const name = popUp.querySelector(".popup-form__input-name")
-    const phone = popUp.querySelector(".popup-form__input-phone")
-    console.log(message)
-    console.log(name)
-    console.log(phone)
-    
-    const maskOptions = {
-      mask: '+{7}(000)000-00-00'
-    };
-    const mask = IMask(phone, maskOptions);
-  })
-}
 
 
 
@@ -40,9 +24,6 @@ if (triggers){
             console.log(fancybox.$content)
             console.log(slide)
             const clonedSwiper = fancybox.$content.querySelector(".swiper")
-            // fancyboxContent.style = "background : transparent; padding : 0; width : calc(100% - 50px) ; max-width : fit-content"
-            // fancyboxContent.closest(".fancybox__slide").style = "padding : 0"
-            // clonedSwiper.style = "width : 100%"
             swiper = new Swiper(clonedSwiper, {
               loop : true,
             pagination : {  

@@ -9,6 +9,7 @@
     align-items: center;
     position: absolute;
   }
+
   &__wrapper-pagination {
     width: 168px;
     position: absolute;
@@ -16,6 +17,7 @@
     z-index: 5;
     transform: translateX(-50%);
   }
+
   &__background-img {
     position: absolute;
     height: 100%;
@@ -24,6 +26,7 @@
     object-fit: cover;
     z-index: -1;
   }
+
   .swiper {
     position: relative;
     z-index: 2;
@@ -79,7 +82,8 @@
           font-size: 20px;
         }
       }
-      &__text-list{
+
+      &__text-list {
         display: flex;
         flex-direction: column;
         gap: 3px;
@@ -106,6 +110,7 @@
       &__left {
         max-width: 568px;
       }
+
       &__button-prev,
       &__button-next {
         position: absolute;
@@ -116,71 +121,77 @@
         border-radius: 60px;
         padding: 12px;
       }
+
       &__button-next {
         right: 8px;
         transform: rotate(-90deg);
       }
+
       &__button-prev {
         left: 8px;
         transform: rotate(90deg);
       }
     }
   }
-  
-  
+
   .swiper-button-disabled {
     filter: grayscale(100%);
     pointer-events: none;
   }
-  @include table{
+
+  @include table {
     padding-top: 40px;
   }
 
-  @include mobile{
+  @include mobile {
     padding-top: 0;
-    .container{
+
+    .container {
       padding: 0;
     }
 
-    &__background-img{
-     object-position: 75%; 
+    &__background-img {
+      object-position: 75%;
     }
 
-    .swiper-main{
-    &__button-prev,
+    .swiper-main {
+      &__button-prev,
       &__button-next {
         top: auto;
         bottom: 8px;
       }
-    &__title{
-      font-size: 32px;
-      line-height: 110%;
-    }
-    &__content{
-      padding: 32px 20px 86px;
-    }
-    &__text{
-      margin-top: 24px;
-      max-width: 260px;
-    }
-    &__link{
-      margin-top: 16px;
-    }
-    
-  }
-  .swiper{
-border-radius: 0;
-    &-main{
-      &__button-next {
-        right: 5%;
+
+      &__title {
+        font-size: 32px;
+        line-height: 110%;
       }
-      &__button-prev {
-        left: 5%;
+
+      &__content {
+        padding: 32px 20px 86px;
+      }
+
+      &__text {
+        margin-top: 24px;
+        max-width: 260px;
+      }
+
+      &__link {
+        margin-top: 16px;
+      }
+    }
+    .swiper {
+      border-radius: 0;
+      &-main {
+        &__button-next {
+          right: 5%;
+        }
+        &__button-prev {
+          left: 5%;
+        }
       }
     }
   }
 }
-}
-#images{
+#images {
   display: none;
 }

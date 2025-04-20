@@ -35,16 +35,6 @@
         }
     }
 
-    &__close-btn {
-        width: 40px;
-        height: 40px;
-        background-color: $MWhite;
-        border-radius: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
     &__first-part,
     &__second-part {
         display: flex;
@@ -95,7 +85,6 @@
         }
 
         &__second-part {
-            // flex: 1 0 auto;
             width: 100%;
         }
     }

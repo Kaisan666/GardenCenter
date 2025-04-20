@@ -105,12 +105,10 @@
   }
 
   &__main {
-    // word-break: break-all;
     -webkit-line-clamp: 2;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    min-height: 38px;
     color: $MBlack;
   }
 

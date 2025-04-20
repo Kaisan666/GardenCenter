@@ -4,7 +4,7 @@
 
 
 
-.pages {
+.pages-example {
     padding: 20px;
   
     &__table {
@@ -23,7 +23,7 @@
           height: 100%;
   
           iframe {
-            width: 100%;
+            width: 85%;
             height: 100%;
           }
         }
@@ -32,8 +32,6 @@
           width: calc(15% - 40px);
           position: relative;
           padding: 10px 0px 10px 00px;
-        //   color: $primary1;
-        //   font-family: $FInter, $FDefault;
           font-size: 16px;
           font-weight: 500;
           line-height: 20px;
@@ -42,7 +40,7 @@
   
         @media (hover: hover) and (pointer: fine) {
           &:hover {
-            .pages__table-item-box {
+            .pages-example__table-item-box {
               display: block;
             }
           }

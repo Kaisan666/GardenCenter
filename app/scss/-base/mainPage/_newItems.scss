@@ -1,6 +1,9 @@
 .new-items{
+    
     &__swiper{
+
         .product-card{
+
             &__photo{
                 flex: 0 1 auto;
             }
@@ -10,13 +13,12 @@
     @include mobile{
         .swiper{
             overflow: visible;
-
         }
+
         .item-swiper{
             &__ui{
                 display: none;
             }
         }
-        // .ite
     }
 }
