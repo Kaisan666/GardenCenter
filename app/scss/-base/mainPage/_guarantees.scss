@@ -24,6 +24,9 @@
   @include table {
     .attraction {
       gap: 20px;
+      &__info{
+        flex: 1 1 auto;
+      }
     }
   }
   @include mobile {
