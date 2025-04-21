@@ -1,7 +1,7 @@
 mixin productCard(img, alt, name, price, link, items)
     .product-card
         .product-card__photo
-            img(src=img, alt=alt)
+            img(src=img, alt=alt loading="lazy")
         .product-card__content
             .product-card__title=name
             ul.product-card__categories.categories
