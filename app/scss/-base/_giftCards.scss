@@ -4,9 +4,11 @@
     flex-direction: column;
     gap: 40px;
   }
+
   &__photo {
     border-radius: 40px;
   }
+
   &__wrapper-photo {
     display: flex;
     justify-content: center;
@@ -28,6 +30,7 @@
       }
     }
   }
+  
   @include mobile {
     &__topic {
       &-header {

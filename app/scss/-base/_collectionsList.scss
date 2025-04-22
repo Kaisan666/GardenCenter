@@ -1,22 +1,25 @@
-.collections{
-    &__content{
+.collections {
+    &__content {
         display: flex;
         flex-direction: column;
         gap: 80px;
     }
-    
-    @include mobile{
+
+    @include mobile {
         overflow: hidden;
-        &__content{
+
+        &__content {
             gap: 40px;
-        .swiper{
-            overflow: visible;
-        }
-        .item-swiper{
-            &__ui{
-                display: none;
+
+            .swiper {
+                overflow: visible;
+            }
+
+            .item-swiper {
+                &__ui {
+                    display: none;
+                }
             }
         }
-    }
     }
 }

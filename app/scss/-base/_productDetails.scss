@@ -4,6 +4,7 @@
     margin: 0 auto;
     padding: 0px 40px;
   }
+
   &__content {
     display: flex;
     flex-direction: column;
@@ -78,19 +79,25 @@
       border-bottom: dotted 2px $MMiddleGray;
     }
   }
+
   @include table {
+
     &__header {
       padding: 0 20px;
     }
   }
+
   @include table {
+    
     &__main {
       flex-direction: column;
       gap: 60px;
     }
+
     &__swiper-item {
       flex: 1 1 auto;
     }
+
     &__info {
       flex: 1 1 auto;
     }
@@ -111,15 +118,18 @@
       line-height: 110%;
     }
   }
+
   @include smallMobile {
     &__characteristics {
       &-item {
         gap: 0;
       }
     }
+
     &__title {
       font-size: 30px;
     }
+
     .subheader {
       &__title {
         font-size: 22px;

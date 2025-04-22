@@ -17,39 +17,39 @@
     &--dark-green{
         background-color: $GMediumG;
         color: $MWhite;
-        transition: all .2s ease-in-out;
+        transition: all 0.3s ease-in-out;
         svg{
             fill: $MWhite;
-            transition: all .2s ease-in-out;
+            transition: all 0.3s ease-in-out;
         }
         @media (hover : hover) and (pointer : fine) {
             &:hover{
                 background: $GSupportDG;
                 color: $GLightG;
-                transition: all .2s ease-in-out;
+                transition: all 0.3s ease-in-out;
                 svg  {
                     fill: $GLightG;
-                    transition: all .2s ease-in-out;
+                    transition: all 0.3s ease-in-out;
                 }
             }
         }
         &:active{
             background-color: $GDarkG;
             color: $GLightG;
-            transition: all .2s ease-in-out;
+            transition: all 0.3s ease-in-out;
             svg{
                 fill: $GLightG;
-                transition: all .2s ease-in-out;
+                transition: all 0.3s ease-in-out;
             }
         }
         &:disabled{
             pointer-events: none;
             background-color: $MMiddleGray;
             color: $MWhite;
-            transition: all .2s ease-in-out;
+            transition: all 0.3s ease-in-out;
             svg {
                 fill: $MWhite;
-                transition: all .2s ease-in-out;
+                transition: all 0.3s ease-in-out;
             }
         }
         
@@ -57,39 +57,39 @@
     &--light-green{
         background-color: $GLightG;
         color: $GMediumG;
-        transition: all .2s ;
+        transition: all 0.3s ;
         svg{
             fill: $GMediumG;
-            transition: all .2s ;
+            transition: all 0.3s ;
         }
         @media (hover : hover) and (pointer : fine) {
             &:hover{
                 background: $GSupportLG;
                 color: $GSupportDG;
-                transition: all .2s ;
+                transition: all 0.3s ;
                 svg  {
                     fill: $GSupportDG;
-                    transition: all .2s ;
+                    transition: all 0.3s ;
                 }
             }
         }
         &:active{
             background-color: $GMediumG;
             color: $GLightG;
-            transition: all .2s;
+            transition: all 0.3s;
             svg  {
                 fill: $GLightG;
-                transition: all .2s;
+                transition: all 0.3s;
             }
         }
         &:disabled{
             pointer-events: none;
             background-color: $MMiddleGray;
             color: $MWhite;
-            transition: all .3s ease-in-out;
+            transition: all 0.3s ease-in-out;
             svg  {
                 fill: $MWhite;
-                transition: all .3s ease-in-out;
+                transition: all 0.3s ease-in-out;
             }
         }
         
@@ -98,36 +98,36 @@
         padding: 0;
         padding-bottom: 8px;
         background-color: transparent;
-        transition: all .2s ;
+        transition: all 0.3s ;
         svg{
             fill: $GMediumG;
-            transition: all .2s ;
+            transition: all 0.3s ;
         }
         @media (hover : hover) and (pointer : fine) {
             &:hover{
                 color: $GSupportDG;
-                transition: all .2s ;
+                transition: all 0.3s ;
                 svg  {
                     fill: $GSupportDG;
-                    transition: all .2s ;
+                    transition: all 0.3s ;
                 }
             }
         }
         &:active{
             color: $GDarkG;
-            transition: all .2s;
+            transition: all 0.3s;
             svg  {
                 fill: $GDarkG;
-                transition: all .2s;
+                transition: all 0.3s;
             }
         }
         &:disabled{
             pointer-events: none;
             color: $MWhite;
-            transition: all .3s ease-in-out;
+            transition: all 0.3s ease-in-out;
             svg  {
                 fill: $MWhite;
-                transition: all .3s ease-in-out;
+                transition: all 0.3s ease-in-out;
             }
         }
     }

@@ -3,6 +3,7 @@
   background-color: $MWhite;
   z-index: 50;
   width: 100%;
+
   .search {
     max-width: 313px;
   }
@@ -21,6 +22,7 @@
   &__fixed {
     position: fixed;
     top: 0;
+
     .header {
       &__container {
         position: relative;
@@ -226,8 +228,9 @@
 
     &__fixed {
       top: 0%;
-      
+
       transition: top 0.3s ease-in-out;
+
       &--hidden {
         top: -15%;
         transition: top 0.3s ease-in-out;

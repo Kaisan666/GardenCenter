@@ -1,29 +1,35 @@
-.news-info{
+.blog-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    &__tag{
-    font-weight: 700;
-    font-size: 20px;
-    color: $GMediumG;
-    border-radius: 60px;
-    padding: 8px 16px;
-    background-color: $GLightG;
+
+    &__tag {
+        font-weight: 700;
+        font-size: 20px;
+        color: $GMediumG;
+        border-radius: 60px;
+        padding: 8px 16px;
+        background-color: $GLightG;
+
     }
+
     &__time-date {
         display: flex;
         gap: 12px;
         color: $MMiddleGray;
-      }
-      &__info {
+    }
+
+    &__info {
         color: $GSupportDG;
-      }
-    &__main{
+    }
+
+    &__main {
         display: flex;
         gap: 24px;
     }
-    @include mobile{
-        &__main{
+
+    @include mobile {
+        &__main {
             flex-direction: column;
             gap: 4px;
         }

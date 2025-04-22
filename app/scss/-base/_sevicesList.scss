@@ -4,14 +4,16 @@
         flex-direction: column;
         gap: 20px;
     }
-    
-    @include mobile{
-        .section-header{
-            &__second-row{
+
+    @include mobile {
+
+        .section-header {
+            &__second-row {
                 width: 90%;
             }
         }
-        .offer-card{
+
+        .offer-card {
             flex: 1 1 182px;
         }
     }

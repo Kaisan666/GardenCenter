@@ -189,7 +189,7 @@ if (blogPageSwipers){
             slidesPerView: "1",
             spaceBetween : 32,
             breakpoints : {
-                1023 : {
+                1315 : {
                     slidesPerView: "5",
             spaceBetween : 32,
                 },

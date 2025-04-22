@@ -1,11 +1,12 @@
-.photo-studio{
-    &__content{
+.photo-studio {
+    &__content {
         display: flex;
         flex-direction: column;
         gap: 40px;
     }
-    .annotation{
-        a{
+
+    .annotation {
+        a {
             font-weight: 700;
         }
     }

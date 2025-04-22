@@ -1,52 +1,65 @@
-.subscribe-link{
+.subscribe-link {
     padding: 9px 19px;
     border-radius: 48px;
     width: 90%;
     height: 9.5%;
     transition: all 0.3s ease-in-out;
-    &__text{
+
+    &__text {
         color: $MWhite;
         font-weight: 700;
         font-size: 16px;
         text-transform: uppercase;
     }
+    svg{
+        flex: 0 0 auto;
+    }
+
     display: flex;
     align-items: center;
     gap: 8px;
     justify-content: center;
-    &--telegram{
+
+    &--telegram {
         background-color: $Telegram;
+
         @media (hover : hover) and (pointer : fine) {
-            &:hover{
+            &:hover {
                 background-color: #00527a;
                 transition: all 0.3s ease-in-out;
             }
         }
-        &:active{
+
+        &:active {
             background-color: #4cabdb;
             transition: all 0.3s ease-in-out;
         }
-    
+
     }
-    &--vkontakte{
+
+
+    &--vkontakte {
         background-color: $Vkontakte;
+
         @media (hover : hover) and (pointer : fine) {
-            &:hover{
+            &:hover {
                 background-color: #2e4662;
                 transition: all 0.3s ease-in-out;
             }
         }
-        &:active{
+
+        &:active {
             background-color: #819ebe;
             transition: all 0.3s ease-in-out;
         }
-    
+
     }
-    
-    @include table{
+
+    @include table {
         width: 72px;
         height: 48px;
-        &__text{
+
+        &__text {
             display: none;
         }
     }
