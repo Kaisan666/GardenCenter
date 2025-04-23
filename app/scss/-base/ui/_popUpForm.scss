@@ -1,4 +1,23 @@
 .popup-form {
+  .field:has(textarea){
+    textarea{
+      min-height: 150px;
+      overflow: hidden;
+      &:not(:placeholder-shown) ~ .field__placeholder-text{
+        top: 8px;
+      }
+      &:focus~ .field__placeholder-text{
+        top: 8px;
+      }
+    }
+      .field__placeholder{
+        &-text{
+          top: 15%;
+        }
+
+      }
+  }
+  
   border-radius: 60px;
   &__title-list{
     font-weight: 700;

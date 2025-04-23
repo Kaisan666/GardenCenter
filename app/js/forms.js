@@ -7,7 +7,7 @@ const maskOptions = {
 };
 
 const formTriggers = document.querySelectorAll('.form-trigger');
-
+if (formTriggers.length > 0)
 formTriggers.forEach((formTrigger) => {
   formTrigger.addEventListener('click', () => {
     const card = formTrigger.closest('.offer-card');

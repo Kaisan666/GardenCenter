@@ -56,6 +56,10 @@
     align-items: center;
     justify-content: center;
     padding: 10px;
+    
+    svg{
+      min-height: 20px;
+    }
   }
 
   &:nth-child(2) {

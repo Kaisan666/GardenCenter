@@ -5,7 +5,6 @@ window.addEventListener('load', () => {
     const itemsMore = document.querySelector('#jsItemsMore');
     const itemsContainer = itemsMore.querySelector('#jsItemsContainer');
     // const offsetTop = itemMoreContainer.offsetTop;
-    
 
     // if (itemMoreContainer.clientHeight > 40) {
     if (itemMoreContainer.scrollHeight > 40) {
@@ -50,6 +49,7 @@ window.addEventListener('load', () => {
   };
 
   if (itemMoreContainer) {
+    // console.log(...itemMoreContainer.querySelectorAll(".item-more"))
     let itemMore = [...itemMoreContainer.querySelectorAll('.item-more')];
 
     checkPageLinkRemove(itemMore);
@@ -58,10 +58,6 @@ window.addEventListener('load', () => {
       checkPageLinkRemove(itemMore);
     });
   }
-
-
-
-
 
   const itemMoreContainerFixed = document.querySelector('#jsItemMoreContainerFixed');
 

@@ -1,11 +1,14 @@
 let lastScroll = 0;
 const header = document.querySelector('.header');
+let headerOffSet
 if (header) {
-
+  window.addEventListener("resize", () =>{
+    headerOffSet = header.offsetHeight
+  })
   
   const wrapperBottom = header.querySelector(".header__wrapper-bottom")
   const hideScroll = () => {
-  const headerOffSet = header.offsetHeight;
+  // const headerOffSet = header.offsetHeight;
   const burger = header.querySelector('.burger__modal');
   if (burger.classList.contains('burger__modal--active')) {
     header.classList.add('header__fixed--visible');

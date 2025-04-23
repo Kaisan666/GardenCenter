@@ -87,7 +87,7 @@ if(newItems){
             prevEl: '.item-swiper__button-prev',
             },
         loop : true,
-        slidesPerView: 1.5,
+        slidesPerView: 1.48,
         spaceBetween : 24,
         breakpoints : {
             765 : {
@@ -98,7 +98,7 @@ if(newItems){
     })
 }
 const productsSwipers = document.querySelectorAll(".products-swiper")
-if(productsSwipers){
+if(productsSwipers.length > 0){
 
     productsSwipers.forEach(productSwiper => {
         const swiper = productSwiper.querySelector(".swiper")
@@ -143,8 +143,7 @@ if (categories){
     })
 }
 const breadcrumbs = document.querySelectorAll(".breadcrumbs")
-console.log(breadcrumbs)
-if(breadcrumbs){
+if(breadcrumbs.length > 0){
     breadcrumbs.forEach(breadcrumb => {
         new Swiper(breadcrumb.querySelector('.swiper'), {
             slidesPerView: "auto",
@@ -156,7 +155,7 @@ if(breadcrumbs){
 }
 
 const photoSwipers = document.querySelectorAll(".photo-swiper")
-if (photoSwipers){
+if (photoSwipers.length > 0){
     photoSwipers.forEach(photoSwiper => {
         new Swiper(photoSwiper.querySelector(".swiper"), {
             loop : true,
@@ -168,13 +167,13 @@ if (photoSwipers){
                 nextEl: '.item-swiper__button-next',
                 prevEl: '.item-swiper__button-prev',
               },
-            slidesPerView: "1",
+            slidesPerView: 1,
             spaceBetween : 100,
         })
     })
 }
 const blogPageSwipers = document.querySelectorAll(".blog-page__swiper")
-if (blogPageSwipers){
+if (blogPageSwipers.length > 0){
     blogPageSwipers.forEach(blogPageSwiper => {
         new Swiper(blogPageSwiper.querySelector(".swiper"), {
             loop : true,
