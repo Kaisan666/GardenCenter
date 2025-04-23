@@ -54,13 +54,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  &__main{
-    p + p{
-      padding-top: 12px;
-    }
-  }
 
-  &__header {
+  &-header {
     font-weight: 600;
     font-size: 24px;
     display: flex;
@@ -69,7 +64,7 @@ body {
     gap: 12px;
     align-items: center;
 
-    &-icon {
+    &__icon {
       svg {
         fill: $GSupportLG;
       }
