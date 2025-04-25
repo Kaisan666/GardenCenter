@@ -1,4 +1,6 @@
 .popup-form {
+  max-width: 1360px;
+  width: 90%;
   .field:has(textarea){
     textarea{
       min-height: 150px;
@@ -32,6 +34,7 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
+    flex: 1 1 50%;
   }
 
   &__form-message {
@@ -59,7 +62,7 @@
   }
 
   &__text {
-    max-width: 600px;
+    flex: 1 1 50%;
   }
 
   &__form {
@@ -104,6 +107,7 @@
 
   @include mobile {
     border-radius: 0;
+    width: 100%;
 
     .carousel__button.is-close {
       top: 25px;
