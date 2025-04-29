@@ -9,7 +9,7 @@
         align-items: center;
     }
 
-    &__title {
+    h2 {
         font-weight: 700;
         font-size: 48px;
         line-height: 100%;
@@ -39,8 +39,14 @@
         display: flex;
         gap: 12px;
     }
+    h3 {
+        font-weight: 600;
+        font-size: 24px;
+        color: $MMiddleGray;
+        margin: 12px 0 16px;
+    }
 
-    &__third-row {
+    p {
         max-width: 785px;
         justify-self: end;
         align-self: flex-end;
@@ -57,11 +63,8 @@
     }
 
     @include mobile {
-        &__first-row {
-            min-height: 40px;
-        }
 
-        &__title {
+        h2 {
             font-size: 32px;
             line-height: 110%;
         }
@@ -78,7 +81,7 @@
         &__link {
             padding-bottom: 0;
         }
-        &__third-row{
+        p {
             line-height: 125%;
         }
 

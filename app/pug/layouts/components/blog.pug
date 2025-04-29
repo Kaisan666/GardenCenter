@@ -3,13 +3,13 @@ mixin blog
         .container 
             .blog__header.section-header
                 .section-header__first-row
-                    h2.section-header__title Блог
+                    h2 Блог
                     a(href="##").section-header__link.btn--transparent.btn
                         .section-header__link-text Смотреть все
                         svg(width="24" height='24').section-header__link-img
                             use(href="../assets/icons/sprite.svg#selectArrow")
-                .section-header__second-row Всегда актуальная информация!
-                .section-header__third-row Все о растениях, трендах, лайфхаках и уходе. Следите за новостями, акциями, смотрите рилсы со свежими идеями и вдохновляйтесь!
+                h3 Всегда актуальная информация!
+                p Все о растениях, трендах, лайфхаках и уходе. Следите за новостями, акциями, смотрите рилсы со свежими идеями и вдохновляйтесь!
             .blog__main
                 .blog__news 
                     a(href="##").blog__news-card.news-card
@@ -177,8 +177,10 @@ mixin blog
                 img(src="../assets/images/happyGrandad.png" alt="" loading='lazy').attraction__img
                 .attraction__info
                     .attraction__text
-                        .attraction__title Вырастил? Поделись!
-                        .attraction__main Присоединяйтесь к нашему уютному сообществу единомышленников! Делитесь фотографиями своих растений, обменивайтесь опытом, вдохновляйтесь идеями и находите поддержку. Подписывайтесь на нашу беседу в Telegram — создадим зеленый уголок в сети вместе!
+                        .attraction__title
+                            h2 Вырастил? Поделись!
+                        .attraction__main
+                            div Присоединяйтесь к нашему уютному сообществу единомышленников! Делитесь фотографиями своих растений, обменивайтесь опытом, вдохновляйтесь идеями и находите поддержку. Подписывайтесь на нашу беседу в Telegram — создадим зеленый уголок в сети вместе!
                         //- .attraction__figure
                     .attraction__info-bottom
                         a(href="#").attraction__link.btn.btn--dark-green
