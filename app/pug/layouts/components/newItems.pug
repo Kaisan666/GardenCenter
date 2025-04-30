@@ -3,14 +3,14 @@ mixin newItems
     section.new-items 
         .container 
             .new-items__header.section-header
-                .section-header__first-row
-                    h2.section-header__title Новинки
-                    a(href="##").section-header__link.btn--transparent.btn
-                        .section-header__link-text К подборке
-                        svg(width="24" height='24').section-header__link-img
+                div
+                    h2 Новинки
+                    a(href="##")
+                        | К подборке
+                        svg(width="24" height='24')
                             use(href=  "../assets/icons/sprite.svg#selectArrow")
-                .section-header__second-row Свежие поступления уже здесь!
-                .section-header__third-row Опробуйте новые товары для сада и огорода, которые мы подготовили для Вашего удобства, урожая и красоты вашего участка!
+                h3 Свежие поступления уже здесь!
+                p Опробуйте новые товары для сада и огорода, которые мы подготовили для Вашего удобства, урожая и красоты вашего участка!
         .new-items__swiper-container.swiper-container
             .new-items__swiper
                 .item-swiper

@@ -1,8 +1,8 @@
 mixin header 
     header.header
-        .container
-            .header__container
-                .header__up
+        .header__container
+            .header__wrapper-up
+                .header__up.container
                     a(href="/").header__logo 
                         svg(width="288" height="60")
                             use( href="../assets/icons/sprite.svg#logo")
@@ -82,19 +82,20 @@ mixin header
                                     a(href='/contact.html').page Контакты
                                     a(href='/vacancyesList.html').page Вакансии
                                     a(href='/deliveryAndBuy.html').page Доставка и оплата
-                                .burger__socials.socials
-                                    a(href='##').social
-                                        .social__icon
-                                            svg(width='24' height='24' fill="#ffffff") 
-                                                use( href="../assets/icons/sprite.svg#inst")
-                                    a(href='##').social
-                                        .social__icon
-                                            svg(width='24' height='24' fill="#ffffff") 
-                                                use( href="../assets/icons/sprite.svg#tg")
-                                    a(href='##').social
-                                        .social__icon
-                                            svg(width='24' height='24' fill="#ffffff") 
-                                                use( href="../assets/icons/sprite.svg#vk")
+                                .burger__socials
+                                    .socials
+                                        a(href='##').social
+                                            .social__icon
+                                                svg(width='24' height='24' fill="#ffffff") 
+                                                    use( href="../assets/icons/sprite.svg#inst")
+                                        a(href='##').social
+                                            .social__icon
+                                                svg(width='24' height='24' fill="#ffffff") 
+                                                    use( href="../assets/icons/sprite.svg#tg")
+                                        a(href='##').social
+                                            .social__icon
+                                                svg(width='24' height='24' fill="#ffffff") 
+                                                    use( href="../assets/icons/sprite.svg#vk")
                                     .social.social--phone
                                         .social__icon
                                             svg(width='24' height='24' fill="#ffffff") 
@@ -108,44 +109,43 @@ mixin header
                                                 .custom-tooltip__items
                                                     a(href='##').custom-tooltip__item +7 (999) 999 99 91
                                                     a(href='##').custom-tooltip__item +7 (999) 999 99 92
-                .header__bottom-hide
-                    .header__bottom-hide-animation
-                        .header__bottom.menu
-                            .header__bottom-left
-                                .header__category.category.btn-toggle(id="menu-catalog")
-                                    button.btn-toggle__button
-                                        svg(width='24' height='24' fill='#8EAD75') 
-                                            use( href="../assets/icons/sprite.svg#burger") 
-                                        | Каталог
-                                    //- .btn-toggle__catalog
-                                a(href='/promotionsList.html').header__category.category
-                                    svg(width='24' height='24' fill='#8EAD75') 
-                                        use( href="../assets/icons/sprite.svg#stocks") 
-                                    | Акции
-                                a(href='/collectionsList.html').header__category.category
-                                    svg(width='24' height='24' fill='#8EAD75') 
-                                        use( href="../assets/icons/sprite.svg#compilation") 
-                                    | Подборки
-                                a(href='/clubCards.html').header__category.category
-                                    svg(width='24' height='24' fill='#8EAD75') 
-                                        use( href="../assets/icons/sprite.svg#clubCard") 
-                                    | Клубные карты
-                            .header__line
-                            .header__bottom-right 
-                                .header__bottom-right-container#jsItemMoreContainer
-                                    a(href='/servicesList.html').header__page.page.item-more Услуги
-                                    a(href='/photoStudio.hmtl').header__page.page.item-more Фотостудия
-                                    a(href='/blogPage.hmtl').header__page.page.item-more Блог
-                                    a(href='##').header__page.page.item-more.hidden Подарочные карты
-                                    a(href='/aboutUs.html').header__page.page.item-more О нас
-                                    a(href='/contact.html').header__page.page.item-more Контакты
-                                    a(href='/vacancyesList.html').header__page.page.item-more Вакансии
-                                    a(href='/deliveryAndBuy.html').header__page.page.item-more Доставка и оплата
-                                .header__page.page.custom-tooltip--dom.custom-tooltip.custom-tooltip--arrow#jsItemsMore
-                                    .custom-tooltip__text Еще
-                                    .custom-tooltip__arrow
-                                        svg(width='24' height='24') 
-                                            use(href="../assets/icons/sprite.svg#selectArrow")
-                                    .custom-tooltip__container
-                                        .custom-tooltip__items#jsItemsContainer
+            .header__wrapper-bottom
+                .header__bottom.menu.container
+                    .header__bottom-left
+                        .header__category.category.btn-toggle(id="menu-catalog")
+                            button.btn-toggle__button
+                                svg(width='24' height='24' fill='#8EAD75') 
+                                    use( href="../assets/icons/sprite.svg#burger") 
+                                | Каталог
+                            //- .btn-toggle__catalog
+                        a(href='/promotionsList.html').header__category.category
+                            svg(width='24' height='24' fill='#8EAD75') 
+                                use( href="../assets/icons/sprite.svg#stocks") 
+                            | Акции
+                        a(href='/collectionsList.html').header__category.category
+                            svg(width='24' height='24' fill='#8EAD75') 
+                                use( href="../assets/icons/sprite.svg#compilation") 
+                            | Подборки
+                        a(href='/clubCards.html').header__category.category
+                            svg(width='24' height='24' fill='#8EAD75') 
+                                use( href="../assets/icons/sprite.svg#clubCard") 
+                            | Клубные карты
+                    .header__line
+                    .header__bottom-right 
+                        .header__bottom-right-container#jsItemMoreContainer
+                            a(href='/servicesList.html').header__page.page.item-more Услуги
+                            a(href='/photoStudio.hmtl').header__page.page.item-more Фотостудия
+                            a(href='/blogPage.hmtl').header__page.page.item-more Блог
+                            a(href='##').header__page.page.item-more.hidden Подарочные карты
+                            a(href='/aboutUs.html').header__page.page.item-more О нас
+                            a(href='/contact.html').header__page.page.item-more Контакты
+                            a(href='/vacancyesList.html').header__page.page.item-more Вакансии
+                            a(href='/deliveryAndBuy.html').header__page.page.item-more Доставка и оплата
+                        .header__page.page.custom-tooltip--dom.custom-tooltip.custom-tooltip--arrow#jsItemsMore
+                            .custom-tooltip__text Еще
+                            .custom-tooltip__arrow
+                                svg(width='24' height='24') 
+                                    use(href="../assets/icons/sprite.svg#selectArrow")
+                            .custom-tooltip__container
+                                .custom-tooltip__items#jsItemsContainer
 

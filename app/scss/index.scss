@@ -12,11 +12,20 @@
 
 /* ================================ Base ================================ */
 @import './-base/**/*.scss';
-
-// body:has(.swiper-main){
-//   .header{
-//     padding-bottom: 0;
-//     margin-bottom: 0; 
+// @include mobile{
+//   body:has(.breadcrumbs){
+//     section{
+//       padding: 12px 0;
+//     }
+//     .breadcrumbs{
+//       padding-bottom: 32px;
+//     }
+//     header{
+//       margin-bottom: 0;
+//     }
+//     .footer{
+//       margin-top: 0;
+//     }
 //   }
 // }
 * {
@@ -36,8 +45,8 @@ body {
   padding: 0px 40px 40px;
   overflow: hidden;
 
-  @include table {
-    padding: 0 20px 60px;
+  @include mobile {
+    padding: 0 20px 32px;
   }
 }
 
@@ -62,10 +71,6 @@ body {
     }
   }
 
-  &-main {
-    line-height: 125%;
-  }
-
   @include mobile {
     &-header {
       font-size: 18px;
@@ -78,6 +83,9 @@ body {
   list-style-type: '•';
   padding-left: 15px;
   line-height: 125%;
+  @include mobile{
+    line-height: 130%;
+  }
 
   li {
     list-style-position: outside;
@@ -85,12 +93,28 @@ body {
     padding-left: 10px;
   }
 }
-
-section {
+.app__content{
+  
   padding: 40px 0;
+  padding-bottom: 120px;
+  section{
+    &:last-child{
+      padding-bottom: 0;
+    }
+  }
+  @include mobile{
+    padding-top: 12px;
+    padding-bottom: 40px;
+    &:has(.swiper-main){
+      padding-top: 0;
+    }
+  }
+}
+section {
+  padding-bottom: 80px;
 
-  @include table {
-    padding: 30px 0;
+  @include mobile {
+    padding-bottom: 60px;
   }
 }
 
@@ -151,8 +175,6 @@ section {
   @media (hover: hover) and (pointer: fine) {
     &:hover {
       color: $GSupportDG;
-      text-decoration: underline;
-      text-underline-offset: 5px;
       transition: all 0.2s linear;
 
       svg {
@@ -164,9 +186,7 @@ section {
 
   &:active {
     color: $GDarkG;
-    text-decoration: underline;
     transition: all 0.1s linear;
-    text-underline-offset: 5px;
 
     svg {
       fill: $GDarkG;
@@ -628,6 +648,7 @@ section {
   &__container {
     display: flex;
     flex-direction: column;
+    height: 100%;
   }
 
   display: none;
@@ -705,7 +726,6 @@ section {
     left: -100%;
     top: 84px;
     width: 100%;
-    // max-width: 435px;
     height: calc(100dvh - 84px);
     background-color: $MWhite;
     transition: all 0.3s ease-in-out;
@@ -738,14 +758,13 @@ section {
   &__socials {
     flex-wrap: nowrap;
     margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
 
     .social {
 
       &--phone {
-        // flex: 1 1 100%;
-        justify-self: end;
-        margin-left: auto;
-        // padding-bottom: 100px;
 
         .social {
           &__icon {

@@ -1,16 +1,19 @@
 .news-card {
   display: flex;
-  height: 196px;
   gap: 20px;
-  max-width: 660px;
-  max-height: 187px;
+  max-height: 192px;
+  flex: 1 1 660px;
 
   &__wrapper-img {
     display: flex;
-    flex: 1 1 auto;
     position: relative;
     img{
       height: 100%;
+      border-radius: 40px;
+      object-fit: cover;
+      object-position: center;
+      min-width: 210px;
+      position: relative;
     }
   }
 
@@ -20,8 +23,6 @@
     background-color: rgba(0, 0, 0, 0.473);
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s 0s,
-      visibility 0s ease 0.5s;
     position: absolute;
     z-index: 2;
     border-radius: 40px;
@@ -31,6 +32,8 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+    transition: opacity 0.3s ease-in-out 0s,
+      visibility 0s ease-in-out 0.5s;
 
     &-text {
       color: $MWhite;
@@ -41,12 +44,7 @@
   }
 
   &__img {
-    height: 196px;
-    border-radius: 40px;
-    object-fit: cover;
-    object-position: center;
-    min-width: 210px;
-    position: relative;
+    
 
   }
 
@@ -68,12 +66,11 @@
     align-self: start;
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    flex: 0 1 auto;
-    max-width: 490px;
+    justify-content: space-between;
+    flex: 1 1 auto;
+    gap: 12px;
     height: 100%;
     transition: all 0.3s;
-
   }
 
   &__header {
@@ -86,6 +83,11 @@
     font-size: 24px;
     font-weight: 600;
     color: $MBlack;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   &__tag {
@@ -102,12 +104,10 @@
   }
 
   &__main {
-    // word-break: break-all;
     -webkit-line-clamp: 2;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    min-height: 38px;
     color: $MBlack;
   }
 
@@ -130,12 +130,18 @@
     display: flex;
     gap: 12px;
     color: $MMiddleGray;
+    transition: all 0.3s;
   }
 
   @media (hover : hover) and (pointer : fine) {
     &:hover {
       .news-card__info {
         background-color: $MMiddleGray;
+        transition: all 0.3s;
+      }
+
+      .news-card__time-date {
+        color: $MDarkGray;
         transition: all 0.3s;
       }
 
@@ -159,20 +165,25 @@
     height: auto;
     max-width: none;
     max-height: none;
+    flex: 1 1 auto;
+
 
     &__img {
       height: 100%;
+      width: 100%;
       border-radius: 40px;
     }
 
     &__wrapper-img {
-      flex: 1 1 240px;
+      aspect-ratio: 12.55 / 9;
     }
 
     &__info {
       max-width: 100%;
       padding: 24px 20px;
-      max-height: 217px;
+      justify-content: space-between;
+      gap: 24px;
+      flex: 1 1 224px;
     }
 
     &__tag {

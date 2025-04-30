@@ -1,16 +1,142 @@
 .popup-form {
+  max-width: 1360px;
+  width: 90%;
+  .field:has(textarea){
+    textarea{
+      min-height: 150px;
+      overflow: hidden;
+      &:not(:placeholder-shown) ~ .field__placeholder-text{
+        top: 8px;
+      }
+      &:focus~ .field__placeholder-text{
+        top: 8px;
+      }
+    }
+      .field__placeholder{
+        &-text{
+          top: 15%;
+        }
+
+      }
+  }
+  
+  border-radius: 60px;
+  &__title-list{
+    font-weight: 700;
+  }
+  .carousel__button.is-close {
+    background-color: $MLightGray;
+    top: 40px;
+    right: 35px;
+  }
+
+  &__wrapper-form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    flex: 1 1 50%;
+  }
+
+  &__form-message {
+    font-size: 30px;
+    font-weight: 700;
+  }
+  a {
+    font-weight: 700;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 100%;
+    padding-bottom: 40px;
+  }
+
+  &__main {
+    display: flex;
+    gap: 40px;
+  }
+
+  &__row+&__row {
+    padding: 15px 0;
+  }
+
+  &__text {
+    flex: 1 1 50%;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    flex: 1 1 400px;
+
+    &-title {
+      font-size: 24px;
+      color: $MDarkGray;
+      font-weight: 600;
+    }
+  }
+
+  &__fields {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+
+
+  
+  
+
+  .popup-form__checkbox {
+    cursor: pointer;
+    color: $GMediumG;
+    // transition: color 0.3s ease;
+
+    &:hover {
+      color: $GDarkG;
+    }
+  }
+
+  @include mobile {
+    border-radius: 0;
+    width: 100%;
+
+    .carousel__button.is-close {
+      top: 25px;
+      right: 20px;
+    }
+
+    &__main {
+      flex-direction: column;
+    }
+
     &__title {
-        font-weight: 700;
-        font-size: 48px;
-        line-height: 100%;
+      font-size: 32px;
+      width: calc(100% - 75px);
     }
-    &__phone{
-        font-weight: 700;
+    &.fancybox__content {
+      padding: 24px 20px;
     }
-    &__main{
-        display: flex;
+  }
+
+  
+
+  &__footer {
+    flex-direction: column;
+    align-items: normal;
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-    &__text{
-        max-width: 600px;
-    }
+  }
 }

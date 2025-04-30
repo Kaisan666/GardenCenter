@@ -1,9 +1,10 @@
 .product-details {
-  &__header{
+  &__header {
     max-width: 1440px;
-  margin: 0 auto;
-  padding: 0px 40px;
+    margin: 0 auto;
+    padding: 0px 40px;
   }
+
   &__content {
     display: flex;
     flex-direction: column;
@@ -16,21 +17,18 @@
   }
 
   &__swiper-item {
-    min-width: 0;
-    flex-grow: 1;
-    max-width: 700px;
-    align-self: center;
+    flex: 1 1 600px;
 
     img {
       border-radius: 40px;
     }
   }
 
-
   &__info {
     display: flex;
     flex-direction: column;
     gap: 40px;
+    flex: 1 1 720px;
   }
 
   &__title {
@@ -59,7 +57,6 @@
   }
 
   &__characteristics {
-
     &-list {
       display: flex;
       flex-direction: column;
@@ -75,10 +72,6 @@
 
     &-characteristic {
       overflow: hidden;
-      // &::after{
-      //   content: ".........................................................................................................................................................";
-      //   overflow: hidden;
-      // }
     }
 
     &-border {
@@ -86,22 +79,33 @@
       border-bottom: dotted 2px $MMiddleGray;
     }
   }
-@include table{
-  &__header{
-    padding: 0 20px;
+
+  @include table {
+
+    &__header {
+      padding: 0 20px;
+    }
   }
-}
-  @include mobile {
+
+  @include table {
+    
     &__main {
       flex-direction: column;
       gap: 60px;
+    }
+
+    &__swiper-item {
+      flex: 1 1 auto;
+    }
+
+    &__info {
+      flex: 1 1 auto;
     }
 
     &__similar,
     &__watched {
       .swiper {
         overflow: visible;
-
       }
 
       .item-swiper__ui {
@@ -114,13 +118,22 @@
       line-height: 110%;
     }
   }
-  @include smallMobile{
-    &__characteristics{
+
+  @include smallMobile {
+    &__characteristics {
       &-item {
         gap: 0;
       }
     }
+
+    &__title {
+      font-size: 30px;
+    }
+
+    .subheader {
+      &__title {
+        font-size: 22px;
+      }
+    }
   }
-
-
 }

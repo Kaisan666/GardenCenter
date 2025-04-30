@@ -4,13 +4,13 @@ mixin beginners
         .container 
             .beginners__header.section-header
                 .section-header__first-row
-                    h2.section-header__title Начинающим
+                    h2 Начинающим
                     a(href="##").section-header__link.btn--transparent.btn
                         .section-header__link-text К подборке
                         svg(width="24" height='24').section-header__link-img
                             use(href="../assets/icons/sprite.svg#selectArrow")
-                .section-header__second-row Легкий старт для вашего сада!
-                .section-header__third-row Если вы только начинаете садоводческий путь, не волнуйтесь — у нас есть всё, чтобы он был простым и приятным! 
+                h3 Легкий старт для вашего сада!
+                p Если вы только начинаете садоводческий путь, не волнуйтесь — у нас есть всё, чтобы он был простым и приятным! 
             .beginners__main
                 .beginners__left
                     +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
@@ -20,16 +20,18 @@ mixin beginners
                     +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
                     +productCard("../../assets/images/flowers/sansevieria.png", "Сансеверия", "Сансеверия", 1200, "##")
             .beginners__footer.attraction
-                img(src="../assets/images/beginnersSection.png" alt="").attraction__img
+                img(src="../assets/images/beginnersSection.png" alt="" loading='lazy').attraction__img
                 .attraction__info
                     .attraction__text
-                        .attraction__title Уценка? Скорее удача!
-                        .attraction__main Помимо основного ассортимента,
-                            | мы предлагаем и уцененные варианты — здоровые растения
-                            | с небольшими внешними особенностями по сниженной цене. 
-                            | Это наш способ заботиться об экологии, давая каждому растению шанс,
-                            | и Ваша возможность сэкономить без потери качества. Загляните к нам
-                            | в магазин, они ждут Ваших заботливых рук!
+                        .attraction__title
+                            h2 Уценка? Скорее удача!
+                        .attraction__main 
+                            div Помимо основного ассортимента,
+                                | мы предлагаем и уцененные варианты — здоровые растения
+                                | с небольшими внешними особенностями по сниженной цене. 
+                                | Это наш способ заботиться об экологии, давая каждому растению шанс,
+                                | и Ваша возможность сэкономить без потери качества. Загляните к нам
+                                | в магазин, они ждут Ваших заботливых рук!
                         //- .attraction__figure
                     .attraction__info-bottom
                         a(href="#").attraction__link.btn.btn--dark-green

@@ -1,7 +1,7 @@
 .field {
   position: relative;
-  max-width: 313px;
-    width: 100%;
+  width: 100%;
+
   input,
   textarea {
     border-radius: 16px;
@@ -11,16 +11,19 @@
     width: 100%;
     transition: all 0.3s ease-in-out;
     position: relative;
+
     &::placeholder {
       color: transparent;
     }
   }
+
 
   &__container {
     display: flex;
     flex-direction: column;
     gap: 8px;
   }
+
   &__date-time {
     display: flex;
     justify-content: space-between;
@@ -32,6 +35,7 @@
   &__placeholder {
     position: relative;
   }
+
   &__placeholder-text {
     position: absolute;
     top: 50%;
@@ -41,20 +45,17 @@
     color: $MDarkGray;
     transition: all 0.3s ease-in-out;
   }
-  input:not(:placeholder-shown) + &__placeholder-text,
-  textarea:not(:placeholder-shown) + &__placeholder-text{
+
+
+
+  input:focus+&__placeholder-text,
+  textarea:focus+&__placeholder-text {
     top: 8px;
     transform: translate(0);
     font-size: 12px;
     transition: all 0.3s ease-in-out;
   }
-  input:focus + &__placeholder-text,
-  textarea:focus + &__placeholder-text {
-    top: 8px;
-    transform: translate(0);
-    font-size: 12px;
-    transition: all 0.3s ease-in-out;
-  }
+
   &__eye-icon {
     position: absolute;
     top: 50%;
@@ -63,84 +64,127 @@
     transition: all 0.3s ease-in-out;
     right: 12px;
   }
+
   @media (hover: hover) and (pointer: fine) {
-    &:has(&:hover) &__placeholder-text {
-      color: $GMediumG;
-      transition: all 0.3s ease-in-out;
+    &:has(&:hover) {
+      .field {
+        &__placeholder-text {
+          color: $GMediumG;
+          transition: all 0.3s ease-in-out;
+        }
+
+        &__eye-icon {
+          fill: $GMediumG;
+          transition: all 0.3s ease-in-out;
+        }
+      }
     }
-    &:has(&:hover) &__eye-icon {
-      fill: $GMediumG;
-      transition: all 0.3s ease-in-out;
-    }
-    input:focus,
-    textarea:focus {
-      transition: all 0.3s ease-in-out;
-      border: 2px solid $GMediumG;
-    }
-    &__placeholder:has(input:focus) &__placeholder-text {
-      color: $GMediumG;
-      transition: all 0.3s ease-in-out;
-    }
-    &__placeholder:has(input:focus) svg {
-      fill: $GMediumG;
-      transition: all 0.3s ease-in-out;
-    }
-    &:has(input:focus) &__date-time,
-    &:has(textarea:focus) &__date-time {
-      color: $GMediumG;
-      transition: all 0.3s ease-in-out;
-    }
+
+
   }
+
   &:has(&:disabled) input,
   &:has(&:disabled) textarea {
     border: 2px solid $MMiddleGray;
     pointer-events: none;
   }
+
+  &.field--normal {
+
+    input,
+    textarea {
+      padding: 8px 12px;
+    }
+
+    input:not(:placeholder-shown),
+    textarea:not(:placeholder-shown) {
+      +.field__placeholder-text {
+        color: transparent;
+        visibility: hidden;
+        transition: all 0.3s;
+      }
+
+    }
+
+    input:focus+.field__placeholder-text,
+    textarea:focus+.field__placeholder-text {
+      color: transparent;
+      visibility: hidden;
+      transition: all 0.3s;
+    }
+  }
+
   &.field--error {
+
     input,
     textarea {
       border: 2px solid $MRed;
       background: $MLightRed;
       transition: all 0.3s ease-in-out;
     }
-    .field{
-    &__placeholder-text {
-      color: $MRed;
-      transition: all 0.3s ease-in-out;
-    }
-    
-    &__placeholder{
-    &:has(input:focus) .field__placeholder-text,
-    &:has(textarea:focus) .field__placeholder-text {    ///спросить про селектор
+
+    .field {
+      &__placeholder-text {
         color: $MRed;
+        transition: all 0.3s ease-in-out;
       }
+
+      // &__placeholder {
+
+      //   &:has(input:focus),
+      //   &:has(textarea:focus) {
+      //     .field__placeholder-text {
+      //       // color: $MRed;
+      //     }
+      //   }
+      // }
+
+      &__eye-icon {
+        fill: $MRed;
+        transition: all 0.3s ease-in-out;
+      }
+
+      &__date-time {
+        color: $MRed;
+        transition: all 0.3s ease-in-out;
+      }
+    }
   }
 
-    &__eye-icon {
-      fill: $MRed;
-      transition: all 0.3s ease-in-out;
-    }
-    &__date-time {
-      color: $MRed;
-      transition: all 0.3s ease-in-out;
+  input:focus,
+  textarea:focus {
+    transition: all 0.3s ease-in-out;
+    border: 2px solid $GMediumG;
+    background-color: $MWhite;
+  }
+
+  &__placeholder:has(input:focus),
+  &__placeholder:has(textarea:focus) {
+    .field {
+      &__placeholder-text {
+        color: $GMediumG;
+        transition: all 0.3s ease-in-out;
+      }
     }
   }
-}
-  &.field--normal{
-    input, textarea{
-      padding: 8px 12px;
-    }
-    input:not(:placeholder-shown) + .field__placeholder-text,
-    textarea:not(:placeholder-shown) + .field__placeholder-text{
-      color: transparent;
-      visibility: hidden;
-      transition: all 0.3s;
-    }
-    input:focus + .field__placeholder-text,
-    textarea:focus + .field__placeholder-text {
-      color: transparent;
-      visibility: hidden;
-      transition: all 0.3s;
-    }
+
+  &__placeholder:has(input:focus) svg {
+    fill: $GMediumG;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:has(input:focus) &__date-time,
+  &:has(textarea:focus) &__date-time {
+    color: $GMediumG;
+    transition: all 0.3s ease-in-out;
+  }
+
+  input:not(:placeholder-shown)+&__placeholder-text,
+  textarea:not(:placeholder-shown)+&__placeholder-text {
+    top: 8px;
+    transform: translate(0);
+    font-size: 12px;
+    transition: all 0.3s ease-in-out;
+    color: $MDarkGray;
   }
 }

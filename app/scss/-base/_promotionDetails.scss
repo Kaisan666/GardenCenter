@@ -20,13 +20,10 @@
         display: flex;
         flex-direction: column;
     }
-    &__name{
-        padding-bottom: 20px;
-    }
+    &__name,
     &__description{
         padding-bottom: 20px;
     }
-
     &__info {
         display: flex;
         flex-direction: column;
@@ -52,13 +49,14 @@
     @include table {
         
         &__condition{
+            
             &-header{
                 align-items: start;
             }
         }
     }
 
-    @include mobile {
+    @include table {
         
         &__card {
             display: flex;
@@ -70,7 +68,7 @@
 
         &__photo{
             width: 100%;
-            max-height: 230px;
+            flex: 1 1 auto;
             img{
                 width: 100%;
                 object-fit: cover;

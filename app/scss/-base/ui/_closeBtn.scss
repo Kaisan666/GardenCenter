@@ -1,0 +1,23 @@
+.close-btn {
+  padding: 8px;
+  background-color: $MWhite;
+  border-radius: 100%;
+  @media (hover : hover) and (pointer : fine) {
+    &:hover{
+        background-color: $GLightG;
+        transition: all 0.3s ease-in-out;
+        svg{
+            fill: $GMediumG;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+  }
+  &:active{
+    background-color: $GMediumG;
+        transition: all 0.3s ease-in-out;
+        svg{
+            fill: $MWhite;
+            transition: all 0.3s ease-in-out;
+        }
+  }
+}

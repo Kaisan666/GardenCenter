@@ -1,115 +1,85 @@
 .offer-card {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 40px;
+  padding: 12px 40px;
+  background-color: $MLightGray;
+  row-gap: 12px;
+
+  &__title {
+    font-weight: 600;
+    font-size: 32px;
+  }
+
+  &__info {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 40px;
-    padding: 12px 40px;
-    background-color: $MLightGray;
-    row-gap: 12px;
-    min-height: 115px;
-    &__header{
-        height: 58px;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__main {
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  &__button {
+    align-self: center;
+
+    &--mobile {
+      display: none;
     }
-    
+  }
+
+  @include mobile {
+    padding: 24px 20px;
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      align-items: center;
+      height: 58px;
+    }
+
     &__title {
-        font-weight: 600;
-        font-size: 32px;
-    }
-
-    &__info {
-
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    &__main {
-        -webkit-line-clamp: 2;
-        line-clamp: 2;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        grid-column: 1;
-        grid-row: 2;
-        font-weight: 300;
+      font-size: 24px;
+      line-height: 125%;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
 
     }
 
     &__button {
-        width: 72px;
-        height: 48px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      display: none;
 
-        &--mobile{
-            display: none;
-        }
-
-        svg {
-            width: 15px;
-            height: 15px;
-        }
+      &--mobile {
+        display: block;
+        padding: 8px;
+        flex-shrink: 0;
+      }
     }
 
-    @include table {
-        &__header{
-            display: flex;
-            justify-content: space-between; 
-            gap: 40px;
-            align-items: center;
-        }
-
-        &__title{
-            line-height: 125%;
-        }
-
-        &__button{
-            display: none;
-            &--mobile{
-                display: block;
-                width: 48px;
-                height: 48px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-shrink: 0;
-            }
-        }
-        &__main {
-            line-height: 125%;
-
-        }
-        &__button {
-            padding: 0;
-        }
-        &__info{
-            flex: 1 1 auto;
-        }
+    &__main {
+      line-height: 125%;
+      -webkit-line-clamp: 3;
+      line-clamp: 3;
+      width: auto;
     }
 
-    @include mobile {
-        padding: 24px 20px;
-        &__title {
-            font-size: 24px;
-        }
-
-        &__info {
-            width: auto;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        
-
-        &__main {
-            -webkit-line-clamp: 3;
-            line-clamp: 3;
-            width: auto;
-        }
+    &__info {
+      flex: 1 1 auto;
+      width: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
     }
-    @include mediumMobile{
-        min-height: 182px;
-    }
+  }
 }

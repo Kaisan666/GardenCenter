@@ -7,99 +7,100 @@ html(lang='ru')
     +m-head
     body
         +header
-        section.photo-studio
-            .photo-studio__breadcrumbs.breadcrumbs.breadcrumbs-case
-                .swiper
-                    .swiper-wrapper
-                        .swiper-slide 
-                            .breadcrumbs__page 
-                                .breadcrumbs__text Главная
-                                svg(width="24" height="24")
-                                    use(href="../assets/icons/sprite.svg#selectArrow")
-                        .swiper-slide
-                            .breadcrumbs__page.breadcrumbs--current
-                                .breadcrumbs__text Фотостудия
-            .container
-                .photo-studio__header.section-header
-                    .section-header__first-row
-                        h2.section-header__title Фотостудия
-                    .section-header__second-row Пространство для вдохновения!
-                    .section-header__third-row Наша фотостудия — это не просто место для съемок, а пространство, где сочетаются естественная красота природы и современные возможности для творчества. 
-                .photo-studio__content
-                    .photo-swiper(id="photo-swiper")
-                        .swiper.item-swiper
-                            .swiper-wrapper 
-                                .swiper-slide.fancybox-trigger
-                                    .photo-swiper__wrapper-photo
-                                        img(src="../assets/images/photoStudio/girl.png" alt="").photo-swiper__img
-                                .swiper-slide.fancybox-trigger
-                                    .photo-swiper__wrapper-photo
-                                        img(src="../assets/images/photoStudio/girls.png" alt="").photo-swiper__img
-                                .swiper-slide.fancybox-trigger
-                                    .photo-swiper__wrapper-photo
-                                        img(src="../assets/images/photoStudio/girls.png" alt="").photo-swiper__img
-                                .swiper-slide.fancybox-trigger
-                                    .photo-swiper__wrapper-photo
-                                        img(src="../assets/images/photoStudio/girls.png" alt="").photo-swiper__img
-                                .swiper-slide.fancybox-trigger
-                                    .photo-swiper__wrapper-photo
-                                        img(src="../assets/images/photoStudio/girls.png" alt="").photo-swiper__img
-                            .item-swiper__ui
-                                button.item-swiper__button-prev.btn.btn--light-green
-                                    svg(width="24" height='24')
+        .app__content
+            section.photo-studio
+                .photo-studio__breadcrumbs.breadcrumbs.breadcrumbs-case
+                    .swiper
+                        .swiper-wrapper
+                            .swiper-slide 
+                                .breadcrumbs__page 
+                                    .breadcrumbs__text Главная
+                                    svg(width="24" height="24")
                                         use(href="../assets/icons/sprite.svg#selectArrow")
-                                .item-swiper__wrapper-pagination
-                                    .item-swiper__pagination 
-                                button.item-swiper__button-next.btn.btn--light-green
-                                    svg(width="24" height='24')
-                                        use(href="../assets/icons/sprite.svg#selectArrow")
-                    .annotation 
-                        .annotation-main На третьем этаже нашего уютного садового центра расположена профессионально оборудованная фотостудия, которая сдается в аренду для фотосессий, видеосъемок, мастер-классов и других творческих мероприятий.
-                    .annotation
-                        .annotation-header Что делает нашу студию особенной?
-                        .annotation-main
-                            ul.custom-list 
-                                li Естественное освещение – стеклянный купол позволяет использовать мягкий дневной свет для создания атмосферных снимков.
-                                li Разнообразие фотозон – среди них зона с песком и корягами, классическая ванна с вензелями и золотая фотостена.
-                                li Атмосфера уюта – живые растения, цветочные композиции и природные элементы делают пространство идеальным для съемок в стиле эко, бохо, минимализм и многих других.
-                    .annotation
-                        .annotation-header Возможности фотостудии
-                        .annotation-main
-                            ul.custom-list 
-                                li Аренда пространства – почасовая аренда для индивидуальных и коммерческих съемок.
-                                li Фотосессии в саду – возможность проводить съемки не только в студии, но и среди цветов и растений нашего центра.
-                                li Создание контента – студия активно используется для записи видео, рилсов и рекламных съемок.
-                                li Мастер-классы и мероприятия – проводим творческие встречи, лекции и обучающие программы.
-                    .photo-swiper
-                        .swiper.item-swiper
-                            .swiper-wrapper 
-                                .swiper-slide
-                                    .photo-swiper__wrapper-photo
-                                        img(src="../assets/images/photoStudio/girl.png" alt="").photo-swiper__img
-                                .swiper-slide
-                                    .photo-swiper__wrapper-photo
-                                        img(src="../assets/images/photoStudio/girls.png" alt="").photo-swiper__img
-                                .swiper-slide
-                                    .photo-swiper__wrapper-photo
-                                        img(src="../assets/images/photoStudio/girls.png" alt="").photo-swiper__img
-                                .swiper-slide
-                                    .photo-swiper__wrapper-photo
-                                        img(src="../assets/images/photoStudio/girls.png" alt="").photo-swiper__img
-                                .swiper-slide
-                                    .photo-swiper__wrapper-photo
-                                        img(src="../assets/images/photoStudio/girls.png" alt="").photo-swiper__img
-                            .item-swiper__ui
-                                button.item-swiper__button-prev.btn.btn--light-green
-                                    svg(width="24" height='24')
-                                        use(href="../assets/icons/sprite.svg#selectArrow")
-                                .item-swiper__wrapper-pagination
-                                    .item-swiper__pagination 
-                                button.item-swiper__button-next.btn.btn--light-green
-                                    svg(width="24" height='24')
-                                        use(href="../assets/icons/sprite.svg#selectArrow")
-                    .annotation
-                        .annotation-header Как забронировать студию?
-                        .annotation-main Запись на аренду осуществляется по предварительному бронированию. Позвоните нам по номеру 
-                            a(href="").link +7 (928) 210 13 32 
-                            | (Инна Вячеславовна)!
+                            .swiper-slide
+                                .breadcrumbs__page.breadcrumbs--current
+                                    .breadcrumbs__text Фотостудия
+                .container
+                    .photo-studio__header.section-header
+                        .section-header__first-row
+                            h2 Фотостудия
+                        h3 Пространство для вдохновения!
+                        p Наша фотостудия — это не просто место для съемок, а пространство, где сочетаются естественная красота природы и современные возможности для творчества. 
+                    .photo-studio__content
+                        .photo-swiper
+                            .swiper.item-swiper
+                                .swiper-wrapper 
+                                    .swiper-slide.fancybox-trigger
+                                        .photo-swiper__wrapper-photo
+                                            img(src="../assets/images/photoStudio/girl.png" alt="").photo-swiper__img
+                                    .swiper-slide.fancybox-trigger
+                                        .photo-swiper__wrapper-photo
+                                            img(src="../assets/images/photoStudio/girls.png" alt="").photo-swiper__img
+                                    .swiper-slide.fancybox-trigger
+                                        .photo-swiper__wrapper-photo
+                                            img(src="../assets/images/photoStudio/girls.png" alt="").photo-swiper__img
+                                    .swiper-slide.fancybox-trigger
+                                        .photo-swiper__wrapper-photo
+                                            img(src="../assets/images/photoStudio/girls.png" alt="").photo-swiper__img
+                                    .swiper-slide.fancybox-trigger
+                                        .photo-swiper__wrapper-photo
+                                            img(src="../assets/images/photoStudio/girls.png" alt="").photo-swiper__img
+                                .item-swiper__ui
+                                    button.item-swiper__button-prev.btn.btn--light-green
+                                        svg(width="24" height='24')
+                                            use(href="../assets/icons/sprite.svg#selectArrow")
+                                    .item-swiper__wrapper-pagination
+                                        .item-swiper__pagination 
+                                    button.item-swiper__button-next.btn.btn--light-green
+                                        svg(width="24" height='24')
+                                            use(href="../assets/icons/sprite.svg#selectArrow")
+                        .annotation 
+                            .annotation-main На третьем этаже нашего уютного садового центра расположена профессионально оборудованная фотостудия, которая сдается в аренду для фотосессий, видеосъемок, мастер-классов и других творческих мероприятий.
+                        .annotation
+                            .annotation-header Что делает нашу студию особенной?
+                            .annotation-main
+                                ul.custom-list 
+                                    li Естественное освещение – стеклянный купол позволяет использовать мягкий дневной свет для создания атмосферных снимков.
+                                    li Разнообразие фотозон – среди них зона с песком и корягами, классическая ванна с вензелями и золотая фотостена.
+                                    li Атмосфера уюта – живые растения, цветочные композиции и природные элементы делают пространство идеальным для съемок в стиле эко, бохо, минимализм и многих других.
+                        .annotation
+                            .annotation-header Возможности фотостудии
+                            .annotation-main
+                                ul.custom-list 
+                                    li Аренда пространства – почасовая аренда для индивидуальных и коммерческих съемок.
+                                    li Фотосессии в саду – возможность проводить съемки не только в студии, но и среди цветов и растений нашего центра.
+                                    li Создание контента – студия активно используется для записи видео, рилсов и рекламных съемок.
+                                    li Мастер-классы и мероприятия – проводим творческие встречи, лекции и обучающие программы.
+                        .photo-swiper
+                            .swiper.item-swiper
+                                .swiper-wrapper 
+                                    .swiper-slide.fancybox-trigger
+                                        .photo-swiper__wrapper-photo
+                                            img(src="../assets/images/photoStudio/girl.png" alt="").photo-swiper__img
+                                    .swiper-slide.fancybox-trigger
+                                        .photo-swiper__wrapper-photo
+                                            img(src="../assets/images/photoStudio/girls.png" alt="").photo-swiper__img
+                                    .swiper-slide.fancybox-trigger
+                                        .photo-swiper__wrapper-photo
+                                            img(src="../assets/images/photoStudio/girls.png" alt="").photo-swiper__img
+                                    .swiper-slide.fancybox-trigger
+                                        .photo-swiper__wrapper-photo
+                                            img(src="../assets/images/photoStudio/girls.png" alt="").photo-swiper__img
+                                    .swiper-slide.fancybox-trigger
+                                        .photo-swiper__wrapper-photo
+                                            img(src="../assets/images/photoStudio/girls.png" alt="").photo-swiper__img
+                                .item-swiper__ui
+                                    button.item-swiper__button-prev.btn.btn--light-green
+                                        svg(width="24" height='24')
+                                            use(href="../assets/icons/sprite.svg#selectArrow")
+                                    .item-swiper__wrapper-pagination
+                                        .item-swiper__pagination 
+                                    button.item-swiper__button-next.btn.btn--light-green
+                                        svg(width="24" height='24')
+                                            use(href="../assets/icons/sprite.svg#selectArrow")
+                        .annotation
+                            .annotation-header Как забронировать студию?
+                            .annotation-main Запись на аренду осуществляется по предварительному бронированию. Позвоните нам по номеру 
+                                a(href="").link +7 (928) 210 13 32 
+                                | (Инна Вячеславовна)!
         +footer     

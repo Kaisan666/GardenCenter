@@ -9,7 +9,6 @@
         flex: 1 1 auto  ;
     }
 }
-
   .attraction {
     gap: 0;
 
@@ -28,11 +27,6 @@
       &__info{
         flex: 1 1 auto;
       }
-      &__img{
-        img{
-          // height: 100%;
-        }
-      }
     }
   }
   @include mobile {
@@ -42,7 +36,7 @@
     .attraction {
 
       &__img {
-        min-height: 240px;
+        flex: 1 1 240px;
       }
     }
 

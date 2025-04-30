@@ -3,6 +3,18 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
-        padding-bottom: 80px;
+    }
+
+    @include mobile {
+
+        .section-header {
+            &__second-row {
+                width: 90%;
+            }
+        }
+
+        .offer-card {
+            flex: 1 1 182px;
+        }
     }
 }

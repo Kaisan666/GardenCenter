@@ -13,7 +13,6 @@
   &__logo {
     display: flex;
     align-items: center;
-    // justify-content: center;
     flex: 1 1 300px;
     
     svg {
@@ -104,8 +103,5 @@
         text-align: center;
       }
     }
-  }
-  @include mobile{
-    margin-top: 10px;
   }
 }
