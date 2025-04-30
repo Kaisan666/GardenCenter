@@ -2,15 +2,14 @@ mixin guarantees
     section.guarantees 
         .container 
             .guarantees__header.section-header
-                .section-header__first-row
+                div
                     h2 Мы гарантируем
                 h3 Ответственность в каждом шаге!
                 p От выбора растений до реализации проекта — мы гарантируем надежность, профессионализм и результат, который будет радовать Вас каждый день!
             .guarantees__main       
                 .guarantees__promotion-card.promotion-card 
-                    .promotion-card__header 
-                        .promotion-card__title 
-                            h2 Широкий ассортимент
+                    .promotion-card__header
+                        h3 Широкий ассортимент
                     .promotion-card__main
                         .promotion-card__wrapper-img  
                             img(src="../assets/images/topics/expMonday.png" alt="").promotion-card__img
@@ -19,8 +18,7 @@ mixin guarantees
                                 use(href="../assets/icons/sprite.svg#link-arrow")
                 .guarantees__promotion-card.promotion-card 
                     .promotion-card__header 
-                        .promotion-card__title 
-                            h2 Импортная продукция
+                        h3 Импортная продукция
                     .promotion-card__main
                         .promotion-card__wrapper-img  
                             img(src="../assets/images/topics/girlBD.png" alt="").promotion-card__img
@@ -29,10 +27,10 @@ mixin guarantees
                                 use(href="../assets/icons/sprite.svg#link-arrow")
                 .guarantees__promotion-card.promotion-card 
                     .promotion-card__header 
-                        .promotion-card__title 
-                            h2 Экспертная помощь
+                        h3 Экспертная помощь
                     .promotion-card__main
                         .promotion-card__wrapper-img  
+                        
                             img(src="../assets/images/topics/momGirl.png" alt="").promotion-card__img
                         a(href="##").promotion-card__link.btn.btn--dark-green
                             svg(width="24" height="24")
@@ -42,15 +40,13 @@ mixin guarantees
                     img(src="../assets/images/happyGrandad.png" alt="")
                 .attraction__info
                     .attraction__text
-                        .attraction__title 
-                            h2 Садовый центр на Атарбекова
-                        .attraction__main 
-                            div Мы рады приветствовать вас в мире растений и уюта! 
-                                | Наш садовый центр — один из крупнейших на юге России. 
-                                | Вдохновленные европейскими традициями, мы более 20 лет закупаем лучшие растения с 
-                                | аукционов Европы и бережно доставляем их в Россию. Среди комнатных растений, 
-                                | декоративных деревьев и товаров для сада вы точно найдете то, что искали!<br>
-                                | Мы также предлагаем услуги по озеленению, мастер-классы и тематические мероприятия. Вдохновляйтесь природой вместе с нами!
+                        h2 Садовый центр на Атарбекова
+                        div Мы рады приветствовать вас в мире растений и уюта! 
+                            | Наш садовый центр — один из крупнейших на юге России. 
+                            | Вдохновленные европейскими традициями, мы более 20 лет закупаем лучшие растения с 
+                            | аукционов Европы и бережно доставляем их в Россию. Среди комнатных растений, 
+                            | декоративных деревьев и товаров для сада вы точно найдете то, что искали!<br>
+                            | Мы также предлагаем услуги по озеленению, мастер-классы и тематические мероприятия. Вдохновляйтесь природой вместе с нами!
                         //- .attraction__figure
                     .attraction__info-bottom
                         a(href="#").attraction__link.btn.btn--dark-green

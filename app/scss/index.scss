@@ -55,19 +55,34 @@ body {
   flex-direction: column;
   gap: 12px;
 
-  &-header {
+  // & div{
+  //   display: flex;
+  //   gap: 12px;
+  //   align-items: center;
+  // }
+  h3 {
     font-weight: 600;
     font-size: 24px;
-    display: flex;
-    align-items: center;
-    display: flex;
-    gap: 12px;
-    align-items: center;
-
+    
     &__icon {
       svg {
         fill: $GSupportLG;
       }
+    }
+  } 
+
+  ul{
+    list-style-position: outside;
+    list-style-type: '•';
+    padding-left: 15px;
+    line-height: 125%;
+    @include mobile{
+      line-height: 130%;
+    }
+    li {
+      list-style-position: outside;
+      list-style-type: '•';
+      padding-left: 10px;
     }
   }
 
@@ -79,19 +94,23 @@ body {
 }
 
 .custom-list {
-  list-style-position: outside;
-  list-style-type: '•';
-  padding-left: 15px;
-  line-height: 125%;
-  @include mobile{
-    line-height: 130%;
-  }
-
-  li {
+  ul{
     list-style-position: outside;
     list-style-type: '•';
-    padding-left: 10px;
+    padding-left: 15px;
+    line-height: 125%;
+    @include mobile{
+      line-height: 130%;
+    }
+    li {
+      list-style-position: outside;
+      list-style-type: '•';
+      padding-left: 10px;
+    }
   }
+  
+
+  
 }
 .app__content{
   

@@ -23,6 +23,12 @@
     flex-direction: column;
     gap: 24px;
     overflow: hidden;
+
+
+    & > div {
+        color: $GSupportDG;
+        line-height: 125%;
+    }
   }
 
   // &__figure {
@@ -90,18 +96,13 @@
       top: -9px;
     }
   }
-  &__title {
     h2{
     font-size: 32px;
     font-weight: 600;
     color: $GSupportDG;
   }
-  }
 
-  &__main {
-    color: $GSupportDG;
-    line-height: 125%;
-  }
+  
 
   &__info {
     padding-top: 28px;
@@ -242,12 +243,19 @@
   }
 
   &--gray {
+    h2{
+      color: $MBlack;
+    }
     .attraction {
       &__text {
         background-color: $MLightGray;
 
         &::after {
           background-color: $MLightGray;
+        }
+
+        & > div{
+          color: $MBlack;
         }
       }
       &__img {
@@ -266,11 +274,7 @@
           bottom: 12%;
         }
       }
-
-      &__title h2,
-      &__main {
-        color: $MBlack;
-      }
+      
       &__info {
         &-middle {
           background-color: $MLightGray;

@@ -2,21 +2,19 @@ mixin promotions
     section.promotions 
         .container 
             .promotions__header.section-header
-                .section-header__first-row
+                div
                     h2 Наши акции
-                    a(href="##").section-header__link.btn--transparent.btn
-                        .section-header__link-text все акции
-                        svg(width="24" height='24').section-header__link-img
+                    a(href="##")
+                        | все акции
+                        svg(width="24" height='24')
                             use(href=  "../assets/icons/sprite.svg#selectArrow")
                 h3 Выгодные предложения для вас!
                 p Не упустите шанс воспользоваться выгодными предложениями и бонусами, которые мы регулярно готовим для вас!
             .promotions__main       
                 .promotions__promotion-card.promotion-card 
                     .promotion-card__header 
-                        .promotion-card__title 
-                            h2 Опытный понедельник
-                        .promotion-card__text 
-                            div Скидка 5% на покупку для пенсионеров каждый понедельник!
+                        h3 Опытный понедельник
+                        p Скидка 5% на покупку для пенсионеров каждый понедельник!
                     .promotion-card__main
                         .promotion-card__wrapper-img
                             img(src="../assets/images/topics/expMonday.png" alt="").promotion-card__img
@@ -24,11 +22,9 @@ mixin promotions
                             svg(width="24" height="24")
                                 use(href="../assets/icons/sprite.svg#link-arrow")
                 .promotions__promotion-card.promotion-card 
-                    .promotion-card__header 
-                        .promotion-card__title 
-                            h2 Цветочный день рождения!
-                        .promotion-card__text 
-                            div Скидка 10% в день рождения и в течении 3 дней до и 3 дней после для всех! 
+                    .promotion-card__header
+                        h3 Цветочный день рождения!
+                        p Скидка 10% в день рождения и в течении 3 дней до и 3 дней после для всех! 
                     .promotion-card__main
                         .promotion-card__wrapper-img
                             img(src="../assets/images/topics/girlBD.png" alt="").promotion-card__img
@@ -36,11 +32,9 @@ mixin promotions
                             svg(width="24" height="24")
                                 use(href="../assets/icons/sprite.svg#link-arrow")
                 .promotions__promotion-card.promotion-card 
-                    .promotion-card__header 
-                        .promotion-card__title 
-                            h2 Двойная выгода!
-                        .promotion-card__text 
-                            div 2 числа каждого месяца скидки по дисконтным картам удваиваются!
+                    .promotion-card__header
+                        h3 Двойная выгода!
+                        p 2 числа каждого месяца скидки по дисконтным картам удваиваются!
                     .promotion-card__main
                         .promotion-card__wrapper-img
                             img(src="../assets/images/topics/momGirl.png" alt="").promotion-card__img

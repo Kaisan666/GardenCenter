@@ -3,7 +3,7 @@
     flex-direction: column;
     padding-bottom: 40px;
 
-    &__first-row {
+    & > div {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -15,7 +15,7 @@
         line-height: 100%;
     }
 
-    &__link {
+    a {
         display: flex;
         align-items: center;
         padding-bottom: 8px;
@@ -24,11 +24,43 @@
         font-weight: 700;
         font-size: 20px;
         text-transform: uppercase;
-
+        transition: all 0.2s linear;
         svg {
             fill: $GMediumG;
             transform: rotate(-90deg);
         }
+
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+              color: $GSupportDG;
+              transition: all 0.2s linear;
+        
+              svg {
+                fill: $GSupportDG;
+                transition: all 0.2s linear;
+              }
+            }
+          }
+        
+          &:active {
+            color: $GDarkG;
+            transition: all 0.1s linear;
+        
+            svg {
+              fill: $GDarkG;
+              transition: all 0.1s linear;
+            }
+          }
+        
+          &:disabled {
+            color: $MMiddleGray;
+            text-decoration: underline;
+            pointer-events: none;
+        
+            svg {
+              fill: $MMiddleGray;
+            }
+          }
     }
 
     &__second-row {

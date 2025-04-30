@@ -28,7 +28,7 @@ html(lang='ru')
                 .container
                     .delivery__content 
                         .delivery__header.section-header
-                            .section-header__first-row
+                            div
                                 h2 Доставка и оплата
                         .delivery__card
                             .delivery__photo
@@ -37,25 +37,27 @@ html(lang='ru')
                                 .delivery__annotation.annotation
                                     .annotation-header 
                                         .annotation-header__icon
-                                            svg(width="24" height="24")
+                                            svg(width="24" height="24" fill="#8ead75")
                                                 use(href="../assets/icons/sprite.svg#navigator")
                                         .annotation-header__text Доставка
-                                    .annotation-main Мы стремимся сделать процесс доставки максимально удобным и быстрым. Доступны следующие варианты:
-                                        ul.custom-list 
+                                    .annotation-main 
+                                        p Мы стремимся сделать процесс доставки максимально удобным и быстрым. Доступны следующие варианты:
+                                        ul
                                             li Курьерская доставка – по вашему адресу в течение 1-3 дней.
                                             li Самовывоз – бесплатно из нашего магазина.
                                             li Транспортные компании – отправка в любой регион России.
-                                        | После оформления заказа мы свяжемся с вами для уточнения деталей доставки.
+                                        p После оформления заказа мы свяжемся с вами для уточнения деталей доставки.
                                 .delivery__annotation.annotation
                                     .annotation-header 
                                         .annotation-header__icon
                                             svg(width="24" height="24")
                                                 use(href="../assets/icons/sprite.svg#star")
                                         .annotation-header__text Оплата
-                                    .annotation-main Вы можете выбрать удобный способ оплаты:
-                                        ul.custom-list 
+                                    .annotation-main 
+                                        p Вы можете выбрать удобный способ оплаты:
+                                        ul
                                             li Наличный расчет – при получении заказа.
                                             li Банковская карта – онлайн на сайте или при получении.
                                             li Безналичный расчет – для юридических лиц.
-                                        | Если у вас остались вопросы, свяжитесь с нами – мы всегда на связи!
+                                        p Если у вас остались вопросы, свяжитесь с нами – мы всегда на связи!
         +footer
