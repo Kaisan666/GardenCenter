@@ -12,6 +12,7 @@
 
 /* ================================ Base ================================ */
 @import './-base/**/*.scss';
+
 // @include mobile{
 //   body:has(.breadcrumbs){
 //     section{
@@ -63,26 +64,69 @@ body {
   h3 {
     font-weight: 600;
     font-size: 24px;
-    
+
     &__icon {
       svg {
         fill: $GSupportLG;
       }
     }
-  } 
+  }
 
-  ul{
+  ul {
     list-style-position: outside;
     list-style-type: '•';
     padding-left: 15px;
     line-height: 125%;
-    @include mobile{
+
+    @include mobile {
       line-height: 130%;
     }
+
     li {
       list-style-position: outside;
       list-style-type: '•';
       padding-left: 10px;
+    }
+  }
+
+  a {
+    color: $GMediumG;
+    text-transform: uppercase;
+
+    svg {
+      fill: $GMediumG;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: $GSupportDG;
+        transition: all 0.2s linear;
+
+        svg {
+          fill: $GSupportDG;
+          transition: all 0.2s linear;
+        }
+      }
+    }
+
+    &:active {
+      color: $GDarkG;
+      transition: all 0.1s linear;
+
+      svg {
+        fill: $GDarkG;
+        transition: all 0.1s linear;
+      }
+    }
+
+    &:disabled {
+      color: $MMiddleGray;
+      text-decoration: underline;
+      pointer-events: none;
+
+      svg {
+        fill: $MMiddleGray;
+      }
     }
   }
 
@@ -94,41 +138,48 @@ body {
 }
 
 .custom-list {
-  ul{
+  ul {
     list-style-position: outside;
     list-style-type: '•';
     padding-left: 15px;
     line-height: 125%;
-    @include mobile{
+
+    @include mobile {
       line-height: 130%;
     }
+
     li {
       list-style-position: outside;
       list-style-type: '•';
       padding-left: 10px;
     }
   }
-  
 
-  
+
+
 }
-.app__content{
-  
+
+.app__content {
+
   padding: 40px 0;
   padding-bottom: 120px;
-  section{
-    &:last-child{
+
+  section {
+    &:last-child {
       padding-bottom: 0;
     }
   }
-  @include mobile{
+
+  @include mobile {
     padding-top: 12px;
     padding-bottom: 40px;
-    &:has(.swiper-main){
+
+    &:has(.swiper-main) {
       padding-top: 0;
     }
   }
 }
+
 section {
   padding-bottom: 80px;
 
@@ -673,7 +724,7 @@ section {
   display: none;
 
   &--active {
-    .search{
+    .search {
       max-width: none;
     }
 
@@ -808,11 +859,13 @@ section {
 
   @include table {
     display: flex;
-    &__modal{
-      &--active{
+
+    &__modal {
+      &--active {
         overflow-y: scroll;
       }
     }
+
     .search {
       margin-bottom: 15px;
       max-height: 40px;
@@ -836,14 +889,16 @@ section {
   }
 
   @include mediumMobile {
-    &__socials{
+    &__socials {
       flex-wrap: wrap;
-      .social{
-        &--phone{
+
+      .social {
+        &--phone {
           margin-left: 0;
         }
       }
     }
+
     &__modal {
       max-width: none;
     }
@@ -935,5 +990,3 @@ section {
 //   display: flex;
 //   gap: 10px;
 // }
-
-
