@@ -7,22 +7,23 @@ html(lang='ru')
     +m-head
     body
         +header
-        section.error-page
-            .breadcrumbs.breadcrumbs-case
-                .swiper
-                    .swiper-wrapper
-                        .swiper-slide 
-                            .breadcrumbs__page 
-                                .breadcrumbs__text Главная
-                                svg(width="24" height="24")
-                                    use(href="../assets/icons/sprite.svg#selectArrow")
-                        .swiper-slide
-                            .breadcrumbs__page.breadcrumbs--current
-                                .breadcrumbs__text Ошибка 404
-            .error-page__content
-                .error-page__img 
-                    img(src="../assets/images/error404.png", alt="404 ошибка")
-                h1 Страница не найдена
-                h3 Возможно, она устарела, переехала или вы ошиблись в адресе. <br> Но вы всё ещё можете найти красоту — 
-                    a(href="") на главной.
+        .app__content
+            section.error-page
+                .breadcrumbs.breadcrumbs-case
+                    .swiper
+                        .swiper-wrapper
+                            .swiper-slide 
+                                .breadcrumbs__page 
+                                    .breadcrumbs__text Главная
+                                    svg(width="24" height="24")
+                                        use(href="../assets/icons/sprite.svg#selectArrow")
+                            .swiper-slide
+                                .breadcrumbs__page.breadcrumbs--current
+                                    .breadcrumbs__text Ошибка 404
+                .error-page__content
+                    .error-page__img 
+                        img(src="../assets/images/error404.png", alt="404 ошибка")
+                    h1 Страница не найдена
+                    h3 Возможно, она устарела, переехала или вы ошиблись в адресе. <br> Но вы всё ещё можете найти красоту — 
+                        a(href="/main.html") на главной.
         +footer
