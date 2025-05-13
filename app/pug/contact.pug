@@ -27,32 +27,37 @@ html(lang='ru')
                     .contacts__content
                         .contacts__info
                             .annotation
-                                .annotation-header 
+                                //- спросить у кости
+                                .annotation-header
                                     .annotation-header__icon 
-                                        svg(height="24" width="24" fill="8EAD75")
+                                        svg(height="24" width="24" fill="#8EAD75")
                                             use(href="../assets/icons/sprite.svg#navigator")
-                                    .annotation-header__text Адрес
+                                    //- .annotation-header__text Адрес
+                                    h3 Адрес
                                 .annotation-main 350062, Россия, Краснодарский край, г. Краснодар, Прикубанский округ, Фестивальный м-н, ул. Им. Атарбекова, дом 3,
                                 .annotation-main
                                     p Остановка «Бальнеолечебница»:
-                                    ul.custom-list
+                                    ul
                                         li Автобус №: 14, 163а, 32, 4, 52,
                                         li Маршрутное такси №: 130а, 183а, 29, 40, 414, 85,
                                         li Троллейбус №: 1, 14, 6, 9.
                             .annotation
                                 .annotation-header 
                                     .annotation-header__icon 
-                                        svg(height="24" width="24" fill="8EAD75")
+                                        svg(height="24" width="24" fill="#8EAD75")
                                             use(href="../assets/icons/sprite.svg#clock")
-                                    .annotation-header__text Время работы
-                                .annotation-main с 8:30 до 20:00, без перерыва и выходных
+                                    //- .annotation-header__text Время работы
+                                    h3 Время работы
+                                .annotation-main 
+                                    p с 8:30 до 20:00, без перерыва и выходных
                             .annotation
                                 .annotation-header 
-                                    .annotation-header__icon 
-                                        svg(height="24" width="24" fill="8EAD75")
+                                    .annotation-header__icon
+                                        svg(height="24" width="24" fill="#8EAD75")
                                             use(href="../assets/icons/sprite.svg#phone")
-                                    .annotation-header__text Телефон
-                                .annotation-main
+                                    //- .annotation-header__text Телефон
+                                    h3 Телефон
+                                .annotation-phones
                                     p +7(861)22-00-780,
                                     p +7(861)22-00-781,
                                     p +7(861)22-00-783.
@@ -60,12 +65,12 @@ html(lang='ru')
                             .annotation
                                 .annotation-header 
                                     .annotation-header__icon 
-                                        svg(height="24" width="24" fill="8EAD75")
+                                        svg(height="24" width="24" fill="#8EAD75")
                                             use(href="../assets/icons/sprite.svg#mail")
-                                    .annotation-header__text Напишите нам!
+                                    //- .annotation-header__text Напишите нам!
+                                    h3 Напишите нам!
                                 .annotation-main 
                                     p Старший менеджер, специалист отдела горшков и аксессуаров: <br> Черная Инна — garden.gorshki@mail.ru
-                                .annotation-main
                                     p Менеджер отдела комнатных и садовых растений: <br> Михайлова Инна — garden.cvetok@mail.ru
                         .contacts__map
                             .contacts__map-wrapper(id="map") 

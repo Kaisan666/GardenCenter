@@ -17,13 +17,16 @@
     }
 
     &__main {
-        display: flex;
-        flex-direction: column;
+        // display: flex;
+        // flex-direction: column;
+        p {
+            margin-bottom: 20px;
+        }
     }
-    &__name,
-    &__description{
-        padding-bottom: 20px;
-    }
+    // &__name,
+    // &__description{
+    //     padding-bottom: 20px;
+    // }
     &__info {
         display: flex;
         flex-direction: column;
@@ -41,7 +44,7 @@
             align-items: center;
         }
 
-        &-name {
+        h3 {
             font-weight: 600;
             font-size: 24px;
         }

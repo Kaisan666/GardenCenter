@@ -1,29 +1,35 @@
 .popup-form {
   max-width: 1360px;
   width: 90%;
-  .field:has(textarea){
-    textarea{
+
+  .field:has(textarea) {
+    textarea {
       min-height: 150px;
       overflow: hidden;
-      &:not(:placeholder-shown) ~ .field__placeholder-text{
+
+      &:not(:placeholder-shown)~.field__placeholder-text {
         top: 8px;
       }
-      &:focus~ .field__placeholder-text{
+
+      &:focus~.field__placeholder-text {
         top: 8px;
       }
     }
-      .field__placeholder{
-        &-text{
-          top: 15%;
-        }
 
+    .field__placeholder {
+      &-text {
+        top: 15%;
       }
+
+    }
   }
-  
+
   border-radius: 60px;
-  &__title-list{
+
+  &__title-list {
     font-weight: 700;
   }
+
   .carousel__button.is-close {
     background-color: $MLightGray;
     top: 40px;
@@ -41,11 +47,12 @@
     font-size: 30px;
     font-weight: 700;
   }
+
   a {
     font-weight: 700;
   }
 
-  &__title {
+  h2 {
     font-weight: 700;
     font-size: 48px;
     line-height: 100%;
@@ -57,13 +64,55 @@
     gap: 40px;
   }
 
-  &__row+&__row {
-    padding: 15px 0;
-  }
-
   &__text {
     flex: 1 1 50%;
+
+    p+p {
+      padding-top: 20px;
+    }
+
+
+    a{
+    color: $GMediumG;
+  text-transform: uppercase;
+
+  svg {
+    fill: $GMediumG;
   }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: $GSupportDG;
+      transition: all 0.2s linear;
+
+      svg {
+        fill: $GSupportDG;
+        transition: all 0.2s linear;
+      }
+    }
+  }
+
+  &:active {
+    color: $GDarkG;
+    transition: all 0.1s linear;
+
+    svg {
+      fill: $GDarkG;
+      transition: all 0.1s linear;
+    }
+  }
+
+  &:disabled {
+    color: $MMiddleGray;
+    text-decoration: underline;
+    pointer-events: none;
+
+    svg {
+      fill: $MMiddleGray;
+    }
+  }
+  }
+}
 
   &__form {
     display: flex;
@@ -92,8 +141,8 @@
   }
 
 
-  
-  
+
+
 
   .popup-form__checkbox {
     cursor: pointer;
@@ -122,12 +171,13 @@
       font-size: 32px;
       width: calc(100% - 75px);
     }
+
     &.fancybox__content {
       padding: 24px 20px;
     }
   }
 
-  
+
 
   &__footer {
     flex-direction: column;
