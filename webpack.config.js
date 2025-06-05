@@ -96,54 +96,54 @@ module.exports = {
     },
     minimizer: [
       // Сжатие изображений
-      new ImageMinimizerPlugin({
-        test: /\.(jpg|jpeg|gif|png|svg)$/i,
-        exclude: /node_modules/,
-        minimizer: {
-          implementation: ImageMinimizerPlugin.imageminMinify,
-          options: {
-            plugins: [
-              ['gifsicle', { interlaced: true, optimizationLevel: 3 }],
-              ['mozjpeg', { progressive: true, quality: 70 }],
-              ['pngquant', { quality: [0.6, 0.8] }],
-              [
-                'svgo',
-                {
-                  plugins: [
-                    {
-                      name: 'preset-default',
-                      params: {
-                        overrides: {
-                          removeViewBox: false,
-                          sortDefsChildren: false,
-                          mergePaths: false,
-                          moveGroupAttrsToElems: false,
-                          moveElemsAttrsToGroup: false,
-                          cleanupNumericValues: false,
-                          removeNonInheritableGroupAttrs: false,
-                          convertTransform: false,
-                          cleanupEnableBackground: false,
-                        },
-                      },
-                    },
-                  ],
-                },
-              ],
-            ],
-          },
-        },
-      }),
+      // new ImageMinimizerPlugin({
+      //   test: /\.(jpg|jpeg|gif|png|svg)$/i,
+      //   exclude: /node_modules/,
+      //   minimizer: {
+      //     implementation: ImageMinimizerPlugin.imageminMinify,
+      //     options: {
+      //       plugins: [
+      //         ['gifsicle', { interlaced: true, optimizationLevel: 3 }],
+      //         ['mozjpeg', { progressive: true, quality: 70 }],
+      //         ['pngquant', { quality: [0.6, 0.8] }],
+      //         [
+      //           'svgo',
+      //           {
+      //             plugins: [
+      //               {
+      //                 name: 'preset-default',
+      //                 params: {
+      //                   overrides: {
+      //                     removeViewBox: false,
+      //                     sortDefsChildren: false,
+      //                     mergePaths: false,
+      //                     moveGroupAttrsToElems: false,
+      //                     moveElemsAttrsToGroup: false,
+      //                     cleanupNumericValues: false,
+      //                     removeNonInheritableGroupAttrs: false,
+      //                     convertTransform: false,
+      //                     cleanupEnableBackground: false,
+      //                   },
+      //                 },
+      //               },
+      //             ],
+      //           },
+      //         ],
+      //       ],
+      //     },
+      //   },
+      // }),
 
       // Сжатие Webp
-      new ImageMinimizerPlugin({
-        test: /\.(png|jpe?g|webp|gif)$/i,
-        minimizer: {
-          implementation: ImageMinimizerPlugin.imageminMinify,
-          options: {
-            plugins: [['webp', { quality: 75 }]],
-          },
-        },
-      }),
+      // new ImageMinimizerPlugin({
+      //   test: /\.(png|jpe?g|webp|gif)$/i,
+      //   minimizer: {
+      //     implementation: ImageMinimizerPlugin.imageminMinify,
+      //     // options: {
+      //     //   plugins: [['webp', { quality: 75 }]],
+      //     // },
+      //   },
+      // }),
 
       // Минификация JS
       new TerserPlugin({
