@@ -2,6 +2,9 @@
   max-width: 1360px;
   width: 90%;
 
+
+
+
   .field:has(textarea) {
     textarea {
       min-height: 150px;
@@ -57,6 +60,7 @@
     font-size: 48px;
     line-height: 100%;
     padding-bottom: 40px;
+    width: calc(100% - 75px);
   }
 
   &__main {
@@ -153,8 +157,33 @@
       color: $GDarkG;
     }
   }
+  &__response{
+    h2{
+      font-size: 28px;
+    }
+    h3{
+      font-size: 24px;
+    }
+    &.response{
+     &--success{
+       h3{
+         color: $GMediumG;
+       }
+
+     }
+      &--error{
+
+        h3{
+          color: $MRed;
+        }
+
+      }
+    }
+
+  }
 
   @include mobile {
+    height: 100%;
     border-radius: 0;
     width: 100%;
 
@@ -167,9 +196,9 @@
       flex-direction: column;
     }
 
-    &__title {
+    h2 {
       font-size: 32px;
-      width: calc(100% - 75px);
+      //width: calc(100% - 75px);
     }
 
     &.fancybox__content {

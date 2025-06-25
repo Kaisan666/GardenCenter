@@ -7,9 +7,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
     }
 
-    h2 {
+    & > h1 {
         font-weight: 700;
         font-size: 48px;
         line-height: 100%;
@@ -71,14 +72,14 @@
         display: flex;
         gap: 12px;
     }
-    h3 {
+    & > h2 {
         font-weight: 600;
         font-size: 24px;
         color: $MMiddleGray;
         margin: 12px 0 16px;
     }
 
-    p {
+    & > h3 {
         max-width: 785px;
         justify-self: end;
         align-self: flex-end;
@@ -106,7 +107,7 @@
             line-height: 125%;
         }
 
-        &__link-text {
+        a > span {
             display: none;
         }
 
@@ -117,5 +118,27 @@
             line-height: 125%;
         }
 
+    }
+
+
+    &--main-page{
+      .section-header{
+        h2{
+          font-weight: 700;
+          font-size: 48px;
+          line-height: 100%;
+        }
+        h3{
+          font-weight: 600;
+          font-size: 24px;
+          color: $MMiddleGray;
+          margin: 12px 0 16px;
+        }
+        p{
+          max-width: 785px;
+          justify-self: end;
+          align-self: flex-end;
+        }
+      }
     }
 }

@@ -60,3 +60,8 @@ justify-content: center;
 .fancybox__container{
   --carousel-button-svg-filter: none;
 }
+
+.fancybox__backdrop{
+  backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.6);
+}

@@ -6,9 +6,16 @@
     }
     &__photo{
         border-radius: 40px;
+        object-fit: cover;
+        object-position: top;
+        aspect-ratio:16/9;
     }
     &__container-photo{
         display: flex;
         justify-content: center;
+        max-width: 1110px;
+        max-height: 580px;
+        align-self: center;
+
     }
 }

@@ -71,7 +71,7 @@ body {
   //   gap: 12px;
   //   align-items: center;
   // }
-  h3 {
+  h4 {
     font-weight: 600;
     font-size: 24px;
 
@@ -895,6 +895,14 @@ section {
         padding: 8px 0px;
 
       }
+    }
+  }
+
+  @include mobile{
+    &__modal{
+      top: 74px;
+      width: 100%;
+      height: calc(100dvh - 74px);
     }
   }
 

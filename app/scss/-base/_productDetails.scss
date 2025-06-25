@@ -69,9 +69,34 @@
       justify-content: space-between;
       gap: 12px;
     }
+    &-quantity{
+      background-color: #fff;
+      position: relative;
+      z-index: 1;
+    }
 
     &-characteristic {
-      overflow: hidden;
+      background-color: #fff;
+      flex: 1 0 200px;
+      position: relative;
+      z-index: 1;
+      //&:after{
+      //  content: "";
+      //  width: 200%;
+      //  border-bottom: dotted 2px $MMiddleGray;
+      //  position: absolute;
+      //  top: 5px;
+      //  z-index: -1;
+      //}
+      //overflow: hidden;
+      //position: relative;
+      //
+      //&:after{
+      //  content: "";
+      //  border-bottom: dotted 2px $MMiddleGray;
+      //  width: 100%;
+      //  position: absolute;
+      //}
     }
 
     &-border {
