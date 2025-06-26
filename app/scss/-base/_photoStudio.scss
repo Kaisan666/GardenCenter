@@ -1,13 +1,89 @@
 .photo-studio {
     &__content {
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-    }
+        //display: flex;
+        //flex-direction: column;
+        //gap: 40px;
+        br{
+            display: flex;
+            height: 20px;
+        }
+        h3 {
+            font-weight: 600;
+            font-size: 24px;
 
-    .annotation {
+            &__icon {
+                svg {
+                    fill: $GSupportLG;
+                }
+            }
+            & + *{
+                margin-top: 12px;
+            }
+        }
+
+        ul {
+            list-style-position: outside;
+            list-style-type: '•';
+            padding-left: 15px;
+            line-height: 125%;
+
+            @include mobile {
+                line-height: 130%;
+            }
+
+            li {
+                list-style-position: outside;
+                list-style-type: '•';
+                padding-left: 10px;
+            }
+        }
+
         a {
-            font-weight: 700;
+            color: $GMediumG;
+            text-transform: uppercase;
+
+            svg {
+                fill: $GMediumG;
+            }
+
+            @media (hover: hover) and (pointer: fine) {
+                &:hover {
+                    color: $GSupportDG;
+                    transition: all 0.2s linear;
+
+                    svg {
+                        fill: $GSupportDG;
+                        transition: all 0.2s linear;
+                    }
+                }
+            }
+
+            &:active {
+                color: $GDarkG;
+                transition: all 0.1s linear;
+
+                svg {
+                    fill: $GDarkG;
+                    transition: all 0.1s linear;
+                }
+            }
+
+            &:disabled {
+                color: $MMiddleGray;
+                text-decoration: underline;
+                pointer-events: none;
+
+                svg {
+                    fill: $MMiddleGray;
+                }
+            }
+        }
+
+        @include mobile {
+            &-header {
+                font-size: 18px;
+            }
         }
     }
+
 }

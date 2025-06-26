@@ -2,7 +2,12 @@
   max-width: 1360px;
   width: 90%;
 
-
+  &__row{
+    font-size: 16px;
+    strong, b, h3{
+      font-weight: 700;
+    }
+  }
 
 
   .field:has(textarea) {
@@ -29,9 +34,7 @@
 
   border-radius: 60px;
 
-  &__title-list {
-    font-weight: 700;
-  }
+
 
   .carousel__button.is-close {
     background-color: $MLightGray;
@@ -53,6 +56,44 @@
 
   a {
     font-weight: 700;
+    color: $GMediumG;
+    text-transform: uppercase;
+
+    svg {
+      fill: $GMediumG;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: $GSupportDG;
+        transition: all 0.2s linear;
+
+        svg {
+          fill: $GSupportDG;
+          transition: all 0.2s linear;
+        }
+      }
+    }
+
+    &:active {
+      color: $GDarkG;
+      transition: all 0.1s linear;
+
+      svg {
+        fill: $GDarkG;
+        transition: all 0.1s linear;
+      }
+    }
+
+    &:disabled {
+      color: $MMiddleGray;
+      text-decoration: underline;
+      pointer-events: none;
+
+      svg {
+        fill: $MMiddleGray;
+      }
+    }
   }
 
   h2 {

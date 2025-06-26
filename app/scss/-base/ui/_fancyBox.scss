@@ -59,6 +59,15 @@ justify-content: center;
 }
 .fancybox__container{
   --carousel-button-svg-filter: none;
+  .fancybox__carousel{
+    .fancybox__viewport{
+      .fancybox__track{
+        a{
+          outline: none;
+        }
+      }
+    }
+  }
 }
 
 .fancybox__backdrop{

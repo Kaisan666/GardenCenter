@@ -73,6 +73,10 @@
       background-color: #fff;
       position: relative;
       z-index: 1;
+
+
+    //  maybe
+      max-width: 50%;
     }
 
     &-characteristic {
@@ -80,6 +84,11 @@
       flex: 1 0 200px;
       position: relative;
       z-index: 1;
+
+      //maybe
+      //max-width: fit-content;
+
+
       //&:after{
       //  content: "";
       //  width: 200%;
@@ -102,6 +111,9 @@
     &-border {
       flex: 1 1 auto;
       border-bottom: dotted 2px $MMiddleGray;
+
+      // maybe
+      height: 16px;
     }
   }
 

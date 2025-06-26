@@ -7,14 +7,9 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-
     }
 
-    & > h1 {
-        font-weight: 700;
-        font-size: 48px;
-        line-height: 100%;
-    }
+
 
     a {
         display: flex;
@@ -35,29 +30,29 @@
             &:hover {
               color: $GSupportDG;
               transition: all 0.2s linear;
-        
+
               svg {
                 fill: $GSupportDG;
                 transition: all 0.2s linear;
               }
             }
           }
-        
+
           &:active {
             color: $GDarkG;
             transition: all 0.1s linear;
-        
+
             svg {
               fill: $GDarkG;
               transition: all 0.1s linear;
             }
           }
-        
+
           &:disabled {
             color: $MMiddleGray;
             text-decoration: underline;
             pointer-events: none;
-        
+
             svg {
               fill: $MMiddleGray;
             }
@@ -72,18 +67,27 @@
         display: flex;
         gap: 12px;
     }
-    & > h2 {
-        font-weight: 600;
-        font-size: 24px;
-        color: $MMiddleGray;
-        margin: 12px 0 16px;
+  &--foreign-page{
+    & h1 {
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 100%;
     }
 
-    & > h3 {
-        max-width: 785px;
-        justify-self: end;
-        align-self: flex-end;
+    & h2 {
+      font-weight: 600;
+      font-size: 24px;
+      color: $MMiddleGray;
+      margin: 12px 0 16px;
     }
+
+    & p {
+      max-width: 785px;
+      justify-self: end;
+      align-self: flex-end;
+    }
+  }
+
     &__search{
         white-space: nowrap;
     }
@@ -95,50 +99,67 @@
         text-overflow: ellipsis;
     }
 
-    @include mobile {
 
-        h2 {
+  &--main-page{
+    h2{
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 100%;
+    }
+    h3{
+      font-weight: 600;
+      font-size: 24px;
+      color: $MMiddleGray;
+      margin: 12px 0 16px;
+    }
+    p{
+      max-width: 785px;
+      justify-self: end;
+      align-self: flex-end;
+    }
+  }
+
+    @include mobile {
+      a > span {
+        display: none;
+      }
+        &--foreign-page{
+          h1 {
             font-size: 32px;
             line-height: 110%;
-        }
-
-        &__second-row {
+          }
+          h2{
             font-size: 18px;
             line-height: 125%;
-        }
+          }
 
-        a > span {
-            display: none;
-        }
-
-        &__link {
+          &__link {
             padding-bottom: 0;
-        }
-        p {
+          }
+          p {
             line-height: 125%;
+          }
         }
 
-    }
 
 
-    &--main-page{
-      .section-header{
-        h2{
-          font-weight: 700;
-          font-size: 48px;
-          line-height: 100%;
-        }
-        h3{
-          font-weight: 600;
-          font-size: 24px;
-          color: $MMiddleGray;
-          margin: 12px 0 16px;
-        }
-        p{
-          max-width: 785px;
-          justify-self: end;
-          align-self: flex-end;
-        }
+      &--main-page{
+          h2{
+            font-size: 32px;
+            line-height: 110%;
+          }
+          h3{
+            font-size: 18px;
+            line-height: 125%;
+          }
+          p{
+            line-height: 125%;
+          }
+
       }
     }
+
+
+
+
 }
