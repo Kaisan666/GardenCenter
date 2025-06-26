@@ -1,11 +1,11 @@
 .item-swiper {
   &__pagination {
-    display: flex;
-    gap: 18px;
-    bottom: 8px;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
+    //display: flex;
+    //gap: 18px;
+    //bottom: 8px;
+    //align-items: center;
+    //flex-wrap: nowrap;
+    //justify-content: center;
     
   }
 
@@ -46,10 +46,19 @@
       height: 10px;
       background: $GLightG;
       opacity: 1;
+      flex: 0 0 auto;
 
       &-active {
         background: $GMediumG;
       }
     }
+
+
+
   }
 }
+.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{
+  transform: translate(0) !important;
+}
+
+

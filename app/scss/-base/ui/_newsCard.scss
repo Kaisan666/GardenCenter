@@ -202,18 +202,20 @@
         display: block;
         font-size: 16px;
         height: 34px;
-        align-self: flex-end;
+        //align-self: flex-end;
       }
     }
 
     &__footer {
       display: flex;
+      align-items: center;
 
       &-main {
         display: flex;
         flex-direction: column-reverse;
         gap: 4px;
         padding: 0px 0px 8px 0px;
+        flex-wrap: wrap;
       }
     }
   }

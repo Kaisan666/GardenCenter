@@ -1,5 +1,8 @@
 .blog-page {
   &__swiper {
+    .swiper-wrapper{
+      //justify-content: center;
+    }
     .swiper {
       &-slide {
         display: flex;

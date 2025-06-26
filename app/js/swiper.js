@@ -11,7 +11,9 @@ new Swiper(mainSwiper, {
     loop : true,
     pagination : {
         el : ".swiper-main__pagination",
-        clickable : true
+        // clickable : true,
+        dynamicBullets : true,
+        dynamicMainBullets : 1,
     },
     navigation: {
         nextEl: '.swiper-main__button-next',
@@ -28,7 +30,9 @@ if(blog){
     new Swiper(blogSwiper, {
         pagination : {
             el : ".item-swiper__pagination",
-            clickable : true
+            // clickable : true,
+            dynamicBullets : true,
+            dynamicMainBullets : 1,
         },
         navigation: {
             nextEl: '.item-swiper__button-next',
@@ -36,7 +40,7 @@ if(blog){
           },
         observer: true, // Включаем отслеживание
   observeParents: true,
-  loop: true,
+  loop: isLooped,
         slidesPerView: 2,
         breakpoints : {
             650 : {
@@ -60,10 +64,12 @@ if(blog){
 const productDetail = document.querySelector(".product-details__swiper-item")
 if(productDetail){
     const productDetailSwiper = productDetail.querySelector(".swiper")
-    new Swiper(productDetailSwiper, {
+    const productSwiper = new Swiper(productDetailSwiper, {
         pagination : {
             el : ".item-swiper__pagination",
-            clickable : true
+            // clickable : true,
+            dynamicBullets : true,
+            dynamicMainBullets : 1,
         },
         loop : true,
         navigation: {
@@ -73,20 +79,25 @@ if(productDetail){
         slidesPerView : "auto",
         spaceBetween : 10,
     })
+
 }
 
 const newItems = document.querySelector(".new-items")
 if(newItems){
-    new Swiper(newItems.querySelector(".swiper"), {
+    const isLooped = newItems.querySelector(".swiper").querySelectorAll(".swiper-slide").length > 4
+    console.log(isLooped)
+    const newItemsSwiper = new Swiper(newItems.querySelector(".swiper"), {
         pagination : {
             el : ".item-swiper__pagination",
-            clickable : true
+            // clickable : true,
+            dynamicBullets : true,
+            dynamicMainBullets : 1,
         },
         navigation: {
             nextEl: '.item-swiper__button-next',
             prevEl: '.item-swiper__button-prev',
             },
-        loop : true,
+        loop : isLooped,
         slidesPerView: 1.48,
         spaceBetween : 24,
         breakpoints : {
@@ -102,16 +113,20 @@ if(productsSwipers.length > 0){
 
     productsSwipers.forEach(productSwiper => {
         const swiper = productSwiper.querySelector(".swiper")
+        const isLooped = swiper.querySelectorAll(".swiper-slide").length > 4
+        console.log(isLooped)
         new Swiper(swiper, {
             pagination : {
                 el : ".item-swiper__pagination",
-                clickable : true
+                // clickable : true,
+                dynamicBullets : true,
+                dynamicMainBullets : 1,
             },
             navigation: {
                 nextEl: '.item-swiper__button-next',
                 prevEl: '.item-swiper__button-prev',
               },
-            loop : true,
+            loop : isLooped,
             slidesPerView: 1.47,
             spaceBetween : 24,
             breakpoints : {
@@ -161,7 +176,9 @@ if (photoSwipers.length > 0){
             loop : true,
             pagination : {
                 el : ".item-swiper__pagination",
-                clickable : true
+                // clickable : true,
+                dynamicBullets : true,
+                dynamicMainBullets : 1,
             },
             navigation: {
                 nextEl: '.item-swiper__button-next',
@@ -175,11 +192,14 @@ if (photoSwipers.length > 0){
 const blogPageSwipers = document.querySelectorAll(".blog-page__swiper")
 if (blogPageSwipers.length > 0){
     blogPageSwipers.forEach(blogPageSwiper => {
+        const isLooped = blogPageSwiper.querySelectorAll(".swiper-slide").length > 4
         new Swiper(blogPageSwiper.querySelector(".swiper"), {
-            loop : true,
+            loop : isLooped,
             pagination : {
                 el : ".item-swiper__pagination",
-                clickable : true
+                // clickable : true,
+                dynamicBullets : true,
+                dynamicMainBullets : 1,
             },
             navigation: {
                 nextEl: '.item-swiper__button-next',
