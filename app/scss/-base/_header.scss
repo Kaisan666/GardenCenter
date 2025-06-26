@@ -23,6 +23,13 @@
     position: fixed;
     top: 0;
 
+    .info-badge {
+      position: absolute;
+      z-index: -1;
+      top: 206%;
+      transition: top 0.3s ease-in-out;
+    }
+
     .header {
       &__container {
         position: relative;
@@ -35,12 +42,27 @@
         z-index: -1;
         transition: all 0.3s ease-in-out;
       }
+
+      &__wrapper-up {
+        padding-block: 2px;
+      }
+
     }
 
-    &--hidden {
-      .header {
-        &__wrapper-bottom {
-          top: 0;
+    &.header {
+      &__fixed {
+        &--hidden {
+          .info-badge {
+            top: 0;
+            z-index: -2;
+          }
+
+          .header {
+            &__wrapper-bottom {
+              top: 0;
+            }
+
+          }
         }
       }
     }

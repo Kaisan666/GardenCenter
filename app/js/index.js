@@ -26,6 +26,7 @@ import './fancyBox';
 import './map';
 import "./forms"
 import "./hidingHeader"
+import "./closeBadge"
 //// ================================ Code ======================================
 
 const tooltipElements = document.querySelectorAll('.custom-tooltip');

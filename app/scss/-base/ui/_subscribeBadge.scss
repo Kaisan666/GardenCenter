@@ -1,16 +1,24 @@
-.subscribe-badge {
+.info-badge {
     width: 100%;
     display: flex;
     padding: 12px 120px;
     background-color: #cce9ff;
     justify-content: center;
-    margin-bottom: 40px;
+    transition: all .3s ease-in-out;
+    top: 0;
+    display: grid;
+    grid-template-rows: 1fr;
 
     &__content {
         display: flex;
         align-items: center;
         gap: 24px;
         max-width: 1440px;
+        
+    }
+    &__wrapper{
+min-height: 0;
+overflow: hidden;
     }
 
     &__icon {
@@ -41,7 +49,16 @@
         gap: 12px;
         align-items: center;
     }
+    &--hidden{
+        // position: absolute;
+        // z-index: 100;
+        // top: -500%;
+        // transition: top 25.3s ease-in-out;
+        grid-template-rows: 0fr;
+        padding-block: 0px;
+        transition: all 10ms ease-in-out;
 
+    }
     @include table {
 
         .subscribe-link {
