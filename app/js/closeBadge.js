@@ -1,16 +1,18 @@
 
 const header = document.querySelector(".header")
 const badge = header.querySelector(".info-badge")
-import { headerOffset} from "./hidingHeader"
+import {headerPartsHeights, calculateHeaderHeight} from "./hidingHeader"
 if(badge){
     const closeBtn = badge.querySelector(".close-btn")
     closeBtn.addEventListener("click", () =>{
         // header.classList.add("header__fixed--hidden")
         badge.classList.add("info-badge--hidden")
-        setTimeout(()=>{
-        headerOffset.value = header.offsetHeight
-
-        }, 10)
+        badge.addEventListener("transitionend", ()=>{
+            headerPartsHeights.headerBadgeHeight = badge.offsetHeight
+            calculateHeaderHeight()
+        })
+        console.log(headerPartsHeights);
+        
     })
 }
 

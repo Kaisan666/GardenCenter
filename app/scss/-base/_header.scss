@@ -25,9 +25,9 @@
 
     .info-badge {
       position: absolute;
-      z-index: -1;
+      z-index: -2;
       top: 206%;
-      transition: top 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
     }
 
     .header {
@@ -37,14 +37,9 @@
 
       &__wrapper-bottom {
         position: absolute;
-        padding: 14px 0;
         top: 100%;
         z-index: -1;
         transition: all 0.3s ease-in-out;
-      }
-
-      &__wrapper-up {
-        padding-block: 2px;
       }
 
     }
@@ -103,9 +98,10 @@
   &__container {
     display: flex;
     flex-direction: column;
-    gap: 14px;
   }
-
+  &__wrapper-bottom{
+    padding-block: 14px;
+  }
   &__bottom {
     display: flex;
     justify-content: space-between;
@@ -253,6 +249,10 @@
     }
 
     &__fixed {
+
+      .info-badge{
+        top: 100%;
+      }
       top: 0%;
 
       transition: top 0.3s ease-in-out;
