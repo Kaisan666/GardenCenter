@@ -93,6 +93,10 @@
         &__second-part {
             align-self: end;
         }
+
+        &--hidden{
+            padding-block: 0;
+        }
     }
 
     @include mediumMobile {
