@@ -3,13 +3,12 @@ let headerHeight;
 const headerPaddings = 24;
 const header = document.querySelector('.header');
 
-const headerUp = header.querySelector('.header__wrapper-up');
-const headerBottom = header.querySelector('.header__wrapper-bottom');
-const headerBadge = header.querySelector('.info-badge');
+
 
 export const headerPartsHeights = {
   headerUpHeight: 60,
   headerBottomHeight: 68,
+  // headerBadge : 64,
 };
 export const calculateHeaderHeight = () => {
   let counter = headerPaddings;
@@ -22,7 +21,9 @@ export const calculateHeaderHeight = () => {
 };
 if (header) {
     
-
+const headerUp = header.querySelector('.header__wrapper-up');
+const headerBottom = header.querySelector('.header__wrapper-bottom');
+const headerBadge = header.querySelector('.info-badge');
 
 
 

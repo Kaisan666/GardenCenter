@@ -4,7 +4,6 @@
     padding: 12px 120px;
     background-color: #cce9ff;
     justify-content: center;
-    // transition: all .3s ease-in-out;
     top: 0;
     display: grid;
     grid-template-rows: 1fr;
@@ -17,10 +16,16 @@
         
     }
     &__wrapper{
-min-height: 0;
-overflow: hidden;
+        min-height: 0;
+        overflow: hidden;
     }
-
+    &--telegram{
+        .info-badge{
+           &__icon{
+            
+           } 
+        }
+    }
     &__icon {
         width: 40px;
         height: 40px;
@@ -31,6 +36,8 @@ overflow: hidden;
         align-items: center;
         flex: 1 0 auto;
     }
+
+
 
     .subscribe-link {
         padding: 10.5px 24px;
