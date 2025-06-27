@@ -22,14 +22,34 @@
     &--telegram{
         .info-badge{
            &__icon{
-            
+background-color: #08c;
            } 
+        }
+    }
+    &--success{
+        .info-badge{
+           &__icon{
+background-color: #08c;
+           } 
+        }
+        .subscribe-link{
+            display: none;
+        }   
+    }
+    &--error{
+        .info-badge{
+           &__icon{
+background-color: #08c;
+           } 
+        }
+
+        .subscribe-link{
+            display: none;
         }
     }
     &__icon {
         width: 40px;
         height: 40px;
-        background-color: #08c;
         border-radius: 100%;
         display: flex;
         justify-content: center;
