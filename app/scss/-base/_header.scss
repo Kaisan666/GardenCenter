@@ -256,10 +256,17 @@
       top: 0%;
 
       transition: top 0.3s ease-in-out;
+      &.header__fixed--hidden{
+        .info-badge{
+          top: -100%;
+        }
 
+      }
       &--hidden {
         top: -15%;
         transition: top 0.3s ease-in-out;
+
+
       }
     }
 

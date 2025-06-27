@@ -27,6 +27,7 @@ new Swiper(mainSwiper, {
 const blog = document.querySelector(".blog__swiper")
 if(blog){
     const blogSwiper = blog.querySelector(".swiper")
+    const isLooped = blogSwiper.querySelectorAll(".swiper-slide")
     new Swiper(blogSwiper, {
         pagination : {
             el : ".item-swiper__pagination",

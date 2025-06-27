@@ -32,7 +32,9 @@ if (photoSwipers.length > 0) {
                     loop: true,
                     pagination: {
                       el: '.item-swiper__pagination',
-                      clickable: true,
+                      // clickable: true,
+                      dynamicBullets : true,
+                      dynamicMainBullets : 1,
                     },
                     navigation: {
                       nextEl: '.item-swiper__button-next',

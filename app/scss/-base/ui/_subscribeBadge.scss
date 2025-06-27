@@ -71,7 +71,7 @@ overflow: hidden;
     }
 
     @include mobile {
-        padding: 12px 75px;
+        padding: 12px 60px;
 
         &__content {
             flex-direction: column;
@@ -89,6 +89,7 @@ overflow: hidden;
     }
 
     @include mediumMobile {
+        padding-inline: 20px;
         .subscribe-link {
             svg {
                 display: block;

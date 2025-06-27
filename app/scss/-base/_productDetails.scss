@@ -44,7 +44,46 @@
     }
   }
   &__description{
+    &:has(input:checked){
+      .product-details__description-main{
+        max-height: 100%;
+        transition: all 0.3s ease-in-out;
+        &:after{
+          opacity: 0;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+      .product-details__description-more{
+        svg{
+          transform: rotate(-180deg);
+          transition: all 0.3s ease-in-out;
+        }
+      }
+
+    }
+    &:not(:has(.product-details__description-more--hidden)){
+      .product-details__description-main{
+        position: relative;
+        &:after{
+          content: "";
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          background: linear-gradient(0deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+          opacity: 1;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
     &-main{
+      max-height: 212px;
+      overflow: hidden;
+      transition: all 0.3s ease-in-out;
+
+
+
+
       h4{
         font-weight: 600;
         display: inline;
@@ -55,11 +94,21 @@
     }
     &-more{
     display: flex;
-    gap: 10px;
-    align-items: center;
     font-weight: 700;
+      justify-content: end;
+      transition: all 0.3s ease-in-out;
+      input{
+        display: none;
+      }
+      label{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+
     svg{
-      transform: rotate(90deg);
+      //transform: rotate(90deg);
+      transition: all 0.3s ease-in-out;
     }
   }
   }
@@ -88,6 +137,7 @@
       display: flex;
       justify-content: space-between;
       gap: 12px;
+      align-items: end;
     }
     &-quantity{
       background-color: #fff;
@@ -101,39 +151,11 @@
 
     &-characteristic {
       background-color: #fff;
-      flex: 1 0 200px;
-      position: relative;
-      z-index: 1;
-
-      //maybe
-      //max-width: fit-content;
-
-
-      //&:after{
-      //  content: "";
-      //  width: 200%;
-      //  border-bottom: dotted 2px $MMiddleGray;
-      //  position: absolute;
-      //  top: 5px;
-      //  z-index: -1;
-      //}
-      //overflow: hidden;
-      //position: relative;
-      //
-      //&:after{
-      //  content: "";
-      //  border-bottom: dotted 2px $MMiddleGray;
-      //  width: 100%;
-      //  position: absolute;
-      //}
     }
 
     &-border {
       flex: 1 1 auto;
       border-bottom: dotted 2px $MMiddleGray;
-
-      // maybe
-      height: 16px;
     }
   }
 
@@ -179,6 +201,7 @@
   @include smallMobile {
     &__characteristics {
       &-item {
+
         gap: 0;
       }
     }
