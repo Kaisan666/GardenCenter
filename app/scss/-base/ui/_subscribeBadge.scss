@@ -113,6 +113,10 @@ background-color: #08c;
         &__second-part {
             align-self: end;
         }
+
+        &--hidden{
+            padding-block: 0;
+        }
     }
 
     @include mediumMobile {
