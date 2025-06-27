@@ -43,6 +43,13 @@
       font-size: 24px;
     }
   }
+  &__description{
+    &-main{
+      p{
+        display: inline;
+      }
+    }
+  }
 
   .subheader {
     display: flex;

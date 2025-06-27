@@ -1,26 +1,4 @@
 
-const header = document.querySelector(".header")
-const badge = header.querySelector(".info-badge")
-import {headerPartsHeights, calculateHeaderHeight} from "./hidingHeader"
-if(badge){
-    const closeBtn = badge.querySelector(".close-btn")
-    closeBtn.addEventListener("click", () =>{
-        // header.classList.add("header__fixed--hidden")
-        badge.classList.add("info-badge--hidden")
-        badge.addEventListener("transitionend", ()=>{
-            headerPartsHeights.headerBadgeHeight = badge.offsetHeight
-            calculateHeaderHeight()
-        })
-        console.log(headerPartsHeights);
-        
-    })
-}
-
-
-
-
-
-
 const MESSAGES = {
     "error" :{
         "message" : "Что-то пошло не так… Не удалось отправить заявку. Попробуйте ещё раз чуть позже или свяжитесь с нами напрямую",
@@ -34,4 +12,24 @@ const MESSAGES = {
 "message" : "Розыгрыши призов, информация о мероприятиях и все самое главное о Садовом центре на Атербекова!",
         "imgURL" : "/assets/icons/sprite.svg#tg",
     },
+}
+
+
+const header = document.querySelector(".header")
+const badge = header.querySelector(".info-badge")
+import {headerPartsHeights, calculateHeaderHeight} from "./hidingHeader"
+if(badge){
+    const closeBtn = badge.querySelector(".close-btn")
+    closeBtn.addEventListener("click", () =>{
+        // header.classList.add("header__fixed--hidden")
+        badge.classList.add("info-badge--hidden")
+        badge.addEventListener("transitionend", ()=>{
+            headerPartsHeights.headerBadgeHeight = badge.offsetHeight
+            console.log(headerPartsHeights.headerBadgeHeight);
+            
+            calculateHeaderHeight()
+        })
+        console.log(headerPartsHeights);
+        
+    })
 }

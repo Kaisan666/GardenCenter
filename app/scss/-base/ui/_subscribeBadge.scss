@@ -4,7 +4,7 @@
     padding: 12px 120px;
     background-color: #cce9ff;
     justify-content: center;
-    transition: all .3s ease-in-out;
+    // transition: all .3s ease-in-out;
     top: 0;
     display: grid;
     grid-template-rows: 1fr;
@@ -56,7 +56,7 @@ overflow: hidden;
         // transition: top 25.3s ease-in-out;
         grid-template-rows: 0fr;
         padding-block: 0px;
-        transition: all 0.5s ease-in-out ;
+        transition: all 0.3s ease-in-out ;
 
     }
     @include table {

@@ -1,7 +1,8 @@
 let lastScroll = 0;
-
-const header = document.querySelector('.header');
+let headerHeight;
 const headerPaddings = 24;
+const header = document.querySelector('.header');
+
 const headerUp = header.querySelector('.header__wrapper-up');
 const headerBottom = header.querySelector('.header__wrapper-bottom');
 const headerBadge = header.querySelector('.info-badge');
@@ -9,12 +10,9 @@ const headerBadge = header.querySelector('.info-badge');
 export const headerPartsHeights = {
   headerUpHeight: 60,
   headerBottomHeight: 68,
-  headerBadgeHeight: 64,
 };
-let headerHeight;
-
 export const calculateHeaderHeight = () => {
-  let counter = 24;
+  let counter = headerPaddings;
   for (let key in headerPartsHeights) {
     counter += headerPartsHeights[key];
   }
@@ -23,6 +21,11 @@ export const calculateHeaderHeight = () => {
   return;
 };
 if (header) {
+    
+
+
+
+
   window.addEventListener('resize', () => {
     if (!header.classList.contains('header__fixed')) {
       headerPartsHeights.headerUpHeight = headerUp.offsetHeight;
@@ -45,7 +48,6 @@ if (header) {
   const hideScroll = () => {
     const burger = header.querySelector('.burger__modal');
     if (burger.classList.contains('burger__modal--active')) {
-      header.classList.add('header__fixed--visible');
       header.classList.remove('header__fixed--hidden');
     }
     if (window.scrollY > headerHeight + 150 && window.scrollY > lastScroll) {
