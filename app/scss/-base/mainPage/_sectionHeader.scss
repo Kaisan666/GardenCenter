@@ -119,6 +119,12 @@
     }
   }
 
+  &.search__header{
+    .section-header__second-row{
+      justify-content: start;
+    }
+  }
+
     @include mobile {
       a > span {
         display: none;
