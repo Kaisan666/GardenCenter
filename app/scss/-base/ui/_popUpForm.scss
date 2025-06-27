@@ -1,11 +1,27 @@
 .popup-form {
   max-width: 1360px;
   width: 90%;
+  padding: 40px 60px;
 
   &__row{
     font-size: 16px;
+    max-width: 600px;
     strong, b, h3{
       font-weight: 700;
+    }
+
+    h3{
+      margin-top: 20px;
+    }
+    p{
+      margin-top: 20px;
+    }
+
+    h3:first-child, p:first-child{
+      margin-top: 0;
+    }
+    h3 + * {
+      margin-top: 0;
     }
   }
 

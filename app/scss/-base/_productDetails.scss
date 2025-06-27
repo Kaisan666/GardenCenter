@@ -137,7 +137,7 @@
       display: flex;
       justify-content: space-between;
       gap: 12px;
-      align-items: end;
+      align-items: start;
     }
     &-quantity{
       background-color: #fff;
@@ -156,18 +156,15 @@
     &-border {
       flex: 1 1 auto;
       border-bottom: dotted 2px $MMiddleGray;
+      padding-top: 12px;
     }
   }
 
-  @include table {
 
+  @include table {
     &__header {
       padding: 0 20px;
     }
-  }
-
-  @include table {
-    
     &__main {
       flex-direction: column;
       gap: 60px;
@@ -200,10 +197,7 @@
 
   @include smallMobile {
     &__characteristics {
-      &-item {
 
-        gap: 0;
-      }
     }
 
     &__title {

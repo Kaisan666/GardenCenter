@@ -57,8 +57,18 @@
 
   }
 }
+
+
 .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{
-  transform: translate(0) !important;
+  transform: translateX(0) !important;
 }
+
+
+
+.item-swiper{
+   .swiper-pagination-bullets-dynamic{
+     //margin-left: 22px;
+   }
+ }
 
 

@@ -58,7 +58,7 @@ body {
   &-main{
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    //gap: 12px;
   }
   &-header{
     display: flex;
@@ -71,7 +71,7 @@ body {
   //   gap: 12px;
   //   align-items: center;
   // }
-  h4 {
+  h3 {
     font-weight: 600;
     font-size: 24px;
 
@@ -1015,14 +1015,19 @@ section {
 //   gap: 10px;
 // }
 
-
+.app__content .section-header ~ .client-edit *:first-child{
+  margin-top: 0;
+}
 
 .client-edit {
-  gap: 0;
-  p:not(:first-child){
-    margin-top: 40px;
-
+  .photo-swiper{
+    margin-block: 40px ;
   }
+  gap: 0;
+  //p:not(:first-child){
+  //  margin-top: 40px;
+  //
+  //}
   p{
     & + * {
       margin-top: 12px;

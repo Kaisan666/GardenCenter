@@ -78,13 +78,14 @@
       font-weight: 600;
       font-size: 24px;
       color: $MMiddleGray;
-      margin: 12px 0 16px;
+      margin-top: 12px;
     }
 
     & p {
       max-width: 785px;
       justify-self: end;
       align-self: flex-end;
+      margin-top: 16px;
     }
   }
 
@@ -110,12 +111,13 @@
       font-weight: 600;
       font-size: 24px;
       color: $MMiddleGray;
-      margin: 12px 0 16px;
+      margin-top: 12px;
     }
     p{
       max-width: 785px;
       justify-self: end;
       align-self: flex-end;
+      margin-top: 16px;
     }
   }
 
