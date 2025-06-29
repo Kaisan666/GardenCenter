@@ -69,7 +69,7 @@
     "jshint": "^2.13.4",
     "nouislider": "^15.6.0",
     "smooth-scrollbar": "^8.7.4",
-    "swiper": "^8.0.5",
+    "swiper": "^11.2.10",
     "validate.js": "^0.13.1"
   }
 }

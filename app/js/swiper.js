@@ -173,13 +173,15 @@ if(breadcrumbs.length > 0){
 const photoSwipers = document.querySelectorAll(".photo-swiper")
 if (photoSwipers.length > 0){
     photoSwipers.forEach(photoSwiper => {
-        new Swiper(photoSwiper.querySelector(".swiper"), {
+        const originalSwiper = new Swiper(photoSwiper.querySelector(".swiper"), {
+            preloadImages: false,
+            lazy: true,
             loop : true,
             pagination : {
                 el : ".item-swiper__pagination",
                 // clickable : true,
                 dynamicBullets : true,
-                dynamicMainBullets : 1,
+                dynamicMainBullets : 3,
             },
             navigation: {
                 nextEl: '.item-swiper__button-next',
@@ -188,6 +190,9 @@ if (photoSwipers.length > 0){
             slidesPerView: 1,
             spaceBetween : 100,
         })
+
+        photoSwiper.swiperInstance = originalSwiper;
+        console.log(photoSwiper)
     })
 }
 const blogPageSwipers = document.querySelectorAll(".blog-page__swiper")

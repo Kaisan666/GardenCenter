@@ -6,12 +6,17 @@ import Swiper from 'swiper/bundle';
 const photoSwipers = document.querySelectorAll('.photo-swiper');
 if (photoSwipers.length > 0) {
   photoSwipers.forEach((photoSwiper) => {
+
     const triggers = photoSwiper.querySelectorAll('.fancybox-trigger');
     if (triggers.length > 0) {
       triggers.forEach((trigger, index) => {
-        trigger.addEventListener('click', () => {
+        trigger.addEventListener('click', (e) => {
           console.log(index);
           const photoSwiper = trigger.closest('.photo-swiper');
+          const originalSwiper = photoSwiper.swiperInstance
+          console.log(photoSwiper)
+          const currentSlide = originalSwiper.activeIndex
+          console.log(currentSlide)
           let swiper;
           Fancybox.show(
             [
@@ -30,6 +35,7 @@ if (photoSwipers.length > 0) {
                   const clonedSwiper = fancybox.$content.querySelector('.swiper');
                   swiper = new Swiper(clonedSwiper, {
                     loop: true,
+                    lazy: false,
                     pagination: {
                       el: '.item-swiper__pagination',
                       // clickable: true,
@@ -43,9 +49,9 @@ if (photoSwipers.length > 0) {
                     slidesPerView: '1',
                     spaceBetween: 10,
                   });
-                  swiper.slideTo(index, 0);
+                  swiper.slideTo(currentSlide, 0);
                 },
-                closing: () => {
+                destroy: () => {
                   swiper.destroy();
                 },
               },

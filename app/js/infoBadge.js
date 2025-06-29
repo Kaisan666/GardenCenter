@@ -31,20 +31,24 @@ const header = document.querySelector(".header")
 const badge = header.querySelector(".info-badge")
 import {headerPartsHeights, calculateHeaderHeight} from "./hidingHeader"
 if(badge){
-    if (!getCookie("tgBadge")){
 
-        badge.classList.add("info-badge--telegram")
-        badge.querySelector(".info-badge__text").textContent = "Розыгрыши призов, информация о мероприятиях и все самое главное о Садовом центре на Атербекова!"
-        badge.querySelector(".info-badge__icon").querySelector("use").setAttribute("href", "/assets/icons/sprite.svg#tg")
-        badge.classList.remove("info-badge--hidden")
-        badge.addEventListener("transitionend", ()=>{
-            headerPartsHeights.headerBadgeHeight = badge.offsetHeight
-            console.log(headerPartsHeights.headerBadgeHeight);
-            
-            calculateHeaderHeight()
-        })
-        
-    }
+    document.addEventListener("DOMContentLoaded", () =>{
+        if (!getCookie("tgBadge")){
+
+            badge.classList.add("info-badge--telegram")
+            badge.querySelector(".info-badge__text").textContent = "Розыгрыши призов, информация о мероприятиях и все самое главное о Садовом центре на Атербекова!"
+            badge.querySelector(".info-badge__icon").querySelector("use").setAttribute("href", "/assets/icons/sprite.svg#tg")
+            badge.classList.remove("info-badge--hidden")
+            badge.addEventListener("transitionend", ()=>{
+                headerPartsHeights.headerBadge = badge.offsetHeight
+                console.log(headerPartsHeights.headerBadge);
+
+                calculateHeaderHeight()
+            }, { once: true })
+
+        }
+    })
+
     const closeBtn = badge.querySelector(".close-btn")
     closeBtn.addEventListener("click", () =>{
         // header.classList.add("header__fixed--hidden")
@@ -53,13 +57,17 @@ if(badge){
         }
         badge.classList.add("info-badge--hidden")
         badge.addEventListener("transitionend", ()=>{
-            headerPartsHeights.headerBadgeHeight = badge.offsetHeight
-            console.log(headerPartsHeights.headerBadgeHeight);
+            headerPartsHeights.headerBadge = badge.offsetHeight
+            console.log(headerPartsHeights.headerBadge);
             
             calculateHeaderHeight()
-        })
+        }, { once: true })
         console.log(headerPartsHeights);
         
+    })
+    badge.addEventListener("transitionend", ()=>{
+        headerPartsHeights.headerBadge = badge.offsetHeight
+        calculateHeaderHeight()
     })
 }
 

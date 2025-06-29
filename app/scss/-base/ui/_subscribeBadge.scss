@@ -19,11 +19,39 @@
         min-height: 0;
         overflow: hidden;
     }
+    &--success{
+        background-color: $GLightG;
+
+
+        .info-badge{
+            &__icon{
+                background-color: $GMediumG;
+            }
+        }
+
+        .subscribe-link{
+            display: none;
+        }
+    }
     &--telegram{
         .info-badge{
            &__icon{
             
            } 
+        }
+    }
+    &--error{
+        background-color: $MLightRed;
+
+
+        .info-badge{
+            &__icon{
+                background-color: $MRed;
+            }
+        }
+
+        .subscribe-link{
+            display: none;
         }
     }
     &__icon {
