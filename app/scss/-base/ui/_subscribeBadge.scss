@@ -36,10 +36,11 @@
     &--telegram{
         .info-badge{
            &__icon{
-            
+background-color: #08c;
            } 
         }
     }
+<<<<<<< HEAD
     &--error{
         background-color: $MLightRed;
 
@@ -48,6 +49,23 @@
             &__icon{
                 background-color: $MRed;
             }
+=======
+    &--success{
+        .info-badge{
+           &__icon{
+background-color: #08c;
+           } 
+        }
+        .subscribe-link{
+            display: none;
+        }   
+    }
+    &--error{
+        .info-badge{
+           &__icon{
+background-color: #08c;
+           } 
+>>>>>>> 5a5aad847a56a5d5363cb169578c045aa71e73e4
         }
 
         .subscribe-link{
@@ -57,7 +75,6 @@
     &__icon {
         width: 40px;
         height: 40px;
-        background-color: #08c;
         border-radius: 100%;
         display: flex;
         justify-content: center;
