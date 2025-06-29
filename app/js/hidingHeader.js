@@ -8,7 +8,7 @@ const header = document.querySelector('.header');
 export const headerPartsHeights = {
   headerUpHeight: 60,
   headerBottomHeight: 68,
-  // headerBadge : 64,
+  headerBadge : 64,
 };
 export const calculateHeaderHeight = () => {
   let counter = headerPaddings;

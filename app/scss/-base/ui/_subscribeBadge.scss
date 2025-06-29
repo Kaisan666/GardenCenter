@@ -2,7 +2,6 @@
     width: 100%;
     display: flex;
     padding: 12px 120px;
-    background-color: #cce9ff;
     justify-content: center;
     top: 0;
     display: grid;
@@ -34,26 +33,25 @@
         }
     }
     &--telegram{
+        background-color: #CCE9FF;
         .info-badge{
            &__icon{
 background-color: #08c;
-           } 
+           }
+
+
+            .subscribe-link{
+                display: block;
+            }
         }
     }
-    &--success{
-        .info-badge{
-           &__icon{
-background-color: #08c;
-           } 
-        }
-        .subscribe-link{
-            display: none;
-        }   
-    }
+
+
     &--error{
+        background-color: $MLightRed;
         .info-badge{
            &__icon{
-background-color: #08c;
+background-color: $MRed;
            } 
         }
 
@@ -74,14 +72,11 @@ background-color: #08c;
 
 
     .subscribe-link {
+        display: none;
         padding: 10.5px 24px;
         width: auto;
         border-radius: 60px;
         height: auto;
-
-        svg {
-            display: none;
-        }
     }
 
     &__first-part,
@@ -91,10 +86,6 @@ background-color: #08c;
         align-items: center;
     }
     &--hidden{
-        // position: absolute;
-        // z-index: 100;
-        // top: -500%;
-        // transition: top 25.3s ease-in-out;
         grid-template-rows: 0fr;
         padding-block: 0px;
         transition: all 0.3s ease-in-out ;

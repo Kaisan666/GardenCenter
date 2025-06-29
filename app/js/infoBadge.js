@@ -13,6 +13,8 @@ export const INSTANCES = {
         "imgURL" : "/assets/icons/sprite.svg#tg",
     },
 }
+
+const badgeClasses = ["info-badge--telegram", "info-badge--error", "info-badge--success"]
 function getCookie(name) {
         const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
         return match ? match[2] : null;
@@ -47,6 +49,13 @@ if(badge){
             }, { once: true })
 
         }
+
+        else{
+            headerPartsHeights.headerBadge = badge.offsetHeight
+            console.log(headerPartsHeights.headerBadge);
+
+            calculateHeaderHeight()
+        }
     })
 
     const closeBtn = badge.querySelector(".close-btn")
@@ -56,7 +65,11 @@ if(badge){
             setCookie("tgBadge", "closed", 0.125)
         }
         badge.classList.add("info-badge--hidden")
+
         badge.addEventListener("transitionend", ()=>{
+            badgeClasses.forEach(badgeClass => {
+                badge.classList.remove(badgeClass)
+            })
             headerPartsHeights.headerBadge = badge.offsetHeight
             console.log(headerPartsHeights.headerBadge);
             
