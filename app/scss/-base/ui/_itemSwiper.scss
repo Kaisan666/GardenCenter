@@ -1,11 +1,13 @@
 .item-swiper {
+
+  &__wrapper-pagination{
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+  }
   &__pagination {
-    //display: flex;
-    //gap: 18px;
-    //bottom: 8px;
-    //align-items: center;
-    //flex-wrap: nowrap;
-    //justify-content: center;
+    display: flex;
+    justify-content: center;
     
   }
 
@@ -59,16 +61,6 @@
 }
 
 
-.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{
-  transform: translateX(0) !important;
-}
 
-
-
-.item-swiper{
-   .swiper-pagination-bullets-dynamic{
-     //margin-left: 22px;
-   }
- }
 
 

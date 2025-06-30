@@ -111,10 +111,13 @@ if(newItems){
 }
 const productsSwipers = document.querySelectorAll(".products-swiper")
 if(productsSwipers.length > 0){
-
+    console.log(productsSwipers)
     productsSwipers.forEach(productSwiper => {
+        console.log(productSwiper)
         const swiper = productSwiper.querySelector(".swiper")
+        console.log(swiper)
         const isLooped = swiper.querySelectorAll(".swiper-slide").length > 4
+        console.log(isLooped)
         console.log(isLooped)
         new Swiper(swiper, {
             pagination : {
@@ -173,16 +176,26 @@ if(breadcrumbs.length > 0){
 const photoSwipers = document.querySelectorAll(".photo-swiper")
 if (photoSwipers.length > 0){
     photoSwipers.forEach(photoSwiper => {
+        const slides = photoSwiper.querySelectorAll(".swiper-slide")
+        slides.forEach(slide => {
+            console.log(slide.querySelector("img").naturalHeight, "Натуральная высота")
+            console.log(slide.querySelector("img").naturalWidth, "Натуральная ширина")
+        })
         const originalSwiper = new Swiper(photoSwiper.querySelector(".swiper"), {
-            preloadImages: false,
-            lazy: true,
+            // lazyPreloadPrevNext: 1,
+            // lazy: true,
             loop : true,
             pagination : {
                 el : ".item-swiper__pagination",
                 // clickable : true,
                 dynamicBullets : true,
-                dynamicMainBullets : 3,
+                dynamicMainBullets : 1,
             },
+            // on : {
+            //     swiperChange : () => {
+            //         console.log(originalSwiper.slides(originalSwiper.activeIndex))
+            //     }
+            // }
             navigation: {
                 nextEl: '.item-swiper__button-next',
                 prevEl: '.item-swiper__button-prev',

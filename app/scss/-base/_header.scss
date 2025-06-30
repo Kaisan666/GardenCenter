@@ -5,9 +5,7 @@
   width: 100%;
 
 
-  &:not(:has(.info-badge--hidden)){
-    padding-bottom: 0;
-  }
+
 
   .search {
     max-width: 313px;
@@ -241,6 +239,14 @@
 
 
   @include table {
+    &:not(:has(.info-badge--hidden)){
+      padding-bottom: 0;
+      .header{
+        &__container{
+          gap: 12px;
+        }
+      }
+    }
     &__container {
       gap: 0;
     }

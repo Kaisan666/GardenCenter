@@ -6,7 +6,16 @@
     top: 0;
     display: grid;
     grid-template-rows: 1fr;
-
+    .subscribe-link {
+        display: none;
+        padding: 10.5px 24px;
+        width: auto;
+        border-radius: 60px;
+        height: auto;
+        svg{
+            display: none;
+        }
+    }
     &__content {
         display: flex;
         align-items: center;
@@ -40,9 +49,11 @@ background-color: #08c;
            }
 
 
-            .subscribe-link{
-                display: block;
-            }
+
+        }
+        .subscribe-link{
+            display: flex;
+            justify-content: center;
         }
     }
 
@@ -71,13 +82,7 @@ background-color: $MRed;
 
 
 
-    .subscribe-link {
-        display: none;
-        padding: 10.5px 24px;
-        width: auto;
-        border-radius: 60px;
-        height: auto;
-    }
+
 
     &__first-part,
     &__second-part {
@@ -93,8 +98,11 @@ background-color: $MRed;
     }
     @include table {
 
+
+
         .subscribe-link {
             height: 40px;
+
 
             &__text {
                 display: block;
@@ -103,11 +111,24 @@ background-color: $MRed;
     }
 
     @include mobile {
+        &--telegram{
+
+            .info-badge{
+                &__content {
+                    flex-direction: column;
+                }
+            }
+
+            .subscribe-link{
+                svg{
+                    display: block;
+                }
+            }
+
+        }
         padding: 12px 60px;
 
-        &__content {
-            flex-direction: column;
-        }
+
 
         .subscribe-link {
             &__text {
@@ -132,10 +153,6 @@ background-color: $MRed;
             }
 
             flex: 1 1 auto;
-        }
-
-        &__icon {
-            display: none;
         }
 
         &__second-part {

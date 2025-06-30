@@ -3,19 +3,19 @@
     display: flex;
     // flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
+    //gap: 15px;
     height: 24px;
     bottom: 8px;
     align-items: center;
-    position: absolute;
+    //position: absolute;
   }
 
   &__wrapper-pagination {
-    width: 168px;
+    //width: 168px;
     position: absolute;
     left: 50%;
     z-index: 5;
-    transform: translateX(-50%);
+    bottom: 8px;
   }
 
   &__background-img {
@@ -151,6 +151,10 @@
   }
 
   @include mobile {
+
+    &__wrapper-pagination{
+      bottom: 18px;
+    }
   .swiper{
     &-main{
       &__wrapper-arrow{
@@ -212,17 +216,4 @@
 }
 #images {
   display: none;
-}
-
-.swiper-main{
-    .swiper{
-      .swiper-main__wrapper-pagination{
-
-        .swiper-pagination-bullets-dynamic{
-          left: 25%;
-        }
-      }
-
-
-  }
 }

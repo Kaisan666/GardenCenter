@@ -35,7 +35,8 @@ if (photoSwipers.length > 0) {
                   const clonedSwiper = fancybox.$content.querySelector('.swiper');
                   swiper = new Swiper(clonedSwiper, {
                     loop: true,
-                    lazy: false,
+                    preloadImages: false,
+                    lazy: true,
                     pagination: {
                       el: '.item-swiper__pagination',
                       // clickable: true,
