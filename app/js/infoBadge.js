@@ -43,7 +43,6 @@ if(badge){
             badge.classList.remove("info-badge--hidden")
             badge.addEventListener("transitionend", ()=>{
                 headerPartsHeights.headerBadge = badge.offsetHeight
-                console.log(headerPartsHeights.headerBadge);
 
                 calculateHeaderHeight()
             }, { once: true })
@@ -52,7 +51,6 @@ if(badge){
 
         else{
             headerPartsHeights.headerBadge = badge.offsetHeight
-            console.log(headerPartsHeights.headerBadge);
 
             calculateHeaderHeight()
         }
@@ -71,11 +69,9 @@ if(badge){
                 badge.classList.remove(badgeClass)
             })
             headerPartsHeights.headerBadge = badge.offsetHeight
-            console.log(headerPartsHeights.headerBadge);
             
             calculateHeaderHeight()
         }, { once: true })
-        console.log(headerPartsHeights);
         
     })
     badge.addEventListener("transitionend", ()=>{

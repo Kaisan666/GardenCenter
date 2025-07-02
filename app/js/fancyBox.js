@@ -2,7 +2,11 @@ import { Fancybox, Carousel, Panzoom } from '@fancyapps/ui';
 
 import IMask from 'imask';
 import Swiper from 'swiper/bundle';
+function lockTouch(e) {
+    e.preventDefault();
 
+}
+import {checkAspectRatio} from "./swiper"
 const photoSwipers = document.querySelectorAll('.photo-swiper');
 if (photoSwipers.length > 0) {
   photoSwipers.forEach((photoSwiper) => {
@@ -11,12 +15,9 @@ if (photoSwipers.length > 0) {
     if (triggers.length > 0) {
       triggers.forEach((trigger, index) => {
         trigger.addEventListener('click', (e) => {
-          console.log(index);
           const photoSwiper = trigger.closest('.photo-swiper');
           const originalSwiper = photoSwiper.swiperInstance
-          console.log(photoSwiper)
           const currentSlide = originalSwiper.activeIndex
-          console.log(currentSlide)
           let swiper;
           Fancybox.show(
             [
@@ -25,13 +26,12 @@ if (photoSwipers.length > 0) {
                 type: 'clone',
                 dragToClose: false,
               },
+
             ],
             {
               on: {
                 reveal: (event, fancybox, slide) => {
-                  console.log(event.$container);
-                  console.log(fancybox.$content);
-                  console.log(slide);
+                  document.addEventListener('touchmove', lockTouch, { passive: false });
                   const clonedSwiper = fancybox.$content.querySelector('.swiper');
                   swiper = new Swiper(clonedSwiper, {
                     loop: true,
@@ -39,9 +39,26 @@ if (photoSwipers.length > 0) {
                     lazy: true,
                     pagination: {
                       el: '.item-swiper__pagination',
-                      // clickable: true,
                       dynamicBullets : true,
                       dynamicMainBullets : 1,
+                    },
+                    zoom: true,
+                    on : {
+                      slideChange : function(){
+                        const activeSlide = this.slides[this.activeIndex]
+
+                        if (activeSlide){
+                          const currentImage = activeSlide.querySelector("img")
+                          if (!currentImage.classList.contains("image-vertical") || !currentImage.classList.contains("image-horizontal")){
+                            checkAspectRatio(currentImage)
+                          }
+
+
+
+                        }
+
+
+                      }
                     },
                     navigation: {
                       nextEl: '.item-swiper__button-next',
@@ -53,6 +70,8 @@ if (photoSwipers.length > 0) {
                   swiper.slideTo(currentSlide, 0);
                 },
                 destroy: () => {
+                  document.documentElement.classList.remove('fancybox-open');
+                  document.removeEventListener('touchmove', lockTouch);
                   swiper.destroy();
                 },
               },
@@ -70,11 +89,9 @@ if (videoTrigger.length > 0) {
   videoTrigger.forEach((trigger) => {
     trigger.addEventListener('click', () => {
       const content = trigger.closest('.swiper-slide');
-      console.log(content);
       const videoPlayer = content.querySelector('.video-player');
       const url = videoPlayer.getAttribute('data-videoUrl');
       videoPlayer.querySelector('iframe').setAttribute('src', url);
-      console.log(videoPlayer);
       Fancybox.show([
         {
           src: videoPlayer,

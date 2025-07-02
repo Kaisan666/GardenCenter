@@ -269,12 +269,12 @@
       transition: top 0.3s ease-in-out;
       &.header__fixed--hidden{
         .info-badge{
-          top: -100%;
+          top: -150%;
         }
 
       }
       &--hidden {
-        top: -15%;
+        top: -50%;
         transition: top 0.3s ease-in-out;
 
 

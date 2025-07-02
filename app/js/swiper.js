@@ -4,6 +4,29 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
+
+export function checkAspectRatio(img, attempt = 0){
+    console.log(img)
+    console.log(2112341312321)
+    console.log(img.naturalWidth)
+    console.log(img.naturalHeight)
+    const MAX_ATTEMPS = 50
+    if (img.naturalHeight > img.naturalWidth){
+        img.classList.add("image-vertical")
+        return
+    }
+    else if(img.naturalHeight === 0 && img.naturalWidth === 0)
+    {
+        setTimeout(() => {
+            checkAspectRatio(img, attempt + 1)
+        }, 100)
+    }
+    else{
+        img.classList.add("image-horizontal")
+        return
+    }
+}
+
 const swiperSection = document.querySelector(".swiper-main")
 if (swiperSection){
 const mainSwiper = swiperSection.querySelector(".swiper")
@@ -23,6 +46,7 @@ new Swiper(mainSwiper, {
     spaceBetween : 20,
 })
 }
+
 
 const blog = document.querySelector(".blog__swiper")
 if(blog){
@@ -65,10 +89,10 @@ if(blog){
 const productDetail = document.querySelector(".product-details__swiper-item")
 if(productDetail){
     const productDetailSwiper = productDetail.querySelector(".swiper")
+    
     const productSwiper = new Swiper(productDetailSwiper, {
         pagination : {
             el : ".item-swiper__pagination",
-            // clickable : true,
             dynamicBullets : true,
             dynamicMainBullets : 1,
         },
@@ -86,7 +110,6 @@ if(productDetail){
 const newItems = document.querySelector(".new-items")
 if(newItems){
     const isLooped = newItems.querySelector(".swiper").querySelectorAll(".swiper-slide").length > 4
-    console.log(isLooped)
     const newItemsSwiper = new Swiper(newItems.querySelector(".swiper"), {
         pagination : {
             el : ".item-swiper__pagination",
@@ -111,18 +134,12 @@ if(newItems){
 }
 const productsSwipers = document.querySelectorAll(".products-swiper")
 if(productsSwipers.length > 0){
-    console.log(productsSwipers)
     productsSwipers.forEach(productSwiper => {
-        console.log(productSwiper)
         const swiper = productSwiper.querySelector(".swiper")
-        console.log(swiper)
         const isLooped = swiper.querySelectorAll(".swiper-slide").length > 4
-        console.log(isLooped)
-        console.log(isLooped)
         new Swiper(swiper, {
             pagination : {
                 el : ".item-swiper__pagination",
-                // clickable : true,
                 dynamicBullets : true,
                 dynamicMainBullets : 1,
             },
@@ -178,24 +195,33 @@ if (photoSwipers.length > 0){
     photoSwipers.forEach(photoSwiper => {
         const slides = photoSwiper.querySelectorAll(".swiper-slide")
         slides.forEach(slide => {
-            console.log(slide.querySelector("img").naturalHeight, "Натуральная высота")
-            console.log(slide.querySelector("img").naturalWidth, "Натуральная ширина")
         })
         const originalSwiper = new Swiper(photoSwiper.querySelector(".swiper"), {
-            // lazyPreloadPrevNext: 1,
-            // lazy: true,
             loop : true,
             pagination : {
                 el : ".item-swiper__pagination",
-                // clickable : true,
                 dynamicBullets : true,
                 dynamicMainBullets : 1,
             },
-            // on : {
-            //     swiperChange : () => {
-            //         console.log(originalSwiper.slides(originalSwiper.activeIndex))
-            //     }
-            // }
+
+            on : {
+                slideChange : function(){
+                    const activeSlide = this?.slides[this.activeIndex]
+                    if (activeSlide){
+                        console.log(activeSlide)
+                        const currentImage = activeSlide.querySelector("img")
+                        console.log(currentImage)
+                        if (!currentImage.classList.contains("image-vertical") || !currentImage.classList.contains("image-horizontal")){
+                            checkAspectRatio(currentImage)
+                        }
+
+
+
+                    }
+
+
+                },
+            },
             navigation: {
                 nextEl: '.item-swiper__button-next',
                 prevEl: '.item-swiper__button-prev',
@@ -205,7 +231,6 @@ if (photoSwipers.length > 0){
         })
 
         photoSwiper.swiperInstance = originalSwiper;
-        console.log(photoSwiper)
     })
 }
 const blogPageSwipers = document.querySelectorAll(".blog-page__swiper")

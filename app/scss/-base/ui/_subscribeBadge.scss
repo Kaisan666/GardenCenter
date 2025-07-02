@@ -97,7 +97,24 @@ background-color: $MRed;
 
     }
     @include table {
+        &__second-part {
+            align-self: end;
+        }
+        &--telegram{
 
+            .info-badge{
+                &__content {
+                    flex-direction: column;
+                }
+            }
+
+            .subscribe-link{
+                svg{
+                    display: block;
+                }
+            }
+
+        }
 
 
         .subscribe-link {
