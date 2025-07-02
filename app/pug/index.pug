@@ -1,82 +1,25 @@
 include layouts/modules/_m-head.pug
-
-
+include layouts/components/header.pug
+include layouts/components/footer.pug
+include layouts/components/swiperMain.pug
+include layouts/components/newItems.pug
+include layouts/components/promotions.pug
+include layouts/components/beginners.pug
+include layouts/components/blog.pug
+include layouts/components/clients.pug
+include layouts/components/guarantees.pug
 
 
 html(lang='ru')
   +m-head
-  .index 
-    .pages-example
-    ul.pages-example__table
-      li.pages-example__table-item
-        a(href='/ui.html') UI
-        .pages-example__table-item-box
-          iframe(src="/ui.html")
-      li.pages-example__table-item.pages-example__table-item--new
-        a(href='/main.html') главная
-        .pages-example__table-item-box
-          iframe(src="/main.html")
-      li.pages-example__table-item.pages-example__table-item--new
-        a(href='/catalog.html') каталог
-        .pages-example__table-item-box
-          iframe(src="/catalog.html")
-      li.pages-example__table-item.pages-example__table-item--new
-        a(href='/productDetail.html') детальная товара
-        .pages-example__table-item-box
-          iframe(src="/productDetail.html")
-      li.pages-example__table-item.pages-example__table-item--new
-        a(href='/promotionsList.html') акции
-        .pages-example__table-item-box
-          iframe(src="/promotionsList.html")
-      li.pages-example__table-item.pages-example__table-item--new
-        a(href='/promotionDetail.html') Детальная акции
-        .pages-example__table-item-box
-          iframe(src="/promotionDetail.html")
-      li.pages-example__table-item.pages-example__table-item--new
-        a(href='/collectionsList.html') Коллекции
-        .pages-example__table-item-box
-          iframe(src="/collectionsList.html")
-      li.pages-example__table-item.pages-example__table-item--new
-        a(href='/collection.html') Коллекция
-        .pages-example__table-item-box
-          iframe(src="/collection.html")
-      li.pages-example__table-item.pages-example__table-item--new
-        a(href='/clubCards.html') Клубная карта
-        .pages-example__table-item-box
-          iframe(src="/clubCards.html")
-      li.pages-example__table-item.pages-example__table-item--new
-        a(href='/servicesList.html') Услуги
-        .pages-example__table-item-box
-          iframe(src="/servicesList.html")
-      li.pages-example__table-item.pages-example__table-item--new
-        a(href='/vacancyesList.html') Вакансии
-        .pages-example__table-item-box
-          iframe(src="/vacancyesList.html")
-      li.pages-example__table-item.pages-example__table-item--new
-        a(href='/photoStudio.html') Фотостудия
-        .pages-example__table-item-box
-          iframe(src="/photoStudio.html")
-      li.pages-example__table-item.pages-example__table-item--new
-        a(href='/blogPage.htmlblogPage') Блог
-        .pages-example__table-item-box
-          iframe(src="/blogPage.html")
-      li.pages-example__table-item.pages-example__table-item--new
-        a(href='/blogDetail.html') Блог детальная
-        .pages-example__table-item-box
-          iframe(src="/blogDetail.html")
-      li.pages-example__table-item.pages-example__table-item--new
-        a(href='/aboutUs.html') О нас
-        .pages-example__table-item-box
-          iframe(src="/aboutUs.html")
-      li.pages-example__table-item.pages-example__table-item--new
-        a(href='/contact.html') Контакты
-        .pages-example__table-item-box
-          iframe(src="/contact.html")
-      li.pages-example__table-item.pages-example__table-item--new
-        a(href='/deliveryAndBuy.html') Доставка
-        .pages-example__table-item-box
-          iframe(src="/deliveryAndBuy.html")
-      li.pages-example__table-item.pages-example__table-item--new
-        a(href='/search.html') Поиск
-        .pages-example__table-item-box
-          iframe(src="/search.html")
+  body
+    +header
+    .app__content
+      +swiperMain
+      +newItems
+      +promotions
+      +beginners
+      +blog
+      +clients
+      +guarantees
+    +footer
