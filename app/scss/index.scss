@@ -1019,6 +1019,9 @@ section {
 
 .client-edit {
   display: block;
+  *:first-child{
+    margin-top: 0;
+  }
   &__main-photo{
     margin-block: 40px;
   }
